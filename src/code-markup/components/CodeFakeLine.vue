@@ -12,9 +12,9 @@
 
     &::before {
       content: '';
-      display: table-cell;
     }
 
+    &::before,
     &-coll {
       display: table-cell;
     }
