@@ -8,6 +8,7 @@
 
 <style lang="scss">
   .code-markup-line {
+    display: table-row;
     white-space: nowrap;
     counter-increment: count;
 
@@ -25,6 +26,7 @@
     &-content {
       display: table-cell;
       padding-left: 10px;
+      width: 100%;
     }
   }
 </style>

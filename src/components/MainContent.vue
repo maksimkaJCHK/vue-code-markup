@@ -2,7 +2,7 @@
   <main>
     <h1>Vue code markup</h1>
 
-    <code-markup>
+    <code-markup header="Заголовок">
       
     </code-markup>
   </main>

@@ -8,13 +8,13 @@
     </div>
 
     <div class="code-markup-body">
-      <code-icon @click="copyCodeProps" />
-
       <div class="code-markup-wrap">
+        <code-fake-line>
+          <code-icon @click="copyCodeProps" />
+        </code-fake-line>
+
         <slot></slot>
-        <code-line></code-line>
-        <code-line></code-line>
-        <code-line></code-line>
+
       </div>
     </div>
   </div>
@@ -23,6 +23,7 @@
 <script setup>
   import CodeIcon from './components/CodeIcon.vue';
   import CodeLine from './components/CodeLine.vue';
+  import CodeFakeLine from './components/CodeFakeLine.vue';
   import copyCode from './copyCode';
 
   const props = defineProps({
@@ -51,6 +52,10 @@
 
     // Иконка копировать текст
     --cm-icon-color: #fff;
+
+    // Заголовок
+    --cm-height-font-size: 1.1em;
+    --cm-height-font-weight: bold;
   }
 
   .code-markup {
@@ -60,6 +65,13 @@
     background: var(--cm-bg);
     color: var(--cm-text-color);
     overflow: auto;
+
+    &-header {
+      padding: 1em;
+      border-bottom: 1px solid grey;
+      font-size: var(--cm-height-font-size);
+      font-weight: var(--cm-height-font-weight);
+    }
 
     &-body {
       position: relative;
