@@ -15,16 +15,35 @@
 
         <slot></slot>
 
+        <code-line>
+          <mu-tag>
+            {{'<'}}template{{'>'}}
+          </mu-tag>
+        </code-line>
+        <code-line>
+          <mu-tag>
+            {{'<'}}span{{'>'}}
+          </mu-tag>
+        </code-line>
+        <code-line>
+          dddd
+        </code-line>
+        <code-line>
+          dddd
+        </code-line>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-  import CodeIcon from './components/CodeIcon.vue';
-  import CodeLine from './components/CodeLine.vue';
-  import CodeFakeLine from './components/CodeFakeLine.vue';
   import copyCode from './copyCode';
+  import CodeIcon from './components/CodeIcon.vue';
+
+  import CodeFakeLine from './components/CodeFakeLine.vue';
+  import CodeLine from './components/CodeLine.vue';
+  
+  import MuTag from './markup/MuTag.vue';
 
   const props = defineProps({
     header: {
@@ -44,11 +63,24 @@
   :root {
     --cm-bg: #212122;
     --cm-border-radius: 5px;
-    --cm-text-color: #a9b7c6;
+
+    // Цвета
+    $color-1: #ffc661;
+    $color-2: #647f54;
+    $color-3: #cc7832;
+    $color-4: #985c64;
+    $color-5: #985c64;
+    $color-6: #d4d4c9;
+
+    --cm-main-color: #a9b7c6;
+
+    --cm-tag-color: #{$color-1};
 
     // Шрифт
     --cm-text-font-weight: bold;
     --cm-text-font-size: 1em;
+    --cm-text-font-family: inherit;
+    --cm-text-line-height: 1.4;
 
     // Иконка копировать текст
     --cm-icon-color: #fff;
@@ -59,12 +91,14 @@
   }
 
   .code-markup {
-    font-size: var(--cm-text-font-size);
-    font-weight: var(--cm-text-font-weight);
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
-    color: var(--cm-text-color);
+    color: var(--cm-main-color);
     overflow: auto;
+    font-weight: var(--cm-text-font-weight);
+    font-size: var(--cm-text-font-size);
+    font-family: var(--cm-text-font-family);
+    line-height: var(--cm-text-line-height);
 
     &-header {
       padding: 1em;
