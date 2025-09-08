@@ -60,25 +60,26 @@
 
 <style lang="scss">
   .code-markup-line {
+    height: 1em;
     display: table-row;
     white-space: nowrap;
     counter-increment: count;
-
-    &::before {
-      color: #fff;
-      padding-left: .6em;
-      padding-right: .6em;
-      content: counter(count);
-      display: table-cell;
-      background: grey;
-      position: sticky;
-      left: 0;
-    }
 
     &-content {
       display: table-cell;
       padding-left: 10px;
       width: 100%;
+    }
+
+    .code-markup-count &::before {
+      color: #fff;
+      padding-left: 7px;
+      padding-right: 7px;
+      content: counter(count);
+      display: table-cell;
+      background: grey;
+      position: sticky;
+      left: 0;
     }
 
     @for $i from 2 through 12 {

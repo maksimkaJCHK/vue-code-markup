@@ -10,12 +10,12 @@
   .code-markup-fake-line {
     display: table-row;
 
-    &::before {
-      content: '';
+    &-coll {
+      display: table-cell;
     }
 
-    &::before,
-    &-coll {
+    .code-markup-count &::before {
+      content: '';
       display: table-cell;
     }
   }
