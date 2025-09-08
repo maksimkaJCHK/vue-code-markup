@@ -1,6 +1,6 @@
 <template>
   <span
-    v-if="props.code.length"
+    v-if="props.code.length > 0"
     v-text="props.code"
     :class="[className]"
   ></span>
@@ -21,11 +21,11 @@
     }
   });
 
-  const className = 'code-markup-tag';
+  const className = 'code-markup-key';
 </script>
 
 <style lang="scss">
-  .code-markup-tag {
-    color: var(--cm-tag-color);
+  .code-markup-key {
+    color: var(--cm-key-color);
   }
 </style>
