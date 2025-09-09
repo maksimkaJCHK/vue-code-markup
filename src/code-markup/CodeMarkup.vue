@@ -98,7 +98,7 @@
     // Шрифт
     --cm-text-font-size: 1em;
     --cm-text-font-family: inherit;
-    --cm-text-line-height: 1.4;
+    --cm-text-line-height: 1.4em;
 
     // Иконка копировать текст
     --cm-icon-color: #fff;
@@ -134,13 +134,15 @@
     --cm-variable-color: #{$color-4};
     --cm-number-color: #{$color-6};
     --cm-comment-color: #{$color-7};
+    --cm-attr-color: #{$color-5};
   }
 
   .code-markup {
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
     color: var(--cm-main-color);
-    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
     font-size: var(--cm-text-font-size);
     font-family: var(--cm-text-font-family);
     line-height: var(--cm-text-line-height);
@@ -158,7 +160,7 @@
 
     &-body {
       position: relative;
-      min-height: 2em;
+      min-height: var(--cm-text-line-height);
     }
 
     &-wrap {

@@ -1,21 +1,18 @@
 <template>
   <header>
-    Vue code markup
+    <link-repository />
   </header>
 
   <main-content />
 
   <footer>
-    <a
-      href="https://github.com/maksimkaJCHK/vue-code-markup"
-      target="_blank"
-      title="Vue code markup repository"
-    >Vue code markup</a>
+    <link-repository />
   </footer>
 </template>
 
 <script setup>
   import MainContent from '@/components/MainContent.vue';
+  import LinkRepository from '@/components/LinkRepository.vue';
 </script>
 
 <style lang="scss">
@@ -62,20 +59,6 @@
     padding-top: .6rem;
     height: 42px;
     font-size: .8rem;
-
-    a {
-      color: #000;
-      display: inline-block;
-      text-decoration: underline;
-      background: url('./assets/github-mark.png') no-repeat 0 50%;
-      background-size: 16px auto;
-      padding-left: 25px;
-
-      &:hover {
-        color: #000;
-        text-decoration: none;
-      }
-    }
   }
 
   main {

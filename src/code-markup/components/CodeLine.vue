@@ -79,6 +79,7 @@
       display: table-cell;
       background: grey;
       position: sticky;
+      user-select: none;
       left: 0;
     }
 
