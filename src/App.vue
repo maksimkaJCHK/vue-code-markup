@@ -6,13 +6,29 @@
   <main-content />
 
   <footer>
-    <link-repository />
+    <link-repository>
+      {{ textRep }}
+    </link-repository>
   </footer>
 </template>
 
 <script setup>
+  import { ref } from 'vue';
+
   import MainContent from '@/components/MainContent.vue';
   import LinkRepository from '@/components/LinkRepository.vue';
+
+  const textRep = ref('');
+  const nameRep= 'Vue code markup repository';
+
+  const cYear = 2025;
+  const tYear = (new Date()).getFullYear();
+
+  const bNameRep = (year=cYear) => `${nameRep} ${year}`;
+
+  textRep.value = (tYear > cYear)
+    ? bNameRep(`${cYear}-${tYear}`)
+    : bNameRep();
 </script>
 
 <style lang="scss">
