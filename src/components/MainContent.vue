@@ -2,23 +2,6 @@
   <main>
     <h1>Vue code markup</h1>
 
-    <div class="boks-list">
-      <div
-        v-for="book in books"
-        :key="book.id"
-        class="books-list-item"
-      >
-        <h3>{{ book.title }}</h3>
-
-        <div class="author">
-          {{ book.author }}
-        </div>
-
-        <div class="pages">
-          {{ book.pages }}
-        </div>
-      </div>
-    </div>
     <code-markup
       header="BooksList.vue"
     >
@@ -54,7 +37,45 @@
       <code-line level-3>
         <mu-tag code='>' />
       </code-line>
-
+      <code-line level-4>
+        <mu-tag code='<h3>{' />
+        <mu-tag code='{ ' />
+        book.
+        <mu-key code="title " />
+        <mu-tag code=' }}</h3>' />
+      </code-line>
+      <code-line level-4>
+        <mu-tag code="<div " />
+        <mu-attr code="class=" />
+        <mu-text code='"author"' />
+        <mu-tag code=">" />
+      </code-line>
+      <code-line level-5>
+        <mu-tag code="{" />
+        <mu-tag code="{ " />
+        books.
+        <mu-key code="author " />
+        <mu-tag code="}}" />
+      </code-line>
+      <code-line level-4>
+        <mu-tag code="</div>" />
+      </code-line>
+      <code-line level-4>
+        <mu-tag code="<div " />
+        <mu-attr code="class=" />
+        <mu-text code='"pages"' />
+        <mu-tag code=">" />
+      </code-line>
+      <code-line level-5>
+        <mu-tag code="{" />
+        <mu-tag code="{ " />
+        books.
+        <mu-key code="pages " />
+        <mu-tag code="}}" />
+      </code-line>
+      <code-line level-4>
+        <mu-tag code="</div>" />
+      </code-line>
       <code-line level-3>
         <mu-tag code='</div>' />
       </code-line>
