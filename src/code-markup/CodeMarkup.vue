@@ -36,19 +36,7 @@
 
   import copyCode from './copyCode';
   import CodeIcon from './components/CodeIcon.vue';
-
   import CodeFakeLine from './components/CodeFakeLine.vue';
-  import CodeLine from './components/CodeLine.vue';
-
-  import MuTag from './markup/MuTag.vue';
-  import MuImport from './markup/MuImport.vue';
-  import MuFrom from './markup/MuFrom.vue';
-  import MuText from './markup/MuText.vue';
-  import MuKey from './markup/MuKey.vue';
-  import MuKeyWords from './markup/MuKeyWords.vue';
-  import MuVariable from './markup/MuVariable.vue';
-  import MuNumber from './markup/MuNumber.vue';
-  import MuComment from './markup/MuComment.vue';
 
   const props = defineProps({
     header: {
@@ -91,9 +79,9 @@
 </script>
 
 <style lang="scss">
-  @mixin styleScroll($scrollBarBg: #000, $trackBg: #FFA500, $scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
+  @mixin styleScroll($scrollBarBg: #000, $thumbBg: #FFA500, $scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
     scrollbar-width: $scrollBarType;
-    scrollbar-color: $trackBg $scrollBarBg;
+    scrollbar-color: $thumbBg $scrollBarBg;
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
@@ -108,7 +96,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: $trackBg;
+      background: $thumbBg;
       border-radius: $scrollBarBR;
     }
   }
@@ -162,7 +150,7 @@
   }
 
   .code-markup {
-    @include styleScroll($scrollBarBg: $color-7, $trackBg: $color-3);
+    @include styleScroll($scrollBarBg: $color-7, $thumbBg: $color-3);
 
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
