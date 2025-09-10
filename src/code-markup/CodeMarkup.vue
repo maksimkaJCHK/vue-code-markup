@@ -91,6 +91,37 @@
 </script>
 
 <style lang="scss">
+  @mixin styleScroll($scrollBarBg: #000, $trackBg: #FFA500, $scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
+    scrollbar-width: $scrollBarType;
+    scrollbar-color: $trackBg $scrollBarBg;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      width: $scrollBarWidth;
+      background: $scrollBarBg;
+      border-radius: $scrollBarBR;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $scrollBarBg;
+      border-radius: $scrollBarBR;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $trackBg;
+      border-radius: $scrollBarBR;
+    }
+  }
+
+  // Цвета
+  $color-1: #ffc661;
+  $color-2: #647f54;
+  $color-3: #cc7832;
+  $color-4: #9876aa;
+  $color-5: #d4d4c9;
+  $color-6: #6897bb;
+  $color-7: #808080;
+
   :root {
     --cm-bg: #212122;
     --cm-border-radius: 5px;
@@ -107,15 +138,6 @@
     --cm-header-padding: .5em 1em;
     --cm-height-font-size: 1em;
 
-    // Цвета
-    $color-1: #ffc661;
-    $color-2: #647f54;
-    $color-3: #cc7832;
-    $color-4: #9876aa;
-    $color-5: #d4d4c9;
-    $color-6: #6897bb;
-    $color-7: #808080;
-
     // Цвета текста по умолчани.
     --cm-main-color: #a9b7c6;
 
@@ -126,8 +148,6 @@
     --cm-tag-color: #{$color-1};
 
     // Цвета для элементов внутри script
-    --cm-import-color: #{$color-3};
-    --cm-from-color: #{$color-3};
     --cm-text-color: #{$color-2};
     --cm-key-color: #{$color-4};
     --cm-key-words-color: #{$color-3};
@@ -135,9 +155,15 @@
     --cm-number-color: #{$color-6};
     --cm-comment-color: #{$color-7};
     --cm-attr-color: #{$color-5};
+
+    // Цвет выделения
+    --cm-selection-bg: #{$color-2};
+    --cm-selection-color: #fff;
   }
 
   .code-markup {
+    @include styleScroll($scrollBarBg: $color-7, $trackBg: $color-3);
+
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
     color: var(--cm-main-color);
@@ -146,6 +172,11 @@
     font-size: var(--cm-text-font-size);
     font-family: var(--cm-text-font-family);
     line-height: var(--cm-text-line-height);
+
+    &::selection {
+      background: var(--cm-selection-bg);
+      color: var(--cm-selection-color);
+    }
 
     &-bold {
       font-weight: bold;

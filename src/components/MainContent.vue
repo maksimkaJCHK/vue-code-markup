@@ -75,9 +75,9 @@
       </code-line>
 
       <code-line level2>
-        <mu-import code="import" />
+        <mu-key-words code="import" />
         { ref }
-        <mu-from code="from " />
+        <mu-key-words code="from " />
         <mu-text code="'vue'" />;
       </code-line>
 
@@ -153,8 +153,6 @@
   import CodeLine from '@/code-markup/components/CodeLine.vue';
 
   import MuTag from '@/code-markup/markup/MuTag.vue';
-  import MuImport from '@/code-markup/markup/MuImport.vue';
-  import MuFrom from '@/code-markup/markup/MuFrom.vue';
   import MuText from '@/code-markup/markup/MuText.vue';
   import MuKey from '@/code-markup/markup/MuKey.vue';
   import MuKeyWords from '@/code-markup/markup/MuKeyWords.vue';

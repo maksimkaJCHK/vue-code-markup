@@ -85,7 +85,7 @@
 
     @for $i from 2 through 12 {
       &-level-#{$i} &-content {
-        padding-left: #{$i * 10}px;
+        padding-left: #{$i * 15}px;
       }
     }
   }
