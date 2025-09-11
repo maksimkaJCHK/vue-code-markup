@@ -252,12 +252,14 @@
   // Для шаблона
   import MuTag from '@/code-markup/markup/template/MuTag.vue';
   import MuAttr from '@/code-markup/markup/template/MuAttr.vue';
+  // Для секции скриптов
   import MuText from '@/code-markup/markup/script/MuText.vue';
   import MuKey from '@/code-markup/markup/script/MuKey.vue';
   import MuKeyWords from '@/code-markup/markup/script/MuKeyWords.vue';
   import MuVariable from '@/code-markup/markup/script/MuVariable.vue';
   import MuNumber from '@/code-markup/markup/script/MuNumber.vue';
   import MuComment from '@/code-markup/markup/script/MuComment.vue';
+  // Для блока стилей
   import MuStyleClass from '@/code-markup/markup/style/MuStyleClass.vue';
   import MuStyleTag from '@/code-markup/markup/style/MuStyleTag.vue';
   import MuStyleKey from '@/code-markup/markup/style/MuStyleKey.vue';
