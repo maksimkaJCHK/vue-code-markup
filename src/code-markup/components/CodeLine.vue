@@ -85,7 +85,7 @@
 
     @for $i from 2 through 12 {
       .code-markup_level-#{$i} &__content {
-        padding-left: #{$i * 15}px;
+        padding-left: #{$i}em;
       }
     }
   }
