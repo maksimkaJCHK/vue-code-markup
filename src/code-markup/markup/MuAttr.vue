@@ -21,11 +21,11 @@
     }
   });
 
-  const className = 'code-markup-attr';
+  const className = 'code-markup__attr';
 </script>
 
 <style lang="scss">
-  .code-markup-attr {
+  .code-markup__attr {
     color: var(--cm-attr-color);
   }
 </style>

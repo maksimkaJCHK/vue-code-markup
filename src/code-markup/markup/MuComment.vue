@@ -21,11 +21,11 @@
     }
   });
 
-  const className = 'code-markup-comment';
+  const className = 'code-markup__comment';
 </script>
 
 <style lang="scss">
-  .code-markup-comment {
+  .code-markup__comment {
     color: var(--cm-comment-color);
   }
 </style>

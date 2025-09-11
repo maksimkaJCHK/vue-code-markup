@@ -21,11 +21,11 @@
     }
   });
 
-  const className = 'code-markup-key-words';
+  const className = 'code-markup__key-words';
 </script>
 
 <style lang="scss">
-  .code-markup-key-words {
+  .code-markup__key-words {
     color: var(--cm-key-words-color);
   }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div
-    class="code-markup-line"
+    class="code-markup__line"
     :class="classLine"
   >
-    <div class="code-markup-line-content">
+    <div class="code-markup__line__content">
       <slot></slot>
     </div>
   </div>
@@ -44,34 +44,34 @@
   });
 
   const classLine = computed(() => ({
-    'code-markup-line-level-2': props['level2'],
-    'code-markup-line-level-3': props['level3'],
-    'code-markup-line-level-4': props['level4'],
-    'code-markup-line-level-5': props['level5'],
-    'code-markup-line-level-6': props['level6'],
-    'code-markup-line-level-7': props['level7'],
-    'code-markup-line-level-8': props['level8'],
-    'code-markup-line-level-9': props['level9'],
-    'code-markup-line-level-10': props['level10'],
-    'code-markup-line-level-11': props['level11'],
-    'code-markup-line-level-12': props['level12'],
+    'code-markup_level-2': props['level2'],
+    'code-markup_level-3': props['level3'],
+    'code-markup_level-4': props['level4'],
+    'code-markup_level-5': props['level5'],
+    'code-markup_level-6': props['level6'],
+    'code-markup_level-7': props['level7'],
+    'code-markup_level-8': props['level8'],
+    'code-markup_level-9': props['level9'],
+    'code-markup_level-10': props['level10'],
+    'code-markup_level-11': props['level11'],
+    'code-markup_level-12': props['level12'],
   }));
 </script>
 
 <style lang="scss">
-  .code-markup-line {
+  .code-markup__line {
     height: 1em;
     display: table-row;
     white-space: nowrap;
     counter-increment: count;
 
-    &-content {
+    &__content {
       display: table-cell;
       padding-left: 10px;
       width: 100%;
     }
 
-    .code-markup-count &::before {
+    .code-markup_count &::before {
       color: #fff;
       padding-left: 7px;
       padding-right: 7px;
@@ -84,7 +84,7 @@
     }
 
     @for $i from 2 through 12 {
-      &-level-#{$i} &-content {
+      .code-markup_level-#{$i} &__content {
         padding-left: #{$i * 15}px;
       }
     }

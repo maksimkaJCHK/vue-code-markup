@@ -17,10 +17,10 @@
     </template>
 
     <div
-      class="code-markup-body"
+      class="code-markup__body"
       :class="bodyClass"
     >
-      <div class="code-markup-wrap">
+      <div class="code-markup__wrap">
         <code-fake-line>
           <code-icon @click="copyCodeProps" />
         </code-fake-line>
@@ -68,13 +68,13 @@
   const copyCodeProps = () => copyCode(props.code);
 
   const bodyClass = computed(() => ({
-    'code-markup-bold': props.boldText,
-    'code-markup-count': props.isCount,
+    'code-markup_bold': props.boldText,
+    'code-markup_count': props.isCount,
   }));
 
   const headerClass = computed(() => ({
-    'code-markup-header': true,
-    'code-markup-bold': props.headerBold
+    'code-markup__header': true,
+    'code-markup_bold': props.headerBold
   }));
 </script>
 
@@ -166,23 +166,23 @@
       color: var(--cm-selection-color);
     }
 
-    &-bold {
+    &_bold {
       font-weight: bold;
     }
 
-    &-header {
+    &__header {
       padding: var(--cm-header-padding);
       color: var(--cm-header-color);
       border-bottom: 1px solid grey;
       font-size: var(--cm-height-font-size);
     }
 
-    &-body {
+    &__body {
       position: relative;
       min-height: var(--cm-text-line-height);
     }
 
-    &-wrap {
+    &__wrap {
       width: 100%;
       display: table;
       counter-reset: count;

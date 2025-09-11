@@ -21,11 +21,11 @@
     }
   });
 
-  const className = 'code-markup-text';
+  const className = 'code-markup__text';
 </script>
 
 <style lang="scss">
-  .code-markup-text {
+  .code-markup__text {
     color: var(--cm-text-color);
   }
 </style>

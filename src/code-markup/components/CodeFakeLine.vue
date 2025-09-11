@@ -1,20 +1,20 @@
 <template>
-  <div class="code-markup-fake-line">
-    <div class="code-markup-fake-line-coll">
+  <div class="code-markup__fake-line">
+    <div class="code-markup__fake-line__coll">
       <slot></slot>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-  .code-markup-fake-line {
+  .code-markup__fake-line {
     display: table-row;
 
-    &-coll {
+    &__coll {
       display: table-cell;
     }
 
-    .code-markup-count &::before {
+    .code-markup_count &::before {
       content: '';
       display: table-cell;
     }

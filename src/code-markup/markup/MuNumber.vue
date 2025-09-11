@@ -21,11 +21,11 @@
     }
   });
 
-  const className = 'code-markup-number';
+  const className = 'code-markup__number';
 </script>
 
 <style lang="scss">
-  .code-markup-number {
+  .code-markup__number {
     color: var(--cm-number-color);
   }
 </style>

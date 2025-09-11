@@ -1,11 +1,11 @@
 <template>
-  <div class="code-markup-icon">
+  <div class="code-markup__icon">
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width='24'
       height='24'
       viewBox='0 0 24 24'
-      class="code-markup-icon-svg"
+      class="code-markup__icon__svg"
     >
       <g
         fill='none'
@@ -18,7 +18,7 @@
 </template>
 
 <style lang="scss">
-  .code-markup-icon {
+  .code-markup__icon {
     $translateX: translateX(-5px);
 
     right: 0;
@@ -36,7 +36,7 @@
       transform: $translateX translateY(4px);
     }
 
-    &-svg {
+    &__svg {
       width: 100%;
       height: 100%;
 
