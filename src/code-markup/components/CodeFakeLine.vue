@@ -28,6 +28,8 @@
     .code-markup_count &:last-of-type {
       &::before {
         background: grey;
+        position: sticky;
+        left: 0;
       }
     }
 

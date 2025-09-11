@@ -113,9 +113,10 @@
   $color-6: #6897bb;
   $color-7: #808080;
   $color-8: #a9b7c6;
+  $color-9: #212122;
 
   :root {
-    --cm-bg: #212122;
+    --cm-bg: #{$color-9};
     --cm-border-radius: 5px;
 
     // Шрифт
@@ -163,7 +164,7 @@
   }
 
   .code-markup {
-    @include styleScroll($scrollBarBg: $color-7, $thumbBg: $color-3);
+    @include styleScroll($scrollBarBg: $color-9, $thumbBg: $color-1);
 
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
@@ -193,7 +194,7 @@
     }
 
     &__body {
-      @include styleScroll($scrollBarBg: $color-7, $thumbBg: $color-3);
+      @include styleScroll($scrollBarBg: $color-9, $thumbBg: $color-1);
       position: relative;
       overflow: auto;
       max-height: var(--cm-max-height-body);
