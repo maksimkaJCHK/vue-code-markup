@@ -4,6 +4,7 @@
       <div
         v-if="props.header.length > 0"
         :class="headerClass"
+        :title="props.header"
       >
         {{ props.header }}
       </div>
@@ -26,6 +27,8 @@
         </code-fake-line>
 
         <slot></slot>
+
+        <code-fake-line />
       </div>
     </div>
   </div>
@@ -119,18 +122,20 @@
     --cm-text-font-family: inherit;
     --cm-text-line-height: 1.4em;
 
+    // Максимальный размер блока с кодом
+    --cm-max-height-body: auto;
+
     // Иконка копировать текст
     --cm-icon-color: #fff;
 
     // Заголовок
     --cm-header-padding: .5em 1em;
-    --cm-height-font-size: 1em;
+    --cm-header-font-size: 1em;
+    // Цвет заголовка
+    --cm-header-color: #{$color-1};
 
     // Цвета текста по умолчани.
     --cm-main-color: #a9b7c6;
-
-    // Цвет заголовка
-    --cm-header-color: #{$color-1};
 
     // Цвет для тегов
     --cm-tag-color: #{$color-1};
@@ -174,12 +179,16 @@
       padding: var(--cm-header-padding);
       color: var(--cm-header-color);
       border-bottom: 1px solid grey;
-      font-size: var(--cm-height-font-size);
+      font-size: var(--cm-header-font-size);
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &__body {
+      @include styleScroll($scrollBarBg: $color-7, $thumbBg: $color-3);
       position: relative;
-      min-height: var(--cm-text-line-height);
+      overflow: auto;
+      max-height: var(--cm-max-height-body);
     }
 
     &__wrap {

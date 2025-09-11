@@ -18,5 +18,21 @@
       content: '';
       display: table-cell;
     }
+
+    &:first-of-type {
+      top: 0;
+      left: 0;
+      position: sticky;
+    }
+
+    .code-markup_count &:last-of-type {
+      &::before {
+        background: grey;
+      }
+    }
+
+    &:last-of-type &__coll {
+      height: 6px;
+    }
   }
 </style>

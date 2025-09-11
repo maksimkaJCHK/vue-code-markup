@@ -19,21 +19,21 @@
 
 <style lang="scss">
   .code-markup__icon {
-    $translateX: translateX(-5px);
+    $translateX: translateX(-8px);
 
     right: 0;
     float: right;
-    width: 1em;
-    height: 1em;
+    width: var(--cm-text-font-size);
+    height: var(--cm-text-font-size);
     cursor: pointer;
     position: sticky;
     user-select: none;
     z-index: 1;
-    margin: 0 0 -1em 0;
-    transform: $translateX translateY(3px);
+    margin: 0 0 calc(var(--cm-text-line-height) * -1) 0;
+    transform: $translateX translateY(5px);
 
     &:active {
-      transform: $translateX translateY(4px);
+      transform: $translateX translateY(6px);
     }
 
     &__svg {

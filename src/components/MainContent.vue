@@ -3,7 +3,7 @@
     <h1>Vue code markup</h1>
 
     <code-markup
-      header="BooksList.vue"
+      header="BooksListBooksListBooksListBooksList.vue"
     >
       <code-line>
         <mu-tag code="<template>" />
