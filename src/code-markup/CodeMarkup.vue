@@ -50,7 +50,7 @@
       type: [String, Object],
       default: ''
     },
-    boldText: {
+    textBold: {
       type: Boolean,
       default: false
     },
@@ -71,7 +71,7 @@
   const copyCodeProps = () => copyCode(props.code);
 
   const bodyClass = computed(() => ({
-    'code-markup_bold': props.boldText,
+    'code-markup_bold': props.textBold,
     'code-markup_count': props.isCount,
   }));
 
