@@ -2,9 +2,11 @@
   <main>
     <h1>Vue code markup</h1>
 
+    <example-content />
     <code-markup
-      header="BooksListBooksListBooksListBooksList.vue"
+      header="BooksList.vue"
     >
+      <!-- template -->
       <code-line>
         <mu-tag code="<template>" />
       </code-line>
@@ -12,7 +14,8 @@
       <code-line level-2>
         <mu-tag code='<div '/>
         <mu-attr code='class=' />
-        <mu-text code='"boks-list""' />
+        <mu-text code='"boks-list"' />
+        <mu-tag code='>'/>
       </code-line>
 
       <code-line level-3>
@@ -40,8 +43,7 @@
       <code-line level-4>
         <mu-tag code='<h3>{' />
         <mu-tag code='{ ' />
-        book.
-        <mu-key code="title " />
+        book.<mu-key code="title " />
         <mu-tag code=' }}</h3>' />
       </code-line>
       <code-line level-4>
@@ -53,8 +55,7 @@
       <code-line level-5>
         <mu-tag code="{" />
         <mu-tag code="{ " />
-        books.
-        <mu-key code="author " />
+        book.<mu-key code="author " />
         <mu-tag code="}}" />
       </code-line>
       <code-line level-4>
@@ -69,8 +70,7 @@
       <code-line level-5>
         <mu-tag code="{" />
         <mu-tag code="{ " />
-        books.
-        <mu-key code="pages " />
+        book.<mu-key code="pages " />
         <mu-tag code="}}" />
       </code-line>
       <code-line level-4>
@@ -89,6 +89,7 @@
 
       <code-line />
 
+      <!-- script -->
       <code-line>
         <mu-tag code="<script " />
         <mu-attr code="setup" />
@@ -108,7 +109,7 @@
         <mu-comment code="// Пример комментария" />
       </code-line>
       <code-line level-2>
-        <mu-key-words code="const" /> <mu-variable code="book" /> = <mu-key-words code='ref' />([
+        <mu-key-words code="const" /> <mu-variable code="books" /> = <mu-key-words code='ref' />([
       </code-line>
       <code-line level-3>
         {
@@ -163,24 +164,107 @@
       <code-line>
         <mu-tag code="</script>" />
       </code-line>
+
+      <code-line />
+      <!-- Стили -->
+      <code-line>
+        <mu-tag code="<style " />
+        <mu-attr code="lang=" />
+        <mu-text code='"scss"' />
+        <mu-attr code=" scoped" />
+        <mu-tag code=">" />
+      </code-line>
+
+      <code-line level-2>
+        <mu-style-class code=".books-list {" />
+      </code-line>
+
+      <code-line level-3>
+        <mu-style-param code="line-height" />:
+        <mu-number code=" 1.2" />;
+      </code-line>
+      <code-line level-3>
+        <mu-style-param code="margin" />:
+        <mu-number code=" 1" />
+        <mu-style-unit-meas code="em" />
+        <mu-number code=" 0 " />
+        <mu-number code="2.5" />
+        <mu-style-unit-meas code="em" />;
+      </code-line>
+
+      <code-line />
+
+      <code-line level-3>
+        <mu-style-tag code="h3 {" />
+      </code-line>
+      <code-line level-4>
+        <mu-style-param code="font-size" />:
+        <mu-number code="1.2" />
+        <mu-style-unit-meas code="em" />;
+      </code-line>
+      <code-line level-4>
+        <mu-style-param code="margin" />:
+        <mu-number code=".4" />
+        <mu-style-unit-meas code="em" />
+        <mu-number code=" 0 " />
+        <mu-number code="2.5" />
+        <mu-style-unit-meas code="em" />;
+      </code-line>
+      <code-line level-3>
+        <mu-style-tag code="}" />
+      </code-line>
+
+      <code-line />
+
+      <code-line level-3>
+        <mu-style-ampersand code="&" />
+        <mu-style-key code="-item" />
+        <mu-style-curly-brace code=" {" />
+      </code-line>
+      <code-line level-4>
+        <mu-style-param code="margin" />:
+        <mu-number code=".1.5" />
+        <mu-style-unit-meas code="em" />
+        <mu-number code=" 0 " />;
+      </code-line>
+      <code-line level-3>
+        <mu-style-curly-brace code="}" />
+      </code-line>
+
+      <code-line level-2>
+        <mu-style-class code="}" />
+      </code-line>
+      <code-line>
+        <mu-tag code="</style>" />
+      </code-line>
     </code-markup>
   </main>
 </template>
 
 <script setup>
   import { ref } from 'vue';
+  import ExampleContent from '@/components/ExampleContent.vue';
+
   import CodeMarkup from '@/code-markup/codemarkup.vue';
 
   import CodeLine from '@/code-markup/components/CodeLine.vue';
 
-  import MuTag from '@/code-markup/markup/MuTag.vue';
-  import MuText from '@/code-markup/markup/MuText.vue';
-  import MuKey from '@/code-markup/markup/MuKey.vue';
-  import MuKeyWords from '@/code-markup/markup/MuKeyWords.vue';
-  import MuVariable from '@/code-markup/markup/MuVariable.vue';
-  import MuNumber from '@/code-markup/markup/MuNumber.vue';
-  import MuComment from '@/code-markup/markup/MuComment.vue';
-  import MuAttr from '@/code-markup/markup/MuAttr.vue';
+  // Для шаблона
+  import MuTag from '@/code-markup/markup/template/MuTag.vue';
+  import MuAttr from '@/code-markup/markup/template/MuAttr.vue';
+  import MuText from '@/code-markup/markup/script/MuText.vue';
+  import MuKey from '@/code-markup/markup/script/MuKey.vue';
+  import MuKeyWords from '@/code-markup/markup/script/MuKeyWords.vue';
+  import MuVariable from '@/code-markup/markup/script/MuVariable.vue';
+  import MuNumber from '@/code-markup/markup/script/MuNumber.vue';
+  import MuComment from '@/code-markup/markup/script/MuComment.vue';
+  import MuStyleClass from '@/code-markup/markup/style/MuStyleClass.vue';
+  import MuStyleTag from '@/code-markup/markup/style/MuStyleTag.vue';
+  import MuStyleKey from '@/code-markup/markup/style/MuStyleKey.vue';
+  import MuStyleParam from '@/code-markup/markup/style/MuStyleParam.vue';
+  import MuStyleUnitMeas from '@/code-markup/markup/style/MuStyleUnitMeas.vue';
+  import MuStyleAmpersand from '@/code-markup/markup/style/MuStyleAmpersand.vue';
+  import MuStyleCurlyBrace from '@/code-markup/markup/style/MuStyleCurlyBrace.vue';
 
   // Пример комментария
   const books = ref([

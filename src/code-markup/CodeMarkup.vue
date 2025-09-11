@@ -112,6 +112,7 @@
   $color-5: #d4d4c9;
   $color-6: #6897bb;
   $color-7: #808080;
+  $color-8: #a9b7c6;
 
   :root {
     --cm-bg: #212122;
@@ -135,7 +136,7 @@
     --cm-header-color: #{$color-1};
 
     // Цвета текста по умолчани.
-    --cm-main-color: #a9b7c6;
+    --cm-main-color: #{$color-8};
 
     // Цвет для тегов
     --cm-tag-color: #{$color-1};
@@ -148,6 +149,13 @@
     --cm-number-color: #{$color-6};
     --cm-comment-color: #{$color-7};
     --cm-attr-color: #{$color-5};
+    --cm-style-class: #{$color-1};
+    --cm-style-tag: #{$color-1};
+    --cm-style-key: #{$color-5};
+    --cm-style-param: #{$color-4};
+    --cm-style-unit-mes: #{$color-8};
+    --cm-style-ampersand: #{$color-1};
+    --cm-style-curly-brace: #{$color-1};
 
     // Цвет выделения
     --cm-selection-bg: #{$color-2};
