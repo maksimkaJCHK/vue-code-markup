@@ -27,7 +27,7 @@
 
     .code-markup_count &:last-of-type {
       &::before {
-        background: grey;
+        background: var(--cm-count-bg);
         position: sticky;
         left: 0;
       }

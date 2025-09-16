@@ -123,6 +123,7 @@
     --cm-text-font-size: 1em;
     --cm-text-font-family: inherit;
     --cm-text-line-height: 1.4em;
+    --cm-count-padding: 0 .6em;
 
     // Максимальный размер блока с кодом
     --cm-max-height-body: auto;
@@ -133,11 +134,20 @@
     // Заголовок
     --cm-header-padding: .5em 1em;
     --cm-header-font-size: 1em;
+
     // Цвет заголовка
     --cm-header-color: #{$color-1};
 
     // Цвета текста по умолчани.
     --cm-main-color: #{$color-8};
+
+    // Цвета активной строки
+    --cm-active-bg: #2a2a2b;
+    --cm-active-count-bg: #454545;
+
+    // Цвет номера строки
+    --cm-count-bg: #5e5d5d;
+    --cm-count-color: #fff;
 
     // Цвет для тегов
     --cm-tag-color: #{$color-1};

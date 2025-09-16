@@ -13,6 +13,10 @@
   import { computed } from 'vue';
 
   const props = defineProps({
+    active: {
+      type: Boolean,
+      default: false
+    },
     'level-2': {
       type: Boolean,
       default: false
@@ -44,6 +48,7 @@
   });
 
   const classLine = computed(() => ({
+    'code-markup__line_active': props.active,
     'code-markup_level-2': props['level2'],
     'code-markup_level-3': props['level3'],
     'code-markup_level-4': props['level4'],
@@ -72,15 +77,22 @@
     }
 
     .code-markup_count &::before {
-      color: #fff;
-      padding-left: 7px;
-      padding-right: 7px;
+      color: var(--cm-count-color);
+      padding: var(--cm-count-padding);
       content: counter(count);
       display: table-cell;
-      background: grey;
+      background: var(--cm-count-bg);
       position: sticky;
       user-select: none;
       left: 0;
+    }
+
+    &_active {
+      background: var(--cm-active-bg);
+
+      .code-markup_count &::before {
+        background: var(--cm-active-count-bg);
+      }
     }
 
     @for $i from 2 through 12 {
