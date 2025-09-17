@@ -106,7 +106,7 @@
 
     &_new {
       .code-markup_count &::before {
-        border-right-color: #487e02;
+        border-right-color: var(--cm-new-border);
       }
     }
 

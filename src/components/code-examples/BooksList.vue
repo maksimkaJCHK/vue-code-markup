@@ -65,13 +65,19 @@
       <mu-text code='"author"' />
       <mu-tag code=">" />
     </code-line>
-    <code-line level-5>
+    <code-line
+      level-5
+      new
+    >
       <mu-tag code="{" />
       <mu-tag code="{ " />
       book.<mu-key code="author " />
       <mu-tag code="}}" />
     </code-line>
-    <code-line level-4>
+    <code-line
+      level-4
+      new
+    >
       <mu-tag code="</div>" />
     </code-line>
     <code-line level-4>
