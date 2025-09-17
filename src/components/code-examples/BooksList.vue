@@ -9,10 +9,20 @@
     </code-line>
 
     <code-line level-2>
-      <mu-tag code='<div '/>
+      <mu-tag code='<div' />
+    </code-line>
+
+    <code-line level-3>
+      <mu-attr code='id=' />
+      <mu-text code='"books-list"' />
+    </code-line>
+    <code-line level-3>
       <mu-attr code='class=' />
       <mu-text code='"books-list"' />
-      <mu-tag code='>'/>
+    </code-line>
+
+    <code-line level-2>
+      <mu-tag code='>' />
     </code-line>
 
     <code-line level-3>
@@ -290,7 +300,10 @@
   import MuStyleCurlyBrace from '@/code-markup/markup/style/MuStyleCurlyBrace.vue';
 
     const code = `<template>
-  <div class="books-list">
+  <div
+    id="books-list"
+    class="books-list"
+  >
     <div
       v-for="book in books"
       :key=" book. id"
