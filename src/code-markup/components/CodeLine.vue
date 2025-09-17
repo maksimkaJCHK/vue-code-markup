@@ -69,6 +69,8 @@
 </script>
 
 <style lang="scss">
+  @use "sass:math";
+
   .code-markup__line {
     height: 1em;
     display: table-row;
@@ -82,6 +84,8 @@
     }
 
     .code-markup_count &::before {
+      $borde-width: math.div(4em, 16);
+
       color: var(--cm-count-color);
       padding: var(--cm-count-padding);
       content: counter(count);
@@ -90,8 +94,8 @@
       position: sticky;
       user-select: none;
       left: 0;
-      border-left: 4px solid var(--cm-count-bg);
-      border-right: 4px solid var(--cm-count-bg);
+      border-left: $borde-width solid var(--cm-count-bg);
+      border-right: $borde-width solid var(--cm-count-bg);
     }
 
     &_active {

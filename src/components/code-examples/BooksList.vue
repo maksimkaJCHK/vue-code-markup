@@ -226,7 +226,10 @@
 
     <code-line />
 
-    <code-line level-3>
+    <code-line
+      level-3
+      new
+    >
       <mu-style-tag code="h3 {" />
     </code-line>
     <code-line
@@ -237,7 +240,10 @@
       <mu-number code="1.2" />
       <mu-style-unit-meas code="em" />;
     </code-line>
-    <code-line level-4>
+    <code-line
+      level-4
+      new
+    >
       <mu-style-param code="margin" />:
       <mu-number code=".4" />
       <mu-style-unit-meas code="em" />
@@ -245,7 +251,10 @@
       <mu-number code=".3" />
       <mu-style-unit-meas code="em" />;
     </code-line>
-    <code-line level-3>
+    <code-line
+      level-3
+      new
+    >
       <mu-style-tag code="}" />
     </code-line>
 

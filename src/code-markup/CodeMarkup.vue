@@ -123,7 +123,7 @@
     --cm-text-font-size: 1em;
     --cm-text-font-family: inherit;
     --cm-text-line-height: 1.4em;
-    --cm-count-padding: 0 .3em;
+    --cm-count-padding: 0 .35em;
 
     // Максимальный размер блока с кодом
     --cm-max-height-body: auto;
