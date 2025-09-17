@@ -18,7 +18,10 @@
     <code-line level-3>
       <mu-tag code='<div' />
     </code-line>
-    <code-line level-4 active>
+    <code-line
+      level-4
+      active
+    >
       <mu-key-words code='v-for' />
       <mu-attr code='="book ' />
       <mu-key-words code='in' />
@@ -30,20 +33,33 @@
       <mu-key code='id' />
       <mu-attr code='"' />
     </code-line>
-    <code-line level-4 active>
+    <code-line
+      level-4
+      active
+      new
+    >
       <mu-attr code='class=' />
       <mu-text code='"books-list-item"' />
     </code-line>
-    <code-line level-3>
+    <code-line
+      level-3
+      new
+    >
       <mu-tag code='>' />
     </code-line>
-    <code-line level-4>
+    <code-line
+      level-4
+      new
+    >
       <mu-tag code='<h3>{' />
       <mu-tag code='{ ' />
       book.<mu-key code="title " />
       <mu-tag code=' }}</h3>' />
     </code-line>
-    <code-line level-4>
+    <code-line
+      level-4
+      new
+    >
       <mu-tag code="<div " />
       <mu-attr code="class=" />
       <mu-text code='"author"' />
@@ -176,7 +192,10 @@
       <mu-style-class code=".books-list {" />
     </code-line>
 
-    <code-line level-3>
+    <code-line
+      level-3
+      active
+    >
       <mu-style-param code="line-height" />:
       <mu-number code=" 1.2" />;
     </code-line>
@@ -194,7 +213,10 @@
     <code-line level-3>
       <mu-style-tag code="h3 {" />
     </code-line>
-    <code-line level-4>
+    <code-line
+      level-4
+      new
+    >
       <mu-style-param code="font-size" />:
       <mu-number code="1.2" />
       <mu-style-unit-meas code="em" />;

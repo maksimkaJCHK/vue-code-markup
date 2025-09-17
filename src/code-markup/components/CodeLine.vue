@@ -13,6 +13,10 @@
   import { computed } from 'vue';
 
   const props = defineProps({
+    new: {
+      type: Boolean,
+      default: false
+    },
     active: {
       type: Boolean,
       default: false
@@ -49,6 +53,7 @@
 
   const classLine = computed(() => ({
     'code-markup__line_active': props.active,
+    'code-markup__line_new': props.new,
     'code-markup_level-2': props['level2'],
     'code-markup_level-3': props['level3'],
     'code-markup_level-4': props['level4'],
@@ -85,6 +90,8 @@
       position: sticky;
       user-select: none;
       left: 0;
+      border-left: 4px solid var(--cm-count-bg);
+      border-right: 4px solid var(--cm-count-bg);
     }
 
     &_active {
@@ -92,6 +99,14 @@
 
       .code-markup_count &::before {
         background: var(--cm-active-count-bg);
+        border-left-color: var(--cm-active-count-bg);
+        border-right-color: var(--cm-active-count-bg);
+      }
+    }
+
+    &_new {
+      .code-markup_count &::before {
+        border-right-color: #487e02;
       }
     }
 
