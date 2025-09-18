@@ -3,6 +3,8 @@
     <h1>Vue code markup</h1>
 
     <books-list />
+
+    <tab-books-list />
   </main>
 </template>
 
@@ -10,6 +12,7 @@
   // Пока ExampleContent не нужен
   import ExampleContent from '@/components/ExampleContent.vue';
   import BooksList from '@/components/code-examples/BooksList.vue';
+  import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
 </script>
 
 <style lang="scss">
@@ -39,6 +42,10 @@
       &:hover {
         color: #535bf2;
       }
+    }
+
+    .code-markup {
+      margin: 1em 0;
     }
   }
 </style>
