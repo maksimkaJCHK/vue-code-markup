@@ -2,6 +2,7 @@
   <main>
     <h1>Vue code markup</h1>
 
+    <example-content />
     <books-list />
 
     <tab-books-list />

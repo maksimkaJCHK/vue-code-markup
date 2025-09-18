@@ -91,9 +91,12 @@
 </${'scrip'}t>
 
 <style lang="scss" scoped>
+  #books-list {
+    margin: 1em 0 2.5em;
+  }
+
   .books-list {
     line-height: 1.2;
-    margin: 1em 0 2.5em;
 
     h3 {
       font-size: 1.2em;
@@ -101,7 +104,7 @@
     }
 
     &-item {
-      margin: 1.5em 0;
+      margin: 1.5em 0 ;
     }
   }
 </style>`;

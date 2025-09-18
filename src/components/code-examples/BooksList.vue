@@ -370,10 +370,12 @@
 
   .books-list {
     line-height: 1.2;
+
     h3 {
       font-size: 1.2em;
       margin: .4em 0 .3em;
     }
+
     &-item {
       margin: 1.5em 0 ;
     }

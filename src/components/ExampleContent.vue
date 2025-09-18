@@ -49,7 +49,6 @@
 
   .books-list {
     line-height: 1.2;
-    
 
     h3 {
       font-size: 1.2em;
@@ -57,7 +56,7 @@
     }
 
     &-item {
-      margin: 1.5em 0;
+      margin: 1.5em 0 ;
     }
   }
 </style>
