@@ -20,6 +20,7 @@
     <div
       class="code-markup__body"
       :class="bodyClass"
+      :style="maxHeightStyle"
     >
       <div class="code-markup__wrap">
         <code-fake-line>
@@ -65,7 +66,11 @@
     isCount: {
       type: Boolean,
       default: true
-    }
+    },
+    lineCount: {
+      type: [String, Number],
+      default: 'auto'
+    },
   });
 
   const copyCodeProps = () => copyCode(props.code);
@@ -79,6 +84,16 @@
     'code-markup__header': true,
     'code-markup_bold': props.headerBold
   }));
+
+  const maxHeightStyle = computed(() => {
+    const isAuto = props.lineCount === 'auto';
+
+    if (isAuto) return { '--cm-max-height-body': 'auto' };
+
+    return {
+      '--cm-max-height-body': `calc(var(--cm-text-line-height) * ${props.lineCount})`
+    }
+  });
 </script>
 
 <style lang="scss">

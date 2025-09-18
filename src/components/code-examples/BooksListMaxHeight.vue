@@ -1,15 +1,9 @@
 <template>
   <div class="books-list-max-height">
-    <books-list />
+    <books-list :line-count="10" />
   </div>
 </template>
 
 <script setup>
   import BooksList from './BooksList.vue';
 </script>
-
-<style lang="scss" scoped>
-  .books-list-max-height {
-    --cm-max-height-body: 250px;
-  }
-</style>
