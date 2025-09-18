@@ -1,5 +1,8 @@
 <template>
-  <div class="books-list">
+  <div
+    id="books-list"
+    class="books-list"
+  >
     <div
       v-for="book in books"
       :key=" book. id"
@@ -40,9 +43,13 @@
 </script>
 
 <style lang="scss" scoped>
+  #books-list {
+    margin: 1em 0 2.5em;
+  }
+
   .books-list {
     line-height: 1.2;
-    margin: 1em 0 2.5em;
+    
 
     h3 {
       font-size: 1.2em;

@@ -164,6 +164,7 @@
     --cm-comment-color: #{$color-7};
     --cm-attr-color: #{$color-5};
     --cm-style-class: #{$color-1};
+    --cm-style-id: #{$color-1};
     --cm-style-tag: #{$color-1};
     --cm-style-key: #{$color-5};
     --cm-style-param: #{$color-4};

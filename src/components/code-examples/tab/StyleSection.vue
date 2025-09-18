@@ -9,6 +9,23 @@
   </code-line>
 
   <code-line level-2>
+    <mu-style-id code="#books-list {" />
+  </code-line>
+  <code-line level-3>
+    <mu-style-param code="margin" />:
+    <mu-number code=" 1" />
+    <mu-style-unit-meas code="em" />
+    <mu-number code=" 0 " />
+    <mu-number code="2.5" />
+    <mu-style-unit-meas code="em" />;
+  </code-line>
+  <code-line level-2>
+    <mu-style-id code="}" />
+  </code-line>
+
+  <code-line />
+
+  <code-line level-2>
     <mu-style-class code=".books-list {" />
   </code-line>
 
@@ -18,14 +35,6 @@
   >
     <mu-style-param code="line-height" />:
     <mu-number code=" 1.2" />;
-  </code-line>
-  <code-line level-3>
-    <mu-style-param code="margin" />:
-    <mu-number code=" 1" />
-    <mu-style-unit-meas code="em" />
-    <mu-number code=" 0 " />
-    <mu-number code="2.5" />
-    <mu-style-unit-meas code="em" />;
   </code-line>
 
   <code-line />
@@ -98,6 +107,7 @@
   import MuNumber from '@/code-markup/markup/MuNumber.vue';
   // Для блока стилей
   import MuStyleClass from '@/code-markup/markup/style/MuStyleClass.vue';
+  import MuStyleId from '@/code-markup/markup/style/MuStyleId.vue';
   import MuStyleTag from '@/code-markup/markup/style/MuStyleTag.vue';
   import MuStyleKey from '@/code-markup/markup/style/MuStyleKey.vue';
   import MuStyleParam from '@/code-markup/markup/style/MuStyleParam.vue';
