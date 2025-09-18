@@ -3,9 +3,10 @@
     <h1>Vue code markup</h1>
 
     <example-content />
-    <books-list />
 
+    <books-list />
     <tab-books-list />
+    <books-list-max-height />
   </main>
 </template>
 
@@ -14,6 +15,7 @@
   import ExampleContent from '@/components/ExampleContent.vue';
   import BooksList from '@/components/code-examples/BooksList.vue';
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
+  import BooksListMaxHeight from '@/components/code-examples/BooksListMaxHeight.vue';
 </script>
 
 <style lang="scss">
