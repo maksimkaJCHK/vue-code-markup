@@ -113,18 +113,14 @@
 </template>
 
 <script setup>
-  import CodeLine from '@/code-markup/components/CodeLine.vue';
-
-  // Для шаблона
-  import MuTag from '@/code-markup/markup/template/MuTag.vue';
-  import MuAttr from '@/code-markup/markup/template/MuAttr.vue';
-
-  // Общие
-  import MuText from '@/code-markup/markup/MuText.vue';
-
-  // Для секции скриптов
-  import MuKey from '@/code-markup/markup/script/MuKey.vue';
-  import MuKeyWords from '@/code-markup/markup/script/MuKeyWords.vue';
+  import {
+    CodeLine,
+    MuTag,
+    MuAttr,
+    MuText,
+    MuKey,
+    MuKeyWords,
+  } from '@/code-markUp/';
 </script>
 
 <style lang="scss" scoped>

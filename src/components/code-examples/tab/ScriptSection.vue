@@ -77,19 +77,17 @@
 </template>
 
 <script setup>
-  import CodeLine from '@/code-markup/components/CodeLine.vue';
-
-  // Для шаблона
-  import MuTag from '@/code-markup/markup/template/MuTag.vue';
-  import MuAttr from '@/code-markup/markup/template/MuAttr.vue';
-  // Общие
-  import MuText from '@/code-markup/markup/MuText.vue';
-  import MuNumber from '@/code-markup/markup/MuNumber.vue';
-  import MuComment from '@/code-markup/markup/MuComment.vue';
-  // Для секции скриптов
-  import MuKey from '@/code-markup/markup/script/MuKey.vue';
-  import MuKeyWords from '@/code-markup/markup/script/MuKeyWords.vue';
-  import MuVariable from '@/code-markup/markup/script/MuVariable.vue';
+  import {
+    CodeLine,
+    MuTag,
+    MuAttr,
+    MuText,
+    MuNumber,
+    MuComment,
+    MuKey,
+    MuKeyWords,
+    MuVariable,
+  } from '@/code-markUp/';
 </script>
 
 <style lang="scss" scoped>
