@@ -7,6 +7,7 @@
     <books-list />
     <tab-books-list />
     <books-line-count />
+    <books-style-height />
   </main>
 </template>
 
@@ -16,6 +17,7 @@
   import BooksList from '@/components/code-examples/BooksList.vue';
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
   import BooksLineCount from '@/components/code-examples/BooksLineCount.vue';
+  import BooksStyleHeight from '@/components/code-examples/BooksStyleHeight.vue';
 </script>
 
 <style lang="scss">

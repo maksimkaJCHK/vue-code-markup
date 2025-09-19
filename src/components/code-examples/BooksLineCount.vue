@@ -1,5 +1,5 @@
 <template>
-  <div class="books-list-max-height">
+  <div class="books-line-count">
     <p>
       <strong>:line-count="10"</strong>
     </p>
