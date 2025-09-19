@@ -25,7 +25,28 @@ import MuStyleCurlyBrace from '@/code-markup/markup/style/MuStyleCurlyBrace.vue'
 
 export default {
   install(app) {
-    
+    app.component('code-markup', CodeMarkup);
+    app.component('code-line', CodeLine);
+    // Для шаблона
+    app.component('mu-tag', MuTag);
+    app.component('mu-attr', MuAttr);
+    // Общие
+    app.component('mu-text', MuText);
+    app.component('mu-number', MuNumber);
+    app.component('mu-comment', MuComment);
+    // Для секции скриптов
+    app.component('mu-key', MuKey);
+    app.component('mu-key-words', MuKeyWords);
+    app.component('mu-variable', MuVariable);
+    // Стили
+    app.component('mu-style-class', MuStyleClass);
+    app.component('mu-style-id', MuStyleId);
+    app.component('mu-style-tag', MuStyleTag);
+    app.component('mu-style-key', MuStyleKey);
+    app.component('mu-style-param', MuStyleParam);
+    app.component('mu-style-unit-meas', MuStyleUnitMeas);
+    app.component('mu-style-ampersand', MuStyleAmpersand);
+    app.component('mu-style-curly-brace', MuStyleCurlyBrace);
   }
 }
 
