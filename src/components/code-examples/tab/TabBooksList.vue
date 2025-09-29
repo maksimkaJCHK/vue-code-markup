@@ -24,7 +24,7 @@
 <script setup>
   import { ref, computed } from 'vue';
 
-  import CodeMarkup from '@/code-markup/codemarkup.vue';
+  //import CodeMarkup from '@/code-markup/codemarkup.vue';
 
   import TemplateSection from './TemplateSection.vue';
   import ScriptSection from './ScriptSection.vue';
