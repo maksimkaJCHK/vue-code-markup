@@ -2,7 +2,10 @@
   <main>
     <h1>Vue code markup</h1>
 
-    <example-content />
+    <select-lang
+      :lang="lang"
+      @change-lang="cLang"
+    />
 
     <books-list />
     <tab-books-list />
@@ -12,12 +15,17 @@
 </template>
 
 <script setup>
+  import { ref } from 'vue';
   // Пока ExampleContent не нужен
-  import ExampleContent from '@/components/ExampleContent.vue';
+  //import ExampleContent from '@/components/ExampleContent.vue';
+  import SelectLang from '@/components/SelectLang.vue';
   import BooksList from '@/components/code-examples/BooksList.vue';
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
   import BooksLineCount from '@/components/code-examples/BooksLineCount.vue';
   import BooksStyleHeight from '@/components/code-examples/BooksStyleHeight.vue';
+
+  const lang = ref('rus');
+  const cLang = (v) => lang.value = v;
 </script>
 
 <style lang="scss">
