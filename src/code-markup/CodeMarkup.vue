@@ -24,7 +24,10 @@
     >
       <div class="code-markup__wrap">
         <code-fake-line>
-          <code-icon @click="copyCodeProps" />
+          <code-icon-block
+            :is-copy="isCopy"
+            @click="copyCodeProps"
+          />
         </code-fake-line>
 
         <slot></slot>
@@ -36,10 +39,14 @@
 </template>
 
 <script setup>
-  import { computed } from 'vue';
+  import {
+    ref,
+    computed,
+    onBeforeUnmount
+  } from 'vue';
 
   import copyCode from './copyCode';
-  import CodeIcon from './components/CodeIcon.vue';
+  import CodeIconBlock from './components/CodeIconBlock.vue';
   import CodeFakeLine from './components/CodeFakeLine.vue';
 
   const props = defineProps({
@@ -73,7 +80,23 @@
     },
   });
 
-  const copyCodeProps = () => copyCode(props.code);
+  const isCopy = ref(false);
+
+  let timerId;
+  const resetIsCopy = () => timerId = setTimeout(() => isCopy.value = false, 5_000);
+  const clearTimerId = () => { if (timerId) clearTimeout(timerId) };
+
+  const copyCodeProps = () => {
+    if (!isCopy.value) {
+      try {
+        copyCode(props.code);
+        isCopy.value = true;
+        resetIsCopy();
+      } catch (error) {
+        // Пока не придумал как выводить ошибку
+      }
+    }
+  };
 
   const bodyClass = computed(() => ({
     'code-markup_bold': props.textBold,
@@ -94,6 +117,8 @@
       '--cm-max-height-body': `calc(var(--cm-text-line-height) * ${props.lineCount})`
     }
   });
+
+  onBeforeUnmount(clearTimerId);
 </script>
 
 <style lang="scss">

@@ -1,18 +1,20 @@
 const oldCopyText = (code) => {
-  const textArea = document.createElement('textarea');
+  try {
+    const textArea = document.createElement('textarea');
 
-  textArea.value = code;
+    textArea.value = code;
 
-  textArea.setAttribute('readonly', '');
-  textArea.style.position = 'absolute';
-  textArea.style.left = '-10000px';
-  textArea.style.top = '-10000px';
+    textArea.setAttribute('readonly', '');
+    textArea.style.position = 'absolute';
+    textArea.style.left = '-10000px';
+    textArea.style.top = '-10000px';
 
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand('copy');
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
 
-  document.body.removeChild(textArea);
+    document.body.removeChild(textArea);
+  } catch (error) { return error }
 }
 
 const prepareCode = (code) => {
@@ -33,13 +35,13 @@ const copyCode = async (code) => {
 
   const isNewCopy = navigator?.clipboard?.writeText;
 
-  if (!isNewCopy) oldCopyText(codeForCopy);
+  try {
+    if (!isNewCopy) oldCopyText(codeForCopy);
 
-  if (isNewCopy) {
-    try {
+    if (isNewCopy) {
       await navigator.clipboard.writeText(codeForCopy);
-    } catch (error) { return error }
-  }
+    }
+  } catch (error) { return error }
 }
 
 export default copyCode;
