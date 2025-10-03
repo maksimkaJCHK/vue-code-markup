@@ -9,8 +9,8 @@
 </template>
 
 <script setup>
-  import CodeIcon from './CodeIcon.vue';
-  import CodeIconCopy from './CodeIconCopy.vue';
+  import CodeIcon from './icons/CodeIcon.vue';
+  import CodeIconCopy from './icons/CodeIconCopy.vue';
 
   const iconClass = 'code-markup__icon__svg';
   const iconClassIsCopy = [iconClass, `${iconClass}__is-copy`];
