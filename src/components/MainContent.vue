@@ -2,22 +2,23 @@
   <main>
     <h1>Vue code markup</h1>
 
-    <template v-if="lang === 'rus'">
-      <p>
-        Данных плагин создавался для документации кода. Это будет не редактор кода, но что-то на него очень похожее.
-      </p>
-    </template>
-
-    <template v-if="lang === 'eng'">
-      <p>
-        Данных плагин создавался для документации кода. Это будет не редактор кода, но что-то на него очень похожее.
-      </p>
-    </template>
-
     <select-lang
       :lang="lang"
       @change-lang="cLang"
     />
+
+    <template v-if="lang === 'rus'">
+      <p>
+        Данный плагин создавался для документирования кода. Обычно для этого используется "<a href="https://storybook.js.org/" target="_blank">storybook</a>", но это не подходит для тех случаев, когда человек для которого ты этот код документируешь не frontend-разработчик. Он в "storybook" не разберётся. Мне нужно было написать один компонент для "vue.js" и написать документацию для backend-разработчика, чтобы он мог им пользоваться. По сути это была детальная инструкция по использованию, основам "vue.js", со множеством примеров.
+      </p>
+
+    </template>
+
+    <template v-if="lang === 'eng'">
+      <p>
+        This plugin was created to document the code. Usually "<a href=" is used for this.https://storybook.js.org /" target="_blank">storybook</a>", but this is not suitable for cases where the person for whom you are documenting this code is not a frontend developer. He won't understand storybook. I needed to write one component for "vue.js" and write documentation for the backend developer so that he can use it. In fact, it was a detailed instruction on how to use the basics of "vue.js", with many examples.
+      </p>
+    </template>
 
     <books-list />
     <tab-books-list />
@@ -61,7 +62,7 @@
 
     a {
       font-weight: 500;
-      color: #646cff;
+      color: var(--link-color);
       text-decoration: inherit;
 
       &:hover {
