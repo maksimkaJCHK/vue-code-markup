@@ -1,42 +1,55 @@
 <template>
   <div
     class="code-markup__icon"
-    :class="{ 'code-markup__icon_animation': props.isCopy }"
+    :title="title"
   >
-    <code-icon :svg-class="iconClass" />
-    <code-icon-copy :svg-class="iconClassIsCopy" />
+    <code-icon-error
+      v-if="props.isError"
+      :svg-class="iconClassIsError"
+    />
+
+    <template v-else>
+      <code-icon
+        v-if="!props.isCopy"
+        :svg-class="iconClass"
+      />
+
+      <code-icon-copy
+        v-if="props.isCopy"
+        :svg-class="iconClassIsCopy"
+      />
+    </template>
   </div>
 </template>
 
 <script setup>
+  import { computed } from 'vue';
+
   import CodeIcon from './icons/CodeIcon.vue';
   import CodeIconCopy from './icons/CodeIconCopy.vue';
+  import CodeIconError from './icons/CodeIconError.vue';
 
   const iconClass = 'code-markup__icon__svg';
   const iconClassIsCopy = [iconClass, `${iconClass}__is-copy`];
+  const iconClassIsError = [iconClass, `${iconClass}__is-error`];
 
-  const props = defineProps(['isCopy']);
+  const props = defineProps([
+    'isCopy',
+    'isError',
+    'title',
+    'successfulText',
+    'errorText',
+  ]);
+
+  const title = computed(() => {
+    if (props.isError) return props.errorText;
+    if (props.isCopy) return props.successfulText;
+
+    return props.title;
+  });
 </script>
 
 <style lang="scss">
-  @keyframes iconFadeIn {
-    0%, 90% {
-      opacity: 0;
-    }
-    91%, 100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes iconFadeOut {
-    0%, 90% {
-      opacity: 1;
-    }
-    91%, 100% {
-      opacity: 0;
-    }
-  }
-
   .code-markup__icon {
     $translateX: translateX(-8px);
     --icon-animation: 5s 1 normal ease-out 0s;
@@ -56,34 +69,23 @@
       transform: $translateX translateY(6px);
     }
 
-    &_animation {
-      .code-markup__icon {
-        &__svg {
-          animation: iconFadeIn var(--icon-animation);
-        }
-
-        &__svg__is-copy {
-          animation: iconFadeOut var(--icon-animation);
-        }
-      }
-    }
-
     &__svg {
       width: 100%;
 
       path {
         fill: var(--cm-icon-color);
       }
+    }
 
-      &__is-copy {
-        top: 0;
-        left: 0;
-        position: absolute;
-        opacity: 0;
+    &__svg__is-copy {
+      path {
+        fill: var(--cm-new-border);
+      }
+    }
 
-        path {
-          fill: var(--cm-new-border);
-        }
+    &__svg__is-error {
+      path {
+        fill: var(--cm-error-color);
       }
     }
   }

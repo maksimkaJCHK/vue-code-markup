@@ -26,7 +26,11 @@
         <code-fake-line>
           <code-icon-block
             :is-copy="isCopy"
-            @click="copyCodeProps"
+            :is-error="isError"
+            :title="props.title"
+            :successful-text="props.successfulText"
+            :error-text="props.errorText"
+            @click="copyCode"
           />
         </code-fake-line>
 
@@ -75,9 +79,25 @@
       type: [String, Number],
       default: 'auto'
     },
+    title: {
+      type: String,
+      default: 'Copy text to clipboard'
+    },
+    successfulText: {
+      type: String,
+      default: 'The text is copied to the clipboard'
+    },
+    errorText: {
+      type: String,
+      default: 'An error occurred while copying the code to the clipboard'
+    },
   });
 
-  const { isCopy, copyCodeProps } = useCopy(props.code);
+  const {
+    isCopy,
+    isError,
+    copyCode
+  } = useCopy(props.code);
 
   const bodyClass = computed(() => ({
     'code-markup_bold': props.textBold,
@@ -173,6 +193,9 @@
 
     // Цвет для тегов
     --cm-tag-color: #{$color-1};
+
+    // Цвет для тегов
+    --cm-error-color: #980505;
 
     // Цвета для элементов внутри script
     --cm-text-color: #{$color-2};

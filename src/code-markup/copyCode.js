@@ -37,11 +37,8 @@ const copyCode = async (code) => {
 
   try {
     if (!isNewCopy) oldCopyText(codeForCopy);
-
-    if (isNewCopy) {
-      await navigator.clipboard.writeText(codeForCopy);
-    }
-  } catch (error) { return error }
+    if (isNewCopy) await navigator.clipboard.writeText(codeForCopy);
+  } catch (error) { throw error }
 }
 
 export default copyCode;

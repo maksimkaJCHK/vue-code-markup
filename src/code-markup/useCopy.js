@@ -4,19 +4,24 @@ import copyCode from './copyCode.js';
 
 const useCopy = (code) => {
   const isCopy = ref(false);
+  const isError = ref(false);
 
   let timerId;
   const resetIsCopy = () => timerId = setTimeout(() => isCopy.value = false, 5_000);
+  const resetIsError = () => timerId = setTimeout(() => isError.value = false, 5_000);
+
   const clearTimerId = () => { if (timerId) clearTimeout(timerId) };
 
-  const copyCodeProps = () => {
+  const copyCodeProps = async () => {
     if (!isCopy.value) {
       try {
-        copyCode(code);
+        await copyCode(code);
+
         isCopy.value = true;
         resetIsCopy();
       } catch (error) {
-        // Пока не придумал как выводить ошибку
+        isError.value = true;
+        resetIsError();
       }
     }
   };
@@ -25,7 +30,8 @@ const useCopy = (code) => {
 
   return {
     isCopy,
-    copyCodeProps
+    isError,
+    copyCode: copyCodeProps
   }
 }
 
