@@ -3,21 +3,33 @@
     class="code-markup__icon"
     :title="title"
   >
-    <code-icon-error
+    <div 
       v-if="props.isError"
-      :svg-class="iconClassIsError"
-    />
+      :class="iconClassIsError"
+    >
+      <slot name="error">
+        <code-icon-error />
+      </slot>
+    </div>
 
     <template v-else>
-      <code-icon
+      <div
         v-if="!props.isCopy"
-        :svg-class="iconClass"
-      />
+        :class="iconClass"
+      >
+        <slot name="copy">
+          <code-icon />
+        </slot>
+      </div>
 
-      <code-icon-copy
+      <div
         v-if="props.isCopy"
-        :svg-class="iconClassIsCopy"
-      />
+        :class="iconClassIsCopy"
+      >
+        <slot name="success">
+          <code-icon-success />
+        </slot>
+      </div>
     </template>
   </div>
 </template>
@@ -26,7 +38,7 @@
   import { computed } from 'vue';
 
   import CodeIcon from './icons/CodeIcon.vue';
-  import CodeIconCopy from './icons/CodeIconCopy.vue';
+  import CodeIconSuccess from './icons/CodeIconSuccess.vue';
   import CodeIconError from './icons/CodeIconError.vue';
 
   const iconClass = 'code-markup__icon__svg';
@@ -70,7 +82,11 @@
     }
 
     &__svg {
-      width: 100%;
+      &,
+      svg,
+      img {
+        width: 100%;
+      }
 
       path {
         fill: var(--cm-icon-color);

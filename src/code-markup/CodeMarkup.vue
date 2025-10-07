@@ -31,7 +31,28 @@
             :successful-text="props.successfulText"
             :error-text="props.errorText"
             @click="copyCode"
-          />
+          >
+            <template 
+              v-if="slots.error"
+              #error
+            >
+              <render-error />
+            </template>
+
+            <template 
+              v-if="slots.copy"
+              #copy
+            >
+              <render-copy />
+            </template>
+
+            <template 
+              v-if="slots.success"
+              #success
+            >
+              <render-success />
+            </template>
+          </code-icon-block>
         </code-fake-line>
 
         <slot></slot>
@@ -43,12 +64,18 @@
 </template>
 
 <script setup>
-  import { computed } from 'vue';
+  import { computed, useSlots, h } from 'vue';
 
   import CodeIconBlock from './components/CodeIconBlock.vue';
   import CodeFakeLine from './components/CodeFakeLine.vue';
 
   import useCopy from './useCopy';
+
+  const slots = useSlots();
+
+  const renderError = () => h('div', slots.error());
+  const renderCopy = () => h('div', slots.copy());
+  const renderSuccess = () => h('div', slots.success());
 
   const props = defineProps({
     header: {
