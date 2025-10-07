@@ -27,6 +27,8 @@
 
 <style lang="scss" scoped>
   .select-lang {
+    user-select: none;
+
     span {
       cursor: pointer;
       color: var(--link-color);
