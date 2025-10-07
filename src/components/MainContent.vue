@@ -1,11 +1,11 @@
 <template>
   <main>
-    <h1>Vue code markup</h1>
-
     <select-lang
       :lang="lang"
       @change-lang="cLang"
     />
+
+    <h1>Vue code markup</h1>
 
     <template v-if="lang === 'rus'">
       <p>
@@ -42,10 +42,22 @@
 
 <style lang="scss">
   main {
+    @media screen and (max-width: 700px) {
+      font-size: .9em;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: .8em;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: .75em;
+    }
+
     h1 {
       font-size: 1.5em;
       line-height: 1.2;
-      margin: 0 0 1em;
+      margin: .5em 0 1em;
     }
 
     h2 {

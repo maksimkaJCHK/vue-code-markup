@@ -4,15 +4,21 @@
       <span
         :class="isActiveTemplate"
         @click="cNameComponent('template')"
-      >Template</span>
+      >
+        Template
+      </span>
       | <span
           :class="isActiveScripts"
           @click="cNameComponent('script')"
-      >Script</span>
+      >
+        Script
+      </span>
       | <span
           :class="isActiveStyle"
           @click="cNameComponent('style')"
-        >Styles</span>
+        >
+          Styles
+        </span>
     </template>
 
     <template #default>
@@ -113,10 +119,10 @@
 <style lang="scss" scoped>
   .tab {
     cursor: pointer;
+    user-select: none;
   }
 
   .isActive {
     color: var(--cm-key-words-color);
-    font-weight: bold;
   }
 </style>
