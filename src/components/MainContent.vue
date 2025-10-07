@@ -9,13 +9,21 @@
 
     <template v-if="lang === 'rus'">
       <p>
-        Данный плагин создавался для документирования кода. Обычно для этого используется "<a href="https://storybook.js.org/" target="_blank">storybook</a>", но это не подходит для тех случаев, когда человек для которого ты этот код документируешь не frontend-разработчик. Он в "storybook" не разберётся. Мне нужно было написать один компонент для "vue.js" и написать документацию для backend-разработчика, чтобы он мог им пользоваться. По сути это была детальная инструкция по использованию, основам "vue.js", со множеством примеров.
+        Данный плагин создавался для документирования кода. Обычно для этого используется "<a href="https://storybook.js.org/" target="_blank">storybook</a>", но это не подходит для тех случаев, когда человек для которого этот код документируется не является frontend-разработчиком. Он в "storybook" не разберётся. Мне нужно было написать один компонент для "vue.js" и описать как он работает для backend-разработчика, чтобы он мог им пользоваться. По сути это была детальная инструкция по использованию, основам "vue.js", со множеством примеров.
+      </p>
+
+      <p>
+        Давайте для начала я покажу, что можно делать при помощи моего плагина.
       </p>
     </template>
 
     <template v-else>
       <p>
-        This plugin was created to document the code. Usually "<a href=" is used for this.https://storybook.js.org /" target="_blank">storybook</a>", but this is not suitable for cases where the person for whom you are documenting this code is not a frontend developer. He won't understand storybook. I needed to write one component for "vue.js" and write documentation for the backend developer so that he can use it. In fact, it was a detailed instruction on how to use the basics of "vue.js", with many examples.
+        This plugin was created to document the code. Usually "<a href=" is used for this.https://storybook.js.org /" target="_blank">storybook</a>", but this is not suitable for cases where the person for whom this code is being documented is not a frontend developer. He won't understand storybook. I needed to write one component for "vue.js" and describe how it works for the backend developer so that he can use it. In fact, it was a detailed instruction on how to use the basics of "vue.js", with many examples.
+      </p>
+
+      <p>
+        First, let me show you what you can do with my plugin.
       </p>
     </template>
 
@@ -57,7 +65,7 @@
     h1 {
       font-size: 1.5em;
       line-height: 1.2;
-      margin: .5em 0 1em;
+      margin: .5em 0 .7em;
     }
 
     h2 {
@@ -68,7 +76,7 @@
 
     p {
       line-height: 1.4;
-      margin: 1em 0;
+      margin: .8em 0;
     }
 
     a {
