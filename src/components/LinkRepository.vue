@@ -18,7 +18,7 @@
   .repository {
     color: #000;
     display: inline-block;
-    text-decoration: underline;
+    text-decoration: none;
     background: url('@/assets/github-mark.png') no-repeat 0 50%;
     background-size: 18px auto;
     line-height: 160%;
@@ -26,7 +26,6 @@
 
     &:hover {
       color: #000;
-      text-decoration: none;
     }
 
     header & {
