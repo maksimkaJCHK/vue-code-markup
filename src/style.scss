@@ -20,14 +20,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
 
-body {
   @media screen and (min-width: 980px) {
     background:
-    linear-gradient(#eaeaea, transparent 1px),
-    linear-gradient(90deg, #eaeaea, transparent 1px);
+      linear-gradient(#eaeaea, transparent 1px),
+      linear-gradient(90deg, #eaeaea, transparent 1px);
     background-size: 10px 10px;
-    background-position: center center;
+    background-position: center top;
   }
 }
