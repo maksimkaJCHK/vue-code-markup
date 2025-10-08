@@ -51,9 +51,7 @@
         <mu-attr code=' books"' />
       </code-line>
       <code-line level-4>
-        <mu-attr code=':key="' />
-        book.
-        <mu-key code='id' />
+        <mu-attr code=':key="' />book.<mu-key code='id' />
         <mu-attr code='"' />
       </code-line>
       <code-line
@@ -336,7 +334,7 @@
   >
     <div
       v-for="book in books"
-      :key=" book. id"
+      :key="book.id"
       class="books-list-item"
     >
       <h3>{{ book.title }}</h3>
