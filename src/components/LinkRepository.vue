@@ -16,7 +16,6 @@
 
 <style lang="scss">
   .repository {
-    color: #000;
     display: inline-block;
     text-decoration: none;
     background: url('@/assets/github-mark.png') no-repeat 0 50%;
@@ -24,6 +23,7 @@
     line-height: 160%;
     padding-left: 25px;
 
+    &,
     &:hover {
       color: #000;
     }
