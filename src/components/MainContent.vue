@@ -15,6 +15,8 @@
       <p>
         Давайте для начала я покажу, что можно делать при помощи моего плагина.
       </p>
+
+      <books-list lang="ru" />
     </template>
 
     <template v-else>
@@ -25,12 +27,13 @@
       <p>
         First, let me show you what you can do with my plugin.
       </p>
+
+      <books-list />
     </template>
 
-    <books-list lang="ru" />
-    <tab-books-list lang="ru" />
+    <!-- <tab-books-list lang="ru" />
     <books-line-count lang="ru" />
-    <books-style-height lang="ru" />
+    <books-style-height lang="ru" /> -->
   </main>
 </template>
 

@@ -319,7 +319,7 @@
       type: String,
       default: 'en',
       validator(value) {
-        return ['ru', 'en'].includes(value)
+        return ['ru', 'en'].includes(value);
       }
     }
   });

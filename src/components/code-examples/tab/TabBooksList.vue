@@ -25,7 +25,7 @@
     </template>
 
     <template #default>
-      <component :is="rComponent" :lang="props.lang" />
+      <component :is="rComponent" />
     </template>
   </code-markup>
 </template>
