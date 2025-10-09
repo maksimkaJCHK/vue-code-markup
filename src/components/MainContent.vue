@@ -80,12 +80,11 @@
     }
 
     a {
-      font-weight: 500;
       color: var(--link-color);
       text-decoration: inherit;
 
       &:hover {
-        color: #535bf2;
+        color: var(--link-hover-color);
       }
     }
 

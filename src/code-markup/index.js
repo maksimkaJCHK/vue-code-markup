@@ -9,6 +9,7 @@ import MuAttr from '@/code-markup/markup/template/MuAttr.vue';
 import MuText from '@/code-markup/markup/MuText.vue';
 import MuNumber from '@/code-markup/markup/MuNumber.vue';
 import MuComment from '@/code-markup/markup/MuComment.vue';
+import MuType from '@/code-markup/markup/MuType.vue';
 // Для секции скриптов
 import MuKey from '@/code-markup/markup/script/MuKey.vue';
 import MuKeyWords from '@/code-markup/markup/script/MuKeyWords.vue';
@@ -34,6 +35,7 @@ export default {
     app.component('mu-text', MuText);
     app.component('mu-number', MuNumber);
     app.component('mu-comment', MuComment);
+    app.component('mu-type', MuType);
     // Для секции скриптов
     app.component('mu-key', MuKey);
     app.component('mu-key-words', MuKeyWords);

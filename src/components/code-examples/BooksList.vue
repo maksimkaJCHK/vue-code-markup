@@ -51,7 +51,9 @@
         <mu-attr code=' books"' />
       </code-line>
       <code-line level-4>
-        <mu-attr code=':key="' />book.<mu-key code='id' />
+        <mu-attr code=':key="' />
+        <mu-type code="book." />
+        <mu-key code='id' />
         <mu-attr code='"' />
       </code-line>
       <code-line
@@ -74,7 +76,8 @@
       >
         <mu-tag code='<h3>{' />
         <mu-tag code='{ ' />
-        book.<mu-key code="title " />
+        <mu-type code='book.' />
+        <mu-key code="title " />
         <mu-tag code=' }}</h3>' />
       </code-line>
       <code-line
@@ -92,7 +95,8 @@
       >
         <mu-tag code="{" />
         <mu-tag code="{ " />
-        book.<mu-key code="author " />
+        <mu-type code='book.' />
+        <mu-key code="author " />
         <mu-tag code="}}" />
       </code-line>
       <code-line
@@ -110,7 +114,8 @@
       <code-line level-5>
         <mu-tag code="{" />
         <mu-tag code="{ " />
-        book.<mu-key code="pages " />
+        <mu-type code='book.' />
+        <mu-key code="pages " />
         <mu-tag code="}}" />
       </code-line>
       <code-line level-4>
@@ -138,7 +143,7 @@
 
       <code-line level2>
         <mu-key-words code="import" />
-        { ref }
+        <mu-type code=' { ref } ' />
         <mu-key-words code="from " />
         <mu-text code="'vue'" />;
       </code-line>

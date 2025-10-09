@@ -1,17 +1,16 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #000;
   line-height: 1.5;
   font-weight: 400;
-
-  color: #000;
-  background-color: #f9f9f9;
-
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   --link-color: #5686a7;
+  --link-hover-color: #476e88;
 }
 
 html,
@@ -21,10 +20,11 @@ body {
   margin: 0;
   padding: 0;
 
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 1000px) {
     background:
-      linear-gradient(#eaeaea, transparent 1px),
-      linear-gradient(90deg, #eaeaea, transparent 1px);
+      linear-gradient(#e1e1e1, transparent 1px),
+      linear-gradient(90deg, #e1e1e1, transparent 1px),
+      #f9f9f9;
     background-size: 10px 10px;
     background-position: center top;
   }
