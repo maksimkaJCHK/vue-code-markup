@@ -1,5 +1,8 @@
 <template>
-  <code-markup :code="code">
+  <code-markup
+    :code="code"
+    v-bind="codeParam"
+  >
     <template #header>
       <span
         :class="isActiveTemplate"
@@ -22,20 +25,31 @@
     </template>
 
     <template #default>
-      <component :is="rComponent" />
+      <component :is="rComponent" :lang="props.lang" />
     </template>
   </code-markup>
 </template>
 
 <script setup>
   import { ref, computed } from 'vue';
-
+  import useLang from '../useLang';
   //import CodeMarkup from '@/code-markup/codemarkup.vue';
 
   import TemplateSection from './TemplateSection.vue';
   import ScriptSection from './ScriptSection.vue';
   import StyleSection from './StyleSection.vue';
 
+  const props = defineProps({
+    lang: {
+      type: String,
+      default: 'en',
+      validator(value) {
+        return ['ru', 'en'].includes(value)
+      }
+    }
+  });
+
+  const { codeParam } = useLang(props);
   const nameComponent = ref('template');
 
   const cNameComponent = (name) => nameComponent.value = name;

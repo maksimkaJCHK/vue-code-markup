@@ -2,6 +2,7 @@
   <code-markup
     header="BooksList.vue"
     :code="code"
+    v-bind="codeParam"
   >
     <!-- <template #error>
       error
@@ -311,26 +312,19 @@
 </template>
 
 <script setup>
-  // import {
-  //   CodeMarkup,
-  //   CodeLine,
-  //   MuTag,
-  //   MuAttr,
-  //   MuText,
-  //   MuNumber,
-  //   MuComment,
-  //   MuKey,
-  //   MuKeyWords,
-  //   MuVariable,
-  //   MuStyleClass,
-  //   MuStyleId,
-  //   MuStyleTag,
-  //   MuStyleKey,
-  //   MuStyleParam,
-  //   MuStyleUnitMeas,
-  //   MuStyleAmpersand,
-  //   MuStyleCurlyBrace,
-  // } from '@/code-markUp/';
+  import useLang from './useLang';
+
+  const props = defineProps({
+    lang: {
+      type: String,
+      default: 'en',
+      validator(value) {
+        return ['ru', 'en'].includes(value)
+      }
+    }
+  });
+
+  const { codeParam } = useLang(props);
 
   const code = `<template>
   <div

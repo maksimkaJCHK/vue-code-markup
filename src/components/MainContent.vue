@@ -27,10 +27,10 @@
       </p>
     </template>
 
-    <books-list />
-    <tab-books-list />
-    <books-line-count />
-    <books-style-height />
+    <books-list lang="ru" />
+    <tab-books-list lang="ru" />
+    <books-line-count lang="ru" />
+    <books-style-height lang="ru" />
   </main>
 </template>
 

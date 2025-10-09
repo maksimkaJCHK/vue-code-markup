@@ -108,11 +108,11 @@
     },
     title: {
       type: String,
-      default: 'Copy text to clipboard'
+      default: 'Copy code to clipboard'
     },
     successfulText: {
       type: String,
-      default: 'The text is copied to the clipboard'
+      default: 'The code is copied to the clipboard'
     },
     errorText: {
       type: String,
