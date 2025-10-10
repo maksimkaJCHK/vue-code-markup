@@ -1,6 +1,7 @@
 <template>
   <div
     class="code-markup__icon"
+    :class="{ 'code-markup__icon_no-active': noActive }"
     :title="title"
   >
     <div 
@@ -59,6 +60,8 @@
 
     return props.title;
   });
+
+  const noActive = computed(() => props.isError || props.isCopy);
 </script>
 
 <style lang="scss">
@@ -81,11 +84,18 @@
       transform: $translateX translateY(6px);
     }
 
+    &_no-active {
+      &:active {
+        transform: $translateX translateY(5px);
+      }
+    }
+
     &__svg {
       &,
       svg,
       img {
         width: 100%;
+        height: auto;
       }
 
       path {

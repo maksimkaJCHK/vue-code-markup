@@ -27,8 +27,14 @@
       </p>
 
       <h2>
-        Установка, настройка.
+        Установка, настройка
       </h2>
+
+      <p>
+        Для установки моего плагина необходимо иметь установленный node.js и npm последней версии.
+      </p>
+
+      <instal-code lang="ru" />
     </template>
 
     <template v-else>
@@ -67,6 +73,7 @@
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
   // Пример с табами
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
+  import InstalCode from '@/components/code-examples/doc/InstalCode.vue';
 
   const lang = ref('rus');
   const cLang = (v) => lang.value = v;
@@ -95,12 +102,12 @@
     h2 {
       font-size: 1.3em;
       line-height: 1.2;
-      margin: 1em 0;
+      margin: 1em 0 .5em;
     }
 
     p {
       line-height: 1.4;
-      margin: .8em 0;
+      margin: .5em 0 1em;
     }
 
     a {
