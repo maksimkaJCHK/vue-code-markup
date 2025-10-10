@@ -2,6 +2,7 @@
   <code-markup
     :code="code"
     :is-header="false"
+    :is-count="false"
     v-bind="codeParam"
   >
     <code-line>

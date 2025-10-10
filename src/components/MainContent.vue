@@ -31,7 +31,7 @@
       </h2>
 
       <p>
-        Для установки моего плагина необходимо иметь установленный node.js и npm последней версии.
+        Для установки моего плагина необходимо иметь установленный node.js и npm последней версии. В терминале нужно ввести следующую команду:
       </p>
 
       <instal-code lang="ru" />
@@ -55,6 +55,16 @@
       <p>
         The main focus will be on styling vue.js components. Of course, using my plugin, it will be possible to style html templates, style files, and js code. But still, I will focus on styling vue.js components.
       </p>
+
+      <h2>
+        Installation, configuration
+      </h2>
+
+      <p>
+        To install my plugin, you need to have node installed.js and npm are the latest versions. Enter the following command in the terminal:
+      </p>
+
+      <instal-code />
     </template>
 
     <!-- <tab-books-list lang="ru" />
