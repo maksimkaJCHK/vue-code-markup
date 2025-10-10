@@ -13,10 +13,22 @@
       </p>
 
       <p>
-        Давайте для начала я покажу, что можно делать при помощи моего плагина.
+        Давайте я для начала покажу, что можно делать при помощи моего плагина:
       </p>
 
       <books-list lang="ru" />
+
+      <p>
+        В качестве редактора я использую "Visual Studio Code", мне очень нравится тема "darcula", её я и взял в качестве основной для моего плагина. В будующем я планирую сделать другие темы: "monokai", "gitHub theme" и др. Если у вас стоит задача по документированию кода, то я думаю, что мой плагин вам подойдёт. Есть и другие плагины позволяющие вывести код, но там по сути 2-3 цвета, и они не яркие. С моим плагином, ваша документация станет ярче.
+      </p>
+
+      <p>
+        Основной упор будет делаться на стилизации vue.js компонентов. Конечно при помощи моего плагина можно будет стилизовать и html-шаблоны, файлы стилей, js код. Но всё таки упор я буду делать на стилизацию vue.js компонентов.
+      </p>
+
+      <h2>
+        Установка, настройка.
+      </h2>
     </template>
 
     <template v-else>
@@ -25,10 +37,18 @@
       </p>
 
       <p>
-        First, let me show you what you can do with my plugin.
+        Let me first show you what you can do with my plugin:
       </p>
 
       <books-list />
+
+      <p>
+        I use Visual Studio Code as an editor, I really like the darcula theme, and I took it as the main one for my plugin. In the future, I plan to make other themes: "monokai", "GitHub theme", etc. If you have the task of documenting the code, then I think my plugin will suit you. There are other plugins that allow you to output the code, but there are essentially 2-3 colors, and they are not bright. With my plugin, your documentation will become brighter.
+      </p>
+
+      <p>
+        The main focus will be on styling vue.js components. Of course, using my plugin, it will be possible to style html templates, style files, and js code. But still, I will focus on styling vue.js components.
+      </p>
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -42,10 +62,11 @@
   // Пока ExampleContent не нужен
   //import ExampleContent from '@/components/ExampleContent.vue';
   import SelectLang from '@/components/SelectLang.vue';
-  import BooksList from '@/components/code-examples/BooksList.vue';
+  import BooksList from '@/components/code-examples/books/BooksList.vue';
+  import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
+  import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
+  // Пример с табами
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
-  import BooksLineCount from '@/components/code-examples/BooksLineCount.vue';
-  import BooksStyleHeight from '@/components/code-examples/BooksStyleHeight.vue';
 
   const lang = ref('rus');
   const cLang = (v) => lang.value = v;
@@ -84,10 +105,11 @@
 
     a {
       color: var(--link-color);
-      text-decoration: inherit;
+      text-decoration: underline;
 
       &:hover {
         color: var(--link-hover-color);
+        text-decoration: none;
       }
     }
 

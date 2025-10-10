@@ -312,7 +312,7 @@
 </template>
 
 <script setup>
-  import useLang from './useLang';
+  import useLang from '../useLang';
 
   const props = defineProps({
     lang: {
