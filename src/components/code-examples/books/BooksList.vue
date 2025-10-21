@@ -2,6 +2,7 @@
   <code-markup
     header="BooksList.vue"
     :code="code"
+    :lineCount="props.lineCount"
     v-bind="codeParam"
   >
     <!-- <template #error>
@@ -321,6 +322,9 @@
       validator(value) {
         return ['ru', 'en'].includes(value);
       }
+    },
+    lineCount: {
+      default: 'auto'
     }
   });
 

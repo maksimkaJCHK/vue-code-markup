@@ -9,21 +9,24 @@
 
     <template v-if="lang === 'rus'">
       <p>
-        Данный плагин создавался для документирования кода. Обычно для этого используется "<a href="https://storybook.js.org/" target="_blank">storybook</a>", но это не подходит для тех случаев, когда человек для которого этот код документируется не является frontend-разработчиком. Он в "storybook" не разберётся. Мне нужно было написать один компонент для "vue.js" и описать как он работает для backend-разработчика, чтобы он мог им пользоваться. По сути это была детальная инструкция по использованию, основам "vue.js", со множеством примеров.
+        Данный плагин создавался для документирования кода. Обычно для этого используется "<a href="https://storybook.js.org/" target="_blank">storybook</a>", но это не подходит для тех случаев, когда человек для которого этот код документируется не является frontend-разработчиком. Он в "storybook" не разберётся. Мне нужно было написать один компонент для "vue.js" и описать как он работает для backend разработчика, чтобы он мог им пользоваться. По сути это была детальная инструкция по использованию, основам "vue.js", со множеством примеров.
       </p>
 
       <p>
-        Давайте я для начала покажу, что можно делать при помощи моего плагина:
+        Давайте для начала я покажу, что можно делать при помощи моего плагина:
       </p>
 
-      <books-list lang="ru" />
+      <books-list
+        lang="ru"
+        line-count="15"
+      />
 
       <p>
         В качестве редактора я использую "Visual Studio Code", мне очень нравится тема "darcula", её я и взял в качестве основной для моего плагина. В будующем я планирую сделать другие темы: "monokai", "gitHub theme" и др. Если у вас стоит задача по документированию кода, то я думаю, что мой плагин вам подойдёт. Есть и другие плагины позволяющие вывести код, но там по сути 2-3 цвета, и они не яркие. С моим плагином, ваша документация станет ярче.
       </p>
 
       <p>
-        Основной упор будет делаться на стилизации vue.js компонентов. Конечно при помощи моего плагина можно будет стилизовать и html-шаблоны, файлы стилей, js код. Но всё таки упор я буду делать на стилизацию vue.js компонентов.
+        Основной упор будет делаться на написание документации для vue.js компонентов.
       </p>
 
       <h2>
@@ -42,18 +45,10 @@
         This plugin was created to document the code. Usually "<a href=" is used for this.https://storybook.js.org /" target="_blank">storybook</a>", but this is not suitable for cases where the person for whom this code is being documented is not a frontend developer. He won't understand storybook. I needed to write one component for "vue.js" and describe how it works for the backend developer so that he can use it. In fact, it was a detailed instruction on how to use the basics of "vue.js", with many examples.
       </p>
 
-      <p>
-        Let me first show you what you can do with my plugin:
-      </p>
-
-      <books-list />
+      <books-list line-count="15" />
 
       <p>
         I use Visual Studio Code as an editor, I really like the darcula theme, and I took it as the main one for my plugin. In the future, I plan to make other themes: "monokai", "GitHub theme", etc. If you have the task of documenting the code, then I think my plugin will suit you. There are other plugins that allow you to output the code, but there are essentially 2-3 colors, and they are not bright. With my plugin, your documentation will become brighter.
-      </p>
-
-      <p>
-        The main focus will be on styling vue.js components. Of course, using my plugin, it will be possible to style html templates, style files, and js code. But still, I will focus on styling vue.js components.
       </p>
 
       <h2>
@@ -83,6 +78,7 @@
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
   // Пример с табами
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
+  // Для документации
   import InstalCode from '@/components/code-examples/doc/InstalCode.vue';
 
   const lang = ref('rus');

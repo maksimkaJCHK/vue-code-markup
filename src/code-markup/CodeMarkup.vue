@@ -138,8 +138,9 @@
 
   const maxHeightStyle = computed(() => {
     const isAuto = props.lineCount === 'auto';
+    const isNotVal = props.lineCount === null || props.lineCount === undefined;
 
-    if (isAuto) return {};
+    if (isAuto || isNotVal) return {};
 
     return {
       '--cm-max-height-body': `calc(var(--cm-text-line-height) * ${props.lineCount})`
