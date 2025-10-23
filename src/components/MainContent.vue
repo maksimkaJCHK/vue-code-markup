@@ -38,6 +38,12 @@
       </p>
 
       <instal-code lang="ru" />
+
+      <p>
+        После установки, если никаких ошибок не возникнет, нужно подключить мой плагин следующим способом:
+      </p>
+
+      <enable-plagin lang="ru" />
     </template>
 
     <template v-else>
@@ -80,6 +86,7 @@
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
   // Для документации
   import InstalCode from '@/components/code-examples/doc/InstalCode.vue';
+  import EnablePlagin from '@/components/code-examples/doc/EnablePlagin.vue';
 
   const lang = ref('rus');
   const cLang = (v) => lang.value = v;

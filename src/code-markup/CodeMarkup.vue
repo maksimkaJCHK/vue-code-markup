@@ -241,6 +241,7 @@
     --cm-style-unit-mes: #{$color-8};
     --cm-style-ampersand: #{$color-1};
     --cm-style-curly-brace: #{$color-1};
+    --cm-function-color: #{$color-1};
 
     // Цвет выделения
     --cm-selection-bg: #{$color-2};
