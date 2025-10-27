@@ -18,7 +18,7 @@
       <enable-plagin lang="ru" />
 
       <p>
-        Возможно подключить только CSS и отельные компоненты, как это сделать я опише ниже.
+        Возможно подключить только CSS и отдельные компоненты, как это сделать я опише ниже.
       </p>
     </template>
 
@@ -40,7 +40,7 @@
       <enable-plagin />
 
       <p>
-        It is possible to connect only CSS and individual components. I will describe how to do this below.
+        It is possible to connect only CSS and individual components, as I described below.
       </p>
     </template>
   </div>

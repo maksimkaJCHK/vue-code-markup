@@ -10,12 +10,13 @@
     <template v-if="lang === 'rus'">
       <intro-doc is-rus />
       <install-doc is-rus />
-      <settings-doc is-rus/>
+      <settings-doc is-rus />
     </template>
 
     <template v-else>
       <intro-doc />
       <install-doc />
+      <settings-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
