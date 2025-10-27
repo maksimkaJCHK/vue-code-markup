@@ -26,10 +26,11 @@ export default defineConfig({
     rollupOptions: {
       output: {
         entryFileNames: 'js/main.js',
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return 'css/styles[extname]';
-          }
+        assetFileNames: (info) => {
+          const name = info?.name;
+          const isCSS = name && name?.endsWith('.css');
+
+          if (isCSS) return 'css/styles[extname]';
 
           return 'images/[name][extname]';
         },
