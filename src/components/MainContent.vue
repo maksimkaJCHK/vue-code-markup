@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, onBeforeMount } from 'vue';
   // Пока ExampleContent не нужен
   //import ExampleContent from '@/components/ExampleContent.vue';
   import SelectLang from '@/components/SelectLang.vue';
@@ -40,7 +40,16 @@
   import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
 
   const lang = ref('rus');
-  const cLang = (v) => lang.value = v;
+
+  const cLang = (v) => {
+    lang.value = v;
+
+    window.location.hash = (v === 'rus') ? v : '';
+  }
+
+  const identLang = () => lang.value = (window.location.hash === '#rus') ? 'rus' : 'eng';
+
+  onBeforeMount(identLang);
 </script>
 
 <style lang="scss">
