@@ -164,7 +164,7 @@
   const header = ref('BooksList.vue');
   const isHeader = ref(true);
   const isCount = ref(true);
-  const lineCount = ref(50);
+  const lineCount = ref(55);
   const textBold = ref(false);
   const headerBold = ref(false);
   const title = ref('Copy code to clipboard');

@@ -1,3 +1,25 @@
+@mixin styleScroll($scrollBarBg: #000, $thumbBg: #FFA500, $scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
+  scrollbar-width: $scrollBarType;
+  scrollbar-color: $thumbBg $scrollBarBg;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: $scrollBarWidth;
+    background: $scrollBarBg;
+    border-radius: $scrollBarBR;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollBarBg;
+    border-radius: $scrollBarBR;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumbBg;
+    border-radius: $scrollBarBR;
+  }
+}
+
 :root {
   color: #000;
   line-height: 1.5;
@@ -15,6 +37,9 @@
 
 html,
 body {
+  $bgColor: #f9f9f9;
+  @include styleScroll($scrollBarBg: $bgColor, $thumbBg: #6897bb);
+
   width: 100%;
   height: 100%;
   margin: 0;
@@ -24,7 +49,7 @@ body {
     background:
       linear-gradient(#e1e1e1, transparent 1px),
       linear-gradient(90deg, #e1e1e1, transparent 1px),
-      #f9f9f9;
+      $bgColor;
     background-size: 10px 10px;
     background-position: center top;
   }
