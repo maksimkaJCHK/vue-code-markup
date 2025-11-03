@@ -49,9 +49,12 @@
       box-shadow: 0 0 15px #aaa;
       border-radius: 5px;
       line-height: 120%;
+      min-width: 2em;
+      position: relative;
 
       &::before,
       &::after {
+        top: 50%;
         content: ' ';
         display: block;
         position: absolute;
@@ -59,18 +62,18 @@
       }
 
       &::before {
-        top: 10px;
         left: 7px;
         width: 14px;
         height: 14px;
+        margin-top: -7px;
         border: 1px solid grey;
       }
 
       &::after {
-        top: 13px;
         left: 10px;
         width: 10px;
         height: 10px;
+        margin-top: -4px;
         background: transparent;
       }
     }
