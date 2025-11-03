@@ -75,7 +75,7 @@
     h2 {
       font-size: 1.3em;
       line-height: 1.2;
-      margin: 1em 0 .5em;
+      margin: 1.3em 0 .5em;
     }
 
     p {

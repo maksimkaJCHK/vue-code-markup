@@ -44,9 +44,9 @@
       display: inline-block;
       position: relative;
       background: #fff;
-      padding: 5px 10px 5px 28px;
-      border: 1px solid grey;
-      box-shadow: 0 0 10px #aaa;
+      padding: 7px 10px 7px 30px;
+      //border: 1px solid grey;
+      box-shadow: 0 0 15px #aaa;
       border-radius: 5px;
       line-height: 120%;
 
@@ -59,16 +59,16 @@
       }
 
       &::before {
-        top: 8px;
-        left: 5px;
+        top: 10px;
+        left: 7px;
         width: 14px;
         height: 14px;
         border: 1px solid grey;
       }
 
       &::after {
-        top: 11px;
-        left: 8px;
+        top: 13px;
+        left: 10px;
         width: 10px;
         height: 10px;
         background: transparent;
