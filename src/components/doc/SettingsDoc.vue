@@ -67,7 +67,7 @@
         </div>
         <div class="settings-doc-row">
           <p>
-            <strong>lineCount</strong> - данный параметр отвечает за то, сколько строк отображать. В него нужно передавать числа, если нужно отобразить все строки, то нужно задать значение "auto". По умолчанию задано значение "auto".
+            <strong>lineCount</strong> - данный параметр отвечает за то, сколько строк отображать. В него нужно передавать числа, если нужно отобразить все строки, то нужно задать значение "auto". По умолчанию задано значение "auto". Для примера я задал {{ lineCount }} строк.
           </p>
 
           <ui-select
@@ -129,7 +129,9 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, watch } from 'vue';
+
+  import useLang from '@/components/code-examples/uselang.js';
 
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
   import { bookListCode } from '@/components/code-examples/books/BookListCode.js';
@@ -143,6 +145,10 @@
       type: Boolean,
       default: false,
     }
+  });
+
+  const { codeParam } = useLang({
+    lang: props.isRus ? 'ru' : 'en'
   });
 
   function* bLineCountOptions(from=5, stop=60, step=5) {
@@ -177,6 +183,13 @@
   const title = ref('Copy code to clipboard');
   const successfulText = ref('The code is copied to the clipboard');
   const errorText = ref('An error occurred while copying the code to the clipboard');
+
+  watch(codeParam, (val) => {
+    title.value = val.title || 'Copy code to clipboard';
+    successfulText.value = val.successfulText || 'The code is copied to the clipboard';
+    errorText.value = val.errorText || 'An error occurred while copying the code to the clipboard';
+  },
+  { immediate: true });
 </script>
 
 <style lang="scss" scoped>

@@ -15,7 +15,7 @@
 <script setup>
   import { ref } from 'vue';
 
-  import MainContent from '@/components/MainContent.vue';
+  import MainContent from '@/pages/MainContent.vue';
   import LinkRepository from '@/components/LinkRepository.vue';
 
   const textRep = ref('');
