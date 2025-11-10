@@ -189,7 +189,7 @@
     // Шрифт
     --cm-text-font-size: 1em;
     --cm-text-font-family: inherit;
-    --cm-text-line-height: 1.4em;
+    --cm-text-line-height: 1.5em;
     --cm-count-padding: 0 .35em;
 
     // Максимальный размер блока с кодом

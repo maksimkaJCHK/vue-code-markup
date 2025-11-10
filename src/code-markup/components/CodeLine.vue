@@ -72,7 +72,7 @@
   @use "sass:math";
 
   .code-markup__line {
-    height: 1em;
+    height: var(--cm-text-line-height);
     display: table-row;
     white-space: nowrap;
     counter-increment: count;

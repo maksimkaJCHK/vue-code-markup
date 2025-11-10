@@ -20,7 +20,7 @@
       <mu-type code=";" />
     </code-line>
 
-    <code-line>
+    <code-line new active>
       <mu-key-words code="import" />
       <mu-type code=" CodeMarkup " />
       <mu-key-words code="from" />
@@ -28,7 +28,7 @@
       <mu-type code=";" />
     </code-line>
 
-    <code-line>
+    <code-line new active>
       <mu-key-words code="import" />
       <mu-text code=" 'vue-code-markup/lib/style.css'" />
       <mu-type code=";" />
@@ -46,7 +46,7 @@
       <mu-type code=";" />
     </code-line>
 
-    <code-line>
+    <code-line new active>
       <mu-type code="app." />
       <mu-function code="use(" />
       <mu-type code="CodeMarkup" />
