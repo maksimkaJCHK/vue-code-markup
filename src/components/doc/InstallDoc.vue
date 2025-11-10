@@ -2,7 +2,7 @@
   <div class="intro-doc">
     <template v-if="props.isRus">
       <h2>
-        Установка, подключение плагина
+        Глобальная установка, подключение плагина
       </h2>
 
       <p>
@@ -24,7 +24,7 @@
 
     <template v-if="!props.isRus">
       <h2>
-        Installation, configuration plugin
+        Global installation, configuration plugin
       </h2>
 
       <p>
