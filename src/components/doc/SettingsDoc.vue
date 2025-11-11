@@ -95,11 +95,11 @@
         </div>
         <div class="settings-doc-row">
           <p v-if="props.isRus">
-            <strong>lineCount</strong> - данный параметр отвечает за то, сколько строк отображать. В него нужно передавать числа, если нужно отобразить все строки, то нужно задать значение "auto", или вообще не задавать данный параметр. По умолчанию задано значение "auto". Для примера я задал {{ lineCount }} строк, и сделал интервал вывода от 10 до 65 строк.
+            <strong>lineCount</strong> - данный параметр отвечает за то, сколько строк отображать. В него нужно передавать числа, если нужно отобразить все строки, то нужно задать значение "auto", или вообще не задавать данный параметр. По умолчанию задано значение "auto". Для примера я задал <span v-once>{{ lineCount }}</span> строк, и сделал интервал вывода от 10 до 65 строк.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>lineCount</strong> - this parameter is responsible for how many lines to display. You need to pass numbers to it, if you want to display all the lines, then you need to set the value to "auto", or not set this parameter at all. The default value is "auto". For example, I set {{lineCount }} lines, and made an output interval from 10 to 65 lines.
+            <strong>lineCount</strong> - this parameter is responsible for how many lines to display. You need to pass numbers to it, if you want to display all the lines, then you need to set the value to "auto", or not set this parameter at all. The default value is "auto". For example, I set <span v-once>{{ lineCount }}</span> lines, and made an output interval from 10 to 65 lines.
           </p>
 
           <ui-select

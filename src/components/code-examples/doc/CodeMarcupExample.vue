@@ -4,53 +4,47 @@
     :code="code"
     v-bind="codeParam"
   >
-    <code-line>
-      <mu-tag code="<template>" />
-    </code-line>
+    <template-block>
 
-    <code-line level-2>
-      <mu-tag code="<code-markup>" />
-    </code-line>
-    <code-line level-4>
-      <mu-comment code="<!-- component content -->" />
-    </code-line>
-    <code-line level-2>
-      <mu-tag code="</code-markup>" />
-    </code-line>
+      <code-line level-2>
+        <mu-tag code="<code-markup>" />
+      </code-line>
+      <code-line level-4>
+        <mu-comment code="<!-- component content -->" />
+      </code-line>
+      <code-line level-2>
+        <mu-tag code="</code-markup>" />
+      </code-line>
 
-    <code-line>
-      <mu-tag code="</template>" />
-    </code-line>
+    </template-block>
 
     <code-line />
 
-    <code-line>
-      <mu-tag code="<script " />
-      <mu-attr code="setup" />
-      <mu-tag code=">" />
-    </code-line>
+    <script-block>
 
-    <code-line level-2>
-      <mu-key-words code="import" />
-      <mu-type code=" CodeMarkup " />
-      <mu-key-words code="from" />
-      <mu-text code=" 'vue-code-markup'" />
-      <mu-type code=";" />
-    </code-line>
+      <code-line level-2>
+        <mu-key-words code="import" />
+        <mu-type code=" { CodeMarkup } " />
+        <mu-key-words code="from" />
+        <mu-text code=" 'vue-code-markup'" />
+        <mu-type code=";" />
+      </code-line>
 
-    <code-line level-2>
-      <mu-key-words code="import" />
-      <mu-text code=" 'vue-code-markup/lib/style.css'" />
-      <mu-type code=";" />
-    </code-line>
-    <code-line>
-      <mu-tag code="</script>" />
-    </code-line>
+      <code-line level-2>
+        <mu-key-words code="import" />
+        <mu-text code=" 'vue-code-markup/lib/style.css'" />
+        <mu-type code=";" />
+      </code-line>
+    
+    </script-block>
   </code-markup>
 </template>
 
 <script setup>
   import useLang from '../useLang';
+
+  import TemplateBlock from '@/components/blocks/TemplateBlock.vue';
+  import ScriptBlock from '@/components/blocks/ScriptBlock.vue';
 
   const props = defineProps({
     lang: {
