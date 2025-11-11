@@ -12,7 +12,11 @@
       <code-marcup-example lang="ru" />
 
       <p>
-        Данный компонент имеет следующие входные параметры:
+        Ниже я приведу пример кода и входные параметры. Входные параметры можно менять, что я и советую вам сделать, так будет нагляднее. Если вы открыли данный сайт с компьютера или планшета, то пример кода будет находиться слева, а входные параметры справа. Если вы открыли данный сайт с мобильного телефона, то сначала будут идти входные параметры, а пример кода будет находиться ниже.
+      </p>
+
+      <p>
+        Итак, данный компонент имеет следующие входные параметры:
       </p>
     </template>
 
@@ -28,7 +32,11 @@
       <code-marcup-example />
 
       <p>
-        This component has the following input parameters:
+        Below I will provide an example of the code and input parameters. The input parameters can be changed, which I advise you to do, so it will be clearer. If you have opened this website from a computer or tablet, the sample code will be on the left and the input parameters on the right. If you have opened this website from a mobile phone, the input parameters will be displayed first, and the sample code will be below.
+      </p>
+
+      <p>
+        So, this component has the following input parameters:
       </p>
     </template>
 

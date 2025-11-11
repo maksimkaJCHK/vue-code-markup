@@ -10,13 +10,13 @@
     <template v-if="lang === 'rus'">
       <intro-doc is-rus />
       <install-doc is-rus />
-      <settings-doc is-rus />
+      <code-markup-doc is-rus />
     </template>
 
     <template v-else>
       <intro-doc />
       <install-doc />
-      <settings-doc />
+      <code-markup-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -32,7 +32,7 @@
   import SelectLang from '@/components/SelectLang.vue';
   import IntroDoc from '@/components/doc/IntroDoc.vue';
   import InstallDoc from '@/components/doc/InstallDoc.vue';
-  import SettingsDoc from '@/components/doc/SettingsDoc.vue';
+  import CodeMarkupDoc from '@/components/doc/CodeMarkupDoc.vue';
 
   import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
