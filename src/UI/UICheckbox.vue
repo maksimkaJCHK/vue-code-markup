@@ -34,7 +34,7 @@
 
     &:checked + label {
       &::after {
-        background: #1c1c8d;
+        background: #6897bb;
       }
     }
 
@@ -45,7 +45,6 @@
       position: relative;
       background: #fff;
       padding: 7px 10px 7px 30px;
-      //border: 1px solid grey;
       box-shadow: 0 0 15px #aaa;
       border-radius: 5px;
       line-height: 120%;
@@ -66,7 +65,7 @@
         width: 14px;
         height: 14px;
         margin-top: -7px;
-        border: 1px solid grey;
+        border: 1px solid #6897bb;
       }
 
       &::after {
