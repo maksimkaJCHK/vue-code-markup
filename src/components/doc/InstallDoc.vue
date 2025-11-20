@@ -1,5 +1,5 @@
 <template>
-  <div class="intro-doc">
+  <div class="install-doc">
     <template v-if="props.isRus">
       <h2>
         Глобальная установка, подключение плагина

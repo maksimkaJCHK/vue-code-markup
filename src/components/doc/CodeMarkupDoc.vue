@@ -1,5 +1,5 @@
 <template>
-  <div class="settings-doc">
+  <div class="code-markup-doc">
     <template v-if="props.isRus">
       <h2>
         Компонент code-markup
