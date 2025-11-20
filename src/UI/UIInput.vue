@@ -30,7 +30,7 @@
       color: #000;
       padding: 7px 13px;
       border-radius: 5px;
-      font: 16px/120% system-ui, Avenir, Helvetica, Arial, sans-serif;;
+      font: 1em/120% system-ui, Avenir, Helvetica, Arial, sans-serif;
       box-sizing: border-box;
       border: 1px solid #6897bb;
       position: relative;

@@ -28,9 +28,10 @@
       border-radius: 5px;
       outline: none;
       border: 1px solid #6897bb;
+      font: 1em/120% system-ui, Avenir, Helvetica, Arial, sans-serif;
 
       &:focus {
-        box-shadow: 0 0 10px 0 rgba(55, 90, 127, .7);
+        box-shadow: 0 0 10px 0 rgba(104, 151, 187, .7);
       }
 
       [selected] {
