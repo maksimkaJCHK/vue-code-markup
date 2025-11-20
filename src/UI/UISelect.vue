@@ -23,7 +23,7 @@
   .ui-select {
     select {
       width: 100%;
-      padding: 5px;
+      padding: 7px 13px;
       display: block;
       border-radius: 5px;
       outline: none;
