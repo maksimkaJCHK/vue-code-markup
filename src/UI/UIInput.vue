@@ -28,11 +28,11 @@
       display: block;
       outline: none;
       color: #000;
-      padding: 7px 13px;
-      border-radius: 5px;
-      font: 1em/120% system-ui, Avenir, Helvetica, Arial, sans-serif;
+      padding: var(--input-padding);
+      border-radius: var(--input-border-radius);
+      font: var(--input-font);
       box-sizing: border-box;
-      border: 1px solid #6897bb;
+      border: var(--input-border);
       position: relative;
       background-color: #fff;
       -webkit-appearance: none;
@@ -45,7 +45,7 @@
       }
 
       &:focus {
-        box-shadow: 0 0 10px 0 rgba(104, 151, 187, .7);
+        box-shadow: var(--input-fokus);
 
         &::placeholder {
           opacity: 0;

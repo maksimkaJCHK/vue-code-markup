@@ -62,10 +62,10 @@
 
       &::before {
         left: 7px;
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         margin-top: -7px;
-        border: 1px solid #6897bb;
+        border: 2px solid #6897bb;
       }
 
       &::after {

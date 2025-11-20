@@ -23,15 +23,15 @@
   .ui-select {
     select {
       width: 100%;
-      padding: 7px 13px;
+      padding: var(--input-padding);
       display: block;
-      border-radius: 5px;
+      border-radius: var(--input-border-radius);
       outline: none;
-      border: 1px solid #6897bb;
-      font: 1em/120% system-ui, Avenir, Helvetica, Arial, sans-serif;
+      border: var(--input-border);
+      font: var(--input-font);
 
       &:focus {
-        box-shadow: 0 0 10px 0 rgba(104, 151, 187, .7);
+        box-shadow: var(--input-fokus);
       }
 
       [selected] {
