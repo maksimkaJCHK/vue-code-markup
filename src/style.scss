@@ -57,6 +57,7 @@ body {
       linear-gradient(90deg, #e1e1e1, transparent 1px),
       $bgColor;
     background-size: 10px 10px;
+    background-attachment: fixed;
     background-position: center top;
   }
 }

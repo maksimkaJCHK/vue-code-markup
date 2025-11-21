@@ -11,12 +11,14 @@
       <intro-doc is-rus />
       <install-doc is-rus />
       <code-markup-doc is-rus />
+      <code-line-doc is-rus />
     </template>
 
     <template v-else>
       <intro-doc />
       <install-doc />
       <code-markup-doc />
+      <code-line-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -33,6 +35,7 @@
   import IntroDoc from '@/components/doc/IntroDoc.vue';
   import InstallDoc from '@/components/doc/InstallDoc.vue';
   import CodeMarkupDoc from '@/components/doc/CodeMarkupDoc.vue';
+  import CodeLineDoc from '@/components/doc/CodeLineDoc.vue';
 
   import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
