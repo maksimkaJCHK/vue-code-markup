@@ -40,8 +40,8 @@
       </p>
     </template>
 
-    <div class="settings-doc-cont">
-      <div class="settings-doc-col settings-doc-code">
+    <settings-doc>
+      <template #code>
         <code-markup
           :header="header"
           :is-header="isHeader"
@@ -56,8 +56,8 @@
         >
           <books-list-body />
         </code-markup>
-      </div>
-      <div class="settings-doc-col settings-doc-content">
+      </template>
+      <template #content>
         <div class="settings-doc-row">
           <p v-if="props.isRus">
             <strong>isHeader</strong> - данный параметр отвечает за отображение заголовка окна с кодом. Если вы собираетесь отображать заголовок, то данный параметр можно не задавать, он по умолчанию равен "true".
@@ -191,8 +191,8 @@
 
           <ui-input v-model="errorText" />
         </div>
-      </div>
-    </div>
+      </template>
+    </settings-doc>
   </div>
 </template>
 
@@ -200,6 +200,8 @@
   import { ref, watch } from 'vue';
 
   import useLang from '@/components/code-examples/uselang.js';
+
+  import SettingsDoc from '@/components/SettingsDoc.vue';
 
   import CodeMarcupExample from '@/components/code-examples/doc/CodeMarcupExample.vue';
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
@@ -261,54 +263,4 @@
   { immediate: true });
 </script>
 
-<style lang="scss" scoped>
-  .settings-doc {
-    &-cont {
-      display: grid;
-      gap: 10px 20px;;
-      grid-template-columns: 1fr 1fr;
-
-      @media screen and (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    &-col {
-      .code-markup {
-        margin: 0;
-      }
-    }
-
-    &-content {
-      p {
-        margin: .5em 0;
-
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-    }
-
-    &-row {
-      margin: 1em 0;
-
-      &:first-of-type {
-        margin-top: 0;
-      }
-    }
-
-    &-code {
-      overflow: hidden;
-    }
-
-    @media screen and (max-width: 700px) {
-      &-code {
-        grid-row-start: 2;
-      }
-
-      &-content {
-        grid-row-start: 1;
-      }
-    }
-  }
-</style>
+<style lang="scss" scoped></style>
