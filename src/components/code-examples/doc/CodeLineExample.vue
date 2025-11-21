@@ -10,7 +10,13 @@
         <mu-tag code="<code-markup>" />
       </code-line>
       <code-line level-3>
+        <mu-tag code="<code-line>" />
+      </code-line>
+      <code-line level-4>
         <mu-comment code="<!-- component content -->" />
+      </code-line>
+      <code-line level-3>
+        <mu-tag code="</code-line>" />
       </code-line>
       <code-line level-2>
         <mu-tag code="</code-markup>" />
@@ -24,7 +30,7 @@
 
       <code-line level-2>
         <mu-key-words code="import" />
-        <mu-type code=" { CodeMarkup } " />
+        <mu-type code=" { CodeMarkup, CodeLine } " />
         <mu-key-words code="from" />
         <mu-text code=" 'vue-code-markup'" />
         <mu-type code=";" />
@@ -60,12 +66,14 @@
 
   const code = `<template>
   <code-markup>
-    <!-- component content -->
+    <code-line>
+      <!-- component content -->
+    </code-line>
   </code-markup>
 </template>
 
 <script setup>
-  import { CodeMarkup } from 'vue-code-markup';
+  import { CodeMarkup, CodeLine } from 'vue-code-markup';
   import 'vue-code-markup/lib/style.css';
 </${'script'}>`;
 </script>
