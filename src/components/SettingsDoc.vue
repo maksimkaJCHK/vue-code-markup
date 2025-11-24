@@ -4,10 +4,14 @@
       <slot name="code"></slot>
     </div>
     <div class="settings-doc-col settings-doc-content">
-      <slot name="content"></slot>
+      <slot name="content" :nameRow="nameRow"></slot>
     </div>
   </div>
 </template>
+
+<script setup>
+  const nameRow = "settings-doc-row";
+</script>
 
 <style lang="scss">
   .settings-doc {

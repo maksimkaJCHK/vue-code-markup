@@ -35,26 +35,56 @@
           v-bind="codeParam"
         >
           <code-line>
-            <mu-comment code="<!-- Below is a line for displaying input parameters. -->" />
+            <mu-comment :code="textInEditor[0]" />
+          </code-line>
+          <code-line
+            :new="newParam"
+            :active="active"
+          >
+            {{ textInEditor[1] }}
           </code-line>
           <code-line>
-            Example of the code-line component for displaying input parameters
-          </code-line>
-          <code-line>
-            <mu-comment code="<!-- Above is a line for displaying input parameters. -->" />
+            <mu-comment :code="textInEditor[2]" />
           </code-line>
         </code-markup>
       </template>
-      <template #content></template>
+      <template #content="{ nameRow }">
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>new</strong> - в Visual Studio Code, когда добавляется новая строка, она отображается с линией
+          </p>
+
+          <ui-checkbox
+            v-model="newParam"
+            value="newParam"
+          >
+            {{ newParam }}
+          </ui-checkbox>
+        </div>
+
+        <div :class="nameRow">
+          <ui-checkbox
+            v-model="active"
+            value="active"
+          >
+            {{ active }}
+          </ui-checkbox>
+        </div>
+      </template>
     </settings-doc>
   </div>
 </template>
 
 <script setup>
+  import { ref, computed } from 'vue';
+
   import useLang from '@/components/code-examples/uselang.js';
 
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import CodeLineExample from '@/components/code-examples/doc/CodeLineExample.vue';
+
+  import UiCheckbox from '@/UI/UICheckbox.vue';
+  import UiSelect from '@/UI/UISelect.vue';
 
   const props = defineProps({
     isRus: {
@@ -65,6 +95,25 @@
 
   const { codeParam } = useLang({
     lang: props.isRus ? 'ru' : 'en'
+  });
+
+  const newParam = ref(false);
+  const active = ref(false);
+
+  const textInEditor = computed(() => {
+    if (props.isRus) {
+      return [
+        '<!-- Ниже приведена строка для отображения входных параметров -->',
+        'Пример компонента кодовой строки для отображения входных параметров',
+        '<!-- Выше приведена строка для отображения входных параметров -->'
+      ]
+    }
+
+    return [
+      '<!-- Below is a line for displaying input parameters -->',
+      'Example of the code-line component for displaying input parameters',
+      '<!-- Above is a line for displaying input parameters -->'
+    ]
   });
 </script>
 
