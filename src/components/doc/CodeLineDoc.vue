@@ -30,7 +30,10 @@
 
     <settings-doc>
       <template #code>
-        <code-markup :is-header="false">
+        <code-markup
+          :is-header="false"
+          v-bind="codeParam"
+        >
           <code-line>
             <mu-comment code="<!-- Below is a line for displaying input parameters. -->" />
           </code-line>
@@ -48,6 +51,8 @@
 </template>
 
 <script setup>
+  import useLang from '@/components/code-examples/uselang.js';
+
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import CodeLineExample from '@/components/code-examples/doc/CodeLineExample.vue';
 
@@ -56,6 +61,10 @@
       type: Boolean,
       default: false,
     }
+  });
+
+  const { codeParam } = useLang({
+    lang: props.isRus ? 'ru' : 'en'
   });
 </script>
 
