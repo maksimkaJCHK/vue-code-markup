@@ -244,6 +244,10 @@
     },
     ...bLineCountOptions()
   ];
+  
+  const textTitle = 'Copy code to clipboard';
+  const textSuccessful = 'The code is copied to the clipboard';
+  const textError= 'An error occurred while copying the code to the clipboard';
 
   const header = ref('BooksList.vue');
   const isHeader = ref(true);
@@ -251,14 +255,14 @@
   const lineCount = ref(30);
   const textBold = ref(false);
   const headerBold = ref(false);
-  const title = ref('Copy code to clipboard');
-  const successfulText = ref('The code is copied to the clipboard');
-  const errorText = ref('An error occurred while copying the code to the clipboard');
+  const title = ref(textTitle);
+  const successfulText = ref(textSuccessful);
+  const errorText = ref(textError);
 
   watch(codeParam, (val) => {
-    title.value = val.title || 'Copy code to clipboard';
-    successfulText.value = val.successfulText || 'The code is copied to the clipboard';
-    errorText.value = val.errorText || 'An error occurred while copying the code to the clipboard';
+    title.value = val.title || textTitle;
+    successfulText.value = val.successfulText || textSuccessful;
+    errorText.value = val.errorText || textError;
   },
   { immediate: true });
 </script>

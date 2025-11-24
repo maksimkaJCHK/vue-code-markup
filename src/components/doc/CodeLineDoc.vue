@@ -32,7 +32,13 @@
       <template #code>
         <code-markup :is-header="false">
           <code-line>
-            Example of the line-count component for displaying input parameters
+            <mu-comment code="<!-- Below is a line for displaying input parameters. -->" />
+          </code-line>
+          <code-line>
+            Example of the code-line component for displaying input parameters
+          </code-line>
+          <code-line>
+            <mu-comment code="<!-- Above is a line for displaying input parameters. -->" />
           </code-line>
         </code-markup>
       </template>
