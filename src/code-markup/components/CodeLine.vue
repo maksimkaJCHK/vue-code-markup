@@ -80,6 +80,7 @@
     &__content {
       display: table-cell;
       padding-left: 10px;
+      padding-right: 30px;
       width: 100%;
     }
 
