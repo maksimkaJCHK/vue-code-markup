@@ -40,6 +40,7 @@
           <code-line
             :new="newParam"
             :active="active"
+            visible-copy
           >
             {{ textInEditor[1] }}
           </code-line>

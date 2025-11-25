@@ -21,6 +21,10 @@
       type: Boolean,
       default: false
     },
+    visibleCopy: {
+      type: Boolean,
+      default: false
+    },
     'level-2': {
       type: Boolean,
       default: false
@@ -54,6 +58,7 @@
   const classLine = computed(() => ({
     'code-markup__line_active': props.active,
     'code-markup__line_new': props.new,
+    'code-markup__line_visible-copy': props.visibleCopy,
     'code-markup_level-2': props['level2'],
     'code-markup_level-3': props['level3'],
     'code-markup_level-4': props['level4'],
@@ -80,7 +85,6 @@
     &__content {
       display: table-cell;
       padding-left: 10px;
-      padding-right: 30px;
       width: 100%;
     }
 
@@ -112,6 +116,12 @@
     &_new {
       .code-markup_count &::before {
         border-right-color: var(--cm-new-border);
+      }
+    }
+
+    &_visible-copy{
+      .code-markup__line__content {
+        padding-right: calc(var(--cm-text-font-size) + 16px);
       }
     }
 
