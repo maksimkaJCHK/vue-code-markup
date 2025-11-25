@@ -83,9 +83,10 @@
     counter-increment: count;
 
     &__content {
+      width: 100%;
       display: table-cell;
       padding-left: 10px;
-      width: 100%;
+      padding-right: 5px;
     }
 
     .code-markup_count &::before {
@@ -119,7 +120,7 @@
       }
     }
 
-    &_visible-copy{
+    &_visible-copy {
       .code-markup__line__content {
         padding-right: calc(var(--cm-text-font-size) + 16px);
       }

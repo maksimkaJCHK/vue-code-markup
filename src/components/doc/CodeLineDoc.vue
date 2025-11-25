@@ -40,7 +40,7 @@
           <code-line
             :new="newParam"
             :active="active"
-            visible-copy
+            :visible-copy="visibleCopy"
           >
             {{ textInEditor[1] }}
           </code-line>
@@ -52,7 +52,11 @@
       <template #content="{ nameRow }">
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>new</strong> - в Visual Studio Code, когда добавляется новая строка, она отображается с линией
+            <strong>new</strong> - в Visual Studio Code, когда добавляется новая строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>new</strong> - In Visual Studio Code, when a new line is added, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
           </p>
 
           <ui-checkbox
@@ -64,11 +68,36 @@
         </div>
 
         <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>active</strong> - в Visual Studio Code активная строка отличается от других строк background-ом. Данный параметр включает background для строки. По умолчанию данный параметр отключен, те имеет значение false.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>active</strong> - in Visual Studio Code, the active string differs from other background strings. This parameter enables the background for the string. By default, this parameter is disabled, it has the value false.
+          </p>
+
           <ui-checkbox
             v-model="active"
             value="active"
           >
             {{ active }}
+          </ui-checkbox>
+        </div>
+
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>visibleCopy</strong> - по умолчанию правый внутренний отступ для строки равен 5px. Возможна такая ситуация, что строк не много, и они достаточно длинные, таким образом кнопка "скопировать текст" будет перекрывать текст строки. При включении данного параметра будет появляться больший правый отступ, так, что можно будет прочитать текст. По умолчанию данный параметр отключен, те имеет значение false.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>visibleCopy</strong> - by default, the inner right indentation for a line is 5px. It is possible that there are not many lines and they are long enough, so the "copy text" button will overlap the text of the line. When this option is enabled, a larger right indentation will appear, so that the text can be read. By default, this parameter is disabled, it has the value false.
+          </p>
+
+          <ui-checkbox
+            v-model="visibleCopy"
+            value="visibleCopy"
+          >
+            {{ visibleCopy }}
           </ui-checkbox>
         </div>
       </template>
@@ -100,6 +129,7 @@
 
   const newParam = ref(false);
   const active = ref(false);
+  const visibleCopy = ref(false);
 
   const textInEditor = computed(() => {
     if (props.isRus) {
