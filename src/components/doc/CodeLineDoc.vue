@@ -10,7 +10,7 @@
       <code-line-example lang="ru" />
 
       <p>
-        Ниже я приведу пример кода и входные параметры. Входные параметры можно менять, что я и советую вам сделать, так будет нагляднее. Если вы открыли данный сайт с компьютера или планшета, то пример кода будет находиться слева, а входные параметры справа. Если вы открыли данный сайт с мобильного телефона, то сначала будут идти входные параметры, а пример кода будет находиться ниже. Посколько описание входных параметров занимает достаточно много места, я сделаю много строк к которым эти параметры будут применяться. Чтобы было понятнее, строки к которой будут применяться входные параметры будут находиться между комментариями.
+        Ниже я приведу пример кода и входные параметры. Входные параметры можно менять, что я и советую вам сделать, так будет нагляднее. Если вы открыли данный сайт с компьютера или планшета, то пример кода будет находиться слева, а входные параметры справа. Если вы открыли данный сайт с мобильного телефона, то сначала будут идти входные параметры, а пример кода будет находиться ниже. Посколько описание входных параметров занимает достаточно много места, я сделаю много строк к которым эти параметры будут применяться. Чтобы было понятнее, строки к которым будут применяться входные параметры будут находиться между комментариями.
       </p>
 
       <p>
@@ -26,6 +26,10 @@
       </p>
 
       <code-line-example lang="en" />
+
+      <p>
+        Below I will provide an example of the code and input parameters. The input parameters can be changed, which I advise you to do, so it will be clearer. If you have opened this website from a computer or tablet, the sample code will be on the left and the input parameters on the right. If you have opened this website from a mobile phone, the input parameters will be displayed first, and the sample code will be below. Since the description of the input parameters takes up quite a lot of space, I will make many lines to which these parameters will be applied. To make it clearer, the lines to which the input parameters will be applied will be located between the comments.
+      </p>
 
       <p>
         This component has the following input parameters:
@@ -169,5 +173,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .code-line-doc {
+    @media screen and (max-width: 700px) {
+      --cm-max-height-body: 70px;
+    }
+  }
 </style>
