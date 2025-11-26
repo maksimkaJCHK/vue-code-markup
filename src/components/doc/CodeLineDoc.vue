@@ -10,6 +10,10 @@
       <code-line-example lang="ru" />
 
       <p>
+        Ниже я приведу пример кода и входные параметры. Входные параметры можно менять, что я и советую вам сделать, так будет нагляднее. Если вы открыли данный сайт с компьютера или планшета, то пример кода будет находиться слева, а входные параметры справа. Если вы открыли данный сайт с мобильного телефона, то сначала будут идти входные параметры, а пример кода будет находиться ниже.
+      </p>
+
+      <p>
         Данный компонент имеет следующие входные параметры:
       </p>
     </template>
@@ -30,25 +34,15 @@
 
     <settings-doc>
       <template #code>
-        <code-markup
-          :is-header="false"
-          v-bind="codeParam"
-        >
-          <code-line>
-            <mu-comment :code="textInEditor[0]" />
-          </code-line>
-          <code-line
-            :new="newParam"
-            :active="active"
-            :visible-copy="visibleCopy"
-          >
-            {{ textInEditor[1] }}
-          </code-line>
-          <code-line>
-            <mu-comment :code="textInEditor[2]" />
-          </code-line>
-        </code-markup>
+        <code-line-set 
+          :isRus="props.isRus"
+          :codeParam="codeParam"
+          :newParam="newParam"
+          :active="active"
+          :visibleCopy="visibleCopy"
+        />
       </template>
+
       <template #content="{ nameRow }">
         <div :class="nameRow">
           <p v-if="props.isRus">
@@ -112,6 +106,7 @@
 
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import CodeLineExample from '@/components/code-examples/doc/CodeLineExample.vue';
+  import CodeLineSet from '@/components/code-examples/doc/CodeLineSet.vue';
 
   import UiCheckbox from '@/UI/UICheckbox.vue';
   import UiSelect from '@/UI/UISelect.vue';
@@ -130,22 +125,6 @@
   const newParam = ref(false);
   const active = ref(false);
   const visibleCopy = ref(false);
-
-  const textInEditor = computed(() => {
-    if (props.isRus) {
-      return [
-        '<!-- Ниже приведена строка для отображения входных параметров -->',
-        'Пример компонента кодовой строки для отображения входных параметров',
-        '<!-- Выше приведена строка для отображения входных параметров -->'
-      ]
-    }
-
-    return [
-      '<!-- Below is a line for displaying input parameters -->',
-      'Example of the code-line component for displaying input parameters',
-      '<!-- Above is a line for displaying input parameters -->'
-    ]
-  });
 </script>
 
 <style lang="scss" scoped>
