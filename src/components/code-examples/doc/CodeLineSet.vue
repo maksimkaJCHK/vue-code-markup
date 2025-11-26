@@ -8,7 +8,7 @@
       v-for="item in repeatArr"
       :key="item"
     >
-      <code-line v-if="item !== 1" />
+      <code-line v-if="item !== 0" />
       <code-line>
         <mu-comment :code="textInEditor[0]" />
       </code-line>
@@ -29,7 +29,11 @@
 <script setup>
   import { computed } from 'vue';
 
-  const repeatArr = [1, 2, 3, 4, 5];
+  function* bArr(count = 7) {
+    for (let i = 0; i < count; i++) yield i;
+  }
+
+  const repeatArr = [...bArr()];
 
   const props = defineProps([
     'isRus',
