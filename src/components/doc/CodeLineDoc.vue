@@ -10,7 +10,7 @@
       <code-line-example lang="ru" />
 
       <p>
-        Ниже я приведу пример кода и входные параметры. Входные параметры можно менять, что я и советую вам сделать, так будет нагляднее. Если вы открыли данный сайт с компьютера или планшета, то пример кода будет находиться слева, а входные параметры справа. Если вы открыли данный сайт с мобильного телефона, то сначала будут идти входные параметры, а пример кода будет находиться ниже.
+        Ниже я приведу пример кода и входные параметры. Входные параметры можно менять, что я и советую вам сделать, так будет нагляднее. Если вы открыли данный сайт с компьютера или планшета, то пример кода будет находиться слева, а входные параметры справа. Если вы открыли данный сайт с мобильного телефона, то сначала будут идти входные параметры, а пример кода будет находиться ниже. Посколько описание входных параметров занимает достаточно много места, я сделаю много строк к которым эти параметры будут применяться. Чтобы было понятнее, строки к которой будут применяться входные параметры будут находиться между комментариями.
       </p>
 
       <p>
@@ -40,6 +40,7 @@
           :newParam="newParam"
           :active="active"
           :visibleCopy="visibleCopy"
+          :levelCodeLine="levelCodeLine"
         />
       </template>
 
@@ -94,6 +95,21 @@
             {{ visibleCopy }}
           </ui-checkbox>
         </div>
+
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>level-2 - level-8</strong> - код имеет определённую вложенность. Данные входные параметры нужны для того, чтобы сделать соответствующий отступ. Всего я предусмотрел 8 уровней вложенности, больше делать я смысла не вижу. Попробуйте выбрать уровень вложенности ниже, и посмотрите как будет меняться отступ и строк.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>level-2 - level-8</strong> - the code has a certain nesting. These input parameters are needed in order to make the appropriate indentation. In total, I have provided 8 levels of nesting, I don't see any point in doing more. Try to select the nesting level below, and see how the indentation and lines will change.
+          </p>
+
+          <ui-select
+            v-model="level"
+            :options="levelOptions"
+          />
+        </div>
       </template>
     </settings-doc>
   </div>
@@ -122,9 +138,34 @@
     lang: props.isRus ? 'ru' : 'en'
   });
 
+  function* bLevel(count = 9) {
+    for (let i = 1; i < count; i++) {
+      const id = `level${i}`;
+      const title = `level-${i}`;
+
+      yield {
+        id,
+        title
+      }
+    }
+  }
+
   const newParam = ref(false);
   const active = ref(false);
   const visibleCopy = ref(false);
+  const level = ref('level1');
+  const levelOptions = ref([...bLevel()]);
+
+  const levelCodeLine = computed(() => ({
+    level1: level.value === 'level1',
+    level2: level.value === 'level2',
+    level3: level.value === 'level3',
+    level4: level.value === 'level4',
+    level5: level.value === 'level5',
+    level6: level.value === 'level6',
+    level7: level.value === 'level7',
+    level8: level.value === 'level8',
+  }));
 </script>
 
 <style lang="scss" scoped>

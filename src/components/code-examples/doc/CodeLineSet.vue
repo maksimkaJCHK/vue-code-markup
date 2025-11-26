@@ -16,6 +16,7 @@
         :new="props.newParam"
         :active="props.active"
         :visible-copy="props.visibleCopy"
+        v-bind="levelCodeLine"
       >
         {{ textInEditor[1] }}
       </code-line>
@@ -41,6 +42,7 @@
     'newParam',
     'active',
     'visibleCopy',
+    'levelCodeLine'
   ]);
 
   const textInEditor = computed(() => {
