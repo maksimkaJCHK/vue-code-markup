@@ -1,5 +1,4 @@
 import CodeMarkup from '@/code-markup/codemarkup.vue';
-
 import CodeLine from '@/code-markup/components/CodeLine.vue';
 
 // Для шаблона

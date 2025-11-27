@@ -1,7 +1,7 @@
 <template>
   <div class="code-line-doc">
     <template v-if="props.isRus">
-      <h2>Компонент code-line</h2>
+      <h3>Компонент code-line</h3>
 
       <p>
         По сути это линия или строка с кодом. Элементы кода должны находиться в этом компоненте. Подключается он следующим способом:
@@ -19,7 +19,7 @@
     </template>
 
     <template v-if="!props.isRus">
-      <h2>The code-line component</h2>
+      <h3>The code-line component</h3>
 
       <p>
         In fact, this is a line or a line with a code. The code elements must be located in this component. It is connected in the following way:

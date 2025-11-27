@@ -1,9 +1,9 @@
 <template>
   <div class="code-markup-doc">
     <template v-if="props.isRus">
-      <h2>
+      <h3>
         Компонент code-markup
-      </h2>
+      </h3>
 
       <p>
         Это самый главный компонент, он служит обёрткой для всех остальных компонентов. Если вы не хотите делать полную установку, то подключить его можно следующим способом:
@@ -21,9 +21,9 @@
     </template>
 
     <template v-if="!props.isRus">
-      <h2>
+      <h3>
         The code-markup component
-      </h2>
+      </h3>
 
       <p>
         This is the most important component, it serves as a wrapper for all other components. If you do not want to do a full installation, then you can connect it in the following way:
