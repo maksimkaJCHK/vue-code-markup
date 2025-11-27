@@ -84,6 +84,12 @@
       margin: 1.3em 0 .5em;
     }
 
+    h3 {
+      font-size: 1.2em;
+      line-height: 1.2;
+      margin: 1.3em 0 .5em;
+    }
+
     p {
       line-height: 1.4;
       margin: .5em 0 1em;
