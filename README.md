@@ -31,7 +31,11 @@ app.mount('#app');
 
 It is possible to connect only CSS and individual components, as I will describe below.
 
-## The code markup component
+## Main components
+
+These are the components that all other components should be wrapped in. Without them, all styling makes no sense. These are "code-markup" and "code-line". Code markup is the most important component, all other components should be wrapped in it. In fact, it is an editor window containing lines of code and code examples. A code-line is a line or string with a code, all other components must be wrapped with it.
+
+### The code markup component
 
 This is the most important component, it serves as a wrapper for all other components. If you do not want to do a full installation, then you can connect it in the following way:
 
@@ -70,7 +74,7 @@ This component has the following input parameters:
 
 **errorText** is a hint that will appear when you hover over the "copy text" icon in case of an error (if the text cannot be copied). By default, the value is set to "An error occurred while copying the code to the clipboard". As a rule, this is necessary for internationalization.
 
-## The code-line component
+### The code-line component
 
 In fact, this is a line or a line with a code. The code elements must be located in this component. It is connected in the following way:
 
