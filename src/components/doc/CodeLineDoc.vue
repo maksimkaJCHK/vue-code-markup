@@ -145,7 +145,7 @@
   function* bLevel(count = 9) {
     for (let i = 1; i < count; i++) {
       const id = `level${i}`;
-      const title = `level-${i}`;
+      const title = (i !== 1) ? `level-${i}` : 'none';
 
       yield {
         id,
@@ -161,7 +161,7 @@
   const levelOptions = ref([...bLevel()]);
 
   const levelCodeLine = computed(() => ({
-    level1: level.value === 'level1',
+    none: level.value === 'level1',
     level2: level.value === 'level2',
     level3: level.value === 'level3',
     level4: level.value === 'level4',
