@@ -27,16 +27,28 @@
         :compArr="compArr"
       >
         <code-line level-3>
-          <mu-text code="Some text" />
+          <mu-tag code="<mu-text " />
+          <mu-attr code="code=" />
+          <mu-text code='"Some text" ' />
+          <mu-tag code="/>" />
         </code-line>
         <code-line level-3>
-          <mu-number code="1234" />
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='"1234" ' />
+          <mu-tag code="/>" />
         </code-line>
         <code-line level-3>
-          <mu-comment code="// Some comment" />
+          <mu-tag code="<mu-comment " />
+          <mu-attr code="code=" />
+          <mu-text code='"// Some comment" ' />
+          <mu-tag code="/>" />
         </code-line>
         <code-line level-3>
-          <mu-type code="Type code" />
+          <mu-tag code="<mu-type " />
+          <mu-attr code="code=" />
+          <mu-text code='"Type code" ' />
+          <mu-tag code="/>" />
         </code-line>
       </com-imports>
     </template>
