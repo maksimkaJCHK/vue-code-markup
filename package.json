@@ -22,6 +22,7 @@
   "author": "Maksim Zhuchkov",
   "license": "MIT",
   "main": "lib/index.js",
+  "homepage": "https://maksimkajchk.github.io/vue-code-markup/",
   "repository": {
     "type": "git",
     "url": "https://github.com/maksimkaJCHK/vue-code-markup"
