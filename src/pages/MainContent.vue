@@ -14,6 +14,7 @@
       <code-markup-doc is-rus />
       <code-line-doc is-rus />
       <mark-up-doc is-rus />
+      <com-doc is-rus />
     </template>
 
     <template v-else>
@@ -23,6 +24,7 @@
       <code-markup-doc />
       <code-line-doc />
       <mark-up-doc />
+      <com-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -32,7 +34,7 @@
 </template>
 
 <script setup>
-  import { ref, onBeforeMount } from 'vue';
+  import { ref } from 'vue';
   // Пока ExampleContent не нужен
   //import ExampleContent from '@/components/ExampleContent.vue';
   import SelectLang from '@/components/SelectLang.vue';
@@ -42,6 +44,7 @@
   import CodeMarkupDoc from '@/components/doc/CodeMarkupDoc.vue';
   import CodeLineDoc from '@/components/doc/CodeLineDoc.vue';
   import MarkUpDoc from '@/components/doc/MarkUpDoc.vue';
+  import ComDoc from '@/components/doc/ComDoc.vue';
 
   import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
@@ -57,8 +60,7 @@
   }
 
   const identLang = () => lang.value = (window.location.hash === '#rus') ? 'rus' : 'eng';
-
-  onBeforeMount(identLang);
+  identLang();
 </script>
 
 <style lang="scss">
