@@ -18,13 +18,32 @@
           <strong>MuComment</strong> - это все комментарии, которые встречаются в разметке.
         </li>
         <li>
-          <strong>MuType</strong> - это типовой текст.
+          <strong>MuType</strong> - это типовой текст. Если вы обернёте какой-нибудь текст компонентом "code-line", то обёрнутый текст будет того же цвета, что и цвет компонента "MuType".
         </li>
       </ul>
     </template>
 
     <template v-if="!props.isRus">
       <h3>Common document markup components</h3>
+
+      <p>
+        The following components are common to the template block, scripts, and styles:
+      </p>
+
+      <ul>
+        <li>
+          <strong>MuText</strong> is plain text, in markup it is what is enclosed in single or double quotes.
+        </li>
+        <li>
+          <strong>MuNumber</strong> is all the numbers that occur in the markup.
+        </li>
+        <li>
+          <strong>MuComment</strong> - these are all comments that occur in the markup.
+        </li>
+        <li>
+          <strong>MuType</strong> is a standard text. If you wrap some text with the "code-line" component, the wrapped text will be the same color as the color of the "MuType" component.
+        </li>
+      </ul>
     </template>
 
     <com-imports

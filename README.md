@@ -108,3 +108,12 @@ This component has the following input parameters:
 When compared with HTML, these components can be called the tags that make up the document. All these components have one input parameter, it is called "code", for convenience, they can wrap the text of the code, but I would advise you to use the input parameter anyway. If it is set, the contents of the input parameter "code" will be output.
 
 Conventionally, all components for marking up a document can be divided into common components, components in the template block, components in the script block, and components in the styles block.
+
+### Common document markup components
+
+The following components are common to the template block, scripts, and styles:
+
+*   **MuText** is plain text, in markup it is what is enclosed in single or double quotes.
+*   **MuNumber** is all the numbers that occur in the markup.
+*   **MuComment** - these are all comments that occur in the markup.
+*   **MuType** is a standard text. If you wrap some text with the "code-line" component, the wrapped text will be the same color as the color of the "MuType" component.

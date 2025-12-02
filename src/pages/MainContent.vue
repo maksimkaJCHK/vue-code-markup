@@ -110,6 +110,19 @@
       }
     }
 
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        &::before {
+          content: '-';
+          margin: 0 10px 0 5px;
+        }
+      }
+    }
+
     .code-markup {
       margin: 1em 0;
     }
