@@ -2,6 +2,7 @@
   <code-markup
     :code="code"
     :key="code.slice(0, 10)"
+    :line-count="15"
     v-bind="props.codeParam"
   >
     <template #header>
@@ -108,7 +109,7 @@
   const nameTabs = computed(() => {
     if (props.isRus) return ['Подключение', 'Вывод'];
 
-    return ['Сonnecting ','Output'];
+    return ['Import ','Output'];
   });
 
   const isImport = computed(() => activeTab.value === 'import');
