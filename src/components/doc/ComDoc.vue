@@ -21,11 +21,35 @@
           <strong>MuType</strong> - это типовой текст.
         </li>
       </ul>
+    </template>
 
-      <com-imports
-        :codeParam="codeParam"
-        :compArr="compArr"
-      >
+    <template v-if="!props.isRus">
+      <h3>Common document markup components</h3>
+    </template>
+
+    <com-imports
+      :isRus="props.isRus"
+      :codeParam="codeParam"
+      :compArr="compArr"
+      :codeImport="codeImport"
+      :codeOutput="codeOutput"
+    >
+      <template #output>
+        <code-line>
+          <mu-text code="Some text" />
+        </code-line>
+        <code-line>
+          <mu-number code="1234" />
+        </code-line>
+        <code-line>
+          <mu-comment code="// Some comment" />
+        </code-line>
+        <code-line>
+          <mu-type code="Type code" />
+        </code-line>
+      </template>
+
+      <template #code>
         <code-line new level-3>
           <mu-tag code="<code-line>" />
         </code-line>
@@ -77,19 +101,8 @@
         <code-line new level-3>
           <mu-tag code="</code-line>" />
         </code-line>
-      </com-imports>
-    </template>
-
-    <template v-if="!props.isRus">
-      <h3>Common document markup components</h3>
-
-      <com-imports
-        :codeParam="codeParam"
-        :compArr="compArr"
-      >
-
-      </com-imports>
-    </template>
+      </template>
+    </com-imports>
   </div>
 </template>
 
@@ -114,6 +127,40 @@
     'MuComment',
     'MuType',
   ];
+
+  const codeImport = `<template>
+  <code-markup>
+    <code-line>
+      <mu-text code="Some text" />
+    </code-line>
+    <code-line>
+      <mu-number code="1234" />
+    </code-line>
+    <code-line>
+      <mu-comment code="// Some comment" />
+    </code-line>
+    <code-line>
+      <mu-type code="Type code" />
+    </code-line>
+  </code-markup>
+</template>
+
+<${'script'} setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuText,
+    MuNumber,
+    MuComment,
+    MuType,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</${'script'}>`;
+
+  const codeOutput = `Some text
+1234
+// Some comment
+Type code`;
 </script>
 
 <style lang="scss" scoped>
