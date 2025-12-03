@@ -133,37 +133,6 @@ Example of connecting common components:
 <template>
   <code-markup>
     <code-line>
-      <mu-text code="Some text" />
-    </code-line>
-    <code-line>
-      <mu-number code="1234" />
-    </code-line>
-    <code-line>
-      <mu-comment code="// Some comment" />
-    </code-line>
-    <code-line>
-      <mu-type code="Type code" />
-    </code-line>
-  </code-markup>
-</template>
-
-<script setup>
-  import {
-    CodeMarkup,
-    CodeLine,
-    MuText,
-    MuNumber,
-    MuComment,
-    MuType,
-  } from 'vue-code-markup';
-  import 'vue-code-markup/lib/style.css';
-</script>
-```
-
-```vue
-<template>
-  <code-markup>
-    <code-line>
       <mu-tag code="<script" />
       <mu-attr code=" setup" />
       <mu-tag code=">" />

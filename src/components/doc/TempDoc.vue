@@ -49,7 +49,7 @@
       <template #output>
         <code-line>
           <mu-tag code="<script" />
-          <mu-attr code=" setup" />
+          <mu-attr code="setup" />
           <mu-tag code=">" />
         </code-line>
         <code-line>
@@ -64,13 +64,22 @@
           <mu-tag code="<code-line>" />
         </code-line>
         <code-line new level-4>
-          <mu-tag code='<mu-tag code="<script" /> ' />
+          <mu-tag code='<mu-tag ' />
+          <mu-attr code='code=' />
+          <mu-text code='"<script"' />
+          <mu-tag code=' /> ' />
         </code-line>
         <code-line new level-4>
-          <mu-tag code='<mu-attr code=" setup" />' />
+          <mu-tag code='<mu-attr ' />
+          <mu-attr code='code=' />
+          <mu-text code='"setup"' />
+          <mu-tag code=' />' />
         </code-line>
         <code-line new level-4>
-          <mu-tag code='<mu-tag code=">" />' />
+          <mu-tag code='<mu-tag ' />
+          <mu-attr code='code=' />
+          <mu-text code='">"' />
+          <mu-tag code=' />' />
         </code-line>
         <code-line new level-3>
           <mu-tag code="</code-line>" />
@@ -80,7 +89,10 @@
           <mu-tag code="<code-line>" />
         </code-line>
         <code-line new level-4>
-          <mu-tag :code="code" />
+          <mu-tag code='<mu-tag ' />
+          <mu-attr code=':code=' />
+          <mu-text :code="codeT" />
+          <mu-tag code=' />' />
         </code-line>
         <code-line new level-3>
           <mu-tag code="</code-line>" />
@@ -110,7 +122,8 @@
     'MuAttr',
   ];
 
-  const code = '<mu-tag :code="`</${\'script\'}>`" />';
+  const codeS = '<mu-tag :code="`</${\'script\'}>`" />';
+  const codeT = '"`</${\'script\'}>`"';
 
   const codeImport = `<template>
   <code-markup>
@@ -120,7 +133,7 @@
       <mu-tag code=">" />
     </code-line>
     <code-line>
-      ${code}
+      ${codeS}
     </code-line>
   </code-markup>
 </template>
