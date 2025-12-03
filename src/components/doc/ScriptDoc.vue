@@ -56,7 +56,7 @@
       :compArr="compArr"
       :codeImport="codeImport"
       :codeOutput="codeOutput"
-      :lineCount="20"
+      :lineCount="15"
     >
       <template #output>
         <code-line>
@@ -90,7 +90,7 @@
           }
         </code-line>
 
-        <code-line v-for="i in 10" :key="i" />
+        <code-line v-for="i in 8" :key="i" />
       </template>
 
       <template #code>
@@ -100,7 +100,7 @@
         <code-line level-4>
           <mu-tag code="<mu-key-words " />
           <mu-attr code="code=" />
-          <mu-text code='"const" ' />
+          <mu-text code='"const " ' />
           <mu-tag code=" />" />
         </code-line>
         <code-line level-4>
@@ -169,7 +169,49 @@
           <mu-text code='"function "' />
           <mu-tag code="/>" />
         </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-function " />
+          <mu-attr code="code=" />
+          <mu-text code='"exampleFunction() "' />
+          <mu-tag code="/>" />
+          <mu-type code="{" />
+        </code-line>
 
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+         <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=">" />
+        </code-line>
+
+        <code-line level-4>
+          <mu-tag code="<mu-key-words " />
+          <mu-attr code="code=" />
+          <mu-text code='"return "' />
+          <mu-tag code="/>" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-variable " />
+          <mu-attr code="code=" />
+          <mu-text code='"someObject"' />
+          <mu-tag code="/>" />
+        </code-line>
+        <code-line level-4>
+          ;
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line>" />
+        </code-line>
+        <code-line level-4>
+        }
+        </code-line>
         <code-line level-3>
           <mu-tag code="</code-line>" />
         </code-line>
@@ -200,7 +242,49 @@
     "MuFunction",
   ];
 
-  const codeImport = `fff`;
+  const codeImport = `<template>
+  <code-markup>
+    <code-line>
+      <mu-key-words code="const " />
+      <mu-variable code="someObject" />
+      =
+      <mu-key-words code="ref" />
+      ({
+    </code-line>
+    <code-line level-2>
+      <mu-key code="key" />
+      : value
+      </code-line>
+      <code-line>
+      });
+    </code-line>
+    <code-line />
+    <code-line>
+      <mu-key-words code="function "/>
+      <mu-function code="exampleFunction() "/>{
+    </code-line>
+    <code-line level-2>
+      <mu-key-words code="return "/>
+      <mu-variable code="someObject"/>
+      ;
+    </code-line>
+    <code-line>
+    }
+    </code-line>
+  </code-markup>
+</template>
+
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuKey,
+    MuKeyWords,
+    MuVariable,
+    MuFunction,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</${'script'}>`;
 
   const codeOutput = `const someObject = ref ({
   key : value
