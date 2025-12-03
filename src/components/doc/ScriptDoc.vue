@@ -59,7 +59,18 @@
       :lineCount="12"
     >
       <template #output>
-
+        <code-line>
+          <mu-key code="dddd" />
+        </code-line>
+        <code-line>
+          <mu-key-words code="dddd" />
+        </code-line>
+        <code-line>
+          <mu-variable code="dddd" />
+        </code-line>
+        <code-line>
+          <mu-function code="dddd" />
+        </code-line>
 
         <code-line v-for="i in 10" :key="i" />
       </template>

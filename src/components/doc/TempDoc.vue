@@ -48,7 +48,7 @@
     >
       <template #output>
         <code-line>
-          <mu-tag code="<script" />
+          <mu-tag code="<script " />
           <mu-attr code="setup" />
           <mu-tag code=">" />
         </code-line>
