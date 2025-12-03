@@ -13,7 +13,7 @@ import MuType from '@/code-markup/markup/MuType.vue';
 import MuKey from '@/code-markup/markup/script/MuKey.vue';
 import MuKeyWords from '@/code-markup/markup/script/MuKeyWords.vue';
 import MuVariable from '@/code-markup/markup/script/MuVariable.vue';
-import Mufunction from '@/code-markup/markup/script/Mufunction.vue';
+import MuFunction from '@/code-markup/markup/script/MuFunction.vue';
 // Для блока стилей
 import MuStyleClass from '@/code-markup/markup/style/MuStyleClass.vue';
 import MuStyleId from '@/code-markup/markup/style/MuStyleId.vue';
@@ -40,7 +40,7 @@ export default {
     app.component('mu-key', MuKey);
     app.component('mu-key-words', MuKeyWords);
     app.component('mu-variable', MuVariable);
-    app.component('mu-function', Mufunction);
+    app.component('mu-function', MuFunction);
     // Стили
     app.component('mu-style-class', MuStyleClass);
     app.component('mu-style-id', MuStyleId);
