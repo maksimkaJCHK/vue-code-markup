@@ -150,3 +150,37 @@ app.mount('#app');
   import 'vue-code-markup/lib/style.css';
 </script>
 ```
+
+### Components for the template block
+
+These are the components that are in the "template" block. These components also include the "template", "script", and "style" blocks themselves. There are only 2 such components:
+
+*   **MuTag** are the tags of the "template" block, as well as the names of the "template", "script", and "style" blocks.
+*   **MuAttr** are tag attributes, for example, "setup" for the "script" block.
+
+Example of connecting template components:
+
+```vue
+<template>
+  <code-markup>
+    <code-line>
+      <mu-tag code="<script" />
+      <mu-attr code=" setup" />
+      <mu-tag code=">" />
+    </code-line>
+    <code-line>
+      <mu-tag :code="`</${'script'}>`" />
+    </code-line>
+  </code-markup>
+</template>
+
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuTag,
+    MuAttr,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</script>
+```

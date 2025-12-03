@@ -15,6 +15,7 @@
       <code-line-doc is-rus />
       <mark-up-doc is-rus />
       <com-doc is-rus />
+      <temp-doc is-rus />
     </template>
 
     <template v-else>
@@ -25,6 +26,7 @@
       <code-line-doc />
       <mark-up-doc />
       <com-doc />
+      <temp-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -45,6 +47,7 @@
   import CodeLineDoc from '@/components/doc/CodeLineDoc.vue';
   import MarkUpDoc from '@/components/doc/MarkUpDoc.vue';
   import ComDoc from '@/components/doc/ComDoc.vue';
+  import TempDoc from '@/components/doc/TempDoc.vue';
 
   import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';

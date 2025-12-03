@@ -120,6 +120,15 @@ The following components are common to the template block, scripts, and styles:
 
 Example of connecting common components:
 
+### Компоненты для блока шаблона
+
+Это компоненты, которые находятся в блоке "template". Также к этим компонента относятся сами блоки "template", "script", "style". Таких компонентов всего лишь 2:
+
+*   **MuTag** - это теги блока "template", а также названия блоков "template", "script", "style".
+*   **MuAttr** - это атрибуты тегов, к примеру "setup" для блока "script".
+
+Пример подключения компонентов шаблона:
+
 ```vue
 <template>
   <code-markup>
@@ -146,6 +155,31 @@ Example of connecting common components:
     MuNumber,
     MuComment,
     MuType,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</script>
+```
+
+```vue
+<template>
+  <code-markup>
+    <code-line>
+      <mu-tag code="<script" />
+      <mu-attr code=" setup" />
+      <mu-tag code=">" />
+    </code-line>
+    <code-line>
+      <mu-tag :code="`</${'script'}>`" />
+    </code-line>
+  </code-markup>
+</template>
+
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuTag,
+    MuAttr,
   } from 'vue-code-markup';
   import 'vue-code-markup/lib/style.css';
 </script>
