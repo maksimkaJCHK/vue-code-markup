@@ -151,14 +151,14 @@ app.mount('#app');
 </script>
 ```
 
-### Components for the template block
+### Компоненты для блока шаблона
 
-These are the components that are in the "template" block. These components also include the "template", "script", and "style" blocks themselves. There are only 2 such components:
+Это компоненты, которые находятся в блоке "template". Также к этим компонента относятся сами блоки "template", "script", "style". Таких компонентов всего лишь 2:
 
-*   **MuTag** are the tags of the "template" block, as well as the names of the "template", "script", and "style" blocks.
-*   **MuAttr** are tag attributes, for example, "setup" for the "script" block.
+*   **MuTag** - это теги блока "template", а также названия блоков "template", "script", "style".
+*   **MuAttr** - это атрибуты тегов, к примеру "setup" для блока "script".
 
-Example of connecting template components:
+Пример подключения компонентов шаблона:
 
 ```vue
 <template>

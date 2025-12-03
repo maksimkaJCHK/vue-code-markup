@@ -120,14 +120,14 @@ The following components are common to the template block, scripts, and styles:
 
 Example of connecting common components:
 
-### Компоненты для блока шаблона
+### Components for the template block
 
-Это компоненты, которые находятся в блоке "template". Также к этим компонента относятся сами блоки "template", "script", "style". Таких компонентов всего лишь 2:
+These are the components that are in the "template" block. These components also include the "template", "script", and "style" blocks themselves. There are only 2 such components:
 
-*   **MuTag** - это теги блока "template", а также названия блоков "template", "script", "style".
-*   **MuAttr** - это атрибуты тегов, к примеру "setup" для блока "script".
+*   **MuTag** are the tags of the "template" block, as well as the names of the "template", "script", and "style" blocks.
+*   **MuAttr** are tag attributes, for example, "setup" for the "script" block.
 
-Пример подключения компонентов шаблона:
+Example of connecting template components:
 
 ```vue
 <template>
