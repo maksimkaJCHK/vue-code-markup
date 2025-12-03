@@ -2,7 +2,7 @@
   <code-markup
     :code="code"
     :key="code.slice(0, 10)"
-    :line-count="15"
+    :line-count="props.lineCount"
     v-bind="props.codeParam"
   >
     <template #header>
@@ -102,6 +102,7 @@
     'codeParam',
     'compArr',
     'isRus',
+    'lineCount',
     'codeImport',
     'codeOutput'
   ]);

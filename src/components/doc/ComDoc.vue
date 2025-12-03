@@ -52,6 +52,7 @@
       :compArr="compArr"
       :codeImport="codeImport"
       :codeOutput="codeOutput"
+      :lineCount="15"
     >
       <template #output>
         <code-line>
@@ -66,6 +67,8 @@
         <code-line>
           <mu-type code="Type code" />
         </code-line>
+
+        <code-line v-for="i in 11" :key="i" />
       </template>
 
       <template #code>
@@ -182,6 +185,6 @@
 Type code`;
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 </style>
