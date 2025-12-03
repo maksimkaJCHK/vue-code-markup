@@ -153,3 +153,62 @@ Example of connecting common components:
   import 'vue-code-markup/lib/style.css';
 </script>
 ```
+
+### Components for the script block
+
+These are the components that are in the "script" block. I'll list them below.
+
+*   **MuKey** - if you need to display an object, then this component is used to write the object's key.
+*   **MuKeyWords** are keywords. In JS, such words are import, export, const, let, var, fucntion, and so on.
+*   **MuVariable** - if you need to display the name of a variable, this component is used.
+*   **MuFunction** - if you need to display the function name, this component is used.
+
+Example of connecting components for a script block:
+
+```vue
+<template>
+  <code-markup>
+    <code-line>
+      <mu-key-words code="const " />
+      <mu-variable code="someObject" />
+      =
+      <mu-key-words code="ref" />
+      ({
+    </code-line>
+    <code-line level-2>
+      <mu-key code="key" />
+      : value
+    </code-line>
+    <code-line>
+    });
+    </code-line>
+
+    <code-line />
+
+    <code-line>
+      <mu-key-words code="function "/>
+      <mu-function code="exampleFunction() "/>{
+    </code-line>
+    <code-line level-2>
+      <mu-key-words code="return "/>
+      <mu-variable code="someObject"/>
+      ;
+    </code-line>
+    <code-line>
+    }
+    </code-line>
+  </code-markup>
+</template>
+
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuKey,
+    MuKeyWords,
+    MuVariable,
+    MuFunction,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</script>
+```

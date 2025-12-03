@@ -184,3 +184,62 @@ Example of connecting template components:
   import 'vue-code-markup/lib/style.css';
 </script>
 ```
+
+### Компоненты для блока скриптов
+
+Это компоненты которые находятся в блоке "script". Ниже я их перечислю:
+
+*   **MuKey** - если нужно отобразить объект, то для написания ключа объекта используется этот компонент.
+*   **MuKeyWords** - это ключевые слова, в JS таковыми словами являются import, export, const, let, var, fucntion и тд.
+*   **MuVariable** - если нужно отобразить название переменной, то используется этот компонент.
+*   **MuFunction** - если нужно отобразить название функци, то используется этот компонент.
+
+Пример подключения компонентов для блока скриптов:
+
+```vue
+<template>
+  <code-markup>
+    <code-line>
+      <mu-key-words code="const " />
+      <mu-variable code="someObject" />
+      =
+      <mu-key-words code="ref" />
+      ({
+    </code-line>
+    <code-line level-2>
+      <mu-key code="key" />
+      : value
+    </code-line>
+    <code-line>
+    });
+    </code-line>
+
+    <code-line />
+
+    <code-line>
+      <mu-key-words code="function "/>
+      <mu-function code="exampleFunction() "/>{
+    </code-line>
+    <code-line level-2>
+      <mu-key-words code="return "/>
+      <mu-variable code="someObject"/>
+      ;
+    </code-line>
+    <code-line>
+    }
+    </code-line>
+  </code-markup>
+</template>
+
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuKey,
+    MuKeyWords,
+    MuVariable,
+    MuFunction,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</script>
+```
