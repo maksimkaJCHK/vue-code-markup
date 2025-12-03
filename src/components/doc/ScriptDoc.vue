@@ -94,82 +94,84 @@
       </template>
 
       <template #code>
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="<code-line>" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-key-words " />
           <mu-attr code="code=" />
           <mu-text code='"const " ' />
           <mu-tag code=" />" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-variable " />
           <mu-attr code="code=" />
           <mu-text code='"someObject" ' />
           <mu-tag code=" />" />
         </code-line>
 
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-type code="=" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-key-words " />
           <mu-attr code="code=" />
           <mu-text code='"ref" ' />
           <mu-tag code=" />" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-type code="({" />
         </code-line>
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="</code-line>" />
         </code-line>
 
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="<code-line" />
           <mu-attr code=" level-2" />
           <mu-tag code=">" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-key " />
           <mu-attr code="code=" />
           <mu-text code='"key" ' />
           <mu-tag code=" />" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-type code=": value" />
         </code-line>
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="</code-line>" />
         </code-line>
 
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="<code-line>" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-type code="});" />
         </code-line>
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="</code-line>" />
         </code-line>
 
-        <code-line />
-        <code-line level-3>
+        <code-line new />
+
+        <code-line level-3 new>
           <mu-tag code="<code-line />" />
         </code-line>
-        <code-line />
 
-        <code-line level-3>
+        <code-line new />
+
+        <code-line level-3 new>
           <mu-tag code="<code-line>" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-key-words " />
           <mu-attr code="code=" />
           <mu-text code='"function "' />
           <mu-tag code="/>" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-function " />
           <mu-attr code="code=" />
           <mu-text code='"exampleFunction() "' />
@@ -177,42 +179,42 @@
           <mu-type code="{" />
         </code-line>
 
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="</code-line>" />
         </code-line>
 
-         <code-line level-3>
+         <code-line level-3 new>
           <mu-tag code="<code-line " />
           <mu-attr code="level-2" />
           <mu-tag code=">" />
         </code-line>
 
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-key-words " />
           <mu-attr code="code=" />
           <mu-text code='"return "' />
           <mu-tag code="/>" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           <mu-tag code="<mu-variable " />
           <mu-attr code="code=" />
           <mu-text code='"someObject"' />
           <mu-tag code="/>" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
           ;
         </code-line>
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="</code-line>" />
         </code-line>
 
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="<code-line>" />
         </code-line>
-        <code-line level-4>
+        <code-line level-4 new>
         }
         </code-line>
-        <code-line level-3>
+        <code-line level-3 new>
           <mu-tag code="</code-line>" />
         </code-line>
       </template>
