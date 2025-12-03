@@ -117,3 +117,36 @@ The following components are common to the template block, scripts, and styles:
 *   **MuNumber** is all the numbers that occur in the markup.
 *   **MuComment** - these are all comments that occur in the markup.
 *   **MuType** is a standard text. If you wrap some text with the "code-line" component, the wrapped text will be the same color as the color of the "MuType" component.
+
+Example of connecting common components:
+
+```vue
+<template>
+  <code-markup>
+    <code-line>
+      <mu-text code="Some text" />
+    </code-line>
+    <code-line>
+      <mu-number code="1234" />
+    </code-line>
+    <code-line>
+      <mu-comment code="// Some comment" />
+    </code-line>
+    <code-line>
+      <mu-type code="Type code" />
+    </code-line>
+  </code-markup>
+</template>
+
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuText,
+    MuNumber,
+    MuComment,
+    MuType,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</script>
+```

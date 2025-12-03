@@ -117,3 +117,36 @@ app.mount('#app');
 *   **MuNumber** - это все цифры, которые встречаются в разметке.
 *   **MuComment** - это все комментарии, которые встречаются в разметке.
 *   **MuType** - это типовой текст. Если вы обернёте какой-нибудь текст компонентом "code-line", то обёрнутый текст будет того же цвета, что и цвет компонента "MuType".
+
+Пример подключения общих компонентов:
+
+```vue
+<template>
+  <code-markup>
+    <code-line>
+      <mu-text code="Some text" />
+    </code-line>
+    <code-line>
+      <mu-number code="1234" />
+    </code-line>
+    <code-line>
+      <mu-comment code="// Some comment" />
+    </code-line>
+    <code-line>
+      <mu-type code="Type code" />
+    </code-line>
+  </code-markup>
+</template>
+
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuText,
+    MuNumber,
+    MuComment,
+    MuType,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</script>
+```

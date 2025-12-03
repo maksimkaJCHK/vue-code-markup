@@ -21,6 +21,10 @@
           <strong>MuType</strong> - это типовой текст. Если вы обернёте какой-нибудь текст компонентом "code-line", то обёрнутый текст будет того же цвета, что и цвет компонента "MuType".
         </li>
       </ul>
+
+      <p>
+        Пример подключения общих компонентов:
+      </p>
     </template>
 
     <template v-if="!props.isRus">
@@ -44,6 +48,10 @@
           <strong>MuType</strong> is a standard text. If you wrap some text with the "code-line" component, the wrapped text will be the same color as the color of the "MuType" component.
         </li>
       </ul>
+
+      <p>
+        Example of connecting common components:
+      </p>
     </template>
 
     <com-imports
