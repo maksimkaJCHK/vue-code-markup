@@ -16,7 +16,7 @@
         </li>
       </ul>
 
-      <p>Пример подключения компонентов шаблона:</p>
+      <p>Пример подключения компонентов для блока шаблона:</p>
     </template>
 
     <template v-if="!props.isRus">
@@ -35,7 +35,7 @@
         </li>
       </ul>
 
-      <p>Example of connecting template components:</p>
+      <p>Example of connecting components for a template block:</p>
     </template>
 
     <com-imports
