@@ -212,3 +212,18 @@ Example of connecting components for a script block:
   import 'vue-code-markup/lib/style.css';
 </script>
 ```
+
+### Components for the style block
+
+These are the components that are located in the "style" block. I'll list them below:
+
+*   **MuStyleClass** - this component is used to output classes.
+*   **MuStyleId** - this component is used to output IDs.
+*   **MuStyleTag** - this component is used to output tags.
+*   **MuStyleKey** - if you need to output the preprocessor code (less or sass), then this component is needed to create nested rules. For example, if we have a class."book", there is a "&-item" component, then it needs to be added to this component.
+*   **MuStyleParam** - you will need to put the CSS properties of the element in this component. These properties are margin, padding, font-size, and so on.
+*   **MuStyleUnitMeas** - this component is needed to output units of measurement (em. rem, px, etc.).
+*   **MuStyleAmpersand** - this component is needed to output the ampersand (&).
+*   **MuStyleCurlyBrace** - this component is needed to output curly braces.
+
+These components are connected in the following way:
