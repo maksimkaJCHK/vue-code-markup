@@ -88,22 +88,6 @@
 </template>
 
 <script setup>
-  // import {
-  //   CodeLine,
-  //   MuTag,
-  //   MuAttr,
-  //   MuText,
-  //   MuNumber,
-  //   MuStyleClass,
-  //   MuStyleId,
-  //   MuStyleTag,
-  //   MuStyleKey,
-  //   MuStyleParam,
-  //   MuStyleUnitMeas,
-  //   MuStyleAmpersand,
-  //   MuStyleCurlyBrace,
-  // } from '@/code-markUp/';
-
   import StyleBlock from '@/components/blocks/StyleBlock.vue';
 </script>
 

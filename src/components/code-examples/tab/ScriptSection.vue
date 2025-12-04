@@ -71,18 +71,6 @@
 </template>
 
 <script setup>
-  // import {
-  //   CodeLine,
-  //   MuTag,
-  //   MuAttr,
-  //   MuText,
-  //   MuNumber,
-  //   MuComment,
-  //   MuKey,
-  //   MuKeyWords,
-  //   MuVariable,
-  // } from '@/code-markUp/';
-
   import ScriptBlock from '@/components/blocks/ScriptBlock.vue';
 </script>
 
