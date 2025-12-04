@@ -17,6 +17,7 @@
       <com-doc is-rus />
       <temp-doc is-rus />
       <script-doc is-rus />
+      <style-doc is-rus />
     </template>
 
     <template v-else>
@@ -29,6 +30,7 @@
       <com-doc />
       <temp-doc />
       <script-doc />
+      <style-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -51,6 +53,7 @@
   import ComDoc from '@/components/doc/ComDoc.vue';
   import TempDoc from '@/components/doc/TempDoc.vue';
   import ScriptDoc from '@/components/doc/ScriptDoc.vue';
+  import StyleDoc from '@/components/doc/StyleDoc.vue';
 
   import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
