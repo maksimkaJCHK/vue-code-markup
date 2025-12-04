@@ -33,11 +33,49 @@
           <strong>MuStyleCurlyBrace</strong> - этот компонент нужен для вывода фигурных скобок.
         </li>
       </ul>
+
+      <p>
+        Данные компоненты подключаются следующим способом:
+      </p>
     </template>
 
     <template v-if="!props.isRus">
       <h3>Components for the style block</h3>
 
+      <p>
+        These are the components that are located in the "style" block. I'll list them below:
+      </p>
+
+      <ul>
+        <li>
+          <strong>MuStyleClass</strong> - this component is used to output classes.
+        </li>
+        <li>
+          <strong>MuStyleId</strong> - this component is used to output IDs.
+        </li>
+        <li>
+          <strong>MuStyleTag</strong> - this component is used to output tags.
+        </li>
+        <li>
+          <strong>MuStyleKey</strong> - if you need to output the preprocessor code (less or sass), then this component is needed to create nested rules. For example, if we have a class."book", there is a "&-item" component, then it needs to be added to this component.
+        </li>
+        <li>
+          <strong>MuStyleParam</strong> - you will need to put the CSS properties of the element in this component. These properties are margin, padding, font-size, and so on. 
+        </li>
+        <li>
+          <strong>MuStyleUnitMeas</strong> - this component is needed to output units of measurement (em. rem, px, etc.).
+        </li>
+        <li>
+          <strong>MuStyleAmpersand</strong> - this component is needed to output the ampersand (&).
+        </li>
+        <li>
+          <strong>MuStyleCurlyBrace</strong> - this component is needed to output curly braces.
+        </li>
+      </ul>
+
+      <p>
+        These components are connected in the following way:
+      </p>
     </template>
 
     <com-imports
