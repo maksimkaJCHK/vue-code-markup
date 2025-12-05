@@ -18,13 +18,13 @@
           <strong>MuStyleTag</strong> - этот компонент используется для вывода тегов.
         </li>
         <li>
-          <strong>MuStyleKey</strong> - если нужно вывести код препроцессора (less или sass), то этот компонент нужен для создания вложенных правил. К примеру, если у нас в классе ".book", лежит компонент "&-item", то его нужно добавить в этот компонент.
+          <strong>MuStyleKey</strong> - если нужно вывести код препроцессора (less или sass), то этот компонент нужен для создания вложенных правил. К примеру, если у нас есть класс ".book", и в нём лежит CSS компонент "&-item", то "&-item" нужно вывечти через "MuStyleKey".
         </li>
         <li>
-          <strong>MuStyleParam</strong> - в этот компонент нужно будет положить свойства CSS элемента. такими свойствами являются margin, padding, font-size и тд. 
+          <strong>MuStyleParam</strong> - в этот компонент нужно будет положить свойства CSS элемента. Если объяснять более подробно, то этими свойствами являются margin, padding, font-size и тд. 
         </li>
         <li>
-          <strong>MuStyleUnitMeas</strong> - этот покпонент нужен для вывода единиц измерений (em. rem, px и тд).
+          <strong>MuStyleUnitMeas</strong> - этот компонент нужен для вывода единиц измерения (em. rem, px и тд).
         </li>
         <li>
           <strong>MuStyleAmpersand</strong> - этот компонент нужен для вывода амперсанда (&).
@@ -57,10 +57,10 @@
           <strong>MuStyleTag</strong> - this component is used to output tags.
         </li>
         <li>
-          <strong>MuStyleKey</strong> - if you need to output the preprocessor code (less or sass), then this component is needed to create nested rules. For example, if we have a class."book", there is a "&-item" component, then it needs to be added to this component.
+          <strong>MuStyleKey</strong> - if you need to output the preprocessor code (less or sass), then this component is needed to create nested rules. For example, if we have a class."book", and it contains the CSS component "&-item", then "&-item" needs to be displayed using "MuStyleKey".
         </li>
         <li>
-          <strong>MuStyleParam</strong> - you will need to put the CSS properties of the element in this component. These properties are margin, padding, font-size, and so on. 
+          <strong>MuStyleParam</strong> - you will need to put the CSS properties of the element in this component. To explain in more detail, these properties are margin, padding, font-size, and so on. 
         </li>
         <li>
           <strong>MuStyleUnitMeas</strong> - this component is needed to output units of measurement (em. rem, px, etc.).
