@@ -160,7 +160,318 @@
       </template>
 
       <template #code>
-        
+        <code-line level-3>
+          <mu-tag code="<code-line>" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-id " />
+          <mu-attr code="code=" />
+          <mu-text code='"#books-list {"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=">" />
+        </code-line>
+
+        <code-line level-4>
+          <mu-tag code="<mu-style-param " />
+          <mu-attr code="code=" />
+          <mu-text code='"margin"' />
+          <mu-tag code=" />" />:
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='" 1"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-unit-meas " />
+          <mu-attr code="code=" />
+          <mu-text code='"em"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='" 0 "' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='"2.5"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-unit-meas " />
+          <mu-attr code="code=" />
+          <mu-text code='"em"' />
+          <mu-tag code=" />" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line>" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-id " />
+          <mu-attr code="code=" />
+          <mu-text code='"}"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="<code-line />" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line>" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-class " />
+          <mu-attr code="code=" />
+          <mu-text code='".books-list {"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-param " />
+          <mu-attr code="code=" />
+          <mu-text code='"line-height"' />:
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='" 1.2"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line />" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-tag " />
+          <mu-attr code="code=" />
+          <mu-text code='"h3 {"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-param " />
+          <mu-attr code="code=" />
+          <mu-text code='"font-size"' />
+          <mu-tag code=" />" />:
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='"1.2"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-unit-meas " />
+          <mu-attr code="code=" />
+          <mu-text code='"em"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=" />" />
+        </code-line>
+
+        <code-line level-4>
+          <mu-tag code="<mu-style-param " />
+          <mu-attr code="code=" />
+          <mu-text code='"margin"' />
+          <mu-tag code=" />" />:
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='".4"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-unit-meas " />
+          <mu-attr code="code=" />
+          <mu-text code='"em"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='" 0 "' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='".3"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-unit-meas " />
+          <mu-attr code="code=" />
+          <mu-text code='"em"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-tag " />
+          <mu-attr code="code=" />
+          <mu-text code='"}"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line />" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=" />" />
+        </code-line>
+
+        <code-line level-4>
+          <mu-tag code="<mu-style-ampersand " />
+          <mu-attr code="code=" />
+          <mu-text code='"&"' />
+          <mu-tag code=" />" />
+        </code-line>
+
+        <code-line level-4>
+          <mu-tag code="<mu-style-key " />
+          <mu-attr code="code=" />
+          <mu-text code='"-item"' />
+          <mu-tag code=" />" />
+        </code-line>
+
+        <code-line level-4>
+          <mu-tag code="<mu-style-curly-brace " />
+          <mu-attr code="code=" />
+          <mu-text code='" {"' />
+          <mu-tag code=" />" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-3" />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-param " />
+          <mu-attr code="code=" />
+          <mu-text code='"margin"' />
+          <mu-tag code=" />" />:
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='"1.5"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-unit-meas " />
+          <mu-attr code="code=" />
+          <mu-text code='"em"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-number " />
+          <mu-attr code="code=" />
+          <mu-text code='" 0 "' />
+          <mu-tag code=" />" />;
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line " />
+          <mu-attr code="level-2" />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-curly-brace " />
+          <mu-attr code="code=" />
+          <mu-text code='"}"' />
+          <mu-tag code=" />" />;
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
+
+        <code-line level-3>
+          <mu-tag code="<code-line>" />
+        </code-line>
+        <code-line level-4>
+          <mu-tag code="<mu-style-class " />
+          <mu-attr code="code=" />
+          <mu-text code='"}"' />
+          <mu-tag code=" />" />
+        </code-line>
+        <code-line level-3>
+          <mu-tag code="</code-line>" />
+        </code-line>
       </template>
     </com-imports>
   </div>
