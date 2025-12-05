@@ -213,7 +213,7 @@
           <mu-tag code="<mu-style-unit-meas " />
           <mu-attr code="code=" />
           <mu-text code='"em"' />
-          <mu-tag code=" />" />
+          <mu-tag code=" />" />;
         </code-line>
 
         <code-line level-3>
@@ -252,19 +252,19 @@
         <code-line level-3>
           <mu-tag code="<code-line " />
           <mu-attr code="level-2" />
-          <mu-tag code=" />" />
+          <mu-tag code=" >" />
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-style-param " />
           <mu-attr code="code=" />
-          <mu-text code='"line-height"' />:
-          <mu-tag code=" />" />
+          <mu-text code='"line-height"' />
+          <mu-tag code=" />" />:
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-number " />
           <mu-attr code="code=" />
           <mu-text code='" 1.2"' />
-          <mu-tag code=" />" />
+          <mu-tag code=" />" />;
         </code-line>
         <code-line level-3>
           <mu-tag code="</code-line>" />
@@ -277,7 +277,7 @@
         <code-line level-3>
           <mu-tag code="<code-line " />
           <mu-attr code="level-2" />
-          <mu-tag code=" />" />
+          <mu-tag code=" >" />
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-style-tag " />
@@ -291,8 +291,8 @@
 
         <code-line level-3>
           <mu-tag code="<code-line " />
-          <mu-attr code="level-2" />
-          <mu-tag code=" />" />
+          <mu-attr code="level-3" />
+          <mu-tag code=" >" />
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-style-param " />
@@ -310,7 +310,7 @@
           <mu-tag code="<mu-style-unit-meas " />
           <mu-attr code="code=" />
           <mu-text code='"em"' />
-          <mu-tag code=" />" />
+          <mu-tag code=" />" />;
         </code-line>
         <code-line level-3>
           <mu-tag code="</code-line>" />
@@ -318,8 +318,8 @@
 
         <code-line level-3>
           <mu-tag code="<code-line " />
-          <mu-attr code="level-2" />
-          <mu-tag code=" />" />
+          <mu-attr code="level-3" />
+          <mu-tag code=" >" />
         </code-line>
 
         <code-line level-4>
@@ -338,7 +338,7 @@
           <mu-tag code="<mu-style-unit-meas " />
           <mu-attr code="code=" />
           <mu-text code='"em"' />
-          <mu-tag code=" />" />
+          <mu-tag code=" />" />;
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-number " />
@@ -365,7 +365,7 @@
         <code-line level-3>
           <mu-tag code="<code-line " />
           <mu-attr code="level-2" />
-          <mu-tag code=" />" />
+          <mu-tag code=" >" />
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-style-tag " />
@@ -384,7 +384,7 @@
         <code-line level-3>
           <mu-tag code="<code-line " />
           <mu-attr code="level-2" />
-          <mu-tag code=" />" />
+          <mu-tag code=" >" />
         </code-line>
 
         <code-line level-4>
@@ -415,7 +415,7 @@
         <code-line level-3>
           <mu-tag code="<code-line " />
           <mu-attr code="level-3" />
-          <mu-tag code=" />" />
+          <mu-tag code=" >" />
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-style-param " />
@@ -448,7 +448,7 @@
         <code-line level-3>
           <mu-tag code="<code-line " />
           <mu-attr code="level-2" />
-          <mu-tag code=" />" />
+          <mu-tag code=" >" />
         </code-line>
         <code-line level-4>
           <mu-tag code="<mu-style-curly-brace " />
@@ -503,9 +503,103 @@
     'MuStyleCurlyBrace',
   ];
 
-  const codeImport = ``;
+  const codeImport = `<template>
+  <code-markup>
+    <code-line>
+      <mu-style-id code="#books-list {" />
+    </code-line>
+    <code-line level-2>
+      <mu-style-param code="margin" />:
+      <mu-number code=" 1" />
+      <mu-style-unit-meas code="em" />
+      <mu-number code=" 0 " />
+      <mu-number code="2.5" />
+      <mu-style-unit-meas code="em" />;
+    </code-line>
+    <code-line>
+      <mu-style-id code="}" />
+    </code-line>
+    <code-line />
+    <code-line>
+      <mu-style-class code=".books-list {" />
+    </code-line>
+    <code-line level-2 >
+      <mu-style-param code="line-height" />:
+      <mu-number code=" 1.2" />;
+    </code-line>
+    <code-line />
+    <code-line level-2 >
+      <mu-style-tag code="h3 {" />
+    </code-line>
+    <code-line level-3 >
+      <mu-style-param code="font-size" />:
+      <mu-number code="1.2" />
+      <mu-style-unit-meas code="em" />;
+    </code-line>
+    <code-line level-3 >
+      <mu-style-param code="margin" />:
+      <mu-number code=".4" />
+      <mu-style-unit-meas code="em" />;
+      <mu-number code=" 0 " />
+      <mu-number code=".3" />
+      <mu-style-unit-meas code="em" />
+    </code-line>
+    <code-line level-2 >
+      <mu-style-tag code="}" />
+    </code-line>
+    <code-line />
+    <code-line level-2 >
+      <mu-style-ampersand code="&" />
+      <mu-style-key code="-item" />
+      <mu-style-curly-brace code=" {" />
+    </code-line>
+    <code-line level-3 >
+      <mu-style-param code="margin" />:
+      <mu-number code="1.5" />
+      <mu-style-unit-meas code="em" />
+      <mu-number code=" 0 " />;
+    </code-line>
+    <code-line level-2 >
+      <mu-style-curly-brace code="}" />;
+    </code-line>
+    <code-line>
+      <mu-style-class code="}" />
+    </code-line>
+  </code-markup>
+</template>
 
-  const codeOutput = ``;
+<script setup>
+  import {
+    CodeMarkup,
+    CodeLine,
+    MuStyleClass,
+    MuStyleId,
+    MuStyleTag,
+    MuStyleKey,
+    MuStyleParam,
+    MuStyleUnitMeas,
+    MuStyleAmpersand,
+    MuStyleCurlyBrace,
+  } from 'vue-code-markup';
+  import 'vue-code-markup/lib/style.css';
+</${'script'}>`;
+
+  const codeOutput = `#books-list {
+  margin: 1em 0 2.5em;
+}
+
+.books-list {
+  line-height: 1.2;
+  
+  h3 {
+    font-size: 1.2em;
+    margin: .4em 0 .3em;
+  }
+
+  &-item {
+    margin: 1.5em 0;
+  }
+}`;
 </script>
 
 <style lang="scss">
