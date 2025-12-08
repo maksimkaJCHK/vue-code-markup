@@ -155,8 +155,6 @@
         <code-line>
           <mu-style-class code="}" />
         </code-line>
-
-        <code-line v-for="i in 8" :key="i" />
       </template>
 
       <template #code>
