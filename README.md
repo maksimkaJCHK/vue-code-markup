@@ -310,3 +310,33 @@ These components are connected in the following way:
   import 'vue-code-markup/lib/style.css';
 </script>
 ```
+
+## Slots
+
+For this section, it's worth starting with an example right away, so it will be clearer:
+
+```vue
+<template>
+  <code-markup>
+    <template #header>
+      <!-- The header of the window with the code is inserted here -->
+    </template>
+    <template #default>
+      <!-- The default code is inserted here if no other templates are specified -->
+    </template>
+
+    <!-- Below are slots for the icons "copy text", "text successfully copied" and the icon when an error occurred while copying text to the clipboard -->
+    <template #copy>
+      <!-- The "copy text" icon is inserted here -->
+    </template>
+    <template #success>
+      <!-- An icon is inserted here when the text has been successfully copied to the clipboard -->
+    </template>
+    <template #error>
+      <!-- An icon is inserted here if an error occurred while copying text to the clipboard -->
+    </template>
+  </code-markup>
+</template>
+```
+
+I think the example above perfectly shows how to use the slots, but still I will describe them below.
