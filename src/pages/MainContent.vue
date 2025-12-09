@@ -18,6 +18,7 @@
       <temp-doc is-rus />
       <script-doc is-rus />
       <style-doc is-rus />
+      <slots-doc is-rus />
     </template>
 
     <template v-else>
@@ -31,6 +32,7 @@
       <temp-doc />
       <script-doc />
       <style-doc />
+      <slots-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -54,6 +56,7 @@
   import TempDoc from '@/components/doc/TempDoc.vue';
   import ScriptDoc from '@/components/doc/ScriptDoc.vue';
   import StyleDoc from '@/components/doc/StyleDoc.vue';
+  import SlotsDoc from '@/components/doc/SlotsDoc.vue';
 
   import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
   import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
