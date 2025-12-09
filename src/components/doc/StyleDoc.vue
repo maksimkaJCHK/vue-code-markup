@@ -1,5 +1,5 @@
 <template>
-  <div class="temp-doc">
+  <div class="style-doc">
     <template v-if="props.isRus">
       <h3>Компоненты для блока стилей</h3>
 

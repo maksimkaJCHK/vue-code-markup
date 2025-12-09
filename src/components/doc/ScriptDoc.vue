@@ -1,5 +1,5 @@
 <template>
-  <div class="temp-doc">
+  <div class="scripts-doc">
     <template v-if="props.isRus">
       <h3>Компоненты для блока скриптов</h3>
 
