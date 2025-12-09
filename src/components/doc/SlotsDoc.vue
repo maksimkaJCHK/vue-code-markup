@@ -1,7 +1,7 @@
 <template>
   <div class="slots-doc">
     <template v-if="props.isRus">
-      <h3>Слоты</h3>
+      <h2>Слоты</h2>
 
       <p>
         Для данного раздела стоит начать сразу с примера, так будет понятнее:
@@ -11,7 +11,7 @@
     </template>
 
     <template v-if="!props.isRus">
-      <h3>Slots</h3>
+      <h2>Slots</h2>
 
       <slots-example />
     </template>
