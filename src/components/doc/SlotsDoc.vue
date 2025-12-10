@@ -15,10 +15,10 @@
 
       <ul>
         <li>
-          <strong>header</strong> - 
+          <strong>default</strong> - 
         </li>
         <li>
-          <strong>default</strong> - 
+          <strong>header</strong> - 
         </li>
         <li>
           <strong>copy</strong> - 

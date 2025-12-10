@@ -11,12 +11,12 @@
         <mu-tag code="<code-markup>" />
       </code-line>
 
-      <template-component type="header">
-        <mu-comment :code="`<!-- ${headerComment} -->`" />
-      </template-component>
-
       <template-component type="default">
         <mu-comment :code="`<!-- ${defaultComment} -->`" />
+      </template-component>
+
+      <template-component type="header">
+        <mu-comment :code="`<!-- ${headerComment} -->`" />
       </template-component>
 
       <code-line />
@@ -66,11 +66,11 @@
   const code = computed(() => {
     if (props.lang === 'ru') return `<template>
   <code-markup>
-    <template #header>
-      <!-- Сюда вставляется заголвок окна с кодом -->
-    </template>
     <template #default>
       <!-- Сюда вставляется код по умолчанию, если никаких других шаблонов не задано -->
+    </template>
+    <template #header>
+      <!-- Сюда вставляется заголвок окна с кодом -->
     </template>
 
     <!-- Ниже находятся слоты для иконок "скопировать текст", "текст удачно скопирован" и иконка когда произошла ошибка во время копирования текста в буфер обмена -->
@@ -88,11 +88,11 @@
 
     return `<template>
   <code-markup>
-    <template #header>
-      <!-- The header of the window with the code is inserted here -->
-    </template>
     <template #default>
       <!-- The default code is inserted here if no other templates are specified -->
+    </template>
+    <template #header>
+      <!-- The header of the window with the code is inserted here -->
     </template>
 
     <!-- Below are slots for the icons "copy text", "text successfully copied" and the icon when an error occurred while copying text to the clipboard -->

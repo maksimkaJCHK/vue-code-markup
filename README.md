@@ -318,11 +318,11 @@ For this section, it's worth starting with an example right away, so it will be 
 ```vue
 <template>
   <code-markup>
-    <template #header>
-      <!-- The header of the window with the code is inserted here -->
-    </template>
     <template #default>
       <!-- The default code is inserted here if no other templates are specified -->
+    </template>
+    <template #header>
+      <!-- The header of the window with the code is inserted here -->
     </template>
 
     <!-- Below are slots for the icons "copy text", "text successfully copied" and the icon when an error occurred while copying text to the clipboard -->
