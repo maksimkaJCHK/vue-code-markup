@@ -19,6 +19,7 @@
       <script-doc is-rus />
       <style-doc is-rus />
       <slots-doc is-rus />
+      <exam-doc is-rus />
     </template>
 
     <template v-else>
@@ -33,6 +34,7 @@
       <script-doc />
       <style-doc />
       <slots-doc />
+      <exam-doc />
     </template>
 
     <!-- <tab-books-list lang="ru" />
@@ -57,11 +59,7 @@
   import ScriptDoc from '@/components/doc/ScriptDoc.vue';
   import StyleDoc from '@/components/doc/StyleDoc.vue';
   import SlotsDoc from '@/components/doc/SlotsDoc.vue';
-
-  import BooksLineCount from '@/components/code-examples/books/BooksLineCount.vue';
-  import BooksStyleHeight from '@/components/code-examples/books/BooksStyleHeight.vue';
-  // Пример с табами
-  import TabBooksList from '@/components/code-examples/tab/TabBooksList.vue';
+  import ExamDoc from '@/components/doc/ExamDoc.vue';
 
   const lang = ref('rus');
 
