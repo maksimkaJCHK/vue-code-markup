@@ -52,7 +52,7 @@ This is the most important component, it serves as a wrapper for all other compo
 </script>
 ```
 
-This component has the following input parameters:
+I would advise you to look at the documentation on [github pages](https://maksimkajchk.github.io/vue-code-markup/), you can change the parameters there and see what changes. This component has the following input parameters:
 
 **isHeader** - this parameter is responsible for displaying the title of the window with the code. If you are going to display the title, then you do not need to set this parameter, it is set to "true" by default.
 
