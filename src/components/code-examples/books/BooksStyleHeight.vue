@@ -1,7 +1,4 @@
 <template>
-  <p>
-    <b>--cm-max-height-body: 200px;</b>
-  </p>
   <div class="books-style-max-height">
     <books-list :lang="props.lang" />
   </div>

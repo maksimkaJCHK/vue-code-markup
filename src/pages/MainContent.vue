@@ -36,17 +36,11 @@
       <slots-doc />
       <exam-doc />
     </template>
-
-    <!-- <tab-books-list lang="ru" />
-    <books-line-count lang="ru" />
-    <books-style-height lang="ru" /> -->
   </main>
 </template>
 
 <script setup>
   import { ref } from 'vue';
-  // Пока ExampleContent не нужен
-  //import ExampleContent from '@/components/ExampleContent.vue';
   import SelectLang from '@/components/SelectLang.vue';
   import IntroDoc from '@/components/doc/IntroDoc.vue';
   import InstallDoc from '@/components/doc/InstallDoc.vue';

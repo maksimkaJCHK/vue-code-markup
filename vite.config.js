@@ -11,6 +11,7 @@ export default defineConfig({
   server: {
     port: 8080
   },
+  base: '/vue-code-markup/',
   plugins: [
     vue(),
     vueDevTools(),
