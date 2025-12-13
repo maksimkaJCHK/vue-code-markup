@@ -25,5 +25,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/maksimkaJCHK/vue-code-markup"
-  }
+  },
+  "description": "Vue component for documenting the code",
+  "keywords": [
+    "vue code markup",
+    "code markup",
+    "create documentation",
+    "vue component for documenting the code",
+    "component for documenting the code",
+    "documenting the code"
+  ]
 }
