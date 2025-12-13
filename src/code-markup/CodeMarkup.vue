@@ -259,6 +259,7 @@
     font-size: var(--cm-text-font-size);
     font-family: var(--cm-text-font-family);
     line-height: var(--cm-text-line-height);
+    text-align: left;
 
     &::selection {
       background: var(--cm-selection-bg);

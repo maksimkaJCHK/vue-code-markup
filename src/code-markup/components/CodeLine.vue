@@ -77,6 +77,7 @@
   @use "sass:math";
 
   .code-markup__line {
+    text-align: left;
     height: var(--cm-text-line-height);
     display: table-row;
     white-space: nowrap;
