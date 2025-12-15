@@ -70,11 +70,11 @@
 
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>deleted</strong> - в Visual Studio Code, когда удаляется какая-либо строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
+            <strong>deleted</strong> - в Visual Studio Code, когда удаляется какая-либо строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false. Так же я делаю данную строку не много прозрачной, чтобы показать, что она удалена.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>deleted</strong> - In Visual Studio Code, when a line is deleted, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
+            <strong>deleted</strong> - In Visual Studio Code, when a line is deleted, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false. I also make this line slightly transparent to show that it has been deleted.
           </p>
 
           <ui-checkbox
