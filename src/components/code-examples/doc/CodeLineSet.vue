@@ -14,6 +14,8 @@
       </code-line>
       <code-line
         :new="props.newParam"
+        :deleted="props.deleted"
+        :changed="props.changed"
         :active="props.active"
         :visible-copy="props.visibleCopy"
         v-bind="levelCodeLine"
@@ -42,7 +44,9 @@
     'newParam',
     'active',
     'visibleCopy',
-    'levelCodeLine'
+    'levelCodeLine',
+    'deleted',
+    'changed',
   ]);
 
   const textInEditor = computed(() => {

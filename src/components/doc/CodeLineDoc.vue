@@ -45,6 +45,8 @@
           :active="active"
           :visibleCopy="visibleCopy"
           :levelCodeLine="levelCodeLine"
+          :deleted="deleted"
+          :changed="changed"
         />
       </template>
 
@@ -63,6 +65,40 @@
             value="newParam"
           >
             {{ newParam }}
+          </ui-checkbox>
+        </div>
+
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>deleted</strong> - в Visual Studio Code, когда добавляется новая строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>deleted</strong> - In Visual Studio Code, when a new line is added, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
+          </p>
+
+          <ui-checkbox
+            v-model="deleted"
+            value="deleted"
+          >
+            {{ deleted }}
+          </ui-checkbox>
+        </div>
+
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>changed</strong> - в Visual Studio Code, когда добавляется новая строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>changed</strong> - In Visual Studio Code, when a new line is added, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
+          </p>
+
+          <ui-checkbox
+            v-model="changed"
+            value="changed"
+          >
+            {{ changed }}
           </ui-checkbox>
         </div>
 
@@ -120,7 +156,11 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
+  import {
+    ref,
+    computed,
+    watch
+  } from 'vue';
 
   import useLang from '@/components/code-examples/uselang.js';
 
@@ -155,6 +195,8 @@
   }
 
   const newParam = ref(false);
+  const deleted = ref(false);
+  const changed = ref(false);
   const active = ref(false);
   const visibleCopy = ref(false);
   const level = ref('level1');
@@ -170,6 +212,22 @@
     level7: level.value === 'level7',
     level8: level.value === 'level8',
   }));
+
+  const resetParam = (cond, stateArr) => {
+    if (cond) stateArr.forEach((state) => state.value = false);
+  }
+
+  watch(newParam, (state) => {
+    resetParam(state, [deleted, changed]);
+  });
+
+  watch(deleted, (state) => {
+    resetParam(state, [newParam, changed]);
+  });
+
+  watch(changed, (state) => {
+    resetParam(state, [newParam, deleted]);
+  });
 </script>
 
 <style lang="scss" scoped>
