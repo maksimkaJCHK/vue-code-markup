@@ -1,10 +1,16 @@
 <template>
   <!-- Стили -->
   <style-block>
-    <code-line level-2>
+    <code-line
+      level-2
+      new
+    >
       <mu-style-id code="#books-list {" />
     </code-line>
-    <code-line level-3>
+    <code-line
+      level-3
+      new
+    >
       <mu-style-param code="margin" />:
       <mu-number code=" 1" />
       <mu-style-unit-meas code="em" />
@@ -12,7 +18,10 @@
       <mu-number code="2.5" />
       <mu-style-unit-meas code="em" />;
     </code-line>
-    <code-line level-2>
+    <code-line
+      level-2
+      new
+    >
       <mu-style-id code="}" />
     </code-line>
 
@@ -32,15 +41,12 @@
 
     <code-line />
 
-    <code-line
-      level-3
-      new
-    >
+    <code-line level-3>
       <mu-style-tag code="h3 {" />
     </code-line>
     <code-line
       level-4
-      new
+      changed
     >
       <mu-style-param code="font-size" />:
       <mu-number code="1.2" />
@@ -48,7 +54,7 @@
     </code-line>
     <code-line
       level-4
-      new
+      changed
     >
       <mu-style-param code="margin" />:
       <mu-number code=".4" />
@@ -57,27 +63,24 @@
       <mu-number code=".3" />
       <mu-style-unit-meas code="em" />;
     </code-line>
-    <code-line
-      level-3
-      new
-    >
+    <code-line level-3>
       <mu-style-tag code="}" />
     </code-line>
 
     <code-line />
 
-    <code-line level-3>
+    <code-line level-3 deleted>
       <mu-style-ampersand code="&" />
       <mu-style-key code="-item" />
       <mu-style-curly-brace code=" {" />
     </code-line>
-    <code-line level-4>
+    <code-line level-4 deleted>
       <mu-style-param code="margin" />:
       <mu-number code="1.5" />
       <mu-style-unit-meas code="em" />
       <mu-number code=" 0 " />;
     </code-line>
-    <code-line level-3>
+    <code-line level-3 deleted>
       <mu-style-curly-brace code="}" />
     </code-line>
 

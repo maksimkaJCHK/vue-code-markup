@@ -20,13 +20,22 @@
     <code-line level-3>
       {
     </code-line>
-    <code-line level-4>
+    <code-line 
+      level-4
+      new
+    >
       <mu-key code="id" />: <mu-number code='1' />,
     </code-line>
-    <code-line level-4>
+    <code-line 
+      level-4
+      new
+    >
       <mu-key code="title" />: <mu-text code='"Война и мир"' />,
     </code-line>
-    <code-line level-4>
+    <code-line 
+      level-4
+      new
+    >
       <mu-key code="author" />: <mu-text code='"Лев Толстой"' />,
     </code-line>
     <code-line level-4>
@@ -42,22 +51,28 @@
     }, {
     </code-line>
 
-    <code-line level-4>
+    <code-line
+      level-4
+      changed
+    >
       <mu-key code="id" />: <mu-number code='2' />,
     </code-line>
-    <code-line level-4>
+    <code-line
+      level-4
+      changed
+    >
       <mu-key code="title" />: <mu-text code='"Записки врача"' />,
     </code-line>
     <code-line level-4>
       <mu-key code="author" />: <mu-text code='"Викентий Вересаев"' />,
     </code-line>
-    <code-line level-4>
+    <code-line level-4 deleted>
       <mu-key code="pages" />: <mu-number code='360' />,
     </code-line>
-    <code-line level-4>
+    <code-line level-4 deleted>
       <mu-key code="isFinished" />: <mu-key-words code='false' />,
     </code-line>
-    <code-line level-4>
+    <code-line level-4 deleted>
       <mu-key code="usersReading" />: <mu-number code='[1922, 1280, 5378, 9576, 10636]' />,
     </code-line>
     <code-line level-3>

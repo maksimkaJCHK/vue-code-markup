@@ -208,8 +208,12 @@
     // Цвета текста по умолчани.
     --cm-main-color: #{$color-8};
 
-    // Цвет нового куска кода
+    // Цвет нового, изменённого, удалённого куска кода
     --cm-new-border: #60a802;
+    --cm-changed-border: rgb(100,149,237);
+    --cm-deleted-border: #92000a;
+
+    --cm-deleted-opacity: .6;
 
     // Цвета активной строки
     --cm-active-bg: #2a2a2b;

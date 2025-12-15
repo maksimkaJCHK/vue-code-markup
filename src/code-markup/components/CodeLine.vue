@@ -21,6 +21,14 @@
       type: Boolean,
       default: false
     },
+    deleted: {
+      type: Boolean,
+      default: false
+    },
+    changed: {
+      type: Boolean,
+      default: false
+    },
     visibleCopy: {
       type: Boolean,
       default: false
@@ -58,6 +66,8 @@
   const classLine = computed(() => ({
     'code-markup__line_active': props.active,
     'code-markup__line_new': props.new,
+    'code-markup__line_deleted': props.deleted,
+    'code-markup__line_changed': props.changed,
     'code-markup__line_visible-copy': props.visibleCopy,
     'code-markup_level-2': props['level2'],
     'code-markup_level-3': props['level3'],
@@ -118,6 +128,24 @@
     &_new {
       .code-markup_count &::before {
         border-right-color: var(--cm-new-border);
+      }
+    }
+
+    &_deleted {
+      .code-markup_count &::before {
+        border-right-color: var(--cm-deleted-border);
+      }
+
+      .code-markup {
+         &__line__content {
+          opacity: var(--cm-deleted-opacity);
+        }
+      }
+    }
+
+    &_changed {
+      .code-markup_count &::before {
+        border-right-color: var(--cm-changed-border);
       }
     }
 
