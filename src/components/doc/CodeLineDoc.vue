@@ -70,11 +70,11 @@
 
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>deleted</strong> - в Visual Studio Code, когда добавляется новая строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
+            <strong>deleted</strong> - в Visual Studio Code, когда удаляется какая-либо строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>deleted</strong> - In Visual Studio Code, when a new line is added, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
+            <strong>deleted</strong> - In Visual Studio Code, when a line is deleted, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
           </p>
 
           <ui-checkbox
@@ -87,11 +87,11 @@
 
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>changed</strong> - в Visual Studio Code, когда добавляется новая строка, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
+            <strong>changed</strong> - в Visual Studio Code, когда происходят какие-нибудь изменения на строке, она отображается правой вертикальной линией, которая разделяет номер строки и текст строки. Данный параметр отображает эту линию. Вертикальная линия будет заметна только в том случае, если номера строк отображаются (включён параметр is-count). По умолчанию данный параметр отключен, те имеет значение false.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>changed</strong> - In Visual Studio Code, when a new line is added, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
+            <strong>changed</strong> - in Visual Studio Code, when any changes occur on a line, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
           </p>
 
           <ui-checkbox
@@ -233,7 +233,7 @@
 <style lang="scss" scoped>
   .code-line-doc {
     @media screen and (max-width: 700px) {
-      --cm-max-height-body: 70px;
+      --cm-max-height-body: 130px;
     }
   }
 </style>

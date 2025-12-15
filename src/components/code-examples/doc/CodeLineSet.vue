@@ -32,7 +32,7 @@
 <script setup>
   import { computed } from 'vue';
 
-  function* bArr(count = 7) {
+  function* bArr(count = 13) {
     for (let i = 0; i < count; i++) yield i;
   }
 
