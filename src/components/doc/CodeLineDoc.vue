@@ -233,7 +233,9 @@
 <style lang="scss" scoped>
   .code-line-doc {
     @media screen and (max-width: 700px) {
-      --cm-max-height-body: 130px;
+      .settings-doc-cont {
+        --cm-max-height-body: calc(var(--cm-text-line-height) * 3);
+      }
     }
   }
 </style>
