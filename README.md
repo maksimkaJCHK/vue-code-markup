@@ -93,9 +93,13 @@ In fact, this is a line or a line with a code. The code elements must be located
 </script>
 ```
 
-This component has the following input parameters:
+Input parameters such as "new", "deleted" and "changed" were taken from Visual Studio Code. They display the new one, the deleted one, and the row where the changes occurred. Only one of these input parameters should be applied to the "code-line" component. Initially, I wanted to set some parameter, for example, "type" and pass one of these three values to it ("new", "deleted" and "changed"), but still I decided to abandon it. You can simply set the "new" parameter and the row will be displayed as a new one. It will be more convenient this way. If you set the input parameters "deleted" and "changed" for the "code-line" component, the line will be displayed as changed, but it will have transparent text from the input parameter "deleted". Styles for the "new" input parameter will have the lowest priority, keep this in mind. So, this component has the following input parameters:
 
 **new** - In Visual Studio Code, when a new line is added, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
+
+**deleted** - In Visual Studio Code, when a line is deleted, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false. I also make this line slightly transparent to show that it has been deleted.
+
+**changed** - in Visual Studio Code, when any changes occur on a line, it is displayed with a right vertical line that separates the line number and the line text. This parameter displays this line. The vertical line will be visible only if the line numbers are displayed (the is-count parameter is enabled). By default, this parameter is disabled, it has the value false.
 
 **active** - in Visual Studio Code, the active line differs from other background lines. This parameter enables the background for the string. By default, this parameter is disabled, it has the value false.
 
