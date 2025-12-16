@@ -14,7 +14,7 @@
       </p>
 
       <p>
-        Данный компонент имеет следующие входные параметры:
+        Такие входные параметры как "new", "deleted" и "changed" были взяты из Visual Studio Code. Они отображают новую, удалённую и строку в которой произошли изменения. К компоненту "code-line" должен быть применён только один из этих входных параметров. Первоначально я хотел задать какой-нибудь параметр, к примеру "type" и передаать в него одно из этих трех значений ("new", "deleted" и "changed"), но всё таки я решил от этого отказаться. Вы можете просто задать параметр "new" и строка будет отображаться как новая. Так будет удобнее. Если вы зададите для компонента "code-line" входные параметры "deleted" и "changed", то строка будет отображаться как изменённая, но будет иметь прозрачный текст от входного параметра "deleted". Стили для входного параметра "new" будут иметь наименьший приоритет, имейте это ввиду. Итак, данный компонент имеет следующие входные параметры:
       </p>
     </template>
 
@@ -32,7 +32,7 @@
       </p>
 
       <p>
-        This component has the following input parameters:
+        Input parameters such as "new", "deleted" and "changed" were taken from Visual Studio Code. They display the new one, the deleted one, and the row where the changes occurred. Only one of these input parameters should be applied to the "code-line" component. Initially, I wanted to set some parameter, for example, "type" and pass one of these three values to it ("new", "deleted" and "changed"), but still I decided to abandon it. You can simply set the "new" parameter and the row will be displayed as a new one. It will be more convenient this way. If you set the input parameters "deleted" and "changed" for the "code-line" component, the line will be displayed as changed, but it will have transparent text from the input parameter "deleted". Styles for the "new" input parameter will have the lowest priority, keep this in mind. So, this component has the following input parameters:
       </p>
     </template>
 
