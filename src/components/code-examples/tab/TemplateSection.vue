@@ -24,6 +24,15 @@
       <mu-tag code='>' />
     </code-line>
 
+    <code-line
+      level-3
+      line-through
+    >
+      <mu-tag code="<h2>" />
+      <mu-type code="Some text" />
+      <mu-tag code="</h2>" />
+    </code-line>
+
     <code-line level-3>
       <mu-tag code='<div' />
     </code-line>

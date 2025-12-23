@@ -29,6 +29,10 @@
       type: Boolean,
       default: false
     },
+    lineThrough: {
+      type: Boolean,
+      default: false
+    },
     visibleCopy: {
       type: Boolean,
       default: false
@@ -64,6 +68,7 @@
   });
 
   const classLine = computed(() => ({
+    'code-markup__line_through': props.lineThrough,
     'code-markup__line_active': props.active,
     'code-markup__line_new': props.new,
     'code-markup__line_deleted': props.deleted,
@@ -113,6 +118,10 @@
       left: 0;
       border-left: $borde-width solid var(--cm-count-bg);
       border-right: $borde-width solid var(--cm-count-bg);
+    }
+
+    &_through {
+      text-decoration: line-through;
     }
 
     &_active {
