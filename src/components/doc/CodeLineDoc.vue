@@ -47,6 +47,7 @@
           :levelCodeLine="levelCodeLine"
           :deleted="deleted"
           :changed="changed"
+          :line-through="lineThrough"
         />
       </template>
 
@@ -116,6 +117,23 @@
             value="active"
           >
             {{ active }}
+          </ui-checkbox>
+        </div>
+
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>lineThrough</strong> - делает текст зачёркнутым. При документировании кода данный входный параметр может сказать, что данная строка кода больше не актуальна, удалена, или заменена на другую строку.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>lineThrough</strong> - makes the text strikethrough. When documenting the code, this input parameter can say that this line of code is no longer relevant, deleted, or replaced with another line.
+          </p>
+
+          <ui-checkbox
+            v-model="lineThrough"
+            value="lineThrough"
+          >
+            {{ lineThrough }}
           </ui-checkbox>
         </div>
 
@@ -199,6 +217,7 @@
   const changed = ref(false);
   const active = ref(false);
   const visibleCopy = ref(false);
+  const lineThrough = ref(false);
   const level = ref('level1');
   const levelOptions = ref([...bLevel()]);
 

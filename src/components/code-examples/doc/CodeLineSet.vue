@@ -18,6 +18,7 @@
         :changed="props.changed"
         :active="props.active"
         :visible-copy="props.visibleCopy"
+        :line-through="props.lineThrough"
         v-bind="levelCodeLine"
       >
         {{ textInEditor[1] }}
@@ -47,6 +48,7 @@
     'levelCodeLine',
     'deleted',
     'changed',
+    'lineThrough'
   ]);
 
   const textInEditor = computed(() => {

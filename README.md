@@ -103,6 +103,8 @@ Input parameters such as "new", "deleted" and "changed" were taken from Visual S
 
 **active** - in Visual Studio Code, the active line differs from other background lines. This parameter enables the background for the string. By default, this parameter is disabled, it has the value false.
 
+**lineThrough** - makes the text strikethrough. When documenting the code, this input parameter can say that this line of code is no longer relevant, deleted, or replaced with another line.
+
 **visibleCopy** - by default, the inner right indentation for a line is 5px. It is possible that there are not many lines and they are long enough, so the "copy text" button will overlap the text of the line. When this option is enabled, a larger right indentation will appear, so that the text can be read. By default, this parameter is disabled, it has the value false.
 
 **evel-2 - level-8** - the code has a certain nesting. These input parameters are needed in order to make the appropriate indentation. In total, I have provided 8 levels of nesting, I don't see any point in doing more.
