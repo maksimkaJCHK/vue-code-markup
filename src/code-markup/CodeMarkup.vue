@@ -270,6 +270,10 @@
       color: var(--cm-selection-color);
     }
 
+    &_line-through {
+      text-decoration: line-through;
+    }
+
     &_bold {
       font-weight: bold;
     }

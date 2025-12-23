@@ -2,12 +2,12 @@
   <span
     v-if="props.code.length > 0"
     v-text="props.code"
-    :class="[className]"
+    :class="className"
   ></span>
 
   <span
     v-else
-    :class="[className]"
+    :class="className"
   >
     <slot></slot>
   </span>
@@ -16,9 +16,18 @@
 <script setup>
   import useProps from '@/code-markup/markup/useProps.js';
 
-  const { props } = useProps();
+  const props = defineProps({
+    code: {
+      type: String,
+      default: ''
+    },
+    lineThrough: {
+      type: Boolean,
+      default: false
+    },
+  });
 
-  const className = 'code-markup__text';
+  const { className } = useProps(props, 'code-markup__text');
 </script>
 
 <style lang="scss">

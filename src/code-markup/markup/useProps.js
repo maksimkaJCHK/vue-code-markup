@@ -1,17 +1,16 @@
-const useProps = () => {
-  const props = defineProps({
-    code: {
-      type: String,
-      default: ''
-    },
-    lineThrough: {
-      type: Boolean,
-      default: false
-    },
+import { computed } from 'vue';
+
+const useProps = (props, text) => {
+  const lineThroughClass = computed(() => {
+    if (props.lineThrough) return 'code-markup_line-through'
+
+    return '';
   });
 
+  const className = [text, lineThroughClass.value];
+
   return {
-    props
+    className
   }
 }
 
