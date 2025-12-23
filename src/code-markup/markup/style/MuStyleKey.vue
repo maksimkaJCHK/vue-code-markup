@@ -14,12 +14,9 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    code: {
-      type: String,
-      default: ''
-    }
-  });
+  import useProps from '@/code-markup/markup/useProps.js';
+
+  const { props } = useProps();
 
   const className = 'code-markup__style-key';
 </script>
