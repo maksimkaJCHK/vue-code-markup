@@ -1,7 +1,7 @@
 <template>
   <span
-    v-if="props.code.length > 0"
-    v-text="props.code"
+    v-if="code.length > 0"
+    v-text="code"
     :class="className"
   ></span>
 
@@ -13,21 +13,18 @@
   </span>
 </template>
 
-<script setup>
-  import useProps from '@/code-markup/markup/useProps.js';
+<script>
+  import { defineComponent } from 'vue';
+  import mixin from '@/code-markup/markup/mixin.js';
 
-  const props = defineProps({
-    code: {
-      type: String,
-      default: ''
+  export default defineComponent({
+    data() {
+      return {
+        classComp: 'code-markup__type'
+      }
     },
-    lineThrough: {
-      type: Boolean,
-      default: false
-    },
+    mixins: [mixin]
   });
-
-  const { className } = useProps(props, 'code-markup__type');
 </script>
 
 <style lang="scss">
