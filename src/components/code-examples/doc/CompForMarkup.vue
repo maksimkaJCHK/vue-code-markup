@@ -13,7 +13,10 @@
           code="old-class"
           line-through
         />
-        <mu-text code=" new-class" />
+        <mu-text
+          bold
+          code=" new-class"
+        />
         <mu-text code='"' />
         <mu-tag code=">" />
       </code-line>

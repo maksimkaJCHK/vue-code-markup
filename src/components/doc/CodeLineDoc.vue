@@ -48,6 +48,7 @@
           :deleted="deleted"
           :changed="changed"
           :line-through="lineThrough"
+          :bold="bold"
         />
       </template>
 
@@ -139,6 +140,23 @@
 
         <div :class="nameRow">
           <p v-if="props.isRus">
+            <strong>bold</strong> - делает текст жирным. Как правило это нужно для того, чтобы выделить строку, отделить её от других строк. Сделать так, чтобы пользователи обратили на неё внимание.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>bold</strong> - makes the text bold. As a rule, this is necessary in order to highlight a line and separate it from other lines. Make sure that users pay attention to it.
+          </p>
+
+          <ui-checkbox
+            v-model="bold"
+            value="bold"
+          >
+            {{ bold }}
+          </ui-checkbox>
+        </div>
+
+        <div :class="nameRow">
+          <p v-if="props.isRus">
             <strong>visibleCopy</strong> - по умолчанию правый внутренний отступ для строки равен 5px. Возможна такая ситуация, что строк не много, и они достаточно длинные, таким образом кнопка "скопировать текст" будет перекрывать текст строки. При включении данного параметра будет появляться больший правый отступ, так, что можно будет прочитать текст. По умолчанию данный параметр отключен, те имеет значение false.
           </p>
 
@@ -218,6 +236,7 @@
   const active = ref(false);
   const visibleCopy = ref(false);
   const lineThrough = ref(false);
+  const bold = ref(false);
   const level = ref('level1');
   const levelOptions = ref([...bLevel()]);
 
