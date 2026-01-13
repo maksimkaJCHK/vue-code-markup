@@ -14,21 +14,11 @@ const mixin = {
     }
   },
   computed: {
-    lineThroughClass() {
-      if (this.lineThrough) return 'code-markup_line-through'
-
-      return '';
-    },
-    boldClass() {
-      if (this.bold) return 'code-markup_bold'
-
-      return '';
-    },
     className() {
       return [
         this.classComp,
-        this.lineThroughClass,
-        this.boldClass
+        this.lineThrough ? 'code-markup_line-through' : '',
+        this.bold ? 'code-markup_bold' : ''
       ];
     }
   }
