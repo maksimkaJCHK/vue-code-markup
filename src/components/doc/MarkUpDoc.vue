@@ -22,7 +22,7 @@
       </ul>
 
       <p>
-        Ниже я приведу пример, чтобы было понятнее. Во второй строке я сделал "old-class" зачёркнутым, а "new-class" я сделал жирным.
+        Ниже я приведу пример, чтобы было понятнее. Во второй строке я сделал "old-class" зачёркнутым, а "new-class" и "div" я сделал жирными.
       </p>
 
       <comp-for-markup lang="ru" />
@@ -54,7 +54,7 @@
       </ul>
 
       <p>
-        I'll give an example below to make it clearer. In the second line, I made "old-class" crossed out, and I made "new-class" bold.
+        I'll give an example below to make it clearer. In the second line, I made "old-class" crossed out, and I made "new-class" and "div" bold.
       </p>
 
       <comp-for-markup />

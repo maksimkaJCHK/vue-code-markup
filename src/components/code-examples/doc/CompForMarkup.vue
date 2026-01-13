@@ -6,7 +6,10 @@
   >
     <template-block>
       <code-line level-2>
-        <mu-tag code="<div " />
+        <mu-tag
+          bold
+          code="<div "
+        />
         <mu-attr code="class=" />
         <mu-text code='"common-class ' />
         <mu-text
