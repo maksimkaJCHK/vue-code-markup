@@ -157,6 +157,16 @@
 
         <div :class="nameRow">
           <p v-if="props.isRus">
+            <strong>nonBold</strong> - делает текст обычным, не жирным, даже если для компонента родителя "code-markup" задан входной параметр "textBold". Этот параметр может пригодиться, если нужно выделить все строки кроме определённых. Жирный текст привлечёт внимание, а обычный текст покажет, что эти строки не изменились, или не важны.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>nonBold</strong> - makes the text plain, not bold, even if the input parameter "textBold" is set for the parent component "code-markup". This parameter can be useful if you need to select all lines except certain ones. Bold text will attract attention, while plain text will show that these lines have not changed or are not important.
+          </p>
+        </div>
+
+        <div :class="nameRow">
+          <p v-if="props.isRus">
             <strong>visibleCopy</strong> - по умолчанию правый внутренний отступ для строки равен 5px. Возможна такая ситуация, что строк не много, и они достаточно длинные, таким образом кнопка "скопировать текст" будет перекрывать текст строки. При включении данного параметра будет появляться больший правый отступ, так, что можно будет прочитать текст. По умолчанию данный параметр отключен, те имеет значение false.
           </p>
 

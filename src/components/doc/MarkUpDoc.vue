@@ -19,10 +19,13 @@
         <li>
           <strong>bold</strong> - данный входной параметр делает элемент кода жирным. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
         </li>
+        <li>
+          <strong>nonBold</strong> - данный входной параметр делает текст обычным, не жирным. Даже если для компонента родителя "code-line" задан входной параметр "bold", или для компонента "code-markup" задан входной параметр "textBold", текст всё равно будет обычным. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
+        </li>
       </ul>
 
       <p>
-        Ниже я приведу пример, чтобы было понятнее. Поскольку часть входных параметров такие же как и для компонента "code-line", да и их не много, пример будет не интерактивным. Во второй строке я сделал "old-class" зачёркнутым, а "new-class" и "div" я сделал жирными.
+        Ниже я приведу пример, чтобы было понятнее. Поскольку часть входных параметров такие же как и для компонента "code-line", да и их не много, пример будет не интерактивным. Во второй строке я сделал "old-class" зачёркнутым, а "new-class" и "div" я сделал жирными. В пятой строчке я сделал у всей строки жирный текст, но для "old-class" я оставил текст обычным. 
       </p>
 
       <comp-for-markup lang="ru" />
@@ -51,10 +54,13 @@
         <li>
           <strong>bold</strong> - this input parameter makes the code element bold. In fact, the "code-line" component also has this input parameter, and it does the same thing.
         </li>
+        <li>
+          <strong>nonBold</strong> - this input parameter makes the text plain, not bold. Even if the "bold" input parameter is set for the "code-line" parent component, or the "textBold" input parameter is set for the "code-markup" component, the text will still be normal. In fact, the "code-line" component also has this input parameter, and it does the same thing.
+        </li>
       </ul>
 
       <p>
-        I'll give an example below to make it clearer. In the second line, I made "old-class" crossed out, and I made "new-class" and "div" bold.
+        I'll give an example below to make it clearer. Since some of the input parameters are the same as for the "code-line" component, and there are not many of them, the example will not be interactive. In the second line, I made "old-class" crossed out, and I made "new-class" and "div" bold. In the fifth line, I made bold text for the entire line, but for the "old-class" I left the text as usual.
       </p>
 
       <comp-for-markup />

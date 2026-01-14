@@ -26,6 +26,26 @@
       <code-line level-2>
         <mu-tag code="</div>" />
       </code-line>
+
+      <code-line />
+
+      <code-line
+        level-2
+        bold
+      >
+        <mu-tag code="<div " />
+        <mu-attr code="class=" />
+        <mu-text code='"example-class' />
+        <mu-text
+          code=' old-class '
+          non-bold
+        />
+        <mu-text code='new-class"' />
+        <mu-tag code=">" />
+      </code-line>
+      <code-line level-2>
+        <mu-tag code="</div>" />
+      </code-line>
     </template-block>
   </code-markup>
 </template>
