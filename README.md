@@ -105,13 +105,19 @@ Input parameters such as "new", "deleted" and "changed" were taken from Visual S
 
 **lineThrough** - makes the text strikethrough. When documenting the code, this input parameter can say that this line of code is no longer relevant, deleted, or replaced with another line.
 
+**bold** - makes the text bold. As a rule, this is necessary in order to highlight a line and separate it from other lines. Make sure that users pay attention to it.
+
 **visibleCopy** - by default, the inner right indentation for a line is 5px. It is possible that there are not many lines and they are long enough, so the "copy text" button will overlap the text of the line. When this option is enabled, a larger right indentation will appear, so that the text can be read. By default, this parameter is disabled, it has the value false.
 
 **evel-2 - level-8** - the code has a certain nesting. These input parameters are needed in order to make the appropriate indentation. In total, I have provided 8 levels of nesting, I don't see any point in doing more.
 
 ## Components for document markup
 
-When compared with HTML, these components can be called the tags that make up the document. All these components have one input parameter, it is called "code", for convenience, they can wrap the text of the code, but I would advise you to use the input parameter anyway. If it is set, the contents of the input parameter "code" will be output.
+When compared with HTML, these components can be called the tags that make up the document. All these components have the following input parameters:
+
+*   **code** is the input parameter to which the text is passed to display the code elements. If you need to add images to the code, you can do without this input parameter. Just wrap the right piece of code with these components, these components have the right slots. If you do not have such a need, then I would advise you to use this input parameter anyway. If it is set, the contents of the input parameter "code" will be output.
+*   **lineThrough** - this input parameter makes the code element strikethrough. In fact, the "code-line" component also has this input parameter, and it does the same thing.
+*   **bold** - this input parameter makes the code element bold. In fact, the "code-line" component also has this input parameter, and it does the same thing.
 
 Conventionally, all components for marking up a document can be divided into common components, components in the template block, components in the script block, and components in the styles block.
 
