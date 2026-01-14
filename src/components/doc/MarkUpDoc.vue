@@ -11,18 +11,18 @@
 
       <ul>
         <li>
-          <strong>code</strong> - входной параметр в который передаётся текст для отображения элементов кода. Если вам нужно добавить в код картинки, то можно обойтись без данного входного параметра. Просто оберните нужный кусок кода этими компонентами, данные компоненты имеют нужные слоты. Если же такой необходимости у вас не возникает, то я бы посоветовал вам всё таки пользоваться данным входным параметром. Если он задан, то выведится содержимое входного параметра "code".
+          <strong>code</strong> - входной параметр в который передаётся текст для отображения элементов кода. Если вам нужно добавить в код картинки, то можно обойтись без данного входного параметра. Просто оберните нужный кусок кода этими компонентами, данные компоненты имеют нужные слоты. Если же такой необходимости у вас не возникает, то я бы посоветовал вам всё таки пользоваться данным входным параметром. Если он задан, то выведется содержимое входного параметра "code".
         </li>
         <li>
-          <strong>lineThrough</strong> - данный входной параметр делает код зачеркнутым. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
+          <strong>lineThrough</strong> - данный входной параметр делает элемент код зачеркнутым. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
         </li>
         <li>
-          <strong>bold</strong> - данный входной параметр делает код жирным. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
+          <strong>bold</strong> - данный входной параметр делает элемент кода жирным. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
         </li>
       </ul>
 
       <p>
-        Ниже я приведу пример, чтобы было понятнее. Во второй строке я сделал "old-class" зачёркнутым, а "new-class" и "div" я сделал жирными.
+        Ниже я приведу пример, чтобы было понятнее. Поскольку часть входных параметров такие же как и для компонента "code-line", да и их не много, пример будет не интерактивным. Во второй строке я сделал "old-class" зачёркнутым, а "new-class" и "div" я сделал жирными.
       </p>
 
       <comp-for-markup lang="ru" />
@@ -46,10 +46,10 @@
           <strong>code</strong> is the input parameter to which the text is passed to display the code elements. If you need to add images to the code, you can do without this input parameter. Just wrap the right piece of code with these components, these components have the right slots. If you do not have such a need, then I would advise you to use this input parameter anyway. If it is set, the contents of the input parameter "code" will be output.
         </li>
         <li>
-          <strong>lineThrough</strong> - this input parameter makes the code strikethrough. In fact, the "code-line" component also has this input parameter, and it does the same thing.
+          <strong>lineThrough</strong> - this input parameter makes the code element strikethrough. In fact, the "code-line" component also has this input parameter, and it does the same thing.
         </li>
         <li>
-          <strong>bold</strong> - this input parameter makes the code bold. In fact, the "code-line" component also has this input parameter, and it does the same thing.
+          <strong>bold</strong> - this input parameter makes the code element bold. In fact, the "code-line" component also has this input parameter, and it does the same thing.
         </li>
       </ul>
 
