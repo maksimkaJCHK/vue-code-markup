@@ -278,6 +278,10 @@
       font-weight: bold;
     }
 
+    &_normal-text {
+      font-weight: normal;
+    }
+
     &__header {
       padding: var(--cm-header-padding);
       color: var(--cm-header-color);

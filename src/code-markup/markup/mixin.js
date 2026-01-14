@@ -11,6 +11,10 @@ const mixin = {
     bold: {
       type: Boolean,
       default: false
+    },
+    nonBold: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -19,7 +23,8 @@ const mixin = {
         this.classComp,
         {
           'code-markup_line-through': this.lineThrough,
-          'code-markup_bold': this.bold 
+          'code-markup_bold': this.bold,
+          'code-markup_normal-text': this.nonBold,
         }
       ];
     }

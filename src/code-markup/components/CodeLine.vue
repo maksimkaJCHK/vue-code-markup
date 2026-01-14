@@ -41,6 +41,10 @@
       type: Boolean,
       default: false,
     },
+    nonBold: {
+      type: Boolean,
+      default: false,
+    },
     'level-2': {
       type: Boolean,
       default: false
@@ -79,6 +83,7 @@
     'code-markup__line_changed': props.changed,
     'code-markup__line_visible-copy': props.visibleCopy,
     'code-markup_bold': props.bold,
+    'code-markup_normal-text': props.nonBold,
     'code-markup_level-2': props['level2'],
     'code-markup_level-3': props['level3'],
     'code-markup_level-4': props['level4'],

@@ -1,5 +1,5 @@
 <template>
-  <div class="slots-doc">
+  <div class="example-doc">
     <template v-if="props.isRus">
       <h2>Примеры</h2>
 
