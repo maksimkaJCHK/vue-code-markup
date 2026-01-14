@@ -17,8 +17,10 @@ const mixin = {
     className() {
       return [
         this.classComp,
-        this.lineThrough ? 'code-markup_line-through' : '',
-        this.bold ? 'code-markup_bold' : ''
+        {
+          'code-markup_line-through': this.lineThrough,
+          'code-markup_bold': this.bold 
+        }
       ];
     }
   }
