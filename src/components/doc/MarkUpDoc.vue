@@ -6,7 +6,7 @@
       </h2>
 
       <p>
-        Если сравнивать с HTML, то эти компоненты можно назвать тегами из которых состоит документ. Все эти компоненты имеют следующие входные параметры:
+        Если сравнивать с HTML, то эти компоненты можно назвать тегами из которых состоит документ. Как правило большая часть входных параметров такие же как у компонента "code-line". Основное их предназначение выделить конкретные куски кода. К примеру мы можем сделать всю строку жирной, а какой-то определённый кусок кода нет. Или мы можем сделать какой-то определённый кусок кода жирным, или зачёркнутым, или полупрозрачным. Все эти компоненты имеют следующие входные параметры:
       </p>
 
       <ul>
@@ -50,7 +50,7 @@
       </h2>
 
       <p>
-        When compared with HTML, these components can be called the tags that make up the document. All these components have the following input parameters:
+        When compared with HTML, these components can be called the tags that make up the document. As a rule, most of the input parameters are the same as those of the "code-line" component. Their main purpose is to highlight specific pieces of code. For example, we can make the entire line bold, but some specific piece of code is not. Or we can make a certain piece of code bold, or crossed out, or translucent. All these components have the following input parameters:
       </p>
 
       <ul>

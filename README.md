@@ -115,7 +115,7 @@ Input parameters such as "new", "deleted" and "changed" were taken from Visual S
 
 ## Components for document markup
 
-When compared with HTML, these components can be called the tags that make up the document. All these components have the following input parameters:
+When compared with HTML, these components can be called the tags that make up the document. As a rule, most of the input parameters are the same as those of the "code-line" component. Their main purpose is to highlight specific pieces of code. For example, we can make the entire line bold, but some specific piece of code is not. Or we can make a certain piece of code bold, or crossed out, or translucent. All these components have the following input parameters:
 
 *   **code** is the input parameter to which the text is passed to display the code elements. If you need to add images to the code, you can do without this input parameter. Just wrap the right piece of code with these components, these components have the right slots. If you do not have such a need, then I would advise you to use this input parameter anyway. If it is set, the contents of the input parameter "code" will be output.
 *   **lineThrough** - this input parameter makes the code element strikethrough. In fact, the "code-line" component also has this input parameter, and it does the same thing.
