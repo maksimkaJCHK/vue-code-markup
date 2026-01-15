@@ -8,6 +8,10 @@ const mixin = {
       type: Boolean,
       default: false
     },
+    nonLineThrough: {
+      type: Boolean,
+      default: false,
+    },
     bold: {
       type: Boolean,
       default: false

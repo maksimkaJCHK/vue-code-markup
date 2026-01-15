@@ -288,7 +288,7 @@
       --transition: .4s #{easing.$easeInOutQuad} 0s;
 
       opacity: 1;
-      transition: opacity var(--transition), color var(--transition);
+      transition: opacity var(--transition), color var(--transition), font-weight var(--transition);
     }
 
     &_inactive {

@@ -69,6 +69,9 @@
   const code = `<template>
   <div class="common-class old-class new-class">
   </div>
+
+  <div class="example-class old-class new-class">
+  </div>
 </template>`;
 </script>
 

@@ -14,7 +14,7 @@
           <strong>code</strong> - входной параметр в который передаётся текст для отображения элементов кода. Если вам нужно добавить в код картинки, то можно обойтись без данного входного параметра. Просто оберните нужный кусок кода этими компонентами, данные компоненты имеют нужные слоты. Если же такой необходимости у вас не возникает, то я бы посоветовал вам всё таки пользоваться данным входным параметром. Если он задан, то выведется содержимое входного параметра "code".
         </li>
         <li>
-          <strong>lineThrough</strong> - данный входной параметр делает элемент код зачеркнутым. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
+          <strong>lineThrough</strong> - данный входной параметр делает элемент кода зачеркнутым. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
         </li>
         <li>
           <strong>bold</strong> - данный входной параметр делает элемент кода жирным. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
@@ -32,6 +32,12 @@
       </p>
 
       <comp-for-markup lang="ru" />
+
+      <p>
+        Ниже я приведу пример того, как можно выделить определённые участки кода. Старую часть кода я сделаю полупрозрачной, а новую часть кода я сделаю жирной. 
+      </p>
+
+      <code-marcup-inactive lang="ru" />
 
       <p>
         Условно все компоненты для разметки документа можно разделить на общие компоненты, компоненты в блоке шаблона, компоненты в блоке скриптов, компоненты в блоке стилей.
@@ -72,6 +78,12 @@
       <comp-for-markup />
 
       <p>
+        Below I will give an example of how to highlight certain sections of the code. I will make the old part of the code semi-transparent, and I will make the new part of the code bold.
+      </p>
+
+      <code-marcup-inactive />
+
+      <p>
         Conventionally, all components for marking up a document can be divided into common components, components in the template block, components in the script block, and components in the styles block.
       </p>
     </template>
@@ -80,6 +92,7 @@
 
 <script setup>
   import CompForMarkup from '@/components/code-examples/doc/CompForMarkup.vue';
+  import CodeMarcupInactive from '@/components/code-examples/doc/CodeMarcupInactive.vue';
 
   const props = defineProps({
     isRus: {
