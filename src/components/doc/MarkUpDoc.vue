@@ -22,6 +22,9 @@
         <li>
           <strong>nonBold</strong> - данный входной параметр делает текст обычным, не жирным. Даже если для компонента родителя "code-line" задан входной параметр "bold", или для компонента "code-markup" задан входной параметр "textBold", текст всё равно будет обычным. По сути данный входной параметр есть так-же у компонента "code-line", и делает он тоже самое.
         </li>
+        <li>
+          <strong>inactive</strong> - данный входной параметр делает текст кода не много прозрачным. Это хорошее средство привлечь внимание к определённым участкам кода.
+        </li>
       </ul>
 
       <p>
@@ -56,6 +59,9 @@
         </li>
         <li>
           <strong>nonBold</strong> - this input parameter makes the text plain, not bold. Even if the "bold" input parameter is set for the "code-line" parent component, or the "textBold" input parameter is set for the "code-markup" component, the text will still be normal. In fact, the "code-line" component also has this input parameter, and it does the same thing.
+        </li>
+        <li>
+          <strong>inactive</strong> - this input parameter does not make the code text very transparent. This is a good way to draw attention to certain parts of the code.
         </li>
       </ul>
 

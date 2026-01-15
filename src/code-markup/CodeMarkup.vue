@@ -149,6 +149,8 @@
 </script>
 
 <style lang="scss">
+  @use '@/styles/_easing.scss' as easing;
+
   @mixin styleScroll($scrollBarBg: #000, $thumbBg: #FFA500, $scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
     scrollbar-width: $scrollBarType;
     scrollbar-color: $thumbBg $scrollBarBg;
@@ -280,6 +282,17 @@
 
     &_normal-text {
       font-weight: normal;
+    }
+
+    &__item {
+      --transition: .4s #{easing.$easeInOutQuad} 0s;
+
+      opacity: 1;
+      transition: opacity var(--transition), color var(--transition);
+    }
+
+    &_inactive {
+      opacity: var(--cm-deleted-opacity);
     }
 
     &__header {

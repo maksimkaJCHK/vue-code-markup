@@ -121,6 +121,7 @@ When compared with HTML, these components can be called the tags that make up th
 *   **lineThrough** - this input parameter makes the code element strikethrough. In fact, the "code-line" component also has this input parameter, and it does the same thing.
 *   **bold** - this input parameter makes the code element bold. In fact, the "code-line" component also has this input parameter, and it does the same thing.
 *   **nonBold** - this input parameter makes the text plain, not bold. Even if the "bold" input parameter is set for the "code-line" parent component, or the "textBold" input parameter is set for the "code-markup" component, the text will still be normal. In fact, the "code-line" component also has this input parameter, and it does the same thing.
+*   **inactive** - this input parameter does not make the code text very transparent. This is a good way to draw attention to certain parts of the code.
 
 Conventionally, all components for marking up a document can be divided into common components, components in the template block, components in the script block, and components in the styles block.
 
