@@ -36,12 +36,6 @@
     <code-line level-3>
       <mu-comment code="<!-- Some comment -->" />
     </code-line>
-    <code-line
-      level-3
-      non-bold
-    >
-      <mu-comment code="<!-- This comment, unlike the comment above, will not become bold, since the line (code-line) has a nonBold input parameter. -->"/>
-    </code-line>
 
     <code-line level-3>
       <mu-tag code='<div' />
