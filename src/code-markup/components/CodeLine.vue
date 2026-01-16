@@ -103,7 +103,7 @@
   @use '@/styles/_easing.scss' as easing;
 
   .code-markup__line {
-    --transition: .4s #{easing.$easeInOutQuad} 0s;
+    --transition: .4s #{easing.$animationEffect} 0s;
 
     text-align: left;
     height: var(--cm-text-line-height);

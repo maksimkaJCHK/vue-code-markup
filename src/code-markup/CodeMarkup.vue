@@ -285,7 +285,7 @@
     }
 
     &__item {
-      --transition: .4s #{easing.$easeInOutQuad} 0s;
+      --transition: .4s #{easing.$animationEffect} 0s;
 
       opacity: 1;
       transition: opacity var(--transition), color var(--transition), font-weight var(--transition);
