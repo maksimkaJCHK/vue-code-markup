@@ -13,7 +13,10 @@
       v-bind="codeParam"
     >
       <template-block>
-        <code-line level-2>
+        <code-line
+          level-2
+          :new="viewСhanges"
+        >
           <mu-tag
             code="<div "
             :inactive="viewСhanges"
@@ -54,6 +57,7 @@
 
         <code-line
           level-2
+          :new="viewСhanges"
         >
           <mu-tag 
             code="<div " 
@@ -80,7 +84,10 @@
             :inactive="viewСhanges"
           />
         </code-line>
-        <code-line level-3>
+        <code-line
+          level-3
+          :new="viewСhanges"
+        >
           <mu-type 
             code="Some piece of text, "
             :inactive="viewСhanges"

@@ -34,7 +34,7 @@
       <comp-for-markup lang="ru" />
 
       <p>
-        Ниже я приведу пример того, как можно выделить определённые участки кода. Старую часть кода я сделаю полупрозрачной, а новую часть кода я сделаю жирной. 
+        Ниже я приведу пример того, как можно привлечь внимание к определённым участкам кода. Давайте представим, что мне нужно показать старые участки кода и новые. Старую часть кода я сделаю полупрозрачной, а новую часть кода я сделаю жирной.
       </p>
 
       <code-marcup-inactive lang="ru" />
@@ -78,7 +78,7 @@
       <comp-for-markup />
 
       <p>
-        Below I will give an example of how to highlight certain sections of the code. I will make the old part of the code semi-transparent, and I will make the new part of the code bold.
+        Below I will give an example of how to draw attention to certain sections of the code. Let's imagine that I need to show the old sections of the code and the new ones. I will make the old part of the code semi-transparent, and I will make the new part of the code bold.
       </p>
 
       <code-marcup-inactive />

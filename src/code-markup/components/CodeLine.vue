@@ -100,19 +100,24 @@
 
 <style lang="scss">
   @use "sass:math";
+  @use '@/styles/_easing.scss' as easing;
 
   .code-markup__line {
+    --transition: .4s #{easing.$easeInOutQuad} 0s;
+
     text-align: left;
     height: var(--cm-text-line-height);
     display: table-row;
     white-space: nowrap;
     counter-increment: count;
+    transition: background var(--transition);
 
     &__content {
       width: 100%;
       display: table-cell;
       padding-left: 10px;
       padding-right: 5px;
+      transition: opacity var(--transition);
     }
 
     .code-markup_count &::before {
@@ -128,6 +133,7 @@
       left: 0;
       border-left: $borde-width solid var(--cm-count-bg);
       border-right: $borde-width solid var(--cm-count-bg);
+      transition: border-color var(--transition), background var(--transition);
     }
 
     &_through {
