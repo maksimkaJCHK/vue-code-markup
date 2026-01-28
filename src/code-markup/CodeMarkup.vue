@@ -158,29 +158,8 @@
 </script>
 
 <style lang="scss">
-  @use '@/styles/_easing.scss' as easing;
-
-  @mixin styleScroll($scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
-    scrollbar-width: $scrollBarType;
-    scrollbar-color: var(--thumb-bg) var(--scroll-bar-bg);
-    scroll-behavior: smooth;
-
-    &::-webkit-scrollbar {
-      width: $scrollBarWidth;
-      background: var(--scroll-bar-bg);
-      border-radius: $scrollBarBR;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: var(--scroll-bar-bg);
-      border-radius: $scrollBarBR;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: var(--thumb-bg);
-      border-radius: $scrollBarBR;
-    }
-  }
+  @use '@/styles/_easing' as easing;
+  @use '@/styles/_mixins' as mixins;
 
   // Цвета
   $color-1: #ffc661;
@@ -271,7 +250,7 @@
   }
 
   .code-markup {
-    @include styleScroll();
+    @include mixins.styleScroll($scrollBarBg: var(--scroll-bar-bg), $thumbBg: var(--thumb-bg));
 
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
@@ -321,7 +300,8 @@
     }
 
     &__body {
-      @include styleScroll();
+      @include mixins.styleScroll($scrollBarBg: var(--scroll-bar-bg), $thumbBg: var(--thumb-bg));
+
       position: relative;
       overflow: auto;
       max-height: var(--cm-max-height-body);

@@ -1,0 +1,21 @@
+@mixin styleScroll($scrollBarBg: #000, $thumbBg: #FFA500, $scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
+  scrollbar-width: $scrollBarType;
+  scrollbar-color: $thumbBg $scrollBarBg;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: $scrollBarWidth;
+    background: $scrollBarBg;
+    border-radius: $scrollBarBR;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollBarBg;
+    border-radius: $scrollBarBR;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumbBg;
+    border-radius: $scrollBarBR;
+  }
+}

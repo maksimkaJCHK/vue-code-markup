@@ -5,7 +5,8 @@
       level-2
       new
     >
-      <mu-style-id code="#books-list {" />
+      <mu-style-id code="#books-list" />
+      <mu-style-curly-brace code=" {" />
     </code-line>
     <code-line
       level-3
@@ -22,13 +23,14 @@
       level-2
       new
     >
-      <mu-style-id code="}" />
+      <mu-style-curly-brace code="}" />
     </code-line>
 
     <code-line />
 
     <code-line level-2>
-      <mu-style-class code=".books-list {" />
+      <mu-style-class code=".books-list" />
+      <mu-style-curly-brace code=" {" />
     </code-line>
 
     <code-line
@@ -42,7 +44,8 @@
     <code-line />
 
     <code-line level-3>
-      <mu-style-tag code="h3 {" />
+      <mu-style-tag code="h3" />
+      <mu-style-curly-brace code=" {" />
     </code-line>
     <code-line
       level-4
@@ -64,7 +67,7 @@
       <mu-style-unit-meas code="em" />;
     </code-line>
     <code-line level-3>
-      <mu-style-tag code="}" />
+      <mu-style-curly-brace code="}" />
     </code-line>
 
     <code-line />
@@ -85,7 +88,7 @@
     </code-line>
 
     <code-line level-2>
-      <mu-style-class code="}" />
+      <mu-style-curly-brace code="}" />
     </code-line>
   </style-block>
 </template>
