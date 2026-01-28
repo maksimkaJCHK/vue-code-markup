@@ -1,5 +1,8 @@
 <template>
-  <div class="code-markup">
+  <div
+    class="code-markup"
+    :class="mainClass"
+  >
     <template v-if="props.isHeader">
       <div
         v-if="props.header.length > 0"
@@ -118,6 +121,10 @@
       type: String,
       default: 'An error occurred while copying the code to the clipboard'
     },
+    theme: {
+      type: String,
+      default: 'darcula',
+    }
   });
 
   const {
@@ -130,6 +137,8 @@
     'code-markup_bold': props.textBold,
     'code-markup_count': props.isCount,
   }));
+
+  const mainClass = computed(() => `code-markup_theme-${props.theme}`);
 
   const headerClass = computed(() => ({
     'code-markup__header': true,
@@ -315,6 +324,67 @@
       width: 100%;
       display: table;
       counter-reset: count;
+    }
+
+    &_theme {
+      &-monokai {
+        $color-1: #ffc661;
+        $color-2: #647f54;
+        $color-3: #cc7832;
+        $color-4: #9876aa;
+        $color-5: #d4d4c9;
+        $color-6: #6897bb;
+        $color-7: #808080;
+        $color-8: #a9b7c6;
+        $color-9: #212122;
+
+        --cm-bg: #272822;
+        --cm-main-color: #fff;
+
+        // Цвет номера строки
+        --cm-count-bg: #272822;
+        --cm-count-color: #fff;
+
+        // Цвета активной строки
+        --cm-active-bg: #47473d;
+        --cm-active-count-bg: #272822;
+
+        // Цвет номера строки
+        --cm-count-bg: #5e5d5d;
+        --cm-count-color: #fff;
+
+        // // Цвет номера строки
+        // --cm-count-bg: #5e5d5d;
+        // --cm-count-color: #fff;
+
+        // // Цвет для тегов
+        // --cm-tag-color: #{$color-1};
+
+        // // Цвет для тегов
+        // --cm-error-color: #980505;
+
+        // // Цвета для элементов внутри script
+        // --cm-text-color: #{$color-2};
+        // --cm-key-color: #{$color-4};
+        // --cm-key-words-color: #{$color-3};
+        // --cm-variable-color: #{$color-4};
+        // --cm-number-color: #{$color-6};
+        // --cm-comment-color: #{$color-7};
+        // --cm-attr-color: #{$color-5};
+        // --cm-style-class: #{$color-1};
+        // --cm-style-id: #{$color-1};
+        // --cm-style-tag: #{$color-1};
+        // --cm-style-key: #{$color-5};
+        // --cm-style-param: #{$color-4};
+        // --cm-style-unit-mes: #{$color-8};
+        // --cm-style-ampersand: #{$color-1};
+        // --cm-style-curly-brace: #{$color-1};
+        // --cm-function-color: #{$color-1};
+
+        // // Цвет выделения
+        // --cm-selection-bg: #{$color-2};
+        // --cm-selection-color: #fff;
+      }
     }
   }
 </style>

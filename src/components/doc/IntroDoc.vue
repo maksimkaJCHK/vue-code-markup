@@ -12,6 +12,7 @@
       <books-list
         lang="ru"
         :line-count="lineCount"
+        theme="monokai"
       />
 
       <p>
