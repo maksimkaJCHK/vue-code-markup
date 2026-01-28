@@ -216,7 +216,7 @@
     // Цвет заголовка
     --cm-header-color: #{$color-1};
 
-    // Цвета текста по умолчани.
+    // Цвета текста по умолчанию.
     --cm-main-color: #{$color-8};
 
     // Цвет нового, изменённого, удалённого куска кода
@@ -341,9 +341,15 @@
         $color-4: #e3d977;
         $color-5: #f12d53;
         $color-6: #c272d1;
+        $color-7: #6495ed;
 
         --cm-bg: #{$color-1};
         --cm-main-color: #{$color-2};
+
+        // Цвет нового, изменённого, удалённого куска кода
+        --cm-new-border: #{$color-3};
+        --cm-changed-border: #{$color-7};
+        --cm-deleted-border: #{$color-5};
 
         // Цвет номера строки
         --cm-count-bg: #{$color-1};
@@ -374,7 +380,7 @@
         --cm-style-id: #{$color-3};
         --cm-style-tag: #{$color-5};
         --cm-style-key: #{$color-3};
-        --cm-style-param: #52ccd9;
+        --cm-style-param: #{$color-7};
         --cm-style-unit-mes: #{$color-5};
         --cm-style-ampersand: #{$color-5};
         --cm-style-curly-brace: #{$color-6};
