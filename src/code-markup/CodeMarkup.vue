@@ -226,18 +226,21 @@
 
     --cm-deleted-opacity: .6;
 
-    // Цвета активной строки
-    --cm-active-bg: #2a2a2b;
-    --cm-active-count-bg: #454545;
-
     // Цвет номера строки
     --cm-count-bg: #5e5d5d;
     --cm-count-color: #fff;
+    --cm-count-border-right: var(--cm-count-bg);
+
+    // Цвета активной строки
+    --cm-active-bg: #2a2a2b;
+    --cm-active-count-bg: #454545;
+    --cm-active-count-color: var(--cm-count-color);
+    --cm-active-count-right-color: var(--cm-active-count-bg);
 
     // Цвет для тегов
     --cm-tag-color: #{$color-1};
 
-    // Цвет для тегов
+    // Цвет для линии ошибки
     --cm-error-color: #980505;
 
     // Цвета для элементов внутри script
@@ -343,47 +346,42 @@
 
         // Цвет номера строки
         --cm-count-bg: #272822;
-        --cm-count-color: #fff;
+        --cm-count-color: #8b9686;
+        --cm-count-border-right: #3d3d31;
 
         // Цвета активной строки
-        --cm-active-bg: #47473d;
-        --cm-active-count-bg: #272822;
+        --cm-active-bg: #4a4a40;
+        --cm-active-count-bg: var(--cm-count-bg);
+        --cm-active-count-color: #c0c6ba;
+        --cm-active-count-right-color: var(--cm-count-border-right);
 
-        // Цвет номера строки
-        --cm-count-bg: #5e5d5d;
-        --cm-count-color: #fff;
+        // Цвет для тегов
+        --cm-tag-color: #f12d53;
 
-        // // Цвет номера строки
-        // --cm-count-bg: #5e5d5d;
-        // --cm-count-color: #fff;
+        // Цвет заголовка
+        --cm-header-color: #e3d977;
 
-        // // Цвет для тегов
-        // --cm-tag-color: #{$color-1};
+        // Цвета для элементов внутри script
+        --cm-text-color: #e3d977;
+        --cm-key-color: #fff;
+        --cm-key-words-color: #f12d53;
+        --cm-variable-color: #fff;
+        --cm-number-color: #a266c0;
+        --cm-comment-color: #6f6d54;
+        --cm-attr-color: #8ce13d;
+        --cm-style-class: #8ce13d;
+        --cm-style-id: #8ce13d;
+        --cm-style-tag: #f12d53;
+        --cm-style-key: #8ce13d;
+        --cm-style-param: #52ccd9;
+        --cm-style-unit-mes: #f12d53;
+        --cm-style-ampersand: #f12d53;
+        --cm-style-curly-brace: #c272d1;
+        --cm-function-color: #8ce13d;
 
-        // // Цвет для тегов
-        // --cm-error-color: #980505;
-
-        // // Цвета для элементов внутри script
-        // --cm-text-color: #{$color-2};
-        // --cm-key-color: #{$color-4};
-        // --cm-key-words-color: #{$color-3};
-        // --cm-variable-color: #{$color-4};
-        // --cm-number-color: #{$color-6};
-        // --cm-comment-color: #{$color-7};
-        // --cm-attr-color: #{$color-5};
-        // --cm-style-class: #{$color-1};
-        // --cm-style-id: #{$color-1};
-        // --cm-style-tag: #{$color-1};
-        // --cm-style-key: #{$color-5};
-        // --cm-style-param: #{$color-4};
-        // --cm-style-unit-mes: #{$color-8};
-        // --cm-style-ampersand: #{$color-1};
-        // --cm-style-curly-brace: #{$color-1};
-        // --cm-function-color: #{$color-1};
-
-        // // Цвет выделения
-        // --cm-selection-bg: #{$color-2};
-        // --cm-selection-color: #fff;
+        // Цвет выделения
+        --cm-selection-bg: #e3d977;
+        --cm-selection-color: #000;
       }
     }
   }

@@ -132,21 +132,24 @@
       user-select: none;
       left: 0;
       border-left: $borde-width solid var(--cm-count-bg);
-      border-right: $borde-width solid var(--cm-count-bg);
+      border-right: $borde-width solid var(--cm-count-border-right);
       transition: border-color var(--transition), background var(--transition);
     }
 
     &_through {
-      text-decoration: line-through;
+      .code-markup__line__content {
+        text-decoration: line-through;
+      }
     }
 
     &_active {
       background: var(--cm-active-bg);
 
       .code-markup_count &::before {
+        color: var(--cm-active-count-color);
         background: var(--cm-active-count-bg);
         border-left-color: var(--cm-active-count-bg);
-        border-right-color: var(--cm-active-count-bg);
+        border-right-color: var(--cm-active-count-right-color);
       }
     }
 
