@@ -160,24 +160,24 @@
 <style lang="scss">
   @use '@/styles/_easing.scss' as easing;
 
-  @mixin styleScroll($scrollBarBg: #000, $thumbBg: #FFA500, $scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
+  @mixin styleScroll($scrollBarBR: 5px, $scrollBarType: thin, $scrollBarWidth: 6px) {
     scrollbar-width: $scrollBarType;
-    scrollbar-color: $thumbBg $scrollBarBg;
+    scrollbar-color: var(--thumb-bg) var(--scroll-bar-bg);
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
       width: $scrollBarWidth;
-      background: $scrollBarBg;
+      background: var(--scroll-bar-bg);
       border-radius: $scrollBarBR;
     }
 
     &::-webkit-scrollbar-track {
-      background: $scrollBarBg;
+      background: var(--scroll-bar-bg);
       border-radius: $scrollBarBR;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: $thumbBg;
+      background: var(--thumb-bg);
       border-radius: $scrollBarBR;
     }
   }
@@ -264,10 +264,14 @@
     // Цвет выделения
     --cm-selection-bg: #{$color-2};
     --cm-selection-color: #fff;
+
+    // Скролл
+    --scroll-bar-bg: #{$color-9};
+    --thumb-bg: #{$color-1};
   }
 
   .code-markup {
-    @include styleScroll($scrollBarBg: $color-9, $thumbBg: $color-1);
+    @include styleScroll();
 
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
@@ -317,7 +321,7 @@
     }
 
     &__body {
-      @include styleScroll($scrollBarBg: $color-9, $thumbBg: $color-1);
+      @include styleScroll();
       position: relative;
       overflow: auto;
       max-height: var(--cm-max-height-body);
@@ -331,21 +335,18 @@
 
     &_theme {
       &-monokai {
-        $color-1: #ffc661;
-        $color-2: #647f54;
-        $color-3: #cc7832;
-        $color-4: #9876aa;
-        $color-5: #d4d4c9;
-        $color-6: #6897bb;
-        $color-7: #808080;
-        $color-8: #a9b7c6;
-        $color-9: #212122;
+        $color-1: #272822;
+        $color-2: #fff;
+        $color-3: #8ce13d;
+        $color-4: #e3d977;
+        $color-5: #f12d53;
+        $color-6: #c272d1;
 
-        --cm-bg: #272822;
-        --cm-main-color: #fff;
+        --cm-bg: #{$color-1};
+        --cm-main-color: #{$color-2};
 
         // Цвет номера строки
-        --cm-count-bg: #272822;
+        --cm-count-bg: #{$color-1};
         --cm-count-color: #8b9686;
         --cm-count-border-right: #3d3d31;
 
@@ -356,32 +357,36 @@
         --cm-active-count-right-color: var(--cm-count-border-right);
 
         // Цвет для тегов
-        --cm-tag-color: #f12d53;
+        --cm-tag-color: #{$color-5};
 
         // Цвет заголовка
-        --cm-header-color: #e3d977;
+        --cm-header-color: #{$color-4};
 
         // Цвета для элементов внутри script
-        --cm-text-color: #e3d977;
-        --cm-key-color: #fff;
-        --cm-key-words-color: #f12d53;
-        --cm-variable-color: #fff;
-        --cm-number-color: #a266c0;
+        --cm-text-color: #{$color-4};
+        --cm-key-color: #{$color-2};
+        --cm-key-words-color: #{$color-5};
+        --cm-variable-color: #{$color-2};
+        --cm-number-color: #{$color-6};
         --cm-comment-color: #6f6d54;
-        --cm-attr-color: #8ce13d;
-        --cm-style-class: #8ce13d;
-        --cm-style-id: #8ce13d;
-        --cm-style-tag: #f12d53;
-        --cm-style-key: #8ce13d;
+        --cm-attr-color: #{$color-3};
+        --cm-style-class: #{$color-3};
+        --cm-style-id: #{$color-3};
+        --cm-style-tag: #{$color-5};
+        --cm-style-key: #{$color-3};
         --cm-style-param: #52ccd9;
-        --cm-style-unit-mes: #f12d53;
-        --cm-style-ampersand: #f12d53;
-        --cm-style-curly-brace: #c272d1;
-        --cm-function-color: #8ce13d;
+        --cm-style-unit-mes: #{$color-5};
+        --cm-style-ampersand: #{$color-5};
+        --cm-style-curly-brace: #{$color-6};
+        --cm-function-color: #{$color-3};
 
         // Цвет выделения
-        --cm-selection-bg: #e3d977;
+        --cm-selection-bg: #{$color-4};
         --cm-selection-color: #000;
+
+        // Скролл
+        --scroll-bar-bg: #{$color-1};
+        --thumb-bg: #{$color-4};
       }
     }
   }
