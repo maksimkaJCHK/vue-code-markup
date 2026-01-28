@@ -14,7 +14,10 @@
     <code-line level-2>
       <mu-comment code="// Пример комментария" />
     </code-line>
-    <code-line level-2>
+    <code-line
+      level-2
+      active
+    >
       <mu-key-words code="const" /> <mu-variable code="books" /> = <mu-key-words code='ref' />([
     </code-line>
     <code-line level-3>

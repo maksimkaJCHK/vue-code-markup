@@ -15,6 +15,7 @@
     <code-line
       level-3
       new
+      active
     >
       <mu-attr code='class=' />
       <mu-text code='"books-list"' />
