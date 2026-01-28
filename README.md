@@ -54,6 +54,8 @@ This is the most important component, it serves as a wrapper for all other compo
 
 I would advise you to look at the documentation on [github pages](https://maksimkajchk.github.io/vue-code-markup/), you can change the parameters there and see what changes. This component has the following input parameters:
 
+**theme** - this parameter is responsible for the theme that will be applied to the window with the code. At this point in time, I have implemented 2 themes: "darcula" and "monokai". "Darcula", the default theme, if you set a non-existent theme name, or do not set this parameter, it will be applied. You can insert any topic name into this parameter. In this case, you will need to style the component using the following class - "code-markup_theme-${name of your theme}. I will describe how to create my own theme below.
+
 **isHeader** - this parameter is responsible for displaying the title of the window with the code. If you are going to display the title, then you do not need to set this parameter, it is set to "true" by default.
 
 **header** is the title of the window with the code. It doesn't matter by default.

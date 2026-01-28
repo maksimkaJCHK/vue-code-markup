@@ -5,18 +5,6 @@
     :lineCount="props.lineCount"
     v-bind="codeParam"
   >
-    <!-- <template #error>
-      error
-    </template>
-
-    <template #copy>
-      copy
-    </template>
-
-    <template #success>
-      success
-    </template> -->
-
     <template #default>
       <books-list-body />
     </template>

@@ -252,6 +252,8 @@
   .code-markup {
     @include mixins.styleScroll($scrollBarBg: var(--scroll-bar-bg), $thumbBg: var(--thumb-bg));
 
+    --transition: .4s #{easing.$animationEffect} 0s;
+
     border-radius: var(--cm-border-radius);
     background: var(--cm-bg);
     color: var(--cm-main-color);
@@ -297,6 +299,7 @@
       font-size: var(--cm-header-font-size);
       text-overflow: ellipsis;
       overflow: hidden;
+      transition: color var(--transition);
     }
 
     &__body {

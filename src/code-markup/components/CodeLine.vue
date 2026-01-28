@@ -100,11 +100,8 @@
 
 <style lang="scss">
   @use "sass:math";
-  @use '@/styles/_easing.scss' as easing;
 
   .code-markup__line {
-    --transition: .4s #{easing.$animationEffect} 0s;
-
     text-align: left;
     height: var(--cm-text-line-height);
     display: table-row;
@@ -133,7 +130,7 @@
       left: 0;
       border-left: $borde-width solid var(--cm-count-bg);
       border-right: $borde-width solid var(--cm-count-border-right);
-      transition: border-color var(--transition), background var(--transition);
+      transition: color var(--transition), border-color var(--transition), background var(--transition);
     }
 
     &_through {
