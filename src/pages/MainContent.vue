@@ -19,6 +19,7 @@
       <script-doc is-rus />
       <style-doc is-rus />
       <slots-doc is-rus />
+      <stilization-doc is-rus />
       <exam-doc is-rus />
     </template>
 
@@ -34,6 +35,7 @@
       <script-doc />
       <style-doc />
       <slots-doc />
+      <stilization-doc />
       <exam-doc />
     </template>
   </main>
@@ -54,6 +56,7 @@
   import StyleDoc from '@/components/doc/StyleDoc.vue';
   import SlotsDoc from '@/components/doc/SlotsDoc.vue';
   import ExamDoc from '@/components/doc/ExamDoc.vue';
+  import StilizationDoc from '@/components/doc/StilizationDoc.vue';
 
   const lang = ref('rus');
 
