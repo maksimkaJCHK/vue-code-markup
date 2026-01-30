@@ -38,7 +38,7 @@
   ]);
 
   const bObj = (obj) => JSON.stringify(obj).replace(/\"/g, '')
-    .replace(/,/g, ',\n  ')
+    .replace(/,/g, ';\n  ')
     .replace(/{/g, '{\n  ')
     .replace(/}/g, '\n}')
     .replace(/:/g, ': ');
