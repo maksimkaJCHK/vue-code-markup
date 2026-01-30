@@ -37,10 +37,11 @@
     'code'
   ]);
 
-  const bObj = (obj) => JSON.stringify(obj).replace(/\"/g, '')
-    .replace(/,/g, ';\n  ')
+  const bObj = (obj) => JSON.stringify(obj)
+    .replace(/\"/g, '')
     .replace(/{/g, '{\n  ')
     .replace(/}/g, '\n}')
+    .replace(/,/g, ';\n  ')
     .replace(/:/g, ': ');
 
   const codeComp = computed(() => bObj(props.code));
