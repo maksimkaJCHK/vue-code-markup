@@ -32,6 +32,7 @@
         <watch-css
           :is-rus="props.isRus"
           :style="styleComp"
+          :code="styleComp"
         />
       </template>
       <template #content="{ nameRow }" >
