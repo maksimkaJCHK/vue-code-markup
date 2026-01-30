@@ -56,7 +56,7 @@
     color: #fff;
     margin-top: 15px;
     background: var(--cm-bg);
-    border-radius: 3px;
+    border-radius: 5px;
 
     &_is-code {
       .watch-css__block {
@@ -90,13 +90,13 @@
     &__block {
       margin: 0;
       display: none;
-      overflow: auto;
       position: relative;
       padding-top: 0;
 
       pre {
         margin: 0;
         padding: 0;
+        overflow: auto;
       }
     }
 
