@@ -4,7 +4,10 @@
       <slot name="code"></slot>
     </div>
     <div class="settings-doc-col settings-doc-content">
-      <slot name="content" :nameRow="nameRow"></slot>
+      <slot
+        name="content"
+        :nameRow="nameRow"
+      ></slot>
     </div>
   </div>
 </template>

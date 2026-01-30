@@ -61,11 +61,11 @@
       <template #content="{ nameRow }" >
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>theme</strong> - данный параметр отвечает за тему, которая будет применена к окну с кодом. На данный момент времени я реализовал 2 темы: "darcula" и "monokai". "Darcula", тема по умолчанию, если вы зададите несуществующее название темы, или не зададите данный параметр, то будет применена она. В данном примере я буду выводить темы через "select", но вы можете вставить сюда любое название темы. В таком случае стилизовать компонент нужно будет через следующий класс - "code-markup_theme-${название вашей темы}. Как создать свою тему я опишу ниже.
+            <strong>theme</strong> - данный параметр отвечает за тему, которая будет применена к окну с кодом. На данный момент времени я реализовал 2 темы: "darcula" и "monokai". "Darcula", тема по умолчанию, если вы зададите несуществующее название темы, или не зададите данный параметр, то будет применена она. В данном примере я буду выводить темы через "select", но вы можете вставить сюда любое название темы. В таком случае стилизовать компонент нужно будет через следующий класс - "code-markup_theme-${название вашей темы}". Как создать свою тему я опишу ниже.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>theme</strong> - this parameter is responsible for the theme that will be applied to the window with the code. At this point in time, I have implemented 2 themes: "darcula" and "monokai". "Darcula" is the default theme, if you set a non-existent theme name, or do not set this parameter, it will be applied. In this example, I will output themes via "select", but you can insert any theme name here. In this case, you will need to style the component using the following class - "code-markup_theme-${name of your theme}. I will describe how to create my own theme below.
+            <strong>theme</strong> - this parameter is responsible for the theme that will be applied to the window with the code. At this point in time, I have implemented 2 themes: "darcula" and "monokai". "Darcula" is the default theme, if you set a non-existent theme name, or do not set this parameter, it will be applied. In this example, I will output themes via "select", but you can insert any theme name here. In this case, you will need to style the component using the following class - "code-markup_theme-${name of your theme}". I will describe how to create my own theme below.
           </p>
 
           <ui-select
