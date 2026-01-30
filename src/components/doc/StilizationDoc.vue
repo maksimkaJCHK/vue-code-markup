@@ -5,9 +5,9 @@
         Стилизация компонентов
       </h3>
 
-     <p>
-      Данный раздел будет посвящён тому, как создавать свои темы, или стилизовывать существующие темы под свой проект. Данный раздел тесно связан с входным параметром "theme" для компонента "code-markup". На данный момент времени я сделал 2 темы: "darcula" и "monokai". За основу я взял тему "darcula", потому что она мне больше всего нравится. Для того, чтобы создать свою тему, нужно добавить во входной параметр "theme" название своей темы. Если вы зададите название темы - "some-theme", то в таком случае CSS класс для стилизации будет выглядеть следующим образом "code-markup_theme-some-theme".
-    </p>
+      <p>
+        Данный раздел будет посвящён тому, как создавать свои темы, или стилизовывать существующие темы под свой проект. Данный раздел тесно связан с входным параметром "theme" для компонента "code-markup". На данный момент времени я сделал 2 темы: "darcula" и "monokai". За основу я взял тему "darcula", потому что она мне больше всего нравится. Для того, чтобы создать свою тему, нужно добавить во входной параметр "theme" название своей темы. Если вы зададите название темы - "some-theme", то в таком случае CSS класс для стилизации будет выглядеть следующим образом "code-markup_theme-some-theme".
+      </p>
     </template>
 
     <template v-if="!props.isRus">
@@ -16,7 +16,7 @@
       </h3>
 
       <p>
-        В этом разделе мы расскажем о том, как создавать свои собственные темы или стилизовать существующие темы в соответствии с вашим проектом. Этот раздел тесно связан с входным параметром "тема" для компонента "разметка кода". На данный момент я создал 2 темы: "даркула" и "монокай". Я взял тему "даркула" за основу, потому что она мне нравится больше всего. Для того чтобы создать свою собственную тему, вам необходимо добавить название вашей темы во входной параметр "theme". Если вы зададите для названия темы значение "some-theme", то класс стилизации CSS будет выглядеть следующим образом: "code-markup_theme-some-theme".
+        This section will focus on how to create your own themes, or style existing themes to fit your project. This section is closely related to the "theme" input parameter for the "code-markup" component. At this point in time, I have made 2 themes: "darcula" and "monokai". I took the theme "darcula" as a basis, because I like it the most. In order to create your own theme, you need to add the name of your theme to the input parameter "theme". If you set the theme name to "some-theme", then the CSS styling class will look like this: "code-markup_theme-some-theme".
       </p>
     </template>
 
@@ -28,6 +28,11 @@
         >
           <books-list-body />
         </code-markup>
+
+        <watch-css
+          :is-rus="props.isRus"
+          :style="styleComp"
+        />
       </template>
       <template #content="{ nameRow }" >
         <div :class="nameRow">
@@ -36,7 +41,7 @@
           </p>
 
           <p v-if="!props.isRus">
-
+            <strong>--cm-bg</strong> - this CSS variable is responsible for the "background" of the editor with the code.
           </p>
         </div>
         <div :class="nameRow">
@@ -45,7 +50,7 @@
           </p>
 
           <p v-if="!props.isRus">
-
+            <strong>--cm-border-radius</strong> - this CSS variable is responsible for the "border-radius" of the editor with the code.
           </p>
         </div>
       </template>
@@ -60,6 +65,7 @@
 
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
+  import WatchCss from '@/components/WatchCss.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
