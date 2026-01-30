@@ -23,6 +23,7 @@
     <settings-doc>
       <template #code>
         <code-markup
+          v-bind="codeParam"
           :style="styleComp"
         >
           <books-list-body />
@@ -53,7 +54,7 @@
 </template>
 
 <script setup>
-  import { ref, computed, watch } from 'vue';
+  import { ref, computed } from 'vue';
 
   import useLang from '@/components/code-examples/uselang.js';
 
@@ -74,21 +75,6 @@
   const { codeParam } = useLang({
     lang: props.isRus ? 'ru' : 'en'
   });
-
-  const textTitle = 'Copy code to clipboard';
-  const textSuccessful = 'The code is copied to the clipboard';
-  const textError= 'An error occurred while copying the code to the clipboard';
-
-  const title = ref(textTitle);
-  const successfulText = ref(textSuccessful);
-  const errorText = ref(textError);
-
-  watch(codeParam, (val) => {
-    title.value = val.title || textTitle;
-    successfulText.value = val.successfulText || textSuccessful;
-    errorText.value = val.errorText || textError;
-  },
-  { immediate: true });
 
   const cmBg = ref('#212122');
   const cmBorderRadius = ref('5px');
