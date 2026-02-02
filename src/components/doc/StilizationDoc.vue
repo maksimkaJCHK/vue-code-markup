@@ -31,8 +31,14 @@
 
         <watch-css
           :is-rus="props.isRus"
-          :style="styleComp"
           :code="styleComp"
+          :cmBg="cmBg"
+          :cmBorderRadius="cmBorderRadius"
+          :cmTextFontSize="cmTextFontSize"
+          :cmTextFontFamily="cmTextFontFamily"
+          :cmTextLineHeight="cmTextLineHeight"
+          :cmCountPadding="cmCountPadding"
+          :cmMaxHeightBody="cmMaxHeightBody"
         />
       </template>
       <template #content="{ nameRow }" >

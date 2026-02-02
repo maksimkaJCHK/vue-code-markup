@@ -15,25 +15,67 @@
       </template>
     </div>
 
-    <code-markup
-      v-if="isCode"
-      :is-header="false"
-      :is-count="false"
-      :code="codeComp"
-    >
-      <div class="watch-css__block">
-        <pre>{{ codeComp }}</pre>
-      </div>
-    </code-markup>
+    <div class="watch-css__block">
+      <code-markup
+        v-if="isCode"
+        :is-header="false"
+        :is-count="false"
+        :code="codeComp"
+      >
+        <code-line>
+          <mu-style-class code=".code-markup_theme-some-theme " />
+          <mu-type code="{" />
+        </code-line>
+          <watch-css-row
+            keyProps="--cm-bg"
+            :valueProps="props.cmBg"
+          />
+          <watch-css-row
+            keyProps="--cm-border-radius"
+            :valueProps="props.cmBorderRadius"
+          />
+          <watch-css-row
+            keyProps="--cm-text-font-size"
+            :valueProps="props.cmTextFontSize"
+          />
+          <watch-css-row
+            keyProps="--cm-text-font-family"
+            :valueProps="props.cmTextFontFamily"
+          />
+          <watch-css-row
+            keyProps="--cm-text-line-height"
+            :valueProps="props.cmTextLineHeight"
+          />
+          <watch-css-row
+            keyProps="--cm-count-padding"
+            :valueProps="props.cmCountPadding"
+          />
+          <watch-css-row
+            keyProps="--cm-max-height-body"
+            :valueProps="props.cmMaxHeightBody"
+          />
+        <code-line>
+          <mu-type code="}" />
+        </code-line>
+      </code-markup>
+    </div>
   </div>
 </template>
 
 <script setup>
   import { ref, computed } from 'vue';
+  import WatchCssRow from './WatchCssRow.vue';
 
   const props = defineProps([
     'isRus',
-    'code'
+    'code',
+    'cmBg',
+    'cmBorderRadius',
+    'cmTextFontSize',
+    'cmTextFontFamily',
+    'cmTextLineHeight',
+    'cmCountPadding',
+    'cmMaxHeightBody',
   ]);
 
   const bObj = (obj) => JSON.stringify(obj)
@@ -88,12 +130,7 @@
     &__block {
       margin: 0;
       display: none;
-      padding-top: 0;
-
-      pre {
-        margin: 0;
-        padding: 0;
-      }
+      padding: 0 5px 0 5px;
     }
   }
 </style>
