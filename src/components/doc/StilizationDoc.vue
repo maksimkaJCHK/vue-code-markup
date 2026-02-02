@@ -44,6 +44,8 @@
           <p v-if="!props.isRus">
             <strong>--cm-bg</strong> - this CSS variable is responsible for the "background" of the editor with the code.
           </p>
+
+          <ui-input v-model="cmBg" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
@@ -53,6 +55,52 @@
           <p v-if="!props.isRus">
             <strong>--cm-border-radius</strong> - this CSS variable is responsible for the "border-radius" of the editor with the code.
           </p>
+
+          <ui-input v-model="cmBorderRadius" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-text-font-size</strong> - размер шрифта редактора с кодом.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-text-font-size</strong> - the font size of the editor with the code.
+          </p>
+
+          <ui-input v-model="cmTextFontSize" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-text-font-family</strong> - семейство шрифта редактора кода.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-text-font-family</strong> - the font family of the code editor.
+          </p>
+
+          <ui-input v-model="cmTextFontFamily" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-text-line-height</strong> - высота шрифта редактора кода.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-text-line-height</strong> - the font height of the code editor.
+          </p>
+
+          <ui-input v-model="cmTextLineHeight" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-count-padding</strong> - внутренние отступы для номеров строк.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-count-padding</strong> - "padding" for line numbers.
+          </p>
+
+          <ui-input v-model="cmCountPadding" />
         </div>
       </template>
     </settings-doc>
@@ -85,10 +133,20 @@
 
   const cmBg = ref('#212122');
   const cmBorderRadius = ref('5px');
+  const cmTextFontSize = ref("1em");
+  const cmTextFontFamily = ref("inherit");
+  const cmTextLineHeight = ref("1.5em");
+  const cmCountPadding = ref("0 .35em");
+  const cmMaxHeightBody = ref('auto');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
-    '--cm-border-radius': cmBorderRadius.value
+    '--cm-border-radius': cmBorderRadius.value,
+    '--cm-text-font-size': cmTextFontSize.value,
+    '--cm-text-font-family': cmTextFontFamily.value,
+    '--cm-text-line-height': cmTextLineHeight.value,
+    '--cm-count-padding': cmCountPadding.value,
+    '--cm-max-height-body': cmMaxHeightBody.value
   }));
 </script>
 
