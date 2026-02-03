@@ -44,21 +44,24 @@
     }
 
     h3 {
+      max-width: 100%;
+      display: inline-block;
+      box-sizing: border-box;
       cursor: pointer;
       position: relative;
-      padding-right: .8em;
+      padding-right: 1em;
       user-select: none;
 
       &::after {
         top: 50%;
         right: 0;
-        margin-top: -0.26em;
+        margin-top: -0.3em;
         content: ' ';
         display: block;
         position: absolute;
         border: .35em solid transparent;
         border-bottom-color: #000;
-        transform-origin: 50% 50%;
+        transform-origin: 50% 70%;
       }
     }
   }
