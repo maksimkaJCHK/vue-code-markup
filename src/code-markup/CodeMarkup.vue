@@ -200,7 +200,7 @@
 
     // Цвет нового, изменённого, удалённого куска кода
     --cm-new-border: #60a802;
-    --cm-changed-border: rgb(100,149,237);
+    --cm-changed-border: #6495ed;
     --cm-deleted-border: #92000a;
 
     --cm-deleted-opacity: .6;

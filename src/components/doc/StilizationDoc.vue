@@ -43,6 +43,9 @@
           :cmIconColor="cmIconColor"
           :cmHeaderPadding="cmHeaderPadding"
           :cmHeaderFontSize="cmHeaderFontSize"
+          :cmHeaderColor="cmHeaderColor"
+          :cmMainColor="cmMainColor"
+          
         />
       </template>
       <template #content="{ nameRow }" >
@@ -67,6 +70,17 @@
           </p>
 
           <ui-input v-model="cmBorderRadius" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-main-color</strong> - основной цвет редактора кода.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-main-color</strong> - the main color of the code editor.
+          </p>
+
+          <ui-input v-model="cmMainColor" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
@@ -137,7 +151,12 @@
 
         <watch-lines>
           <template #header>
-            Стили заголовка редактора кода
+            <template v-if="props.isRus">
+              Стили заголовка редактора кода
+            </template>
+            <template v-if="!props.isRus">
+              Code editor header styles
+            </template>
           </template>
 
           <template #default>
@@ -162,6 +181,17 @@
               </p>
 
               <ui-input v-model="cmHeaderFontSize" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-header-color</strong> - цвет заголовка редактора.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-header-color</strong> - editor's header color.
+              </p>
+
+              <ui-input v-model="cmHeaderColor" />
             </div>
           </template>
         </watch-lines>
@@ -207,10 +237,13 @@
   const cmIconColor = ref('#fff');
   const cmHeaderPadding = ref('.5em 1em');
   const cmHeaderFontSize = ref('1em');
+  const cmHeaderColor = ref('#ffc661');
+  const cmMainColor = ref('#a9b7c6');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
     '--cm-border-radius': cmBorderRadius.value,
+    '--cm-main-color': cmMainColor.value,
     '--cm-text-font-size': cmTextFontSize.value,
     '--cm-text-font-family': cmTextFontFamily.value,
     '--cm-text-line-height': cmTextLineHeight.value,
@@ -219,11 +252,13 @@
     '--cm-icon-color': cmIconColor.value,
     '--cm-header-padding': cmHeaderPadding.value,
     '--cm-header-font-size': cmHeaderFontSize.value,
+    '--cm-header-color': cmHeaderColor.value
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
   --cm-bg: ${cmBg.value};
   --cm-border-radius: ${cmBorderRadius.value};
+  --cm-main-color: ${cmMainColor.value};
   --cm-text-font-size: ${cmTextFontSize.value};
   --cm-text-font-family: ${cmTextFontFamily.value};
   --cm-text-line-height: ${cmTextLineHeight.value};
@@ -232,6 +267,7 @@
   --cm-icon-color: ${cmIconColor.value};
   --cm-header-padding: ${cmHeaderPadding.value};
   --cm-header-font-size: ${cmHeaderFontSize.value};
+  --cm-header-color: ${cmHeaderColor.value};
 }`);
 </script>
 

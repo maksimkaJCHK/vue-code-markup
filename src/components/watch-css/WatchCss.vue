@@ -35,6 +35,10 @@
             :valueProps="props.cmBorderRadius"
           />
           <watch-css-row
+            keyProps="--cm-main-color"
+            :valueProps="props.cmMainColor"
+          />
+          <watch-css-row
             keyProps="--cm-text-font-size"
             :valueProps="props.cmTextFontSize"
           />
@@ -66,6 +70,10 @@
             keyProps="--cm-header-font-size"
             :valueProps="props.cmHeaderFontSize"
           />
+          <watch-css-row
+            keyProps="--cm-header-color"
+            :valueProps="props.cmHeaderColor"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -91,6 +99,8 @@
     'cmIconColor',
     'cmHeaderPadding',
     'cmHeaderFontSize',
+    'cmHeaderColor',
+    'cmMainColor'
   ]);
 
   const isCode = ref(false);
@@ -101,7 +111,7 @@
   .watch-css {
     color: #fff;
     margin-top: 15px;
-    background: var(--cm-bg);
+    background: #212122;
     border-radius: 5px;
 
     &_is-code {
