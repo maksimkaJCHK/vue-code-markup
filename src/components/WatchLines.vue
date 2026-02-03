@@ -51,6 +51,7 @@
       position: relative;
       padding-right: 1em;
       user-select: none;
+      margin-top: .5em;
 
       &::after {
         top: 50%;
