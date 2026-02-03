@@ -24,6 +24,7 @@
       <template #code>
         <code-markup
           v-bind="codeParam"
+          header="Some theme"
           :style="styleComp"
         >
           <books-list-body />
@@ -31,7 +32,7 @@
 
         <watch-css
           :is-rus="props.isRus"
-          :code="styleComp"
+          :code="codeComp"
           :cmBg="cmBg"
           :cmBorderRadius="cmBorderRadius"
           :cmTextFontSize="cmTextFontSize"
@@ -39,6 +40,9 @@
           :cmTextLineHeight="cmTextLineHeight"
           :cmCountPadding="cmCountPadding"
           :cmMaxHeightBody="cmMaxHeightBody"
+          :cmIconColor="cmIconColor"
+          :cmHeaderPadding="cmHeaderPadding"
+          :cmHeaderFontSize="cmHeaderFontSize"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -108,6 +112,50 @@
 
           <ui-input v-model="cmCountPadding" />
         </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>-cm-max-height-body</strong> - максимальная высота редактора кода без шапки.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-max-height-body</strong> - the maximum height of the code editor without a header.
+          </p>
+
+          <ui-input v-model="cmMaxHeightBody" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-icon-color</strong> - цвет иконки скопировать текст.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-icon-color</strong> - icon color copy text.
+          </p>
+
+          <ui-input v-model="cmIconColor" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-header-padding</strong> - внутренние отступы для заголовка редактора.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-header-padding</strong> - "padding" for the editor's heading.
+          </p>
+
+          <ui-input v-model="cmHeaderPadding" />
+        </div>
+        <div :class="nameRow">
+          <p v-if="props.isRus">
+            <strong>--cm-header-font-size</strong> - размер шрифта для заголовка редактора.
+          </p>
+
+          <p v-if="!props.isRus">
+            <strong>--cm-header-font-size</strong> - font size for the editor's header.
+          </p>
+
+          <ui-input v-model="cmHeaderFontSize" />
+        </div>
       </template>
     </settings-doc>
   </div>
@@ -120,7 +168,7 @@
 
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
-  import WatchCss from '@/components/WatchCss.vue';
+  import WatchCss from '@/components/watch-css/WatchCss.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
@@ -144,6 +192,9 @@
   const cmTextLineHeight = ref("1.5em");
   const cmCountPadding = ref("0 .35em");
   const cmMaxHeightBody = ref('auto');
+  const cmIconColor = ref('#fff');
+  const cmHeaderPadding = ref('.5em 1em');
+  const cmHeaderFontSize = ref('1em');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
@@ -152,8 +203,24 @@
     '--cm-text-font-family': cmTextFontFamily.value,
     '--cm-text-line-height': cmTextLineHeight.value,
     '--cm-count-padding': cmCountPadding.value,
-    '--cm-max-height-body': cmMaxHeightBody.value
+    '--cm-max-height-body': cmMaxHeightBody.value,
+    '--cm-icon-color': cmIconColor.value,
+    '--cm-header-padding': cmHeaderPadding.value,
+    '--cm-header-font-size': cmHeaderFontSize.value,
   }));
+
+  const codeComp = computed(() => `.code-markup_theme-some-theme {
+  --cm-bg: ${cmBg.value};
+  --cm-border-radius: ${cmBorderRadius.value};
+  --cm-text-font-size: ${cmTextFontSize.value};
+  --cm-text-font-family: ${cmTextFontFamily.value};
+  --cm-text-line-height: ${cmTextLineHeight.value};
+  --cm-count-padding: ${cmCountPadding.value};
+  --cm-max-height-body: ${cmMaxHeightBody.value};
+  --cm-icon-color: ${cmIconColor.value};
+  --cm-header-padding: ${cmHeaderPadding.value};
+  --cm-header-font-size: ${cmHeaderFontSize.value};
+}`);
 </script>
 
 <style lang="scss" scoped></style>

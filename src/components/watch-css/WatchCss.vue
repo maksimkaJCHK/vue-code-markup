@@ -20,7 +20,7 @@
         v-if="isCode"
         :is-header="false"
         :is-count="false"
-        :code="codeComp"
+        :code="props.code"
       >
         <code-line>
           <mu-style-class code=".code-markup_theme-some-theme " />
@@ -54,6 +54,18 @@
             keyProps="--cm-max-height-body"
             :valueProps="props.cmMaxHeightBody"
           />
+          <watch-css-row
+            keyProps="--cm-icon-color"
+            :valueProps="props.cmIconColor"
+          />
+          <watch-css-row
+            keyProps="--cm-header-padding"
+            :valueProps="props.cmHeaderPadding"
+          />
+          <watch-css-row
+            keyProps="--cm-header-font-size"
+            :valueProps="props.cmHeaderFontSize"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -63,7 +75,7 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
+  import { ref } from 'vue';
   import WatchCssRow from './WatchCssRow.vue';
 
   const props = defineProps([
@@ -76,16 +88,10 @@
     'cmTextLineHeight',
     'cmCountPadding',
     'cmMaxHeightBody',
+    'cmIconColor',
+    'cmHeaderPadding',
+    'cmHeaderFontSize',
   ]);
-
-  const bObj = (obj) => JSON.stringify(obj)
-    .replace(/{/g, '.code-markup_theme-some-theme {\n  ')
-    .replace(/}/g, '\n}')
-    .replace(/\"/g, '')
-    .replace(/,/g, ';\n  ')
-    .replace(/:/g, ': ');
-
-  const codeComp = computed(() => bObj(props.code));
 
   const isCode = ref(false);
   const chIsCode = () => isCode.value = !isCode.value;
