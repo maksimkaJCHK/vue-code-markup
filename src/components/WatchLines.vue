@@ -1,0 +1,65 @@
+<template>
+  <div
+    class="watch-lines"
+    :class="isHintClass"
+  >
+    <h3 @click="cIsHint">
+      <slot name="header"></slot>
+    </h3>
+
+    <div
+      v-if="isHint"
+      class="watch-lines__hint"
+    >
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
+<script setup>
+  import { ref, computed } from 'vue';
+
+  const props = defineProps({
+    isHint: {
+      type: Boolean,
+      default: false
+    }
+  });
+
+  const isHint = ref(props.isHint);
+  const cIsHint = () => isHint.value = !isHint.value;
+  const isHintClass = computed(() => ({
+    'watch-lines_isHint': isHint.value
+  }));
+</script>
+
+<style lang="scss">
+  .watch-lines {
+    &_isHint {
+      h3 {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    h3 {
+      cursor: pointer;
+      position: relative;
+      padding-right: .8em;
+      user-select: none;
+
+      &::after {
+        top: 50%;
+        right: 0;
+        margin-top: -0.26em;
+        content: ' ';
+        display: block;
+        position: absolute;
+        border: .35em solid transparent;
+        border-bottom-color: #000;
+        transform-origin: 50% 50%;
+      }
+    }
+  }
+</style>

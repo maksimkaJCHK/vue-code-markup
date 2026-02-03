@@ -134,28 +134,37 @@
 
           <ui-input v-model="cmIconColor" />
         </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-header-padding</strong> - внутренние отступы для заголовка редактора.
-          </p>
 
-          <p v-if="!props.isRus">
-            <strong>--cm-header-padding</strong> - "padding" for the editor's heading.
-          </p>
+        <watch-lines>
+          <template #header>
+            Стили заголовка редактора кода
+          </template>
 
-          <ui-input v-model="cmHeaderPadding" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-header-font-size</strong> - размер шрифта для заголовка редактора.
-          </p>
+          <template #default>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-header-padding</strong> - внутренние отступы для заголовка редактора.
+              </p>
 
-          <p v-if="!props.isRus">
-            <strong>--cm-header-font-size</strong> - font size for the editor's header.
-          </p>
+              <p v-if="!props.isRus">
+                <strong>--cm-header-padding</strong> - "padding" for the editor's heading.
+              </p>
 
-          <ui-input v-model="cmHeaderFontSize" />
-        </div>
+              <ui-input v-model="cmHeaderPadding" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-header-font-size</strong> - размер шрифта для заголовка редактора.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-header-font-size</strong> - font size for the editor's header.
+              </p>
+
+              <ui-input v-model="cmHeaderFontSize" />
+            </div>
+          </template>
+        </watch-lines>
       </template>
     </settings-doc>
   </div>
@@ -169,6 +178,7 @@
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
   import WatchCss from '@/components/watch-css/WatchCss.vue';
+  import WatchLines from '@/components/WatchLines.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
@@ -184,6 +194,8 @@
   const { codeParam } = useLang({
     lang: props.isRus ? 'ru' : 'en'
   });
+
+  const isHeader = ref(false);
 
   const cmBg = ref('#212122');
   const cmBorderRadius = ref('5px');
