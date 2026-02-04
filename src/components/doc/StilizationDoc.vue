@@ -45,7 +45,9 @@
           :cmHeaderFontSize="cmHeaderFontSize"
           :cmHeaderColor="cmHeaderColor"
           :cmMainColor="cmMainColor"
-          
+          :cmCountBg="cmCountBg"
+          :cmCountColor="cmCountColor"
+          :cmCountBorderRight="cmCountBorderRight"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -77,7 +79,7 @@
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-main-color</strong> - the main color of the code window
+            <strong>--cm-main-color</strong> - the main color of the code window.
           </p>
 
           <ui-input v-model="cmMainColor" />
@@ -99,7 +101,7 @@
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-text-font-family</strong> - the font family of the window with the code.
+            <strong>--cm-text-font-family</strong> - the "font-family "of the window with the code.
           </p>
 
           <ui-input v-model="cmTextFontFamily" />
@@ -114,17 +116,6 @@
           </p>
 
           <ui-input v-model="cmTextLineHeight" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-count-padding</strong> - внутренние отступы для номеров строк.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-count-padding</strong> - "padding" for line numbers.
-          </p>
-
-          <ui-input v-model="cmCountPadding" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
@@ -152,10 +143,10 @@
         <watch-lines>
           <template #header>
             <template v-if="props.isRus">
-              Стили заголовка редактора кода
+              Стили заголовка окна с кодом
             </template>
             <template v-if="!props.isRus">
-              Code editor header styles
+              Window title styles with code
             </template>
           </template>
 
@@ -192,6 +183,64 @@
               </p>
 
               <ui-input v-model="cmHeaderColor" />
+            </div>
+          </template>
+        </watch-lines>
+
+        <watch-lines>
+          <template #header>
+            <template v-if="props.isRus">
+              Стили для номеров строк
+            </template>
+            <template v-if="!props.isRus">
+              Styles for line numbers
+            </template>
+          </template>
+
+          <template #default>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-count-bg</strong> - фон для номеров строк.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-count-bg</strong> - "background" for line numbers.
+              </p>
+
+              <ui-input v-model="cmCountBg" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-count-color</strong> - цвет текста для номеров строк.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-count-color</strong> - text color for line numbers.
+              </p>
+
+              <ui-input v-model="cmCountColor" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-count-padding</strong> - внутренние отступы для номеров строк.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-count-padding</strong> - "padding" for line numbers.
+              </p>
+
+              <ui-input v-model="cmCountPadding" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-count-border-right</strong> - цвет правого "border" для номеров строк.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-count-border-right</strong> - the color of the right "border" for line numbers.
+              </p>
+
+              <ui-input v-model="cmCountBorderRight" />
             </div>
           </template>
         </watch-lines>
@@ -239,6 +288,9 @@
   const cmHeaderFontSize = ref('1em');
   const cmHeaderColor = ref('#ffc661');
   const cmMainColor = ref('#a9b7c6');
+  const cmCountBg = ref('#5e5d5d');
+  const cmCountColor = ref('#fff');
+  const cmCountBorderRight = ref('#5e5d5d');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
@@ -252,7 +304,10 @@
     '--cm-icon-color': cmIconColor.value,
     '--cm-header-padding': cmHeaderPadding.value,
     '--cm-header-font-size': cmHeaderFontSize.value,
-    '--cm-header-color': cmHeaderColor.value
+    '--cm-header-color': cmHeaderColor.value,
+    '--cm-count-bg': cmCountBg.value,
+    '--cm-count-color': cmCountColor.value,
+    '--cm-count-border-right': cmCountBorderRight.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -262,12 +317,15 @@
   --cm-text-font-size: ${cmTextFontSize.value};
   --cm-text-font-family: ${cmTextFontFamily.value};
   --cm-text-line-height: ${cmTextLineHeight.value};
-  --cm-count-padding: ${cmCountPadding.value};
   --cm-max-height-body: ${cmMaxHeightBody.value};
   --cm-icon-color: ${cmIconColor.value};
   --cm-header-padding: ${cmHeaderPadding.value};
   --cm-header-font-size: ${cmHeaderFontSize.value};
   --cm-header-color: ${cmHeaderColor.value};
+  --cm-count-bg: ${cmCountBg.value};
+  --cm-count-color: ${cmCountColor.value};
+  --cm-count-padding: ${cmCountPadding.value};
+  --cm-count-border-right: ${cmCountBorderRight.value};
 }`);
 </script>
 

@@ -51,10 +51,6 @@
             :valueProps="props.cmTextLineHeight"
           />
           <watch-css-row
-            keyProps="--cm-count-padding"
-            :valueProps="props.cmCountPadding"
-          />
-          <watch-css-row
             keyProps="--cm-max-height-body"
             :valueProps="props.cmMaxHeightBody"
           />
@@ -73,6 +69,23 @@
           <watch-css-row
             keyProps="--cm-header-color"
             :valueProps="props.cmHeaderColor"
+          />
+
+          <watch-css-row
+            keyProps="--cm-count-bg"
+            :valueProps="props.cmCountBg"
+          />
+          <watch-css-row
+            keyProps="--cm-count-color"
+            :valueProps="props.cmCountColor"
+          />
+          <watch-css-row
+            keyProps="--cm-count-padding"
+            :valueProps="props.cmCountPadding"
+          />
+          <watch-css-row
+            keyProps="--cm-count-border-right"
+            :valueProps="props.cmCountBorderRight"
           />
         <code-line>
           <mu-type code="}" />
@@ -100,7 +113,10 @@
     'cmHeaderPadding',
     'cmHeaderFontSize',
     'cmHeaderColor',
-    'cmMainColor'
+    'cmMainColor',
+    'cmCountBg',
+    'cmCountColor',
+    'cmCountBorderRight',
   ]);
 
   const isCode = ref(false);

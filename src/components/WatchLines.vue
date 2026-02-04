@@ -35,14 +35,6 @@
 
 <style lang="scss">
   .watch-lines {
-    &_isHint {
-      h3 {
-        &::after {
-          transform: rotate(180deg);
-        }
-      }
-    }
-
     h3 {
       max-width: 100%;
       display: inline-block;
@@ -51,7 +43,8 @@
       position: relative;
       padding-right: 1em;
       user-select: none;
-      margin-top: .5em;
+      margin-top: .2em;
+      margin-bottom: .2em;
 
       &::after {
         top: 50%;
@@ -63,6 +56,16 @@
         border: .35em solid transparent;
         border-bottom-color: #000;
         transform-origin: 50% 70%;
+      }
+    }
+
+    &_isHint {
+      h3 {
+        margin-bottom: .5em;
+
+        &::after {
+          transform: rotate(180deg);
+        }
       }
     }
   }
