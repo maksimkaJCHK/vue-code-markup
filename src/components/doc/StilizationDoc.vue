@@ -51,66 +51,66 @@
       <template #content="{ nameRow }" >
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-bg</strong> - данная CSS переменная отвечает за фон редактора с кодом.
+            <strong>--cm-bg</strong> - данная CSS переменная отвечает за фон окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-bg</strong> - this CSS variable is responsible for the "background" of the editor with the code.
+            <strong>--cm-bg</strong> - this CSS variable is responsible for the "background" of the window with the code.
           </p>
 
           <ui-input v-model="cmBg" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-border-radius</strong> - данная CSS переменная отвечает за "border-radius" редактора с кодом.
+            <strong>--cm-border-radius</strong> - данная CSS переменная отвечает за "border-radius" окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-border-radius</strong> - this CSS variable is responsible for the "border-radius" of the editor with the code.
+            <strong>--cm-border-radius</strong> - this CSS variable is responsible for the "border-radius" of the window with the code.
           </p>
 
           <ui-input v-model="cmBorderRadius" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-main-color</strong> - основной цвет редактора кода.
+            <strong>--cm-main-color</strong> - основной цвет окна кода.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-main-color</strong> - the main color of the code editor.
+            <strong>--cm-main-color</strong> - the main color of the code window
           </p>
 
           <ui-input v-model="cmMainColor" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-text-font-size</strong> - размер шрифта редактора с кодом.
+            <strong>--cm-text-font-size</strong> - размер шрифта окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-text-font-size</strong> - the font size of the editor with the code.
+            <strong>--cm-text-font-size</strong> - the "font-size" of the window with the code.
           </p>
 
           <ui-input v-model="cmTextFontSize" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-text-font-family</strong> - семейство шрифта редактора кода.
+            <strong>--cm-text-font-family</strong> - семейство шрифта окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-text-font-family</strong> - the font family of the code editor.
+            <strong>--cm-text-font-family</strong> - the font family of the window with the code.
           </p>
 
           <ui-input v-model="cmTextFontFamily" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-text-line-height</strong> - высота шрифта редактора кода.
+            <strong>--cm-text-line-height</strong> - высота шрифта окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-text-line-height</strong> - the font height of the code editor.
+            <strong>--cm-text-line-height</strong> - the "line-height" of the window with the code.
           </p>
 
           <ui-input v-model="cmTextLineHeight" />
@@ -128,11 +128,11 @@
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>-cm-max-height-body</strong> - максимальная высота редактора кода без шапки.
+            <strong>-cm-max-height-body</strong> - максимальная высота окна кода без шапки.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-max-height-body</strong> - the maximum height of the code editor without a header.
+            <strong>--cm-max-height-body</strong> - "max-height" of the code window without a header
           </p>
 
           <ui-input v-model="cmMaxHeightBody" />
@@ -162,33 +162,33 @@
           <template #default>
             <div :class="nameRow">
               <p v-if="props.isRus">
-                <strong>--cm-header-padding</strong> - внутренние отступы для заголовка редактора.
+                <strong>--cm-header-padding</strong> - внутренние отступы для заголовка окна с кодом.
               </p>
 
               <p v-if="!props.isRus">
-                <strong>--cm-header-padding</strong> - "padding" for the editor's heading.
+                <strong>--cm-header-padding</strong> - "padding" for the title of the window with the code.
               </p>
 
               <ui-input v-model="cmHeaderPadding" />
             </div>
             <div :class="nameRow">
               <p v-if="props.isRus">
-                <strong>--cm-header-font-size</strong> - размер шрифта для заголовка редактора.
+                <strong>--cm-header-font-size</strong> - размер шрифта для заголовка окна с кодом.
               </p>
 
               <p v-if="!props.isRus">
-                <strong>--cm-header-font-size</strong> - font size for the editor's header.
+                <strong>--cm-header-font-size</strong> - "font-size" for the title of the window with the code
               </p>
 
               <ui-input v-model="cmHeaderFontSize" />
             </div>
             <div :class="nameRow">
               <p v-if="props.isRus">
-                <strong>--cm-header-color</strong> - цвет заголовка редактора.
+                <strong>--cm-header-color</strong> - цвет заголовка окна с кодом.
               </p>
 
               <p v-if="!props.isRus">
-                <strong>--cm-header-color</strong> - editor's header color.
+                <strong>--cm-header-color</strong> - the color of the window title with the code.
               </p>
 
               <ui-input v-model="cmHeaderColor" />
