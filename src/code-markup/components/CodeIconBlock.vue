@@ -105,13 +105,13 @@
 
     &__svg__is-copy {
       path {
-        fill: var(--cm-new-border);
+        fill: var(--cm-icon-is-copy-color);
       }
     }
 
     &__svg__is-error {
       path {
-        fill: var(--cm-error-color);
+        fill: var(--cm-icon-error-color);
       }
     }
   }

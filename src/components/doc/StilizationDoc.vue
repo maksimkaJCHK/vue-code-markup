@@ -128,17 +128,6 @@
 
           <ui-input v-model="cmMaxHeightBody" />
         </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-icon-color</strong> - цвет иконки скопировать текст.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-icon-color</strong> - icon color copy text.
-          </p>
-
-          <ui-input v-model="cmIconColor" />
-        </div>
 
         <watch-lines>
           <template #header>
@@ -241,6 +230,43 @@
               </p>
 
               <ui-input v-model="cmCountBorderRight" />
+            </div>
+          </template>
+        </watch-lines>
+
+        <watch-lines>
+          <template #header>
+            <template v-if="props.isRus">
+              Стили для иконки "скопировать текст" (разные состояния)
+            </template>
+            <template v-if="!props.isRus">
+              Styles for the "copy text" icon (different states)
+            </template>
+          </template>
+
+          <template #default>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-icon-color</strong> - цвет иконки скопировать текст.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-icon-color</strong> - icon color copy text.
+              </p>
+
+              <ui-input v-model="cmIconColor" />
+            </div>
+
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-icon-error-color</strong> - цвет иконки скопировать текст.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-icon-error-color</strong> - icon color copy text.
+              </p>
+
+              <ui-input v-model="cmIconColor" />
             </div>
           </template>
         </watch-lines>
