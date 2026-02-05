@@ -185,9 +185,6 @@
     // Максимальный размер блока с кодом
     --cm-max-height-body: auto;
 
-    // Иконка копировать текст
-    --cm-icon-color: #fff;
-
     // Заголовок
     --cm-header-padding: .5em 1em;
     --cm-header-font-size: 1em;
@@ -219,8 +216,10 @@
     // Цвет для тегов
     --cm-tag-color: #{$color-1};
 
-    // Цвет для линии ошибки
-    --cm-error-color: #980505;
+    // Иконка копировать текст
+    --cm-icon-color: #fff;
+    --cm-icon-error-color: #980505;
+    --cm-icon-is-copy-color: var(--cm-new-border);
 
     // Цвета для элементов внутри script
     --cm-text-color: #{$color-2};

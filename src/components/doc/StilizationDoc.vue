@@ -40,7 +40,6 @@
           :cmTextLineHeight="cmTextLineHeight"
           :cmCountPadding="cmCountPadding"
           :cmMaxHeightBody="cmMaxHeightBody"
-          :cmIconColor="cmIconColor"
           :cmHeaderPadding="cmHeaderPadding"
           :cmHeaderFontSize="cmHeaderFontSize"
           :cmHeaderColor="cmHeaderColor"
@@ -48,6 +47,9 @@
           :cmCountBg="cmCountBg"
           :cmCountColor="cmCountColor"
           :cmCountBorderRight="cmCountBorderRight"
+          :cmIconColor="cmIconColor"
+          :cmIconErrorColor="cmIconErrorColor"
+          :cmIconIsCopyColor="cmIconIsCopyColor"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -237,21 +239,31 @@
         <watch-lines>
           <template #header>
             <template v-if="props.isRus">
-              Стили для иконки "скопировать текст" (разные состояния)
+              Стили для иконок "скопировать код"
             </template>
             <template v-if="!props.isRus">
-              Styles for the "copy text" icon (different states)
+              Styles for "copy code" icons
             </template>
+          </template>
+
+          <template #description>
+            <p v-if="props.isRus">
+              В этом блоке речь пойдет о стилизации иконок "скопировать код". Я реализовал 3 состояния. Это обычное состояние, состояние, когда произошла ошибка во время копирования кода в буфер обмена, и состояние когда код успешно скопирован в буфер обмена. Для всех этих состояний у меня есть 3 разные иконки. Здесь будет описано как менять цвет этих иконок. Если вы через слоты вставите свои картинки, то данный блок вам не поможет. У меня эти иконки реализованы через SVG, я просто меняю их "fill".
+            </p>
+
+            <p v-if="!props.isRus">
+              In this section, we will talk about the styling of the "copy code" icons. I have implemented 3 states. This is the normal state, the state when an error occurred while copying the code to the clipboard, and the state when the code was successfully copied to the clipboard. I have 3 different icons for all these states. Here you will learn how to change the color of these icons. If you insert your pictures through the slots, then this block will not help you. I have these icons implemented via SVG, I just change them to "fill".
+            </p>
           </template>
 
           <template #default>
             <div :class="nameRow">
               <p v-if="props.isRus">
-                <strong>--cm-icon-color</strong> - цвет иконки скопировать текст.
+                <strong>--cm-icon-color</strong> - цвет иконки "скопировать код".
               </p>
 
               <p v-if="!props.isRus">
-                <strong>--cm-icon-color</strong> - icon color copy text.
+                <strong>--cm-icon-color</strong> - icon color "copy text".
               </p>
 
               <ui-input v-model="cmIconColor" />
@@ -259,14 +271,26 @@
 
             <div :class="nameRow">
               <p v-if="props.isRus">
-                <strong>--cm-icon-error-color</strong> - цвет иконки скопировать текст.
+                <strong>--cm-icon-error-color</strong> - цвет иконки "скопировать код", если произошла ошибка.
               </p>
 
               <p v-if="!props.isRus">
-                <strong>--cm-icon-error-color</strong> - icon color copy text.
+                <strong>--cm-icon-error-color</strong> - icon color "copy text" if an error occurred.
               </p>
 
-              <ui-input v-model="cmIconColor" />
+              <ui-input v-model="cmIconErrorColor" />
+            </div>
+
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-icon-is-copy-color</strong> - цвет иконки "скопировать код", когда код успешно скопирован в буфер обмена.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-icon-is-copy-color</strong> - the color of the "copy code" icon when the code has been successfully copied to the clipboard.
+              </p>
+
+              <ui-input v-model="cmIconIsCopyColor" />
             </div>
           </template>
         </watch-lines>
@@ -309,7 +333,6 @@
   const cmTextLineHeight = ref("1.5em");
   const cmCountPadding = ref("0 .35em");
   const cmMaxHeightBody = ref('auto');
-  const cmIconColor = ref('#fff');
   const cmHeaderPadding = ref('.5em 1em');
   const cmHeaderFontSize = ref('1em');
   const cmHeaderColor = ref('#ffc661');
@@ -317,6 +340,9 @@
   const cmCountBg = ref('#5e5d5d');
   const cmCountColor = ref('#fff');
   const cmCountBorderRight = ref('#5e5d5d');
+  const cmIconColor = ref('#fff');
+  const cmIconErrorColor = ref('#980505');
+  const cmIconIsCopyColor = ref('#60a802');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
@@ -327,13 +353,15 @@
     '--cm-text-line-height': cmTextLineHeight.value,
     '--cm-count-padding': cmCountPadding.value,
     '--cm-max-height-body': cmMaxHeightBody.value,
-    '--cm-icon-color': cmIconColor.value,
     '--cm-header-padding': cmHeaderPadding.value,
     '--cm-header-font-size': cmHeaderFontSize.value,
     '--cm-header-color': cmHeaderColor.value,
     '--cm-count-bg': cmCountBg.value,
     '--cm-count-color': cmCountColor.value,
     '--cm-count-border-right': cmCountBorderRight.value,
+    '--cm-icon-color': cmIconColor.value,
+    '--cm-icon-error-color': cmIconErrorColor.value,
+    '--cm-icon-is-copy-color': cmIconIsCopyColor.value
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -344,7 +372,6 @@
   --cm-text-font-family: ${cmTextFontFamily.value};
   --cm-text-line-height: ${cmTextLineHeight.value};
   --cm-max-height-body: ${cmMaxHeightBody.value};
-  --cm-icon-color: ${cmIconColor.value};
   --cm-header-padding: ${cmHeaderPadding.value};
   --cm-header-font-size: ${cmHeaderFontSize.value};
   --cm-header-color: ${cmHeaderColor.value};
@@ -352,6 +379,9 @@
   --cm-count-color: ${cmCountColor.value};
   --cm-count-padding: ${cmCountPadding.value};
   --cm-count-border-right: ${cmCountBorderRight.value};
+  --cm-icon-color: ${cmIconColor.value};
+  --cm-icon-error-color: ${cmIconErrorColor.value};
+  --cm-icon-is-copy-color: ${cmIconIsCopyColor.value};
 }`);
 </script>
 

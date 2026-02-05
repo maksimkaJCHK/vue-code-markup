@@ -7,17 +7,27 @@
       <slot name="header"></slot>
     </h3>
 
-    <div
-      v-if="isHint"
-      class="watch-lines__hint"
-    >
-      <slot></slot>
-    </div>
+    <template v-if="isHint">
+      <div
+        v-if="isDesc"
+        class="watch-lines__description"
+      >
+        <slot name="description"></slot>
+      </div>
+
+      <div class="watch-lines__hint">
+        <slot></slot>
+      </div>
+    </template>
   </div>
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
+  import {
+    ref,
+    computed,
+    useSlots
+  } from 'vue';
 
   const props = defineProps({
     isHint: {
@@ -25,6 +35,8 @@
       default: false
     }
   });
+
+  const isDesc = useSlots().description;
 
   const isHint = ref(props.isHint);
   const cIsHint = () => isHint.value = !isHint.value;
@@ -57,6 +69,10 @@
         border-bottom-color: #000;
         transform-origin: 50% 70%;
       }
+    }
+
+    &__description {
+      font-size: .9em;
     }
 
     &_isHint {

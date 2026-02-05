@@ -77,7 +77,7 @@
     position: sticky;
     user-select: none;
     z-index: 1;
-    margin: 0 0 calc(var(--cm-text-line-height) * -1) 0;
+    margin: 0 0 calc(var(--cm-text-font-size) * -1) 0;
     transform: $translateX translateY(5px);
 
     &:active {
