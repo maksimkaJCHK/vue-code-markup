@@ -50,6 +50,10 @@
           :cmIconColor="cmIconColor"
           :cmIconErrorColor="cmIconErrorColor"
           :cmIconIsCopyColor="cmIconIsCopyColor"
+          :cmActiveBg="cmActiveBg"
+          :cmActiveCountBg="cmActiveCountBg"
+          :cmActiveCountColor="cmActiveCountColor"
+          :cmActiveCountRightColor="cmActiveCountRightColor"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -294,6 +298,63 @@
             </div>
           </template>
         </watch-lines>
+        <watch-lines>
+          <template #header>
+            <template v-if="props.isRus">
+              Стили для активной линии
+            </template>
+            <template v-if="!props.isRus">
+              Styles for the active line
+            </template>
+          </template>
+
+          <template #default>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-active-bg</strong> - фон активной строки.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-active-bg</strong> - "background" of the active line.
+              </p>
+
+              <ui-input v-model="cmActiveBg" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-active-count-bg</strong> - фон для номера строки активной строки.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-active-count-bg</strong> - "background" for the line number of the active line.
+              </p>
+
+              <ui-input v-model="cmActiveCountBg" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-active-count-color</strong> - цвет для номера строки активной строки.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-active-count-color</strong> - the color for the line number of the active line.
+              </p>
+
+              <ui-input v-model="cmActiveCountColor" />
+            </div>
+            <div :class="nameRow">
+              <p v-if="props.isRus">
+                <strong>--cm-active-count-right-color</strong> - цвет правого "border" активной строки.
+              </p>
+
+              <p v-if="!props.isRus">
+                <strong>--cm-active-count-right-color</strong> - the color of the right "border" of the active row.
+              </p>
+
+              <ui-input v-model="cmActiveCountRightColor" />
+            </div>
+          </template>
+        </watch-lines>
       </template>
     </settings-doc>
   </div>
@@ -343,6 +404,10 @@
   const cmIconColor = ref('#fff');
   const cmIconErrorColor = ref('#980505');
   const cmIconIsCopyColor = ref('#60a802');
+  const cmActiveBg = ref('#2a2a2b');
+  const cmActiveCountBg = ref('#454545');
+  const cmActiveCountColor = ref('#5e5d5d');
+  const cmActiveCountRightColor = ref('#454545');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
@@ -361,7 +426,11 @@
     '--cm-count-border-right': cmCountBorderRight.value,
     '--cm-icon-color': cmIconColor.value,
     '--cm-icon-error-color': cmIconErrorColor.value,
-    '--cm-icon-is-copy-color': cmIconIsCopyColor.value
+    '--cm-icon-is-copy-color': cmIconIsCopyColor.value,
+    '--cm-active-bg': cmActiveBg.value,
+    '--cm-active-count-bg': cmActiveCountBg.value,
+    '--cm-active-count-color': cmActiveCountColor.value,
+    '--cm-active-count-right-color': cmActiveCountRightColor.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -382,6 +451,10 @@
   --cm-icon-color: ${cmIconColor.value};
   --cm-icon-error-color: ${cmIconErrorColor.value};
   --cm-icon-is-copy-color: ${cmIconIsCopyColor.value};
+  --cm-active-bg': ${cmActiveBg.value};
+  --cm-active-count-bg: ${cmActiveCountBg.value};
+  --cm-active-count-color: ${cmActiveCountColor.value};
+  --cm-active-count-right-color: ${cmActiveCountRightColor.value};
 }`);
 </script>
 

@@ -95,6 +95,22 @@
             keyProps="--cm-icon-is-copy-color"
             :valueProps="props.cmIconIsCopyColor"
           />
+          <watch-css-row
+            keyProps="--cm-active-bg"
+            :valueProps="props.cmActiveBg"
+          />
+          <watch-css-row
+            keyProps="--cm-active-count-bg"
+            :valueProps="props.cmActiveCountBg"
+          />
+          <watch-css-row
+            keyProps="--cm-active-count-color"
+            :valueProps="props.cmActiveCountColor"
+          />
+          <watch-css-row
+            keyProps="--cm-active-count-right-color"
+            :valueProps="props.cmActiveCountRightColor"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -126,7 +142,11 @@
     'cmCountBorderRight',
     'cmIconColor',
     'cmIconErrorColor',
-    'cmIconIsCopyColor'
+    'cmIconIsCopyColor',
+    'cmActiveBg',
+    'cmActiveCountBg',
+    'cmActiveCountColor',
+    'cmActiveCountRightColor',
   ]);
 
   const isCode = ref(false);
