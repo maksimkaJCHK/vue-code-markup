@@ -385,8 +385,6 @@
     lang: props.isRus ? 'ru' : 'en'
   });
 
-  const isHeader = ref(false);
-
   const cmBg = ref('#212122');
   const cmBorderRadius = ref('5px');
   const cmTextFontSize = ref("1em");
