@@ -1,0 +1,58 @@
+<template>
+  <watch-lines>
+    <template #header>
+      <template v-if="props.isRus">
+        Стили для выделение текста в окне с кодом
+      </template>
+
+      <template v-if="!props.isRus">
+        Styles for "selection" text in a window with a code
+      </template>
+    </template>
+
+    <template #description>
+      <p v-if="props.isRus">
+        Этот блок посвящён выделению текста, для того, чтобы увидеть стили нужно будет выделить текст в окне с кодом. Я задаю фон и цвет выделения.
+      </p>
+
+      <p v-if="!props.isRus">
+        This block is dedicated to text "selection". In order to see the styles, you will need to select the text in the window with the code. I set the "background" and the selection "color".
+      </p>
+    </template>
+
+    <template #default>
+      <div :class="props.nameRow">
+        <p v-if="props.isRus">
+          <strong>--cm-selection-bg</strong> - фон выделения в окне с кодом.
+        </p>
+
+        <p v-if="!props.isRus">
+          <strong>--cm-selection-bg</strong> - "background" of the selection in the window with the code.
+        </p>
+
+        <ui-input v-model="cmSelectionBg" />
+      </div>
+      <div :class="props.nameRow">
+        <p v-if="props.isRus">
+          <strong>--cm-selection-color</strong> - цвет текста при выделении в окне с кодом.
+        </p>
+
+        <p v-if="!props.isRus">
+          <strong>--cm-selection-color</strong> - the "color" of the text when highlighted in the window with the code.
+        </p>
+
+        <ui-input v-model="cmSelectionColor" />
+      </div>
+    </template>
+  </watch-lines>
+</template>
+
+<script setup>
+  import WatchLines from '@/components/WatchLines.vue';
+  import UiInput from '@/UI/UIInput.vue';
+
+  const props = defineProps(['isRus', 'nameRow']);
+
+  const cmSelectionBg = defineModel('cm-selection-bg');
+  const cmSelectionColor = defineModel('cm-selection-color');
+</script>

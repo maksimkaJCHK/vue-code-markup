@@ -20,7 +20,7 @@
     </template>
 
     <template #default>
-      <div :class="nameRow">
+      <div :class="props.nameRow">
         <p v-if="props.isRus">
           <strong>--cm-icon-color</strong> - цвет иконки "скопировать код".
         </p>
@@ -32,7 +32,7 @@
         <ui-input v-model="cmIconColor" />
       </div>
 
-      <div :class="nameRow">
+      <div :class="props.nameRow">
         <p v-if="props.isRus">
           <strong>--cm-icon-error-color</strong> - цвет иконки "скопировать код", если произошла ошибка.
         </p>
@@ -44,7 +44,7 @@
         <ui-input v-model="cmIconErrorColor" />
       </div>
 
-      <div :class="nameRow">
+      <div :class="props.nameRow">
         <p v-if="props.isRus">
           <strong>--cm-icon-is-copy-color</strong> - цвет иконки "скопировать код", когда код успешно скопирован в буфер обмена.
         </p>

@@ -168,6 +168,13 @@
           v-model:cm-active-count-bg="cmActiveCountBg"
           v-model:cm-active-count-right-color="cmActiveCountRightColor"
         />
+
+        <selection-group
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-selection-bg="cmSelectionBg"
+          v-model:cm-selection-color="cmSelectionColor"
+        />
       </template>
     </settings-doc>
   </div>
@@ -186,7 +193,7 @@
   import CopyCode from './stilization/CopyCode.vue';
   import CountNumbers from './stilization/CountNumbers.vue';
   import HeaderGroup from './stilization/HeaderGroup.vue';
-  import WatchLines from '@/components/WatchLines.vue';
+  import SelectionGroup from './stilization/SelectionGroup.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
@@ -226,8 +233,11 @@
   // Активная линия
   const cmActiveBg = ref('#2a2a2b');
   const cmActiveCountBg = ref('#454545');
-  const cmActiveCountColor = ref('#5e5d5d');
+  const cmActiveCountColor = ref('#fff');
   const cmActiveCountRightColor = ref('#454545');
+  // Выделение текста
+  const cmSelectionBg = ref('#647f54');
+  const cmSelectionColor = ref('#fff');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
@@ -251,6 +261,8 @@
     '--cm-active-count-bg': cmActiveCountBg.value,
     '--cm-active-count-color': cmActiveCountColor.value,
     '--cm-active-count-right-color': cmActiveCountRightColor.value,
+    '--cm-selection-bg': cmSelectionBg.value,
+    '--cm-selection-color': cmSelectionColor.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -275,6 +287,8 @@
   --cm-active-count-bg: ${cmActiveCountBg.value};
   --cm-active-count-color: ${cmActiveCountColor.value};
   --cm-active-count-right-color: ${cmActiveCountRightColor.value};
+  --cm-selection-bg: ${cmSelectionBg.value};
+  --cm-selection-color: ${cmSelectionColor.value};
 }`);
 </script>
 

@@ -10,7 +10,7 @@
     </template>
 
     <template #default>
-      <div :class="nameRow">
+      <div :class="props.nameRow">
         <p v-if="props.isRus">
           <strong>--cm-count-bg</strong> - фон для номеров строк.
         </p>
@@ -21,7 +21,7 @@
 
         <ui-input v-model="cmCountBg" />
       </div>
-      <div :class="nameRow">
+      <div :class="props.nameRow">
         <p v-if="props.isRus">
           <strong>--cm-count-color</strong> - цвет текста для номеров строк.
         </p>
@@ -32,7 +32,7 @@
 
         <ui-input v-model="cmCountColor" />
       </div>
-      <div :class="nameRow">
+      <div :class="props.nameRow">
         <p v-if="props.isRus">
           <strong>--cm-count-padding</strong> - внутренние отступы для номеров строк.
         </p>
@@ -43,7 +43,7 @@
 
         <ui-input v-model="cmCountPadding" />
       </div>
-      <div :class="nameRow">
+      <div :class="props.nameRow">
         <p v-if="props.isRus">
           <strong>--cm-count-border-right</strong> - цвет правого "border" для номеров строк.
         </p>
