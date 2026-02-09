@@ -2,10 +2,10 @@
   <watch-lines>
     <template #header>
       <template v-if="props.isRus">
-        Стили для номеров строк
+        Стилизация номеров строк
       </template>
       <template v-if="!props.isRus">
-        Styles for line numbers
+        Stylization of line numbers
       </template>
     </template>
 

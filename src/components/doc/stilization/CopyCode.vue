@@ -2,10 +2,10 @@
   <watch-lines>
     <template #header>
       <template v-if="props.isRus">
-        Стили для иконок "скопировать код"
+        Стилизация иконок "скопировать код"
       </template>
       <template v-if="!props.isRus">
-        Styles for "copy code" icons
+        Stylization of "copy code" icons
       </template>
     </template>
 

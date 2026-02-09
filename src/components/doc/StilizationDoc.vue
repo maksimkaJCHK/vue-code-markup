@@ -175,6 +175,11 @@
           v-model:cm-selection-bg="cmSelectionBg"
           v-model:cm-selection-color="cmSelectionColor"
         />
+
+        <scroll-group
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+        />
       </template>
     </settings-doc>
   </div>
@@ -194,6 +199,7 @@
   import CountNumbers from './stilization/CountNumbers.vue';
   import HeaderGroup from './stilization/HeaderGroup.vue';
   import SelectionGroup from './stilization/SelectionGroup.vue';
+  import ScrollGroup from './stilization/ScrollGroup.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';

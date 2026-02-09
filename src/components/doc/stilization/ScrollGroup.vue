@@ -2,22 +2,12 @@
   <watch-lines>
     <template #header>
       <template v-if="props.isRus">
-        Стилизация выделение текста
+        Cтилизация полосы прокрутки
       </template>
 
       <template v-if="!props.isRus">
-        Stylization text selection
+        Styling the scrollbar
       </template>
-    </template>
-
-    <template #description>
-      <p v-if="props.isRus">
-        Этот блок посвящён выделению текста. Для того, чтобы увидеть результат применения стилей, необходимо выделить текст в окне с кодом. Я задаю фон выделения и цвет текста при выделении.
-      </p>
-
-      <p v-if="!props.isRus">
-        This section is dedicated to text selection. In order to see the result of applying styles, you need to select the text in the window with the code. I set the background of the selection and the color of the text when selected.
-      </p>
     </template>
 
     <template #default>

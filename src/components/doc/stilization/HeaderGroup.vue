@@ -2,10 +2,10 @@
   <watch-lines>
     <template #header>
       <template v-if="props.isRus">
-        Стили заголовка окна с кодом
+        Стилизация заголовка окна с кодом
       </template>
       <template v-if="!props.isRus">
-        Window title styles with code
+        Styling the window title with the code
       </template>
     </template>
 
