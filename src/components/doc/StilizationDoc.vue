@@ -135,226 +135,39 @@
           <ui-input v-model="cmMaxHeightBody" />
         </div>
 
-        <watch-lines>
-          <template #header>
-            <template v-if="props.isRus">
-              Стили заголовка окна с кодом
-            </template>
-            <template v-if="!props.isRus">
-              Window title styles with code
-            </template>
-          </template>
+        <header-group
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-header-padding="cmHeaderPadding"
+          v-model:cm-header-font-size="cmHeaderFontSize"
+          v-model:cm-header-color="cmHeaderColor"
+        />
 
-          <template #default>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-header-padding</strong> - внутренние отступы для заголовка окна с кодом.
-              </p>
+        <count-numbers
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-count-bg="cmCountBg"
+          v-model:cm-count-color="cmCountColor"
+          v-model:cm-count-padding="cmCountPadding"
+          v-model:cm-count-border-right="cmCountBorderRight"
+        />
 
-              <p v-if="!props.isRus">
-                <strong>--cm-header-padding</strong> - "padding" for the title of the window with the code.
-              </p>
+        <copy-code
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-icon-color="cmIconColor"
+          v-model:cm-icon-error-color="cmIconErrorColor"
+          v-model:cm-icon-is-copy-color="cmIconIsCopyColor"
+        />
 
-              <ui-input v-model="cmHeaderPadding" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-header-font-size</strong> - размер шрифта для заголовка окна с кодом.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-header-font-size</strong> - "font-size" for the title of the window with the code
-              </p>
-
-              <ui-input v-model="cmHeaderFontSize" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-header-color</strong> - цвет заголовка окна с кодом.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-header-color</strong> - the color of the window title with the code.
-              </p>
-
-              <ui-input v-model="cmHeaderColor" />
-            </div>
-          </template>
-        </watch-lines>
-
-        <watch-lines>
-          <template #header>
-            <template v-if="props.isRus">
-              Стили для номеров строк
-            </template>
-            <template v-if="!props.isRus">
-              Styles for line numbers
-            </template>
-          </template>
-
-          <template #default>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-count-bg</strong> - фон для номеров строк.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-count-bg</strong> - "background" for line numbers.
-              </p>
-
-              <ui-input v-model="cmCountBg" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-count-color</strong> - цвет текста для номеров строк.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-count-color</strong> - text color for line numbers.
-              </p>
-
-              <ui-input v-model="cmCountColor" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-count-padding</strong> - внутренние отступы для номеров строк.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-count-padding</strong> - "padding" for line numbers.
-              </p>
-
-              <ui-input v-model="cmCountPadding" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-count-border-right</strong> - цвет правого "border" для номеров строк.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-count-border-right</strong> - the color of the right "border" for line numbers.
-              </p>
-
-              <ui-input v-model="cmCountBorderRight" />
-            </div>
-          </template>
-        </watch-lines>
-
-        <watch-lines>
-          <template #header>
-            <template v-if="props.isRus">
-              Стили для иконок "скопировать код"
-            </template>
-            <template v-if="!props.isRus">
-              Styles for "copy code" icons
-            </template>
-          </template>
-
-          <template #description>
-            <p v-if="props.isRus">
-              В этом блоке речь пойдет о стилизации иконок "скопировать код". Я реализовал 3 состояния. Это обычное состояние, состояние, когда произошла ошибка во время копирования кода в буфер обмена, и состояние когда код успешно скопирован в буфер обмена. Для всех этих состояний у меня есть 3 разные иконки. Здесь будет описано как менять цвет этих иконок. Если вы через слоты вставите свои картинки, то данный блок вам не поможет. У меня эти иконки реализованы через SVG, я просто меняю их "fill".
-            </p>
-
-            <p v-if="!props.isRus">
-              In this section, we will talk about the styling of the "copy code" icons. I have implemented 3 states. This is the normal state, the state when an error occurred while copying the code to the clipboard, and the state when the code was successfully copied to the clipboard. I have 3 different icons for all these states. Here you will learn how to change the color of these icons. If you insert your pictures through the slots, then this block will not help you. I have these icons implemented via SVG, I just change them to "fill".
-            </p>
-          </template>
-
-          <template #default>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-icon-color</strong> - цвет иконки "скопировать код".
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-icon-color</strong> - icon color "copy text".
-              </p>
-
-              <ui-input v-model="cmIconColor" />
-            </div>
-
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-icon-error-color</strong> - цвет иконки "скопировать код", если произошла ошибка.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-icon-error-color</strong> - icon color "copy text" if an error occurred.
-              </p>
-
-              <ui-input v-model="cmIconErrorColor" />
-            </div>
-
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-icon-is-copy-color</strong> - цвет иконки "скопировать код", когда код успешно скопирован в буфер обмена.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-icon-is-copy-color</strong> - the color of the "copy code" icon when the code has been successfully copied to the clipboard.
-              </p>
-
-              <ui-input v-model="cmIconIsCopyColor" />
-            </div>
-          </template>
-        </watch-lines>
-        <watch-lines>
-          <template #header>
-            <template v-if="props.isRus">
-              Стили для активной линии
-            </template>
-            <template v-if="!props.isRus">
-              Styles for the active line
-            </template>
-          </template>
-
-          <template #default>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-active-bg</strong> - фон активной строки.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-active-bg</strong> - "background" of the active line.
-              </p>
-
-              <ui-input v-model="cmActiveBg" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-active-count-bg</strong> - фон для номера строки активной строки.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-active-count-bg</strong> - "background" for the line number of the active line.
-              </p>
-
-              <ui-input v-model="cmActiveCountBg" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-active-count-color</strong> - цвет для номера строки активной строки.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-active-count-color</strong> - the color for the line number of the active line.
-              </p>
-
-              <ui-input v-model="cmActiveCountColor" />
-            </div>
-            <div :class="nameRow">
-              <p v-if="props.isRus">
-                <strong>--cm-active-count-right-color</strong> - цвет правого "border" активной строки.
-              </p>
-
-              <p v-if="!props.isRus">
-                <strong>--cm-active-count-right-color</strong> - the color of the right "border" of the active row.
-              </p>
-
-              <ui-input v-model="cmActiveCountRightColor" />
-            </div>
-          </template>
-        </watch-lines>
+        <active-line
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-active-bg="cmActiveBg"
+          v-model:cm-active-count-color="cmActiveCountColor"
+          v-model:cm-active-count-bg="cmActiveCountBg"
+          v-model:cm-active-count-right-color="cmActiveCountRightColor"
+        />
       </template>
     </settings-doc>
   </div>
@@ -368,6 +181,11 @@
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
   import WatchCss from '@/components/watch-css/WatchCss.vue';
+
+  import ActiveLine from './stilization/ActiveLine.vue';
+  import CopyCode from './stilization/CopyCode.vue';
+  import CountNumbers from './stilization/CountNumbers.vue';
+  import HeaderGroup from './stilization/HeaderGroup.vue';
   import WatchLines from '@/components/WatchLines.vue';
 
   import UiInput from '@/UI/UIInput.vue';
@@ -390,18 +208,22 @@
   const cmTextFontSize = ref("1em");
   const cmTextFontFamily = ref("inherit");
   const cmTextLineHeight = ref("1.5em");
-  const cmCountPadding = ref("0 .35em");
   const cmMaxHeightBody = ref('auto');
+  // Заголовок
   const cmHeaderPadding = ref('.5em 1em');
   const cmHeaderFontSize = ref('1em');
   const cmHeaderColor = ref('#ffc661');
   const cmMainColor = ref('#a9b7c6');
+  // Номера строк
   const cmCountBg = ref('#5e5d5d');
   const cmCountColor = ref('#fff');
+  const cmCountPadding = ref("0 .35em");
   const cmCountBorderRight = ref('#5e5d5d');
+  // Иконка скопировать код
   const cmIconColor = ref('#fff');
   const cmIconErrorColor = ref('#980505');
   const cmIconIsCopyColor = ref('#60a802');
+  // Активная линия
   const cmActiveBg = ref('#2a2a2b');
   const cmActiveCountBg = ref('#454545');
   const cmActiveCountColor = ref('#5e5d5d');
