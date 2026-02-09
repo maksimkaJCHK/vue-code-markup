@@ -111,6 +111,22 @@
             keyProps="--cm-active-count-right-color"
             :valueProps="props.cmActiveCountRightColor"
           />
+          <watch-css-row
+            keyProps="--cm-selection-bg"
+            :valueProps="props.cmSelectionBg"
+          />
+          <watch-css-row
+            keyProps="--cm-selection-color"
+            :valueProps="props.cmSelectionColor"
+          />
+          <watch-css-row
+            keyProps="--cm-scroll-bar-bg"
+            :valueProps="props.cmScrollBarBg"
+          />
+          <watch-css-row
+            keyProps="--cm-thumb-bg"
+            :valueProps="props.cmThumbBg"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -147,6 +163,10 @@
     'cmActiveCountBg',
     'cmActiveCountColor',
     'cmActiveCountRightColor',
+    'cmSelectionBg',
+    'cmSelectionColor',
+    'cmScrollBarBg',
+    'cmThumbBg',
   ]);
 
   const isCode = ref(false);

@@ -244,12 +244,12 @@
     --cm-selection-color: #fff;
 
     // Скролл
-    --scroll-bar-bg: #{$color-9};
-    --thumb-bg: #{$color-1};
+    --cm-scroll-bar-bg: #{$color-9};
+    --cm-thumb-bg: #{$color-1};
   }
 
   .code-markup {
-    @include mixins.styleScroll($scrollBarBg: var(--scroll-bar-bg), $thumbBg: var(--thumb-bg));
+    @include mixins.styleScroll($scrollBarBg: var(--cm-scroll-bar-bg), $thumbBg: var(--cm-thumb-bg));
 
     --transition: .4s #{easing.$animationEffect} 0s;
 
@@ -302,7 +302,7 @@
     }
 
     &__body {
-      @include mixins.styleScroll($scrollBarBg: var(--scroll-bar-bg), $thumbBg: var(--thumb-bg));
+      @include mixins.styleScroll($scrollBarBg: var(--cm-scroll-bar-bg), $thumbBg: var(--cm-thumb-bg));
 
       position: relative;
       overflow: auto;
@@ -373,8 +373,8 @@
         --cm-selection-color: #000;
 
         // Скролл
-        --scroll-bar-bg: #{$color-1};
-        --thumb-bg: #{$color-4};
+        --cm-scroll-bar-bg: #{$color-1};
+        --cm-thumb-bg: #{$color-4};
       }
     }
   }

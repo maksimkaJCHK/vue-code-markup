@@ -54,6 +54,10 @@
           :cmActiveCountBg="cmActiveCountBg"
           :cmActiveCountColor="cmActiveCountColor"
           :cmActiveCountRightColor="cmActiveCountRightColor"
+          :cmSelectionBg="cmSelectionBg"
+          :cmSelectionColor="cmSelectionColor"
+          :cmScrollBarBg="cmScrollBarBg"
+          :cmThumbBg="cmThumbBg"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -179,6 +183,8 @@
         <scroll-group
           :is-rus="props.isRus"
           :name-row="nameRow"
+          v-model:cm-scroll-bar-bg="cmScrollBarBg"
+          v-model:cm-thumb-bg="cmThumbBg"
         />
       </template>
     </settings-doc>
@@ -244,6 +250,9 @@
   // Выделение текста
   const cmSelectionBg = ref('#647f54');
   const cmSelectionColor = ref('#fff');
+  // Полоса прокрутки
+  const cmScrollBarBg = ref('#212122');
+  const cmThumbBg = ref('#ffc661');
 
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
@@ -269,6 +278,8 @@
     '--cm-active-count-right-color': cmActiveCountRightColor.value,
     '--cm-selection-bg': cmSelectionBg.value,
     '--cm-selection-color': cmSelectionColor.value,
+    '--cm-scroll-bar-bg': cmScrollBarBg.value,
+    '--cm-thumb-bg': cmThumbBg.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -295,6 +306,8 @@
   --cm-active-count-right-color: ${cmActiveCountRightColor.value};
   --cm-selection-bg: ${cmSelectionBg.value};
   --cm-selection-color: ${cmSelectionColor.value};
+  --cm-scroll-bar-bg: ${cmScrollBarBg.value};
+  --cm-thumb-bg: ${cmThumbBg.value};
 }`);
 </script>
 
