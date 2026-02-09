@@ -21,6 +21,7 @@
         :is-header="false"
         :is-count="false"
         :code="props.code"
+        :key="keyId"
       >
         <code-line>
           <mu-style-class code=".code-markup_theme-some-theme " />
@@ -136,7 +137,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, computed } from 'vue';
   import WatchCssRow from './WatchCssRow.vue';
 
   const props = defineProps([
@@ -168,6 +169,8 @@
     'cmScrollBarBg',
     'cmThumbBg',
   ]);
+
+  const keyId = computed(() => JSON.stringify(props.code));
 
   const isCode = ref(false);
   const chIsCode = () => isCode.value = !isCode.value;

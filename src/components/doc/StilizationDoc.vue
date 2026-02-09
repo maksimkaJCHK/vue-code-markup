@@ -300,7 +300,7 @@
   --cm-icon-color: ${cmIconColor.value};
   --cm-icon-error-color: ${cmIconErrorColor.value};
   --cm-icon-is-copy-color: ${cmIconIsCopyColor.value};
-  --cm-active-bg': ${cmActiveBg.value};
+  --cm-active-bg: ${cmActiveBg.value};
   --cm-active-count-bg: ${cmActiveCountBg.value};
   --cm-active-count-color: ${cmActiveCountColor.value};
   --cm-active-count-right-color: ${cmActiveCountRightColor.value};
