@@ -21,6 +21,7 @@
         :is-header="false"
         :is-count="false"
         :code="props.code"
+        :line-count="15"
         :key="keyId"
       >
         <code-line>

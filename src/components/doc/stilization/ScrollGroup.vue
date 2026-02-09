@@ -24,11 +24,11 @@
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-thumb-bg</strong> - фон ползунка прокрутки.
+          <strong>--cm-thumb-bg</strong> - фон ползунка полосы прокрутки.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-thumb-bg</strong> - scroll thumb background.
+          <strong>--cm-thumb-bg</strong> - scroll bar thumb background.
         </p>
 
         <ui-input v-model="cmThumbBg" />
