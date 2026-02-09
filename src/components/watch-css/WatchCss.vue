@@ -22,7 +22,7 @@
         :is-count="false"
         :code="props.code"
         :line-count="15"
-        :key="keyId"
+        :key="props.code"
       >
         <code-line>
           <mu-style-class code=".code-markup_theme-some-theme " />
@@ -170,8 +170,6 @@
     'cmScrollBarBg',
     'cmThumbBg',
   ]);
-
-  const keyId = computed(() => JSON.stringify(props.code));
 
   const isCode = ref(false);
   const chIsCode = () => isCode.value = !isCode.value;

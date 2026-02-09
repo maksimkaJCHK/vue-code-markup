@@ -306,6 +306,8 @@
   --cm-active-count-right-color: ${cmActiveCountRightColor.value};
   --cm-selection-bg: ${cmSelectionBg.value};
   --cm-selection-color: ${cmSelectionColor.value};
+
+  /* Styling the scrollbar */
   --cm-scroll-bar-bg: ${cmScrollBarBg.value};
   --cm-thumb-bg: ${cmThumbBg.value};
 }`);
