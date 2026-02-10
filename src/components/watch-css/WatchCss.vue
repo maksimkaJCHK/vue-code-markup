@@ -140,6 +140,24 @@
             keyProps="--cm-thumb-bg"
             :valueProps="props.cmThumbBg"
           />
+
+          <watch-css-comment code='Stylization "lines of code"' />
+          <watch-css-row
+            keyProps="--cm-new-border"
+            :valueProps="props.cmNewBorder"
+          />
+          <watch-css-row
+            keyProps="--cm-changed-border"
+            :valueProps="props.cmChangedBorder"
+          />
+          <watch-css-row
+            keyProps="--cm-deleted-border"
+            :valueProps="props.cmDeletedBorder"
+          />
+          <watch-css-row
+            keyProps="--cm-deleted-opacity"
+            :valueProps="props.cmDeletedOpacity"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -181,6 +199,10 @@
     'cmSelectionColor',
     'cmScrollBarBg',
     'cmThumbBg',
+    'cmNewBorder',
+    'cmChangedBorder',
+    'cmDeletedBorder',
+    'cmDeletedOpacity',
   ]);
 
   const isCode = ref(false);

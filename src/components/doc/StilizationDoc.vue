@@ -58,6 +58,10 @@
           :cmSelectionColor="cmSelectionColor"
           :cmScrollBarBg="cmScrollBarBg"
           :cmThumbBg="cmThumbBg"
+          :cmNewBorder="cmNewBorder"
+          :cmChangedBorder="cmChangedBorder"
+          :cmDeletedBorder="cmDeletedBorder"
+          :cmDeletedOpacity="cmDeletedOpacity"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -186,6 +190,15 @@
           v-model:cm-scroll-bar-bg="cmScrollBarBg"
           v-model:cm-thumb-bg="cmThumbBg"
         />
+
+        <selected-line
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-new-border="cmNewBorder"
+          v-model:cm-changed-border="cmChangedBorder"
+          v-model:cm-deleted-border="cmDeletedBorder"
+          v-model:cm-deleted-opacity="cmDeletedOpacity"
+        />
       </template>
     </settings-doc>
   </div>
@@ -206,6 +219,7 @@
   import HeaderGroup from './stilization/HeaderGroup.vue';
   import SelectionGroup from './stilization/SelectionGroup.vue';
   import ScrollGroup from './stilization/ScrollGroup.vue';
+  import SelectedLine from './stilization/SelectedLine.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
@@ -254,6 +268,12 @@
   const cmScrollBarBg = ref('#212122');
   const cmThumbBg = ref('#ffc661');
 
+  // Стилизация строк кода
+  const cmNewBorder = ref('#60a802');
+  const cmChangedBorder = ref('#6495ed');
+  const cmDeletedBorder = ref('#92000a');
+  const cmDeletedOpacity = ref('.6');
+
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
     '--cm-border-radius': cmBorderRadius.value,
@@ -280,6 +300,10 @@
     '--cm-selection-color': cmSelectionColor.value,
     '--cm-scroll-bar-bg': cmScrollBarBg.value,
     '--cm-thumb-bg': cmThumbBg.value,
+    '--cm-new-border': cmNewBorder.value,
+    '--cm-changed-border': cmChangedBorder.value,
+    '--cm-deleted-border': cmDeletedBorder.value,
+    '--cm-deleted-opacity': cmDeletedOpacity.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -320,6 +344,12 @@
   /* Styling the scrollbar */
   --cm-scroll-bar-bg: ${cmScrollBarBg.value};
   --cm-thumb-bg: ${cmThumbBg.value};
+
+  /* Stylization "lines of code" */
+  --cm-new-border: ${cmNewBorder.value};
+  --cm-changed-border: ${cmChangedBorder.value};
+  --cm-deleted-border: ${cmDeletedBorder.value};
+  --cm-deleted-opacity: ${cmDeletedOpacity.value};
 }`);
 </script>
 
