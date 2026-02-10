@@ -2,7 +2,7 @@
   <watch-lines>
     <template #header>
       <template v-if="props.isRus">
-        Стилизация выделение текста
+        Стилизация выделения текста
       </template>
 
       <template v-if="!props.isRus">

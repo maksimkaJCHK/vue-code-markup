@@ -56,6 +56,8 @@
             keyProps="--cm-max-height-body"
             :valueProps="props.cmMaxHeightBody"
           />
+
+          <watch-css-comment code='Styling the window title with the code' />
           <watch-css-row
             keyProps="--cm-header-padding"
             :valueProps="props.cmHeaderPadding"
@@ -69,6 +71,7 @@
             :valueProps="props.cmHeaderColor"
           />
 
+          <watch-css-comment code='Stylization of line numbers' />
           <watch-css-row
             keyProps="--cm-count-bg"
             :valueProps="props.cmCountBg"
@@ -85,6 +88,8 @@
             keyProps="--cm-count-border-right"
             :valueProps="props.cmCountBorderRight"
           />
+
+          <watch-css-comment code='Stylization of "copy code" icons' />
           <watch-css-row
             keyProps="--cm-icon-color"
             :valueProps="props.cmIconColor"
@@ -97,6 +102,8 @@
             keyProps="--cm-icon-is-copy-color"
             :valueProps="props.cmIconIsCopyColor"
           />
+
+          <watch-css-comment code="Styling the active line" />
           <watch-css-row
             keyProps="--cm-active-bg"
             :valueProps="props.cmActiveBg"
@@ -113,6 +120,8 @@
             keyProps="--cm-active-count-right-color"
             :valueProps="props.cmActiveCountRightColor"
           />
+
+          <watch-css-comment code="Stylization text selection" />
           <watch-css-row
             keyProps="--cm-selection-bg"
             :valueProps="props.cmSelectionBg"
@@ -121,6 +130,8 @@
             keyProps="--cm-selection-color"
             :valueProps="props.cmSelectionColor"
           />
+
+          <watch-css-comment code="Styling the scrollbar" />
           <watch-css-row
             keyProps="--cm-scroll-bar-bg"
             :valueProps="props.cmScrollBarBg"
@@ -138,8 +149,9 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
+  import { ref } from 'vue';
   import WatchCssRow from './WatchCssRow.vue';
+  import WatchCssComment from './WatchCssComment.vue';
 
   const props = defineProps([
     'isRus',

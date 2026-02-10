@@ -290,20 +290,30 @@
   --cm-text-font-family: ${cmTextFontFamily.value};
   --cm-text-line-height: ${cmTextLineHeight.value};
   --cm-max-height-body: ${cmMaxHeightBody.value};
+
+  /* Styling the window title with the code */
   --cm-header-padding: ${cmHeaderPadding.value};
   --cm-header-font-size: ${cmHeaderFontSize.value};
   --cm-header-color: ${cmHeaderColor.value};
+
+  /* Stylization of line numbers */
   --cm-count-bg: ${cmCountBg.value};
   --cm-count-color: ${cmCountColor.value};
   --cm-count-padding: ${cmCountPadding.value};
   --cm-count-border-right: ${cmCountBorderRight.value};
+
+  /* Stylization of "copy code" icons */
   --cm-icon-color: ${cmIconColor.value};
   --cm-icon-error-color: ${cmIconErrorColor.value};
   --cm-icon-is-copy-color: ${cmIconIsCopyColor.value};
+
+  /* Styling the active line */
   --cm-active-bg: ${cmActiveBg.value};
   --cm-active-count-bg: ${cmActiveCountBg.value};
   --cm-active-count-color: ${cmActiveCountColor.value};
   --cm-active-count-right-color: ${cmActiveCountRightColor.value};
+
+  /* Stylization text selection */
   --cm-selection-bg: ${cmSelectionBg.value};
   --cm-selection-color: ${cmSelectionColor.value};
 
