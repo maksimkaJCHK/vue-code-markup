@@ -172,6 +172,16 @@
             keyProps="--cm-comment-color"
             :valueProps="props.cmCommentColor"
           />
+
+          <watch-css-comment code='Styling template components' />
+          <watch-css-row
+            keyProps="--cm-tag-color"
+            :valueProps="props.cmTagColor"
+          />
+          <watch-css-row
+            keyProps="--cm-attr-color"
+            :valueProps="props.cmAttrColor"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -220,6 +230,8 @@
     'cmTextColor',
     'cmNumberColor',
     'cmCommentColor',
+    'cmTagColor',
+    'cmAttrColor'
   ]);
 
   const isCode = ref(false);

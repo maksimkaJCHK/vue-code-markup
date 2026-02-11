@@ -65,6 +65,8 @@
           :cmTextColor="cmTextColor"
           :cmNumberColor="cmNumberColor"
           :cmCommentColor="cmCommentColor"
+          :cmTagColor="cmTagColor"
+          :cmAttrColor="cmAttrColor"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -89,17 +91,6 @@
           </p>
 
           <ui-input v-model="cmBorderRadius" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-main-color</strong> - данная CSS переменная отвечает за основной цвет окна кода.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-main-color</strong> - this CSS variable is responsible for the main color of the code window.
-          </p>
-
-          <ui-input v-model="cmMainColor" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
@@ -292,6 +283,10 @@
   const cmNumberColor = ref('#6897bb');
   const cmCommentColor = ref('#808080');
 
+  // Стилизация компонентов шаблона
+  const cmTagColor = ref('#ffc661');
+  const cmAttrColor = ref('#d4d4c9');
+
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
     '--cm-border-radius': cmBorderRadius.value,
@@ -325,6 +320,8 @@
     '--cm-text-color': cmTextColor.value,
     '--cm-number-color': cmNumberColor.value,
     '--cm-comment-color': cmCommentColor.value,
+    '--cm-tag-color': cmTagColor.value,
+    '--cm-attr-color': cmAttrColor.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -377,6 +374,10 @@
   --cm-text-color: ${cmTextColor.value};
   --cm-number-color: ${cmNumberColor.value};
   --cm-comment-color: ${cmCommentColor.value};
+
+  /* Styling template components */
+  --cm-tag-color: ${cmTagColor.value};
+  --cm-attr-color: ${cmAttrColor.value};
 }`);
 </script>
 
