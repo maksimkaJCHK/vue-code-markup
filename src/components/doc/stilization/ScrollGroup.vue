@@ -13,22 +13,22 @@
     <template #default>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-scroll-bar-bg</strong> - фон полосы прокрутки.
+          <strong>--cm-scroll-bar-bg</strong> - данная CSS переменная отвечает за фон полосы прокрутки.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-scroll-bar-bg</strong> - scrollbar background.
+          <strong>--cm-scroll-bar-bg</strong> - This CSS variable is responsible for the "background" of the scrollbar.
         </p>
 
         <ui-input v-model="cmScrollBarBg" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-thumb-bg</strong> - фон ползунка полосы прокрутки.
+          <strong>--cm-thumb-bg</strong> - данная CSS переменная отвечает за фон ползунка полосы прокрутки.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-thumb-bg</strong> - scroll bar thumb background.
+          <strong>--cm-thumb-bg</strong> - this CSS variable is responsible for the background of the scrollbar slider.
         </p>
 
         <ui-input v-model="cmThumbBg" />

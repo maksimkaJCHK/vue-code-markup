@@ -12,44 +12,44 @@
     <template #default>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-count-bg</strong> - фон для номеров строк.
+          <strong>--cm-count-bg</strong> - данная CSS переменная отвечает за фон для номеров строк.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-count-bg</strong> - "background" for line numbers.
+          <strong>--cm-count-bg</strong> - this CSS variable is responsible for the "background" for line numbers.
         </p>
 
         <ui-input v-model="cmCountBg" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-count-color</strong> - цвет текста для номеров строк.
+          <strong>--cm-count-color</strong> - данная CSS переменная отвечает за цвет текста для номеров строк.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-count-color</strong> - text color for line numbers.
+          <strong>--cm-count-color</strong> - this CSS variable is responsible for the text color for line numbers.
         </p>
 
         <ui-input v-model="cmCountColor" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-count-padding</strong> - внутренние отступы для номеров строк.
+          <strong>--cm-count-padding</strong> - данная CSS переменная отвечает за внутренние отступы для номеров строк.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-count-padding</strong> - "padding" for line numbers.
+          <strong>--cm-count-padding</strong> - this CSS variable is responsible for the "paddings" for line numbers.
         </p>
 
         <ui-input v-model="cmCountPadding" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-count-border-right</strong> - цвет правого "border" для номеров строк.
+          <strong>--cm-count-border-right</strong> - данная CSS переменная отвечает за цвет правого "border" для номеров строк.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-count-border-right</strong> - the color of the right "border" for line numbers.
+          <strong>--cm-count-border-right</strong> - this CSS variable is responsible for the color of the right "border" for line numbers.
         </p>
 
         <ui-input v-model="cmCountBorderRight" />

@@ -23,22 +23,22 @@
     <template #default>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-selection-bg</strong> - фон выделения в окне с кодом.
+          <strong>--cm-selection-bg</strong> - данная CSS переменная отвечает за фон выделения в окне с кодом.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-selection-bg</strong> - "background" of the selection in the window with the code.
+          <strong>--cm-selection-bg</strong> - this CSS variable is responsible for the "background" of the selection in the window with the code.
         </p>
 
         <ui-input v-model="cmSelectionBg" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-selection-color</strong> - цвет текста при выделении в окне с кодом.
+          <strong>--cm-selection-color</strong> - данная CSS переменная отвечает за цвет текста при выделении в окне с кодом.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-selection-color</strong> - the "color" of the text when highlighted in the window with the code.
+          <strong>--cm-selection-color</strong> - this CSS variable is responsible for the "color" of the text when selected in the window with the code.
         </p>
 
         <ui-input v-model="cmSelectionColor" />

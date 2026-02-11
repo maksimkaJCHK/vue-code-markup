@@ -89,55 +89,55 @@
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-main-color</strong> - основной цвет окна кода.
+            <strong>--cm-main-color</strong> - данная CSS переменная отвечает за основной цвет окна кода.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-main-color</strong> - the main color of the code window.
+            <strong>--cm-main-color</strong> - this CSS variable is responsible for the main color of the code window.
           </p>
 
           <ui-input v-model="cmMainColor" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-text-font-size</strong> - размер шрифта окна с кодом.
+            <strong>--cm-text-font-size</strong> - данная CSS переменная отвечает за размер шрифта окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-text-font-size</strong> - the "font-size" of the window with the code.
+            <strong>--cm-text-font-size</strong> - this CSS variable is responsible for the "font-size" of the window with the code.
           </p>
 
           <ui-input v-model="cmTextFontSize" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-text-font-family</strong> - семейство шрифта окна с кодом.
+            <strong>--cm-text-font-family</strong> - данная CSS переменная отвечает за семейство шрифта окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-text-font-family</strong> - the "font-family "of the window with the code.
+            <strong>--cm-text-font-family</strong> - this CSS variable is responsible for the font family of the window with the code.
           </p>
 
           <ui-input v-model="cmTextFontFamily" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>--cm-text-line-height</strong> - высота шрифта окна с кодом.
+            <strong>--cm-text-line-height</strong> - данная CSS переменная отвечает за высоту шрифта окна с кодом.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-text-line-height</strong> - the "line-height" of the window with the code.
+            <strong>--cm-text-line-height</strong> - this CSS variable is responsible for the "line-height" of the window with the code.
           </p>
 
           <ui-input v-model="cmTextLineHeight" />
         </div>
         <div :class="nameRow">
           <p v-if="props.isRus">
-            <strong>-cm-max-height-body</strong> - максимальная высота окна кода без шапки.
+            <strong>-cm-max-height-body</strong> - данная CSS переменная отвечает за максимальную высоту окна кода без шапки.
           </p>
 
           <p v-if="!props.isRus">
-            <strong>--cm-max-height-body</strong> - "max-height" of the code window without a header
+            <strong>--cm-max-height-body</strong> - this CSS variable is responsible for the "max-height" of the code window without a header.
           </p>
 
           <ui-input v-model="cmMaxHeightBody" />

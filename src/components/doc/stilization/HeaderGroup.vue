@@ -5,40 +5,40 @@
         Стилизация заголовка окна с кодом
       </template>
       <template v-if="!props.isRus">
-        Styling the window title with the code
+        Styling the window header with the code
       </template>
     </template>
 
     <template #default>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-header-padding</strong> - внутренние отступы для заголовка окна с кодом.
+          <strong>--cm-header-padding</strong> - данная CSS переменная отвечает за внутренние отступы для заголовка окна с кодом.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-header-padding</strong> - "padding" for the title of the window with the code.
+          <strong>--cm-header-padding</strong> - this CSS variable is responsible for the "padding" for the header of the window with the code.
         </p>
 
         <ui-input v-model="cmHeaderPadding" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-header-font-size</strong> - размер шрифта для заголовка окна с кодом.
+          <strong>--cm-header-font-size</strong> - данная CSS переменная отвечает за размер шрифта для заголовка окна с кодом.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-header-font-size</strong> - "font-size" for the title of the window with the code
+          <strong>--cm-header-font-size</strong> - this CSS variable is responsible for the "font-size" for the header of the window with the code.
         </p>
 
         <ui-input v-model="cmHeaderFontSize" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-header-color</strong> - цвет заголовка окна с кодом.
+          <strong>--cm-header-color</strong> - данная CSS переменная отвечает за цвет заголовка окна с кодом.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-header-color</strong> - the color of the window title with the code.
+          <strong>--cm-header-color</strong> - this CSS variable is responsible for the color of the header of the window with the code.
         </p>
 
         <ui-input v-model="cmHeaderColor" />

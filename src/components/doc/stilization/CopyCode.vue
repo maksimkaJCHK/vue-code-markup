@@ -22,11 +22,11 @@
     <template #default>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-icon-color</strong> - цвет иконки "скопировать код".
+          <strong>--cm-icon-color</strong> - данная CSS переменная отвечает за цвет иконки "скопировать код".
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-icon-color</strong> - icon color "copy text".
+          <strong>--cm-icon-color</strong> - this CSS variable is responsible for the color of the "copy code" icon.
         </p>
 
         <ui-input v-model="cmIconColor" />
@@ -34,11 +34,11 @@
 
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-icon-error-color</strong> - цвет иконки "скопировать код", если произошла ошибка.
+          <strong>--cm-icon-error-color</strong> - данная CSS переменная отвечает за цвет иконки "скопировать код", если произошла ошибка.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-icon-error-color</strong> - icon color "copy text" if an error occurred.
+          <strong>--cm-icon-error-color</strong> - this CSS variable is responsible for the color of the "copy code" icon if an error has occurred.
         </p>
 
         <ui-input v-model="cmIconErrorColor" />
@@ -46,11 +46,11 @@
 
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-icon-is-copy-color</strong> - цвет иконки "скопировать код", когда код успешно скопирован в буфер обмена.
+          <strong>--cm-icon-is-copy-color</strong> - данная CSS переменная отвечает за цвет иконки "скопировать код", когда код успешно скопирован в буфер обмена.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-icon-is-copy-color</strong> - the color of the "copy code" icon when the code has been successfully copied to the clipboard.
+          <strong>--cm-icon-is-copy-color</strong> - this CSS variable is responsible for the color of the "copy code" icon when the code has been successfully copied to the clipboard.
         </p>
 
         <ui-input v-model="cmIconIsCopyColor" />

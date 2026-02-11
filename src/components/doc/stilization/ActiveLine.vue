@@ -12,44 +12,44 @@
     <template #default>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-active-bg</strong> - фон активной строки.
+          <strong>--cm-active-bg</strong> - данная CSS переменная отвечает за фон активной строки.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-active-bg</strong> - "background" of the active line.
+          <strong>--cm-active-bg</strong> - this CSS variable is responsible for the "background" of the active line.
         </p>
 
         <ui-input v-model="cmActiveBg" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-active-count-bg</strong> - фон для номера строки активной строки.
+          <strong>--cm-active-count-bg</strong> - данная CSS переменная отвечает за фон номера строки для активной строки.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-active-count-bg</strong> - "background" for the line number of the active line.
+          <strong>--cm-active-count-bg</strong> - this CSS variable is responsible for the "background" of the line number for the active line.
         </p>
 
         <ui-input v-model="cmActiveCountBg" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-active-count-color</strong> - цвет для номера строки активной строки.
+          <strong>--cm-active-count-color</strong> - данная CSS переменная отвечает за цвет номера строки для активной строки.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-active-count-color</strong> - the color for the line number of the active line.
+          <strong>--cm-active-count-color</strong> - this CSS variable is responsible for the color of the line number for the active line.
         </p>
 
         <ui-input v-model="cmActiveCountColor" />
       </div>
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-active-count-right-color</strong> - цвет правого "border" активной строки.
+          <strong>--cm-active-count-right-color</strong> - данная CSS переменная отвечает за цвет правого "border" активной строки.
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-active-count-right-color</strong> - the color of the right "border" of the active row.
+          <strong>--cm-active-count-right-color</strong> - this CSS variable is responsible for the color of the right "border" of the active row.
         </p>
 
         <ui-input v-model="cmActiveCountRightColor" />
