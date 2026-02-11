@@ -37,10 +37,6 @@
             :valueProps="props.cmBorderRadius"
           />
           <watch-css-row
-            keyProps="--cm-main-color"
-            :valueProps="props.cmMainColor"
-          />
-          <watch-css-row
             keyProps="--cm-text-font-size"
             :valueProps="props.cmTextFontSize"
           />
@@ -158,6 +154,24 @@
             keyProps="--cm-deleted-opacity"
             :valueProps="props.cmDeletedOpacity"
           />
+
+          <watch-css-comment code='Styling common components' />
+          <watch-css-row
+            keyProps="--cm-main-color"
+            :valueProps="props.cmMainColor"
+          />
+          <watch-css-row
+            keyProps="--cm-text-color"
+            :valueProps="props.cmTextColor"
+          />
+          <watch-css-row
+            keyProps="--cm-number-color"
+            :valueProps="props.cmNumberColor"
+          />
+          <watch-css-row
+            keyProps="--cm-comment-color"
+            :valueProps="props.cmCommentColor"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -203,6 +217,9 @@
     'cmChangedBorder',
     'cmDeletedBorder',
     'cmDeletedOpacity',
+    'cmTextColor',
+    'cmNumberColor',
+    'cmCommentColor',
   ]);
 
   const isCode = ref(false);

@@ -43,7 +43,6 @@
           :cmHeaderPadding="cmHeaderPadding"
           :cmHeaderFontSize="cmHeaderFontSize"
           :cmHeaderColor="cmHeaderColor"
-          :cmMainColor="cmMainColor"
           :cmCountBg="cmCountBg"
           :cmCountColor="cmCountColor"
           :cmCountBorderRight="cmCountBorderRight"
@@ -62,6 +61,10 @@
           :cmChangedBorder="cmChangedBorder"
           :cmDeletedBorder="cmDeletedBorder"
           :cmDeletedOpacity="cmDeletedOpacity"
+          :cmMainColor="cmMainColor"
+          :cmTextColor="cmTextColor"
+          :cmNumberColor="cmNumberColor"
+          :cmCommentColor="cmCommentColor"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -199,6 +202,15 @@
           v-model:cm-deleted-border="cmDeletedBorder"
           v-model:cm-deleted-opacity="cmDeletedOpacity"
         />
+
+        <com-comp
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-main-color="cmMainColor"
+          v-model:cm-text-color="cmTextColor"
+          v-model:cm-number-color="cmNumberColor"
+          v-model:cm-comment-color="cmCommentColor"
+        />
       </template>
     </settings-doc>
   </div>
@@ -220,6 +232,7 @@
   import SelectionGroup from './stilization/SelectionGroup.vue';
   import ScrollGroup from './stilization/ScrollGroup.vue';
   import SelectedLine from './stilization/SelectedLine.vue';
+  import ComComp from './stilization/ComComp.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
@@ -246,7 +259,6 @@
   const cmHeaderPadding = ref('.5em 1em');
   const cmHeaderFontSize = ref('1em');
   const cmHeaderColor = ref('#ffc661');
-  const cmMainColor = ref('#a9b7c6');
   // Номера строк
   const cmCountBg = ref('#5e5d5d');
   const cmCountColor = ref('#fff');
@@ -274,10 +286,15 @@
   const cmDeletedBorder = ref('#92000a');
   const cmDeletedOpacity = ref('.6');
 
+  // Стилизация общих компонентов
+  const cmMainColor = ref('#a9b7c6');
+  const cmTextColor = ref('#647f54');
+  const cmNumberColor = ref('#6897bb');
+  const cmCommentColor = ref('#808080');
+
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
     '--cm-border-radius': cmBorderRadius.value,
-    '--cm-main-color': cmMainColor.value,
     '--cm-text-font-size': cmTextFontSize.value,
     '--cm-text-font-family': cmTextFontFamily.value,
     '--cm-text-line-height': cmTextLineHeight.value,
@@ -304,6 +321,10 @@
     '--cm-changed-border': cmChangedBorder.value,
     '--cm-deleted-border': cmDeletedBorder.value,
     '--cm-deleted-opacity': cmDeletedOpacity.value,
+    '--cm-main-color': cmMainColor.value,
+    '--cm-text-color': cmTextColor.value,
+    '--cm-number-color': cmNumberColor.value,
+    '--cm-comment-color': cmCommentColor.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -350,6 +371,12 @@
   --cm-changed-border: ${cmChangedBorder.value};
   --cm-deleted-border: ${cmDeletedBorder.value};
   --cm-deleted-opacity: ${cmDeletedOpacity.value};
+
+  /* Styling common components */
+  --cm-main-color: ${cmMainColor.value};
+  --cm-text-color: ${cmTextColor.value};
+  --cm-number-color: ${cmNumberColor.value};
+  --cm-comment-color: ${cmCommentColor.value};
 }`);
 </script>
 
