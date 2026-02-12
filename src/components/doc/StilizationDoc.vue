@@ -202,6 +202,13 @@
           v-model:cm-number-color="cmNumberColor"
           v-model:cm-comment-color="cmCommentColor"
         />
+
+        <template-comp 
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-tag-color="cmTagColor"
+          v-model:cm-attr-color="cmAttrColor"
+        />
       </template>
     </settings-doc>
   </div>
@@ -224,6 +231,7 @@
   import ScrollGroup from './stilization/ScrollGroup.vue';
   import SelectedLine from './stilization/SelectedLine.vue';
   import ComComp from './stilization/ComComp.vue';
+  import TemplateComp from './stilization/TemplateComp.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
