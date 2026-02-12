@@ -182,6 +182,24 @@
             keyProps="--cm-attr-color"
             :valueProps="props.cmAttrColor"
           />
+
+          <watch-css-comment code='Stylization of the "script" block components' />
+          <watch-css-row
+            keyProps="--cm-key-color"
+            :valueProps="props.cmKeyColor"
+          />
+          <watch-css-row
+            keyProps="--cm-key-words-color"
+            :valueProps="props.cmKeyWordsColor"
+          />
+          <watch-css-row
+            keyProps="--cm-variable-color"
+            :valueProps="props.cmVariableColor"
+          />
+          <watch-css-row
+            keyProps="--cm-function-color"
+            :valueProps="props.cmFunctionColor"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
@@ -231,7 +249,11 @@
     'cmNumberColor',
     'cmCommentColor',
     'cmTagColor',
-    'cmAttrColor'
+    'cmAttrColor',
+    'cmKeyColor',
+    'cmKeyWordsColor',
+    'cmVariableColor',
+    'cmFunctionColor',
   ]);
 
   const isCode = ref(false);

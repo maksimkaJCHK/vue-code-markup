@@ -67,6 +67,10 @@
           :cmCommentColor="cmCommentColor"
           :cmTagColor="cmTagColor"
           :cmAttrColor="cmAttrColor"
+          :cmKeyColor="cmKeyColor"
+          :cmKeyWordsColor="cmKeyWordsColor"
+          :cmVariableColor="cmVariableColor"
+          :cmFunctionColor="cmFunctionColor"
         />
       </template>
       <template #content="{ nameRow }" >
@@ -209,6 +213,15 @@
           v-model:cm-tag-color="cmTagColor"
           v-model:cm-attr-color="cmAttrColor"
         />
+
+        <script-comp 
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-key-color="cmKeyColor"
+          v-model:cm-keyWords-color="cmKeyWordsColor"
+          v-model:cm-variable-color="cmVariableColor"
+          v-model:cm-function-color="cmFunctionColor"
+        />
       </template>
     </settings-doc>
   </div>
@@ -232,6 +245,7 @@
   import SelectedLine from './stilization/SelectedLine.vue';
   import ComComp from './stilization/ComComp.vue';
   import TemplateComp from './stilization/TemplateComp.vue';
+  import ScriptComp from './stilization/ScriptComp.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
@@ -295,6 +309,12 @@
   const cmTagColor = ref('#ffc661');
   const cmAttrColor = ref('#d4d4c9');
 
+  // Стилизация компонентов блока script
+  const cmKeyColor = ref('#9876aa');
+  const cmKeyWordsColor = ref('#cc7832');
+  const cmVariableColor = ref('#9876aa');
+  const cmFunctionColor = ref('#ffc661');
+
   const styleComp = computed(() => ({
     '--cm-bg': cmBg.value,
     '--cm-border-radius': cmBorderRadius.value,
@@ -330,6 +350,10 @@
     '--cm-comment-color': cmCommentColor.value,
     '--cm-tag-color': cmTagColor.value,
     '--cm-attr-color': cmAttrColor.value,
+    '--cm-key-color': cmKeyColor.value,
+    '--cm-key-words-color': cmKeyWordsColor.value,
+    '--cm-variable-color': cmVariableColor.value,
+    '--cm-function-color': cmFunctionColor.value,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -386,6 +410,12 @@
   /* Styling template components */
   --cm-tag-color: ${cmTagColor.value};
   --cm-attr-color: ${cmAttrColor.value};
+
+  /* Stylization of the "script" block components */
+  --cm-key-color: ${cmKeyColor.value};
+  --cm-key-words-color: ${cmKeyWordsColor.value};
+  --cm-variable-color: ${cmVariableColor.value};
+  --cm-function-color: ${cmFunctionColor.value};
 }`);
 </script>
 
