@@ -2,11 +2,11 @@
   <watch-lines>
     <template #header>
       <template v-if="props.isRus">
-        Стилизация компонентов блока "template"
+        Стилизация компонентов блока "style"
       </template>
 
       <template v-if="!props.isRus">
-        Styling the components of the "template" block
+        Stylization of the "style" block components
       </template>
     </template>
 

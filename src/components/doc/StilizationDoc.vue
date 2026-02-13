@@ -37,72 +37,16 @@
         />
       </template>
       <template #content="{ nameRow }" >
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-bg</strong> - данная CSS переменная отвечает за фон окна с кодом.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-bg</strong> - this CSS variable is responsible for the "background" of the window with the code.
-          </p>
-
-          <ui-input v-model="parameters.cmBg" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-border-radius</strong> - данная CSS переменная отвечает за "border-radius" окна с кодом.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-border-radius</strong> - this CSS variable is responsible for the "border-radius" of the window with the code.
-          </p>
-
-          <ui-input v-model="parameters.cmBorderRadius" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-text-font-size</strong> - данная CSS переменная отвечает за размер шрифта окна с кодом.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-text-font-size</strong> - this CSS variable is responsible for the "font-size" of the window with the code.
-          </p>
-
-          <ui-input v-model="parameters.cmTextFontSize" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-text-font-family</strong> - данная CSS переменная отвечает за семейство шрифта окна с кодом.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-text-font-family</strong> - this CSS variable is responsible for the font family of the window with the code.
-          </p>
-
-          <ui-input v-model="parameters.cmTextFontFamily" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>--cm-text-line-height</strong> - данная CSS переменная отвечает за высоту шрифта окна с кодом.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-text-line-height</strong> - this CSS variable is responsible for the "line-height" of the window with the code.
-          </p>
-
-          <ui-input v-model="parameters.cmTextLineHeight" />
-        </div>
-        <div :class="nameRow">
-          <p v-if="props.isRus">
-            <strong>-cm-max-height-body</strong> - данная CSS переменная отвечает за максимальную высоту окна кода без шапки.
-          </p>
-
-          <p v-if="!props.isRus">
-            <strong>--cm-max-height-body</strong> - this CSS variable is responsible for the "max-height" of the code window without a header.
-          </p>
-
-          <ui-input v-model="parameters.cmMaxHeightBody" />
-        </div>
+        <com-settings
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-bg="parameters.cmBg"
+          v-model:cm-border-radius="parameters.cmBorderRadius"
+          v-model:cm-text-font-size="parameters.cmTextFontSize"
+          v-model:cm-text-font-family="parameters.cmTextFontFamily"
+          v-model:cm-text-line-height="parameters.cmTextLineHeight"
+          v-model:cm-max-height-body="parameters.cmMaxHeightBody"
+        />
 
         <header-group
           :is-rus="props.isRus"
@@ -199,6 +143,7 @@
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
   import WatchCss from '@/components/watch-css/WatchCss.vue';
 
+  import ComSettings from './stilization/ComSettings.vue';
   import ActiveLine from './stilization/ActiveLine.vue';
   import CopyCode from './stilization/CopyCode.vue';
   import CountNumbers from './stilization/CountNumbers.vue';
