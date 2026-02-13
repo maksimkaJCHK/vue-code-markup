@@ -47,11 +47,11 @@
 
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-style-tag</strong> - данная CSS переменная отвечает за цвет тегов. Это значение будет применено к компоненту "mu-tag".
+          <strong>--cm-style-tag</strong> - данная CSS переменная отвечает за цвет тега. Это значение будет применено к компоненту "mu-style-tag".
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-style-tag</strong> - this CSS variable is responsible for the color of the tags. This value will be applied to the "mu-tag" component.
+          <strong>--cm-style-tag</strong> - данная CSS переменная отвечает за цвет тега. Это значение будет применено к компоненту "mu-style-tag".
         </p>
 
         <ui-input v-model="cmStyleTag" />
@@ -59,23 +59,11 @@
 
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-style-key</strong> - данная CSS переменная отвечает за цвет тегов. Это значение будет применено к компоненту "mu-tag".
+          <strong>--cm-style-param</strong> - данная CSS переменная отвечает за цвет параметров CSS. Это значение будет применено к компоненту "mu-style-param".
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-style-key</strong> - this CSS variable is responsible for the color of the tags. This value will be applied to the "mu-tag" component.
-        </p>
-
-        <ui-input v-model="cmStyleKey" />
-      </div>
-
-      <div :class="props.nameRow">
-        <p v-if="props.isRus">
-          <strong>--cm-style-param</strong> - данная CSS переменная отвечает за цвет тегов. Это значение будет применено к компоненту "mu-tag".
-        </p>
-
-        <p v-if="!props.isRus">
-          <strong>--cm-style-param</strong> - this CSS variable is responsible for the color of the tags. This value will be applied to the "mu-tag" component.
+          <strong>--cm-style-param</strong> - this CSS variable is responsible for the color of the CSS parameters. This value will be applied to the "mu-style-param" component.
         </p>
 
         <ui-input v-model="cmStyleParam" />
@@ -83,11 +71,23 @@
 
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-style-unit-mes</strong> - данная CSS переменная отвечает за цвет тегов. Это значение будет применено к компоненту "mu-tag".
+          <strong>--cm-style-key</strong> - данная CSS переменная отвечает за цвет вложенных правил. Это значение будет применено к компоненту "mu-style-key".
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-style-unit-mes</strong> - this CSS variable is responsible for the color of the tags. This value will be applied to the "mu-tag" component.
+          <strong>--cm-style-key</strong> - this CSS variable is responsible for the color of nested rules. This value will be applied to the "mu-style-key" component.
+        </p>
+
+        <ui-input v-model="cmStyleKey" />
+      </div>
+
+      <div :class="props.nameRow">
+        <p v-if="props.isRus">
+          <strong>--cm-style-unit-mes</strong> - данная CSS переменная отвечает за цвет единиц измерений. Это значение будет применено к компоненту "mu-style-unit-meas".
+        </p>
+
+        <p v-if="!props.isRus">
+          <strong>--cm-style-unit-mes</strong> - this CSS variable is responsible for the color of the units of measurement. This value will be applied to the "mu-style-unit-meas" component.
         </p>
 
         <ui-input v-model="cmStyleUnitMes" />
@@ -95,11 +95,11 @@
 
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-style-ampersand</strong> - данная CSS переменная отвечает за цвет тегов. Это значение будет применено к компоненту "mu-tag".
+          <strong>--cm-style-ampersand</strong> - данная CSS переменная отвечает за цвет амперсанда. Это значение будет применено к компоненту "mu-style-ampersand".
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-style-ampersand</strong> - this CSS variable is responsible for the color of the tags. This value will be applied to the "mu-tag" component.
+          <strong>--cm-style-ampersand</strong> - this CSS variable is responsible for the color of the ampersand. This value will be applied to the "mu-style-ampersand" component.
         </p>
 
         <ui-input v-model="cmStyleAmpersand" />
@@ -107,11 +107,11 @@
 
       <div :class="props.nameRow">
         <p v-if="props.isRus">
-          <strong>--cm-style-curly-brace</strong> - данная CSS переменная отвечает за цвет тегов. Это значение будет применено к компоненту "mu-tag".
+          <strong>--cm-style-curly-brace</strong> - данная CSS переменная отвечает за цвет фигурных скобок. Это значение будет применено к компоненту "mu-style-curly-brace".
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-style-curly-brace</strong> - this CSS variable is responsible for the color of the tags. This value will be applied to the "mu-tag" component.
+          <strong>--cm-style-curly-brace</strong> - this CSS variable is responsible for the color of the curly braces. This value will be applied to the "mu-style-curly-brace" component.
         </p>
 
         <ui-input v-model="cmStyleCurlyBrace" />
