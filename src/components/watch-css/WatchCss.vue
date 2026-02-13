@@ -30,175 +30,175 @@
         </code-line>
           <watch-css-row
             keyProps="--cm-bg"
-            :valueProps="props.cmBg"
+            :valueProps="props.parameters.cmBg"
           />
           <watch-css-row
             keyProps="--cm-border-radius"
-            :valueProps="props.cmBorderRadius"
+            :valueProps="props.parameters.cmBorderRadius"
           />
           <watch-css-row
             keyProps="--cm-text-font-size"
-            :valueProps="props.cmTextFontSize"
+            :valueProps="props.parameters.cmTextFontSize"
           />
           <watch-css-row
             keyProps="--cm-text-font-family"
-            :valueProps="props.cmTextFontFamily"
+            :valueProps="props.parameters.cmTextFontFamily"
           />
           <watch-css-row
             keyProps="--cm-text-line-height"
-            :valueProps="props.cmTextLineHeight"
+            :valueProps="props.parameters.cmTextLineHeight"
           />
           <watch-css-row
             keyProps="--cm-max-height-body"
-            :valueProps="props.cmMaxHeightBody"
+            :valueProps="props.parameters.cmMaxHeightBody"
           />
 
           <watch-css-comment code='Styling the window title with the code' />
           <watch-css-row
             keyProps="--cm-header-padding"
-            :valueProps="props.cmHeaderPadding"
+            :valueProps="props.parameters.cmHeaderPadding"
           />
           <watch-css-row
             keyProps="--cm-header-font-size"
-            :valueProps="props.cmHeaderFontSize"
+            :valueProps="props.parameters.cmHeaderFontSize"
           />
           <watch-css-row
             keyProps="--cm-header-color"
-            :valueProps="props.cmHeaderColor"
+            :valueProps="props.parameters.cmHeaderColor"
           />
 
           <watch-css-comment code='Stylization of line numbers' />
           <watch-css-row
             keyProps="--cm-count-bg"
-            :valueProps="props.cmCountBg"
+            :valueProps="props.parameters.cmCountBg"
           />
           <watch-css-row
             keyProps="--cm-count-color"
-            :valueProps="props.cmCountColor"
+            :valueProps="props.parameters.cmCountColor"
           />
           <watch-css-row
             keyProps="--cm-count-padding"
-            :valueProps="props.cmCountPadding"
+            :valueProps="props.parameters.cmCountPadding"
           />
           <watch-css-row
             keyProps="--cm-count-border-right"
-            :valueProps="props.cmCountBorderRight"
+            :valueProps="props.parameters.cmCountBorderRight"
           />
 
           <watch-css-comment code='Stylization of "copy code" icons' />
           <watch-css-row
             keyProps="--cm-icon-color"
-            :valueProps="props.cmIconColor"
+            :valueProps="props.parameters.cmIconColor"
           />
           <watch-css-row
             keyProps="--cm-icon-error-color"
-            :valueProps="props.cmIconErrorColor"
+            :valueProps="props.parameters.cmIconErrorColor"
           />
           <watch-css-row
             keyProps="--cm-icon-is-copy-color"
-            :valueProps="props.cmIconIsCopyColor"
+            :valueProps="props.parameters.cmIconIsCopyColor"
           />
 
           <watch-css-comment code="Styling the active line" />
           <watch-css-row
             keyProps="--cm-active-bg"
-            :valueProps="props.cmActiveBg"
+            :valueProps="props.parameters.cmActiveBg"
           />
           <watch-css-row
             keyProps="--cm-active-count-bg"
-            :valueProps="props.cmActiveCountBg"
+            :valueProps="props.parameters.cmActiveCountBg"
           />
           <watch-css-row
             keyProps="--cm-active-count-color"
-            :valueProps="props.cmActiveCountColor"
+            :valueProps="props.parameters.cmActiveCountColor"
           />
           <watch-css-row
             keyProps="--cm-active-count-right-color"
-            :valueProps="props.cmActiveCountRightColor"
+            :valueProps="props.parameters.cmActiveCountRightColor"
           />
 
           <watch-css-comment code="Stylization text selection" />
           <watch-css-row
             keyProps="--cm-selection-bg"
-            :valueProps="props.cmSelectionBg"
+            :valueProps="props.parameters.cmSelectionBg"
           />
           <watch-css-row
             keyProps="--cm-selection-color"
-            :valueProps="props.cmSelectionColor"
+            :valueProps="props.parameters.cmSelectionColor"
           />
 
           <watch-css-comment code="Styling the scrollbar" />
           <watch-css-row
             keyProps="--cm-scroll-bar-bg"
-            :valueProps="props.cmScrollBarBg"
+            :valueProps="props.parameters.cmScrollBarBg"
           />
           <watch-css-row
             keyProps="--cm-thumb-bg"
-            :valueProps="props.cmThumbBg"
+            :valueProps="props.parameters.cmThumbBg"
           />
 
           <watch-css-comment code='Stylization "lines of code"' />
           <watch-css-row
             keyProps="--cm-new-border"
-            :valueProps="props.cmNewBorder"
+            :valueProps="props.parameters.cmNewBorder"
           />
           <watch-css-row
             keyProps="--cm-changed-border"
-            :valueProps="props.cmChangedBorder"
+            :valueProps="props.parameters.cmChangedBorder"
           />
           <watch-css-row
             keyProps="--cm-deleted-border"
-            :valueProps="props.cmDeletedBorder"
+            :valueProps="props.parameters.cmDeletedBorder"
           />
           <watch-css-row
             keyProps="--cm-deleted-opacity"
-            :valueProps="props.cmDeletedOpacity"
+            :valueProps="props.parameters.cmDeletedOpacity"
           />
 
           <watch-css-comment code='Styling common components' />
           <watch-css-row
             keyProps="--cm-main-color"
-            :valueProps="props.cmMainColor"
+            :valueProps="props.parameters.cmMainColor"
           />
           <watch-css-row
             keyProps="--cm-text-color"
-            :valueProps="props.cmTextColor"
+            :valueProps="props.parameters.cmTextColor"
           />
           <watch-css-row
             keyProps="--cm-number-color"
-            :valueProps="props.cmNumberColor"
+            :valueProps="props.parameters.cmNumberColor"
           />
           <watch-css-row
             keyProps="--cm-comment-color"
-            :valueProps="props.cmCommentColor"
+            :valueProps="props.parameters.cmCommentColor"
           />
 
           <watch-css-comment code='Styling template components' />
           <watch-css-row
             keyProps="--cm-tag-color"
-            :valueProps="props.cmTagColor"
+            :valueProps="props.parameters.cmTagColor"
           />
           <watch-css-row
             keyProps="--cm-attr-color"
-            :valueProps="props.cmAttrColor"
+            :valueProps="props.parameters.cmAttrColor"
           />
 
           <watch-css-comment code='Stylization of the "script" block components' />
           <watch-css-row
             keyProps="--cm-key-color"
-            :valueProps="props.cmKeyColor"
+            :valueProps="props.parameters.cmKeyColor"
           />
           <watch-css-row
             keyProps="--cm-key-words-color"
-            :valueProps="props.cmKeyWordsColor"
+            :valueProps="props.parameters.cmKeyWordsColor"
           />
           <watch-css-row
             keyProps="--cm-variable-color"
-            :valueProps="props.cmVariableColor"
+            :valueProps="props.parameters.cmVariableColor"
           />
           <watch-css-row
             keyProps="--cm-function-color"
-            :valueProps="props.cmFunctionColor"
+            :valueProps="props.parameters.cmFunctionColor"
           />
         <code-line>
           <mu-type code="}" />
@@ -216,44 +216,7 @@
   const props = defineProps([
     'isRus',
     'code',
-    'cmBg',
-    'cmBorderRadius',
-    'cmTextFontSize',
-    'cmTextFontFamily',
-    'cmTextLineHeight',
-    'cmCountPadding',
-    'cmMaxHeightBody',
-    'cmHeaderPadding',
-    'cmHeaderFontSize',
-    'cmHeaderColor',
-    'cmMainColor',
-    'cmCountBg',
-    'cmCountColor',
-    'cmCountBorderRight',
-    'cmIconColor',
-    'cmIconErrorColor',
-    'cmIconIsCopyColor',
-    'cmActiveBg',
-    'cmActiveCountBg',
-    'cmActiveCountColor',
-    'cmActiveCountRightColor',
-    'cmSelectionBg',
-    'cmSelectionColor',
-    'cmScrollBarBg',
-    'cmThumbBg',
-    'cmNewBorder',
-    'cmChangedBorder',
-    'cmDeletedBorder',
-    'cmDeletedOpacity',
-    'cmTextColor',
-    'cmNumberColor',
-    'cmCommentColor',
-    'cmTagColor',
-    'cmAttrColor',
-    'cmKeyColor',
-    'cmKeyWordsColor',
-    'cmVariableColor',
-    'cmFunctionColor',
+    'parameters',
   ]);
 
   const isCode = ref(false);
