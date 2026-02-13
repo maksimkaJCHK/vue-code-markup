@@ -129,6 +129,19 @@
           v-model:cm-variable-color="parameters.cmVariableColor"
           v-model:cm-function-color="parameters.cmFunctionColor"
         />
+
+        <style-comp
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          v-model:cm-style-class="parameters.cmStyleClass"
+          v-model:cm-style-id="parameters.cmStyleId"
+          v-model:cm-style-tag="parameters.cmStyleTag"
+          v-model:cm-style-key="parameters.cmStyleKey"
+          v-model:cm-style-param="parameters.cmStyleParam"
+          v-model:cm-style-unit-mes="parameters.cmStyleUnitMes"
+          v-model:cm-style-ampersand="parameters.cmStyleAmpersand"
+          v-model:cm-style-curly-brace="parameters.cmStyleCurlyBrace"
+        />
       </template>
     </settings-doc>
   </div>
@@ -154,6 +167,7 @@
   import ComComp from './stilization/ComComp.vue';
   import TemplateComp from './stilization/TemplateComp.vue';
   import ScriptComp from './stilization/ScriptComp.vue';
+  import StyleComp from './stilization/StyleComp.vue';
 
   import UiInput from '@/UI/UIInput.vue';
   import UiCheckbox from '@/UI/UICheckbox.vue';
@@ -219,6 +233,15 @@
     cmKeyWordsColor: '#cc7832',
     cmVariableColor: '#9876aa',
     cmFunctionColor: '#ffc661',
+    // Стилизация компонентов стилей
+    cmStyleClass: '#ffc661',
+    cmStyleId: '#ffc661',
+    cmStyleTag: '#ffc661',
+    cmStyleKey: '#d4d4c9',
+    cmStyleParam: '#9876aa',
+    cmStyleUnitMes: '#a9b7c6',
+    cmStyleAmpersand: '#ffc661',
+    cmStyleCurlyBrace: '#ffc661',
   });
 
   const styleComp = computed(() => ({
@@ -260,6 +283,14 @@
     '--cm-key-words-color': parameters.cmKeyWordsColor,
     '--cm-variable-color': parameters.cmVariableColor,
     '--cm-function-color': parameters.cmFunctionColor,
+    '--cm-style-class': parameters.cmStyleClass,
+    '--cm-style-id': parameters.cmStyleId,
+    '--cm-style-tag': parameters.cmStyleTag,
+    '--cm-style-key': parameters.cmStyleKey,
+    '--cm-style-param': parameters.cmStyleParam,
+    '--cm-style-unit-mes': parameters.cmStyleUnitMes,
+    '--cm-style-ampersand': parameters.cmStyleAmpersand,
+    '--cm-style-curly-brace': parameters.cmStyleCurlyBrace,
   }));
 
   const codeComp = computed(() => `.code-markup_theme-some-theme {
@@ -322,6 +353,16 @@
   --cm-key-words-color: ${parameters.cmKeyWordsColor};
   --cm-variable-color: ${parameters.cmVariableColor};
   --cm-function-color: ${parameters.cmFunctionColor};
+
+  /* Stylization of the "style" block components */
+  --cm-style-class: ${parameters.cmStyleClass};
+  --cm-style-id: ${parameters.cmStyleId};
+  --cm-style-tag: ${parameters.cmStyleTag};
+  --cm-style-key: ${parameters.cmStyleKey};
+  --cm-style-param: ${parameters.cmStyleParam};
+  --cm-style-unit-mes: ${parameters.cmStyleUnitMes};
+  --cm-style-ampersand: ${parameters.cmStyleAmpersand};
+  --cm-style-curly-brace: ${parameters.cmStyleCurlyBrace};
 }`);
 </script>
 

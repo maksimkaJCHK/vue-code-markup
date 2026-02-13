@@ -118,7 +118,7 @@
         <code-line level-2>
           <mu-style-tag code="h3 {" />
         </code-line>
-        <code-line level-2>
+        <code-line level-3>
           <mu-style-param code="font-size" />:
           <mu-number code="1.2" />
           <mu-style-unit-meas code="em" />;

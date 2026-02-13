@@ -200,6 +200,40 @@
             keyProps="--cm-function-color"
             :valueProps="props.parameters.cmFunctionColor"
           />
+
+          <watch-css-comment code='Stylization of the "style" block components' />
+          <watch-css-row
+            keyProps="--cm-style-class"
+            :valueProps="props.parameters.cmStyleClass"
+          />
+          <watch-css-row
+            keyProps="--cm-style-id"
+            :valueProps="props.parameters.cmStyleId"
+          />
+          <watch-css-row
+            keyProps="--cm-style-tag"
+            :valueProps="props.parameters.cmStyleTag"
+          />
+          <watch-css-row
+            keyProps="--cm-style-key"
+            :valueProps="props.parameters.cmStyleKey"
+          />
+          <watch-css-row
+            keyProps="--cm-style-param"
+            :valueProps="props.parameters.cmStyleParam"
+          />
+          <watch-css-row
+            keyProps="--cm-style-unit-mes"
+            :valueProps="props.parameters.cmStyleUnitMes"
+          />
+          <watch-css-row
+            keyProps="--cm-style-ampersand"
+            :valueProps="props.parameters.cmStyleAmpersand"
+          />
+          <watch-css-row
+            keyProps="--cm-style-curly-brace"
+            :valueProps="props.parameters.cmStyleCurlyBrace"
+          />
         <code-line>
           <mu-type code="}" />
         </code-line>
