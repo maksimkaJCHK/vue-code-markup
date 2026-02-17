@@ -215,6 +215,7 @@
   import { ref, watch } from 'vue';
 
   import useLang from '@/components/code-examples/uselang.js';
+  import { themeOptions } from './hooks/themeOptions.js';
 
   import SettingsDoc from '@/components/SettingsDoc.vue';
 
@@ -274,17 +275,6 @@
   const successfulText = ref(textSuccessful);
   const errorText = ref(textError);
   const theme = ref('darcula');
-
-  const themeOptions = [
-    {
-      id: 'darcula',
-      title: 'default (darcula)'
-    },
-    {
-      id: 'monokai',
-      title: 'monokai'
-    },
-  ];
 
   watch(codeParam, (val) => {
     title.value = val.title || textTitle;

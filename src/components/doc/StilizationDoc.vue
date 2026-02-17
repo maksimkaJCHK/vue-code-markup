@@ -37,6 +37,21 @@
         />
       </template>
       <template #content="{ nameRow }" >
+        <div :class="nameRow">
+          <p>
+
+          </p>
+
+          <p>
+
+          </p>
+
+          <ui-select
+            v-model="theme"
+            :options="themeOptions"
+          />
+        </div>
+
         <com-settings
           :is-rus="props.isRus"
           :name-row="nameRow"
@@ -152,6 +167,7 @@
 
   import useParameters from './hooks/stilization/useParameters.js';
   import useServices from './hooks/stilization/useServices.js';
+  import useThemes from './hooks/stilization/useThemes.js';
 
   import SettingsDoc from '@/components/SettingsDoc.vue';
   import BooksListBody from '@/components/code-examples/books/BooksListBody.vue';
@@ -170,6 +186,8 @@
   import ScriptComp from './stilization/ScriptComp.vue';
   import StyleComp from './stilization/StyleComp.vue';
 
+  import UiSelect from '@/UI/UISelect.vue';
+
   const props = defineProps({
     isRus: {
       type: Boolean,
@@ -183,6 +201,7 @@
 
   const parameters = useParameters();
   const { stylesComp, codeComp } = useServices(parameters);
+  const { theme, themeOptions } = useThemes(parameters);
 </script>
 
 <style lang="scss" scoped></style>
