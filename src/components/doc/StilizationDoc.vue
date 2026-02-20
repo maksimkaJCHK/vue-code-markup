@@ -6,7 +6,23 @@
       </h3>
 
       <p>
-        Данный раздел будет посвящён тому, как создавать свои темы, или стилизовывать существующие темы под свой проект. Данный раздел тесно связан с входным параметром "theme" для компонента "code-markup". На данный момент времени я сделал 2 темы: "darcula" и "monokai". За основу я взял тему "darcula", потому что она мне больше всего нравится. Для того, чтобы создать свою тему, нужно добавить во входной параметр "theme" название своей темы. Если вы зададите название темы - "some-theme", то в таком случае CSS класс для стилизации будет выглядеть следующим образом "code-markup_theme-some-theme".
+        Данный раздел будет посвящён тому, как создавать свои темы, или стилизовывать существующие темы под свой проект. Данный раздел тесно связан с входным параметром "theme" для компонента "code-markup". На данный момент времени я сделал 2 темы: "darcula" и "monokai". За основу я взял тему "darcula", потому что она мне больше всего нравится.
+      </p>
+
+      <p>
+        Для того, чтобы создать свою тему, нужно добавить во входной параметр "theme" название своей темы. Если вы зададите название темы - "some-theme", то в таком случае CSS класс для стилизации будет выглядеть следующим образом "code-markup_theme-<b>some-theme</b>".
+      </p>
+
+      <p>
+        Ниже вы можете создать, или стилизовать нужную вам тему. На десктопной версии слева находится блок кода, он нужен для того, чтобы было видно результат применения стилей. Справа находится блок стилизации, его ещё можно назвать блоком настроек. Для удобства, я типовые стили сгруппировал по блокам. Заголовок блока является кликабельным, если на него нажать, то появятся настройки, в которых можно поменять нужные вам CSS переменные. Для начала выберите нужную вам тему, а после меняйте CSS переменные. Учтите, что все ваши изменения при смене темы пропадут, поэтому сначала выберите тему, а уже потом меняйте CSS переменные.
+      </p>
+
+      <p>
+        Под блоком с кодом находится блок "посмотреть стили", все изменения в CSS переменных будут применены в нём. Код из него можно скопировать, и применить в вашем CSS. 
+      </p>
+
+      <p>
+        В мобильной версии, блок с кодом, и блок "посмотреть стили" будут находиться ниже блока настроек, на мой взгляд так будет удобнее.
       </p>
     </template>
 
@@ -16,7 +32,23 @@
       </h3>
 
       <p>
-        This section will focus on how to create your own themes, or style existing themes to fit your project. This section is closely related to the "theme" input parameter for the "code-markup" component. At this point in time, I have made 2 themes: "darcula" and "monokai". I took the theme "darcula" as a basis, because I like it the most. In order to create your own theme, you need to add the name of your theme to the input parameter "theme". If you set the theme name to "some-theme", then the CSS styling class will look like this: "code-markup_theme-some-theme".
+        This section will focus on how to create your own themes, or style existing themes to fit your project. This section is closely related to the "theme" input parameter for the "code-markup" component. At this point in time, I have made 2 themes: "darcula" and "monokai". I took the theme "darcula" as a basis, because I like it the most.
+      </p>
+
+      <p>
+        In order to create your own theme, you need to add the name of your theme to the input parameter "theme". If you set the theme name to "some-theme", then the CSS styling class will look like this: "code-markup_theme-<b>some-theme</b>".
+      </p>
+
+      <p>
+        Below you can create or style the theme you need. On the desktop version, there is a block of code on the left, it is needed in order to see the result of applying styles. On the right is the styling block, which can also be called the settings block. For convenience, I have grouped the standard styles into blocks. The block header is clickable, and if you click on it, settings will appear where you can change the CSS variables you need. First, select the theme you need, and then change the CSS variables. Keep in mind that all your changes will disappear when you change the theme, so first select the theme, and only then change the CSS variables.
+      </p>
+
+      <p>
+        Under the code block is the "view styles" block, all changes to CSS variables will be applied in it. The code from it can be copied and applied in your CSS.
+      </p>
+
+      <p>
+        In the mobile version, the code block and the "view styles" block will be located below the settings block, in my opinion it will be more convenient this way.
       </p>
     </template>
 
@@ -38,12 +70,12 @@
       </template>
       <template #content="{ nameRow }" >
         <div :class="nameRow">
-          <p>
-
+          <p v-if="props.isRus">
+            Выбор нужной темы. Если вы не читали блок выше, то имейте ввиду, что смена данного параметра сотрёт все ваши изменения. Поэтому сперва выберите нужную вам тему, а уже потом меняйте настройки ниже.
           </p>
 
-          <p>
-
+          <p v-if="!props.isRus">
+            Select the desired theme. If you haven't read the block above, then keep in mind that changing this parameter will erase all your changes. Therefore, first select the theme you need, and only then change the settings below.
           </p>
 
           <ui-select
