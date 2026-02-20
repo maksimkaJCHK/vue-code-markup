@@ -21,6 +21,7 @@
       <slots-doc is-rus />
       <stilization-doc is-rus />
       <exam-doc is-rus />
+      <change-log is-rus />
     </template>
 
     <template v-else>
@@ -37,6 +38,7 @@
       <slots-doc />
       <stilization-doc />
       <exam-doc />
+      <change-log />
     </template>
   </main>
 </template>
@@ -57,6 +59,7 @@
   import SlotsDoc from '@/components/doc/SlotsDoc.vue';
   import ExamDoc from '@/components/doc/ExamDoc.vue';
   import StilizationDoc from '@/components/doc/StilizationDoc.vue';
+  import ChangeLog from '@/components/doc/ChangeLog.vue';
 
   const lang = ref('rus');
 
