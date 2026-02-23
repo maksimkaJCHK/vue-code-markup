@@ -9,7 +9,7 @@
     </template>
 
     <template v-if="!props.isRus">
-      <h3>Components for the script block</h3>
+      <h3>The change log</h3>
 
       <p>
         I will keep a change log starting from version "0.5.0". In this version, I made the input parameter "theme" for the "code-markup" component. In this version, I have implemented 2 themes: "darcula" and "monokai". The "darcula" theme was the default, I made the "monokai" theme.
