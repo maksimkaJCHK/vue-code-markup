@@ -373,3 +373,135 @@ Below there are slots for the icons "copy text", "text successfully copied" and 
 This section will focus on how to create your own themes, or style existing themes to fit your project. This section is closely related to the "theme" input parameter for the "code-markup" component. At this point in time, I have made 2 themes: "darcula" and "monokai". I took the theme "darcula" as a basis, because I like it the most.
 
 In order to create your own theme, you need to add the name of your theme to the input parameter "theme". If you set the theme name to "some-theme", then the CSS styling class will look like this: "code-markup\_theme-**some-theme**".
+
+I would advise you to open [this page](https://maksimkajchk.github.io/vue-code-markup/ ), and a description of the styling of the components there. You can select CSS variables on it and see how it will look.
+
+### General settings
+
+**\--cm-bg** - this CSS variable is responsible for the "background" of the window with the code.
+
+**\--cm-border-radius** - this CSS variable is responsible for the "border-radius" of the window with the code.
+
+**\--cm-text-font-size** - this CSS variable is responsible for the "font-size" of the window with the code.
+
+**\--cm-text-font-family** - this CSS variable is responsible for the font family of the window with the code.
+
+**\--cm-text-line-height** - this CSS variable is responsible for the "line-height" of the window with the code.
+
+**\--cm-max-height-body** - this CSS variable is responsible for the "max-height" of the code window without a header.
+
+### Styling the window header with the code
+
+**\--cm-header-padding** - this CSS variable is responsible for the "padding" for the header of the window with the code.
+
+**\--cm-header-font-size** - this CSS variable is responsible for the "font-size" for the header of the window with the code.
+
+**\--cm-header-color** - this CSS variable is responsible for the color of the header of the window with the code.
+
+### Stylization of line numbers
+
+**\--cm-count-bg** - this CSS variable is responsible for the "background" for line numbers.
+
+**\--cm-count-color** - this CSS variable is responsible for the text color for line numbers.
+
+**\--cm-count-padding** - this CSS variable is responsible for the "paddings" for line numbers.
+
+**\--cm-count-border-right** - this CSS variable is responsible for the color of the right "border" for line numbers.
+
+### Stylization of "copy code" icons
+
+In this section, we will talk about the styling of the "copy code" icons. I have implemented 3 states. This is the normal state, the state when an error occurred while copying the code to the clipboard, and the state when the code was successfully copied to the clipboard. I have 3 different icons for all these states. Here you will learn how to change the color of these icons. If you insert your pictures through the slots, then this block will not help you. I have these icons implemented via SVG, I just change them to "fill".
+
+**\--cm-icon-color** - this CSS variable is responsible for the color of the "copy code" icon.
+
+**\--cm-icon-error-color** - this CSS variable is responsible for the color of the "copy code" icon if an error has occurred.
+
+**\--cm-icon-is-copy-color** - this CSS variable is responsible for the color of the "copy code" icon when the code has been successfully copied to the clipboard.
+
+### Styling the active line
+
+**\--cm-active-bg** - this CSS variable is responsible for the "background" of the active line.
+
+**\--cm-active-count-bg** - this CSS variable is responsible for the background of the line number of the active line.
+
+**\--cm-active-count-color** - this CSS variable is responsible for the color of the row number in the active row.
+
+**\--cm-active-count-right-color** - this CSS variable is responsible for the color of the right "border" line number of the active line.
+
+### Stylization "lines of code"
+
+This section is dedicated to the styling of "lines of code". I will put the styling of the active line in a separate block, here I will describe the styles for new, modified, and deleted lines. In fact, there won't be many styles here, mostly the colors of the borders of the line numbers.
+
+**\--cm-new-border** - for new lines, I make a vertical line separating the line numbers from the line text. This CSS variable sets the color of this line. This parameter is closely related to the "new" input parameter for the "code-line" component.
+
+**\--cm-changed-border** - in Visual Studio Code, when any changes occur on a line, it is displayed with a vertical right line that separates the line number and the line text. This CSS variable is responsible for the color of this line. This parameter is associated with the "changed" input parameter for the "code-line" component.
+
+**\--cm-deleted-border** - in order to show that the line has been deleted, I make a vertical line that separates the line numbers from the line text. This CSS variable defines the color of this line. This parameter is closely related to the "deleted" input parameter of the "code-line" component.
+
+**\--cm-deleted-opacity** - this CSS variable is responsible for the transparency of the deleted line. In order to see how it works, you need to add the "deleted" input parameter to the "code-line" component. You can set values from 0 to 1. 0 will make the string completely transparent, you probably won't need it. 1 will make the row fully visible. I recommend setting intermediate values.
+
+### Stylization text selection
+
+This section is dedicated to text selection. In order to see the result of applying styles, you need to select the text in the window with the code. I set the background of the selection and the color of the text when selected.
+
+**\--cm-selection-bg** - this CSS variable is responsible for the "background" of the selection in the window with the code.
+
+**\--cm-selection-color** - this CSS variable is responsible for the "color" of the text when selected in the window with the code.
+
+### Styling the scrollbar
+
+**\--cm-scroll-bar-bg** - This CSS variable is responsible for the "background" of the scrollbar.
+
+**\--cm-thumb-bg** - this CSS variable is responsible for the background of the scrollbar slider.
+
+### Styling common components
+
+Common components are components that can be used in a block of templates, scripts, and styles. These include components responsible for comments, and components responsible for displaying text and numeric information.
+
+**\--cm-main-color** - this CSS variable is responsible for the default text color. If you insert text without any component, or output it in the "mu-type" component, the value of this variable will be applied.
+
+**\--cm-text-color** - this CSS variable is responsible for the color of the text information, as a rule, it is the text printed between 2 quotation marks. This value will be applied to the "mu-text" component.
+
+**\--cm-number-color** - this CSS variable is responsible for the color of numeric information, usually numbers. This value will be applied to the "mu-number" component.
+
+**\--cm-comment-color** - this CSS variable is responsible for the color of the comments. This value will be applied to the "mu-comment" component.
+
+### Styling the components of the "template" block
+
+This section is devoted to the styling of components that are used in the "template" block. There are only two such components - these are "mu-tag" and "mu-attr". Accordingly, these are tags and their attributes.
+
+**\--cm-tag-color** - this CSS variable is responsible for the color of the tags. This value will be applied to the "mu-tag" component.
+
+**\--cm-attr-color** - this CSS variable is responsible for the color of the tag attribute. This value will be applied to the "mu-attr" component.
+
+### Stylization of the "script" block components
+
+This section is dedicated to the components that are in the "script" block. It's not big either, and it shows how to style JS keywords, variables, function names, and object keys.
+
+**\--cm-key-color** - this CSS variable is responsible for the color of the object's keys. This value will be applied to the "mu-key" component.
+
+**\--cm-key-words-color** - this CSS variable is responsible for the color of keywords. These include language constructs such as let, const, var, function, return, and so on. This value will be applied to the "mu-key-words" component.
+
+**\--cm-variable-color** - this CSS variable is responsible for the color of the variables, they come immediately after the keywords let, const, var. This value will be applied to the "mu-variable" component.
+
+**\--cm-function-color** - this CSS variable is responsible for the color of the function name. This value will be applied to the "mu-function" component.
+
+### Stylization of the "style" block components
+
+This section is devoted to the styling of the components that are used in the "style" block. This is probably the largest section. In most themes, there is no particular difference between the "id" of an element and its class. If it is important for you to distinguish between class and "id", then this section will describe how to set different colors for these elements. All CSS variables in this section contain the prefix "style" so that they can be distinguished from other components.
+
+**\--cm-style-class** - this CSS variable is responsible for the color of the class. This value will be applied to the "mu-style-class" component.
+
+**\--cm-style-id** - this CSS variable is responsible for the color of the id. This value will be applied to the "mu-style-id" component.
+
+**\--cm-style-tag** - данная CSS переменная отвечает за цвет тега. Это значение будет применено к компоненту "mu-style-tag".
+
+**\--cm-style-param** - this CSS variable is responsible for the color of the CSS parameters. This value will be applied to the "mu-style-param" component.
+
+**\--cm-style-key** - this CSS variable is responsible for the color of nested rules. This value will be applied to the "mu-style-key" component.
+
+**\--cm-style-unit-mes** - this CSS variable is responsible for the color of the units of measurement. This value will be applied to the "mu-style-unit-meas" component.
+
+**\--cm-style-ampersand** - this CSS variable is responsible for the color of the ampersand. This value will be applied to the "mu-style-ampersand" component.
+
+**\--cm-style-curly-brace** - this CSS variable is responsible for the color of the curly braces. This value will be applied to the "mu-style-curly-brace" component.
