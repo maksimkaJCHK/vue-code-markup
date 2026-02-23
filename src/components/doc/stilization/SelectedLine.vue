@@ -11,13 +11,15 @@
     </template>
 
     <template #description>
-      <p v-if="props.isRus">
-        Этот раздел посвящён стилизации "строк кода". Стилизацию активной строки я вынесу в отдельный блок, здесь я опишу стили для новых, изменённых, и удалённых строк. По сути здесь будет не много стилей, в основном это будут цвета границ у номеров строк.
-      </p>
+      <div :class="props.smallClass">
+        <p v-if="props.isRus">
+          Этот раздел посвящён стилизации "строк кода". Стилизацию активной строки я вынесу в отдельный блок, здесь я опишу стили для новых, изменённых, и удалённых строк. По сути здесь будет не много стилей, в основном это будут цвета границ у номеров строк.
+        </p>
 
-      <p v-if="!props.isRus">
-        This section is dedicated to the styling of "lines of code". I will put the styling of the active line in a separate block, here I will describe the styles for new, modified, and deleted lines. In fact, there won't be many styles here, mostly the colors of the borders of the line numbers.
-      </p>
+        <p v-if="!props.isRus">
+          This section is dedicated to the styling of "lines of code". I will put the styling of the active line in a separate block, here I will describe the styles for new, modified, and deleted lines. In fact, there won't be many styles here, mostly the colors of the borders of the line numbers.
+        </p>
+      </div>
     </template>
 
     <template #default>
@@ -73,7 +75,11 @@
   import WatchLines from '@/components/WatchLines.vue';
   import UiInput from '@/UI/UIInput.vue';
 
-  const props = defineProps(['isRus', 'nameRow']);
+  const props = defineProps([
+    'isRus',
+    'nameRow',
+    'smallClass'
+  ]);
 
   const cmNewBorder = defineModel('cm-new-border');
   const cmChangedBorder = defineModel('cm-changed-border');

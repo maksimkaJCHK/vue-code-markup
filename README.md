@@ -367,3 +367,9 @@ Below there are slots for the icons "copy text", "text successfully copied" and 
 *   **copy** - this slot is needed to replace the "copy text" icon. You can insert an image or an svg into it. The image or svg will take up the entire width, I'm not touching the height. It is better to insert a square icon here. The space for this slot will have a width and height of "1em".
 *   **success** - this slot is needed to replace the icon when the text has been successfully copied to the clipboard. You can also insert an image or an svg into it. The image or svg will take up the entire width, I'm not touching the height. It is better to insert a square icon here. The space for this slot will have a width and height of "1em".
 *   **error** - this slot is needed to replace the icon when an error occurred while copying text to the clipboard. You can also insert an image or an svg into it. The image or svg will take up the entire width, I'm not touching the height. It is better to insert a square icon here. The space for this slot will have a width and height of "1em".
+
+### Stylization of components
+
+This section will focus on how to create your own themes, or style existing themes to fit your project. This section is closely related to the "theme" input parameter for the "code-markup" component. At this point in time, I have made 2 themes: "darcula" and "monokai". I took the theme "darcula" as a basis, because I like it the most.
+
+In order to create your own theme, you need to add the name of your theme to the input parameter "theme". If you set the theme name to "some-theme", then the CSS styling class will look like this: "code-markup\_theme-**some-theme**".

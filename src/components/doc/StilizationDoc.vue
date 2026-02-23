@@ -68,14 +68,14 @@
           :parameters="parameters"
         />
       </template>
-      <template #content="{ nameRow }" >
-        <div :class="nameRow">
+      <template #content="{ nameRow, smallClass }" >
+        <div :class="[nameRow, smallClass]">
           <p v-if="props.isRus">
-            Выбор нужной темы. Если вы не читали блок выше, то имейте ввиду, что смена данного параметра сотрёт все ваши изменения. Поэтому сперва выберите нужную вам тему, а уже потом меняйте настройки ниже.
+            *Выбор нужной темы. Если вы не читали блок выше, то имейте ввиду, что смена данного параметра сотрёт все ваши изменения. Поэтому сперва выберите нужную вам тему, а уже потом меняйте настройки ниже.
           </p>
 
           <p v-if="!props.isRus">
-            Select the desired theme. If you haven't read the block above, then keep in mind that changing this parameter will erase all your changes. Therefore, first select the theme you need, and only then change the settings below.
+            *Select the desired theme. If you haven't read the block above, then keep in mind that changing this parameter will erase all your changes. Therefore, first select the theme you need, and only then change the settings below.
           </p>
 
           <ui-select
@@ -129,6 +129,16 @@
           v-model:cm-active-count-right-color="parameters.cmActiveCountRightColor"
         />
 
+        <selected-line
+          :is-rus="props.isRus"
+          :name-row="nameRow"
+          :smallClass="smallClass"
+          v-model:cm-new-border="parameters.cmNewBorder"
+          v-model:cm-changed-border="parameters.cmChangedBorder"
+          v-model:cm-deleted-border="parameters.cmDeletedBorder"
+          v-model:cm-deleted-opacity="parameters.cmDeletedOpacity"
+        />
+
         <selection-group
           :is-rus="props.isRus"
           :name-row="nameRow"
@@ -143,18 +153,10 @@
           v-model:cm-thumb-bg="parameters.cmThumbBg"
         />
 
-        <selected-line
-          :is-rus="props.isRus"
-          :name-row="nameRow"
-          v-model:cm-new-border="parameters.cmNewBorder"
-          v-model:cm-changed-border="parameters.cmChangedBorder"
-          v-model:cm-deleted-border="parameters.cmDeletedBorder"
-          v-model:cm-deleted-opacity="parameters.cmDeletedOpacity"
-        />
-
         <com-comp
           :is-rus="props.isRus"
           :name-row="nameRow"
+          :smallClass="smallClass"
           v-model:cm-main-color="parameters.cmMainColor"
           v-model:cm-text-color="parameters.cmTextColor"
           v-model:cm-number-color="parameters.cmNumberColor"
@@ -164,6 +166,7 @@
         <template-comp 
           :is-rus="props.isRus"
           :name-row="nameRow"
+          :smallClass="smallClass"
           v-model:cm-tag-color="parameters.cmTagColor"
           v-model:cm-attr-color="parameters.cmAttrColor"
         />
@@ -171,6 +174,7 @@
         <script-comp 
           :is-rus="props.isRus"
           :name-row="nameRow"
+          :smallClass="smallClass"
           v-model:cm-key-color="parameters.cmKeyColor"
           v-model:cm-keyWords-color="parameters.cmKeyWordsColor"
           v-model:cm-variable-color="parameters.cmVariableColor"
@@ -180,6 +184,7 @@
         <style-comp
           :is-rus="props.isRus"
           :name-row="nameRow"
+          :smallClass="smallClass"
           v-model:cm-style-class="parameters.cmStyleClass"
           v-model:cm-style-id="parameters.cmStyleId"
           v-model:cm-style-tag="parameters.cmStyleTag"

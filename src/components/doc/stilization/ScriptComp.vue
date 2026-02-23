@@ -11,13 +11,15 @@
     </template>
 
     <template #description>
-      <p v-if="props.isRus">
-        Данный раздел посвящён компонентам которые находятся в блоке "script". Он тоже не большой, здесь будет показано как стилизовать ключевые слова языка JS, переменные, названия функций и ключей объекта.
-      </p>
+      <div :class="props.smallClass">
+        <p v-if="props.isRus">
+          Данный раздел посвящён компонентам которые находятся в блоке "script". Он тоже не большой, здесь будет показано как стилизовать ключевые слова языка JS, переменные, названия функций и ключей объекта.
+        </p>
 
-      <p v-if="!props.isRus">
-        This section is dedicated to the components that are in the "script" block. It's not big either, and it shows how to style JS keywords, variables, function names, and object keys.
-      </p>
+        <p v-if="!props.isRus">
+          This section is dedicated to the components that are in the "script" block. It's not big either, and it shows how to style JS keywords, variables, function names, and object keys.
+        </p>
+      </div>
     </template>
 
     <template #default>
@@ -73,7 +75,11 @@
   import WatchLines from '@/components/WatchLines.vue';
   import UiInput from '@/UI/UIInput.vue';
 
-  const props = defineProps(['isRus', 'nameRow']);
+  const props = defineProps([
+    'isRus',
+    'nameRow',
+    'smallClass'
+  ]);
 
   const cmKeyColor = defineModel('cm-key-color');
   const cmKeyWordsColor = defineModel('cm-keyWords-color');

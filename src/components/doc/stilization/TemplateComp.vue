@@ -11,13 +11,15 @@
     </template>
 
     <template #description>
-      <p v-if="props.isRus">
-        Данный раздел посвящён стилизации компонентов, которые используются в блоке "template". Таких компонентов всего два - это "mu-tag" и "mu-attr". Соответственно это теги, и их атрибуты.
-      </p>
+      <div :class="props.smallClass">
+        <p v-if="props.isRus">
+          Данный раздел посвящён стилизации компонентов, которые используются в блоке "template". Таких компонентов всего два - это "mu-tag" и "mu-attr". Соответственно это теги, и их атрибуты.
+        </p>
 
-      <p v-if="!props.isRus">
-        This section is devoted to the styling of components that are used in the "template" block. There are only two such components - these are "mu-tag" and "mu-attr". Accordingly, these are tags and their attributes.
-      </p>
+        <p v-if="!props.isRus">
+          This section is devoted to the styling of components that are used in the "template" block. There are only two such components - these are "mu-tag" and "mu-attr". Accordingly, these are tags and their attributes.
+        </p>
+      </div>
     </template>
 
     <template #default>
@@ -51,7 +53,11 @@
   import WatchLines from '@/components/WatchLines.vue';
   import UiInput from '@/UI/UIInput.vue';
 
-  const props = defineProps(['isRus', 'nameRow']);
+  const props = defineProps([
+    'isRus',
+    'nameRow',
+    'smallClass'
+  ]);
 
   const cmTagColor = defineModel('cm-tag-color');
   const cmAttrColor = defineModel('cm-attr-color');

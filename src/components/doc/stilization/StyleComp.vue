@@ -11,13 +11,15 @@
     </template>
 
     <template #description>
-      <p v-if="props.isRus">
-        Данный раздел посвящён стилизации компонентов, которые используются в блоке "style". Это наверное самый большой раздел. В большинстве тем, нет особой разницы между "id" элемента и его классом, если для вас важно различать класс и "id", то в этом разделе будет описано, как задать для данных элементов разные цвета. Все CSS переменные в этом разделе содержат префикс "style", чтобы их можно было отличить от других компонентов.
-      </p>
+      <div :class="props.smallClass">
+        <p v-if="props.isRus">
+          Данный раздел посвящён стилизации компонентов, которые используются в блоке "style". Это наверное самый большой раздел. В большинстве тем, нет особой разницы между "id" элемента и его классом, если для вас важно различать класс и "id", то в этом разделе будет описано, как задать для данных элементов разные цвета. Все CSS переменные в этом разделе содержат префикс "style", чтобы их можно было отличить от других компонентов.
+        </p>
 
-      <p v-if="!props.isRus">
-        This section is devoted to the styling of the components that are used in the "style" block. This is probably the largest section. In most themes, there is no particular difference between the "id" of an element and its class. If it is important for you to distinguish between class and "id", then this section will describe how to set different colors for these elements. All CSS variables in this section contain the prefix "style" so that they can be distinguished from other components.
-      </p>
+        <p v-if="!props.isRus">
+          This section is devoted to the styling of the components that are used in the "style" block. This is probably the largest section. In most themes, there is no particular difference between the "id" of an element and its class. If it is important for you to distinguish between class and "id", then this section will describe how to set different colors for these elements. All CSS variables in this section contain the prefix "style" so that they can be distinguished from other components.
+        </p>
+      </div>
     </template>
 
     <template #default>
@@ -124,7 +126,11 @@
   import WatchLines from '@/components/WatchLines.vue';
   import UiInput from '@/UI/UIInput.vue';
 
-  const props = defineProps(['isRus', 'nameRow']);
+  const props = defineProps([
+    'isRus',
+    'nameRow',
+    'smallClass'
+  ]);
 
   const cmStyleClass = defineModel('cm-style-class');
   const cmStyleId = defineModel('cm-style-id');

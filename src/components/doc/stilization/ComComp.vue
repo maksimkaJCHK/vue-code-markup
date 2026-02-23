@@ -11,13 +11,15 @@
     </template>
 
     <template #description>
-      <p v-if="props.isRus">
-        Общие компоненты - это компоненты которые могут быть использованы в блоке шаблонов, скриптов и стилей. К ним относятся компоненты отвечающие за комментарии, компоненты отвечающие за вывод текстовой и числовой информации.
-      </p>
+      <div :class="props.smallClass">
+        <p v-if="props.isRus">
+          Общие компоненты - это компоненты которые могут быть использованы в блоке шаблонов, скриптов и стилей. К ним относятся компоненты отвечающие за комментарии, компоненты отвечающие за вывод текстовой и числовой информации.
+        </p>
 
-      <p v-if="!props.isRus">
-        Common components are components that can be used in a block of templates, scripts, and styles. These include components responsible for comments, and components responsible for displaying text and numeric information.
-      </p>
+        <p v-if="!props.isRus">
+          Common components are components that can be used in a block of templates, scripts, and styles. These include components responsible for comments, and components responsible for displaying text and numeric information.
+        </p>
+      </div>
     </template>
 
     <template #default>
@@ -73,7 +75,11 @@
   import WatchLines from '@/components/WatchLines.vue';
   import UiInput from '@/UI/UIInput.vue';
 
-  const props = defineProps(['isRus', 'nameRow']);
+  const props = defineProps([
+    'isRus',
+    'nameRow',
+    'smallClass'
+  ]);
 
   const cmMainColor = defineModel('cm-main-color');
   const cmTextColor = defineModel('cm-text-color');

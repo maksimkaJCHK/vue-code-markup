@@ -7,6 +7,7 @@
       <slot
         name="content"
         :nameRow="nameRow"
+        :smallClass="smallClass"
       ></slot>
     </div>
   </div>
@@ -14,6 +15,7 @@
 
 <script setup>
   const nameRow = "settings-doc-row";
+  const smallClass = "settings-doc-small";
 </script>
 
 <style lang="scss">
@@ -54,6 +56,10 @@
 
     &-code {
       overflow: hidden;
+    }
+
+    &-small {
+      font-size: .8em;
     }
 
     @media screen and (max-width: 700px) {
