@@ -53,7 +53,7 @@
         </p>
 
         <p v-if="!props.isRus">
-          <strong>--cm-style-tag</strong> - данная CSS переменная отвечает за цвет тега. Это значение будет применено к компоненту "mu-style-tag".
+          <strong>--cm-style-tag</strong> - this CSS variable is responsible for the color of the tag. This value will be applied to the "mu-style-tag" component.
         </p>
 
         <ui-input v-model="cmStyleTag" />
