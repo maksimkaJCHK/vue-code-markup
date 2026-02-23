@@ -505,3 +505,7 @@ This section is devoted to the styling of the components that are used in the "s
 **\--cm-style-ampersand** - this CSS variable is responsible for the color of the ampersand. This value will be applied to the "mu-style-ampersand" component.
 
 **\--cm-style-curly-brace** - this CSS variable is responsible for the color of the curly braces. This value will be applied to the "mu-style-curly-brace" component.
+
+### Components for the script block
+
+I will keep a change log starting from version "0.5.0". In this version, I made the input parameter "theme" for the "code-markup" component. In this version, I have implemented 2 themes: "darcula" and "monokai". The "darcula" theme was the default, I made the "monokai" theme.
