@@ -494,7 +494,7 @@ This section is devoted to the styling of the components that are used in the "s
 
 **\--cm-style-id** - this CSS variable is responsible for the color of the id. This value will be applied to the "mu-style-id" component.
 
-**\--cm-style-tag** - данная CSS переменная отвечает за цвет тега. Это значение будет применено к компоненту "mu-style-tag".
+**\--cm-style-tag** -this CSS variable is responsible for the color of the tag. This value will be applied to the "mu-style-tag" component.
 
 **\--cm-style-param** - this CSS variable is responsible for the color of the CSS parameters. This value will be applied to the "mu-style-param" component.
 
